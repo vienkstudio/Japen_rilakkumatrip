@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="從拉拉熊官方店開始，按 47 都道府縣搜尋日本旅行。搭配四尺玉花火、古蹟手作、街道鐵路與附近餐廳。">
+<meta name="theme-color" content="#182822">
+<title>日本拉拉熊旅遊圖鑑</title>
+<link rel="icon" href="./assets/compass.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./assets/leaflet.css">
+<link rel="stylesheet" href="./assets/style.css">
+<script defer src="./assets/leaflet.js"></script>
+<script defer src="./assets/data.js"></script>
+<script defer src="./assets/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#explore">跳到地圖與搜尋</a>
+<header class="top">
+ <div class="shell topline">
+  <a class="brand" href="#home"><img src="./assets/compass.svg" alt="" width="34" height="34"><span><strong>日本拉拉熊旅遊圖鑑</strong><small>JAPAN TRAVEL ATLAS</small></span></a>
+  <nav aria-label="主要選單"><a href="#explore">地圖</a><a href="#routes">行程</a><a href="#calendar">活動</a><button type="button" class="navsave" id="saved-nav">我的收藏 <span id="saved-count">0</span></button></nav>
+ </div>
+</header>
+<main id="home">
+ <section class="hero" aria-labelledby="hero-title">
+  <div class="shell hero-layout">
+   <div class="hero-copy">
+    <p class="eyebrow"><span></span> 拉拉熊朝聖與日本地方旅行</p>
+    <h1 id="hero-title">從拉拉熊小店<br>走到四尺玉下</h1>
+    <p class="hero-intro">逛 San-X 官方店，在古老街區做手作，晚上到新潟看奉納花火。按縣市查店、看鐵路，再把地圖上的點排成自己的旅程。</p>
+    <div class="hero-actions"><a class="button amber" href="#explore">打開互動地圖 <span aria-hidden="true">↘</span></a><button class="button glass" type="button" data-route="katakai-6">看新潟＋東京 6 天</button></div>
+    <div class="hero-data"><div><b>47</b><span>都道府縣</span></div><div><b id="route-stat">19</b><span>行程</span></div><div><b>10</b><span>街道鐵路詳圖</span></div></div>
+   </div>
+   <div class="hero-photo" aria-label="2011 年片貝祭正四尺玉的實際照片">
+    <div class="photo-tag"><span class="dot"></span><span>新潟・片貝祭<br><strong>2027.09.10–11</strong></span></div>
+    <p>2011 年片貝四尺玉 · <a href="https://commons.wikimedia.org/wiki/File:2011_katakai_festival_4-shaku_dama.jpg" target="_blank" rel="noopener">Kropsoq</a> · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>（裁切顯示）</p>
+   </div>
+  </div>
+ </section>
+ <section class="shell section" id="explore" aria-labelledby="explore-title">
+  <div class="section-heading">
+   <div><p class="eyebrow">地圖與店面</p><h2 id="explore-title">沿車站找下一站</h2></div>
+   <p>選縣市、主題或地圖範圍。放大看街道與站點，到現場用 Google Maps 規劃動線。</p>
+  </div>
+  <div class="map-workbench">
+   <div class="map-controls">
+    <label class="map-select">地圖範圍<select id="view"><option value="">全日本</option></select></label>
+    <label class="map-select">底圖<select id="basemap"><option value="pale">國土地理院淡色圖</option><option value="std">國土地理院標準圖</option><option value="photo">國土地理院航照</option><option value="osm">OpenStreetMap</option></select></label>
+    <button class="button sub" id="bigmap" type="button" aria-pressed="false">放大地圖</button>
+    <a class="button sub" id="google-view" href="https://www.google.com/maps/search/?api=1&amp;query=Japan" target="_blank" rel="noopener">在 Google Maps 開啟 ↗</a>
+   </div>
+   <div class="map-layout">
+    <div class="map-pane">
+     <div id="map" role="region" aria-label="可縮放的日本街道與鐵路地圖"></div>
+     <p id="map-message" class="map-message" aria-live="polite"></p>
+    </div>
+    <aside class="map-tools" aria-label="地圖圖層及地區詳情">
+     <h3>地圖圖層</h3>
+     <div class="checks">
+      <label><input id="layer-prefs" type="checkbox" checked> 都道府縣邊界</label>
+      <label><input id="layer-places" type="checkbox" checked> <i class="legend-dot"></i> 景點・主題店</label>
+      <label><input id="layer-rail" type="checkbox" checked> <i class="legend-line"></i> 鐵路實際線形</label>
+      <label><input id="layer-station" type="checkbox" checked> <i class="legend-dot station"></i> 車站</label>
+     </div>
+     <label class="small-label" for="rail-line">鐵路營運商／線路</label><select id="rail-line"><option value="">全部鐵路線</option></select>
+     <div id="line-key" class="line-key"></div>
+     <div id="map-details" class="map-details"></div>
+    </aside>
+   </div>
+  </div>
+  <div class="directory">
+   <div class="directory-title"><div><p class="eyebrow">全部地點</p><h3>店面、餐廳與體驗</h3></div><button id="reset" type="button" class="button ghost">清除篩選</button></div>
+   <div class="filters">
+    <label>搜尋<input type="search" id="q" placeholder="店名、站名、地址或日文" autocomplete="off"></label>
+    <label>地區<select id="region"><option value="">所有地區</option></select></label>
+    <label>都道府縣<select id="pref"><option value="">所有都道府縣</option></select></label>
+    <label>主題<select id="kind"><option value="">所有主題</option></select></label>
+   </div>
+   <div class="results-bar"><span id="result-count" aria-live="polite"></span><div><label for="density">顯示</label> <select id="density"><option value="cards">卡片</option><option value="compact">精簡列表</option></select> <label class="saved-toggle"><input type="checkbox" id="saved-only"> 只顯示收藏</label></div></div>
+   <div id="pref-context"></div><div class="places" id="places"></div><button id="more" class="button ghost more" type="button" hidden>顯示更多</button>
+  </div>
+ </section>
+ <section class="route-section" id="routes" aria-labelledby="routes-title">
+  <div class="shell section">
+   <div class="section-heading"><div><p class="eyebrow">交通與順路安排</p><h2 id="routes-title">選一條照著走的行程</h2></div><p>打開行程看每站的樓層、轉乘與預約方式。聚焦四尺玉時，先查當年花火節目與回程。</p></div>
+   <div class="route-filters"><label>按主要縣市找行程 <select id="route-pref"><option value="">所有行程</option></select></label></div>
+   <div class="route-cards" id="route-cards"></div>
+  </div>
+ </section>
+ <section class="shell section" id="calendar" aria-labelledby="calendar-title">
+  <div class="section-heading"><div><p class="eyebrow">行前查日期</p><h2 id="calendar-title">花火與拉拉熊活動</h2></div><p>日期依日本當地時間。四尺玉打揚時刻、抽選、預約與期間中店休，以原公告為準。</p></div>
+  <div class="route-filters"><label>旅行日期 <input id="event-day" type="date"></label><button type="button" id="clear-day" class="button ghost">查看所有日期</button></div>
+  <div class="event-list" id="event-list"></div>
+  <div class="guide-heading"><h3>限定商品、主題餐點與專題</h3><label>搜尋專題 <input id="story-q" type="search" placeholder="商品、角色、活動"></label></div>
+  <div id="story-cards" class="story-grid"></div>
+ </section>
+</main>
+<footer><div class="shell footer"><div><strong>日本拉拉熊旅遊圖鑑</strong><p>個人旅行資料整理。公開頁面使用官方事實、出處與可公開使用的圖資。</p></div><div><strong>資料來源</strong><p><a href="https://www.san-x.co.jp/rilakkuma/rilanowa/" target="_blank" rel="noopener">San-X RilaNowa</a> · <a href="https://www.san-x.co.jp/ja/store-blogs/2026-06-post-0741260/" target="_blank" rel="noopener">San-X 官方店</a> · <a href="https://www.san-x.co.jp/ja/shops/rk-goods/" target="_blank" rel="noopener">角色商品通路</a><br><a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">國土地理院</a> · <a href="https://github.com/dataofjapan/land" target="_blank" rel="noopener">地球地圖縣界</a> · <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html" target="_blank" rel="noopener">國土交通省 N02 鐵路</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a><br>Google Maps 導航與食べログ店頁依外部服務提供。</p></div></div></footer>
+<dialog id="details" aria-labelledby="detail-title"><div class="dialog-bar"><p>旅遊詳情</p><button id="close-detail" type="button" aria-label="關閉詳情">×</button></div><div id="detail-body"></div></dialog>
+<noscript><p class="shell">請開啟 JavaScript 來使用地圖、搜尋與收藏。</p></noscript>
+</body></html>
+
+
