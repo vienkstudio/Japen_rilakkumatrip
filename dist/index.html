@@ -8,14 +8,15 @@
 <title>日本拉拉熊旅遊圖鑑</title>
 <link rel="icon" href="./assets/compass.svg" type="image/svg+xml">
 <link rel="stylesheet" href="./assets/leaflet.css">
-<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="./assets/style.css?v=3">
 <script defer src="./assets/leaflet.js"></script>
 <script defer src="./assets/data.js"></script>
 <script defer src="./assets/photos.js"></script>
 <script defer src="./assets/rail-grid.js"></script>
-<script defer src="./assets/catalog.js"></script>
-<script defer src="./assets/map.js"></script>
-<script defer src="./assets/app.js"></script>
+<script defer src="./assets/travel-details.js?v=3"></script>
+<script defer src="./assets/catalog.js?v=3"></script>
+<script defer src="./assets/map.js?v=3"></script>
+<script defer src="./assets/app.js?v=3"></script>
 </head>
 <body>
 <a class="skip" href="#search">跳到地點搜尋</a>
@@ -35,7 +36,7 @@
   <section class="browse-head" id="browse-head">
    <div class="app-kicker"><span data-icon="map"></span><span id="scope-label">日本全區</span></div>
    <h1 id="workspace-title">探索地點</h1>
-   <div class="search-field" id="search-field"><span data-icon="search"></span><input type="search" id="search" placeholder="搜尋店名、站名、特色…" aria-label="搜尋地點" autocomplete="off"><button type="button" id="clear-search" aria-label="清空搜尋" hidden>×</button><kbd>/</kbd></div>
+   <div class="search-field" id="search-field"><span data-icon="search"></span><input type="search" id="search" placeholder="找店名、車站、四尺玉…" aria-label="搜尋地點" autocomplete="off"><button type="button" id="clear-search" aria-label="清空搜尋" hidden>×</button><kbd>/</kbd></div>
    <div id="explore-filters">
     <div class="filters"><label class="select-wrap"><span>地區</span><select id="region" aria-label="地區"></select></label><label class="select-wrap"><span>都道府縣</span><select id="pref" aria-label="都道府縣"></select></label></div>
     <div class="chips" id="chips" aria-label="地點分類"></div>

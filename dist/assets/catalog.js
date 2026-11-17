@@ -3,6 +3,21 @@
 "use strict";
 const A = window.ATLAS;
 const sourcePhotos = window.ATLAS_PHOTOS || {};
+const {updates,additionalPlaces,regionalRoutes,aliases:redirects} = window.ATLAS_TRAVEL_DETAILS;
+A.routes.push(...regionalRoutes);
+const labelsByPhoto = {
+  "bear-skytree":["押上拉拉熊店（2013）","店面舊照"],
+  "bear-kyoto":["嵐山茶房（2017）","店面舊照"],
+  "bear-tokyo":["東京站拉拉熊店","店面舊照"],
+  katakai:["片貝祭花火（歷屆）","活動舊照"],
+  kusatsu:["草津溫泉浴場（1881）","歷史圖繪"]
+};
+for(const [key,[label,type]] of Object.entries(labelsByPhoto)){
+  if(sourcePhotos[key]) Object.assign(sourcePhotos[key],{label,type});
+}
+if(sourcePhotos.kusatsu) Object.assign(sourcePhotos.kusatsu,{
+  license:"公有領域",licenseUrl:"https://creativecommons.org/publicdomain/mark/1.0/"
+});
 const copiedPins = {
   0:"atlas-north-0",1:"atlas-tohoku-2",2:"atlas-kanto-4",4:"poi-tokyo-0",
   5:"atlas-tokyo-7",6:"poi-asakusa-1",7:"atlas-tokyo-3",8:"atlas-tokyo-6",
@@ -11,8 +26,8 @@ const copiedPins = {
   18:"atlas-kansai-5",19:"atlas-kyushu-0"
 };
 const exactPhotos = {
-  "official-4":"bear-tokyo","official-6":"bear-skytree","poi-asakusa-1":"bear-skytree",
-  "poi-tokyo-0":"bear-tokyo","poi-arashiyama-0":"bear-kyoto","arashi-tea":"bear-kyoto",
+  "official-4":"bear-tokyo","official-6":"bear-skytree",
+  "arashi-tea":"bear-kyoto",
   "poi-katakai-0":"katakai","poi-tokyo-3":"tokyo","poi-arashiyama-1":"tenryuji",
   "poi-osaka-3":"osaka"
 };
@@ -47,8 +62,8 @@ const routesPhotos = {
 };
 const old = new Map(A.places.map(p=>[p.id,p]));
 const used = new Map(Object.entries(copiedPins).map(([n,id])=>[id,"official-"+n]));
-const omitted = new Set([...used.keys(),"atlas-tokyo-0","atlas-tokyo-4","atlas-kanto-0","atlas-tokyo-1","atlas-kansai-0"]);
-const places = A.places.filter(p=>!omitted.has(p.id)).map(p=>{
+const omitted = new Set([...used.keys(),...Object.keys(redirects),"atlas-tokyo-0","atlas-tokyo-4","atlas-kanto-0","atlas-tokyo-1","atlas-kansai-0"]);
+const places = [...A.places.filter(p=>!omitted.has(p.id)),...additionalPlaces].map(p=>{
   const original = old.get(copiedPins[p.id.split("-")[1]]);
   const related = p.kind==="official" && original ? original : null;
   const aliases = [];
@@ -61,7 +76,7 @@ const places = A.places.filter(p=>!omitted.has(p.id)).map(p=>{
   if(p.id==="poi-asakusa-0") aliases.push("淺草寺 雷門 仲見世淺草");
   if(p.id==="official-6") aliases.push("晴空塔 東京晴空街道 Solamachi 押上 晴空塔 拉拉熊專賣店");
   if(p.id==="official-4") aliases.push("東京站 東京車站 一番街 丸之內 八重洲");
-  if(p.id==="poi-arashiyama-0"||p.id==="arashi-tea") aliases.push("嵐山 嵐山茶房 嵐山拉拉熊茶房 拉拉熊茶房 拉拉熊之湯");
+
   const m=p.title.match(/(?:^|[・／])([^・／]*?)(?:站|空港)/);
   if(m) aliases.push(m[1]+"車站",m[1]+"駅");
   let photo = exactPhotos[p.id] || photoAreas[p.area] || prefImages[p.pref];
@@ -73,23 +88,22 @@ const places = A.places.filter(p=>!omitted.has(p.id)).map(p=>{
   if(p.id==="miyajima-goods") photo="miyajima";
   let coords = p.coords || related?.coords || null, approx = p.approx || related?.approx;
   if(p.id==="1899") {coords=old.get("poi-tokyo-2").coords;approx=false;}
-  if(p.id==="arashi-tea") {coords=old.get("poi-arashiyama-0").coords;approx=false;}
+
   if(p.id==="hakata-kushi") {coords=old.get("atlas-kyushu-1").coords;approx=true;}
   if(p.id==="miyajima-goods") {coords=old.get("atlas-chugoku-0").coords;approx=true;}
   let title = p.title, note = p.note;
   if(p.id==="poi-katakai-0"){title="片貝祭・四尺玉";note="2027/9/10–9/11 · 新潟小千谷。兩晚可分開安排，觀覽席與接駁等主辦公布。";}
   if(p.id==="poi-konosu-0"){title="鴻巢花火・糠田會場";note="歷屆有四尺玉。2027 日期、場次與進出場安排待公告。";}
-  if(p.id==="poi-arashiyama-0")title="嵐山拉拉熊伴手禮店";
-  if(p.id==="official-6") title="押上晴空街道拉拉熊店";
   if(p.id==="official-4") title="東京站一番街拉拉熊店";
   if(p.id==="poi-osaka-3")note="從谷町四丁目站步行到大手門，沿石垣進大阪城公園。";
-  return {...p,title,note,aliases:aliases.join(" "),coords,approx,photo:sourcePhotos[photo]?photo:null,
+  const update=updates[p.id];
+  return {...p,title,note,coords,approx,photo:sourcePhotos[photo]?photo:null,
     area:p.area||related?.area||({"official-6":"asakusa","official-4":"tokyo","miyajima-goods":""}[p.id]||null),
-    nearbyPhoto:!exactPhotos[p.id],canonicalId:used.get(p.id)||p.id};
+    nearbyPhoto:!exactPhotos[p.id],...update,aliases:[...aliases,p.aliases,update?.aliases].filter(Boolean).join(" ")};
 });
 const featured = ["official-6","poi-asakusa-0","poi-asakusa-2","poi-katakai-0","arashi-tea","official-4","poi-arashiyama-1","poi-osaka-3"];
 const placesById = new Map(places.map(p=>[p.id,p]));
-for (const [k,v] of used) if(placesById.has(v)) placesById.set(k,placesById.get(v));
+for (const [k,v] of [...used,...Object.entries(redirects)]) if(placesById.has(v)) placesById.set(k,placesById.get(v));
 const assets = Object.keys(sourcePhotos);
 const gallery = [...new Set(["bear-skytree","bear-tokyo","bear-kyoto","katakai","sensoji","arashiyama","kawagoe",...assets])].filter(x=>assets.includes(x));
 window.ATLAS_CATALOG = {labels,categories,routesPhotos,viewShort,photoAreas,places,placesById,featured,gallery};

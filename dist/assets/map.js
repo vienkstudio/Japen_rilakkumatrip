@@ -171,8 +171,11 @@ function init({icon,esc,option,external,google,onPref,onPlace,onFailure,onAreaMo
  }
  function showStation(record){
   if(!record)return;
+  const name=record.query?record.name:record.name+"駅";
+  const line=record.line||record.agency+"｜"+record.lines.join("、");
+  const query=record.query||name+" "+record.agency;
   map.setView(record.coords,Math.max(14,map.getZoom()),{animate:false});
-  L.popup().setLatLng(record.coords).setContent("<strong>"+esc(record.name+"駅")+"</strong><p>"+esc(record.agency+"｜"+record.lines.join("、"))+"</p>"+external(google(record.name+"駅 "+record.agency),"開啟 Google Maps ↗")).openOn(map);
+  L.popup().setLatLng(record.coords).setContent("<strong>"+esc(name)+"</strong><p>"+esc(line)+"</p>"+external(google(query),"開啟 Google Maps ↗")).openOn(map);
  }
  map.on("moveend",()=>{updateRail();onAreaMove?.();});
  byId("base").addEventListener("change",e=>base(e.target.value));
