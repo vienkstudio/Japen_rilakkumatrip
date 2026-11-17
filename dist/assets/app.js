@@ -1,325 +1,371 @@
 
 (() => {
 "use strict";
-const A=window.ATLAS, $=id=>document.getElementById(id);
-if (!A) { $("map-message").textContent="找不到旅遊資料。請重新整理頁面。"; return; }
-const kinds={official:"拉拉熊官方店",rilanowa:"RilaNowa 認證店",retail:"其他商品通路",theme:"主題店／設施",food:"餐廳",fireworks:"四尺玉花火",heritage:"古蹟與地方文化",craft:"手作",event:"活動"};
-const colors={official:"#8c4d32",rilanowa:"#b27337",retail:"#696351",theme:"#a94d37",food:"#b9752e",fireworks:"#9b3446",heritage:"#435d72",craft:"#6351a4",event:"#347966"};
-const arr=items=>new Map(items.map(x=>[x.id,x]));
-const placeBy=arr(A.places),routeBy=arr(A.routes),storyBy=new Map(A.stories.map(x=>[x.key,x])),views=arr(A.views),events=arr(A.events);
-const prefBy=new Map(A.prefs.map(x=>[x.name,x])),groupBy=new Map(A.regions.map(x=>[x.key,x]));
-const html=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const option=(v,n)=>"<option value=\""+html(v)+"\">"+html(n)+"</option>";
-const external=(url,label,cls="")=>"<a class=\""+html(cls)+"\" href=\""+html(url)+"\" target=\"_blank\" rel=\"noopener noreferrer\">"+html(label)+"</a>";
-const btn=(key,val,label,cls="text-button")=>"<button type=\"button\" class=\""+cls+"\" data-"+key+"=\""+html(val)+"\">"+html(label)+"</button>";
-const badge=(kind,label=kinds[kind])=>"<span class=\"badge "+html(kind)+"\">"+html(label)+"</span>";
-const google=q=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q||"Japan");
-const directions=(dest,origin)=>"https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(dest)+"&travelmode=transit"+(origin?"&origin="+encodeURIComponent(origin):"");
-const clean=x=>String(x??"").normalize("NFKC").toLocaleLowerCase();
-const matches=(q,text)=>clean(q).trim().split(/\s+/).every(part=>clean(text).includes(part));
-const keyStorage="japan-atlas-favorites-v1";
-let saved=new Set(), limit=12, activeView="", runId=0, layer=null, railsData=null;
-try { const ids=JSON.parse(localStorage.getItem(keyStorage)||"[]"); if(Array.isArray(ids)) saved=new Set(ids.filter(id=>placeBy.has(id))); } catch {}
-const updateSaved=()=>{ $("saved-count").textContent=saved.size; try{localStorage.setItem(keyStorage,JSON.stringify([...saved]));}catch{} };
-updateSaved();
-$("route-stat").textContent=A.routes.length;
-$("view").insertAdjacentHTML("beforeend",A.views.map(v=>option(v.id,v.pref+"｜"+v.title)).join(""));
-$("region").insertAdjacentHTML("beforeend",A.regions.map(r=>option(r.key,r.name)).join(""));
-$("route-pref").insertAdjacentHTML("beforeend",A.prefs.filter(p=>A.routes.some(r=>r.pref===p.name)).map(p=>option(p.name,p.name)).join(""));
-$("kind").insertAdjacentHTML("beforeend",Object.entries(kinds).map(([k,l])=>option(k,l)).join(""));
-
-function prefOptions(){
- const old=$("pref").value,region=$("region").value;
- $("pref").innerHTML=option("","所有都道府縣")+A.prefs.filter(p=>!region||p.region===region).map(p=>option(p.name,p.name)).join("");
- if([...$("pref").options].some(o=>o.value===old)) $("pref").value=old;
+const A=window.ATLAS, C=window.ATLAS_CATALOG, P=window.ATLAS_PHOTOS || {};
+const $=id=>document.getElementById(id);
+if(!A||!C){$("results").textContent="旅遊目錄載入失敗。請重新整理頁面。";return;}
+const paths={
+ compass:"M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM15.8 8.2l-2.4 5.2-5.2 2.4 2.4-5.2z",
+ search:"M21 21l-4.2-4.2M18.5 10.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z",
+ map:"m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Zm6-3v15m6-12v15",
+ route:"M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm14 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 6h9a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h9",
+ calendar:"M4 6h16a2 2 0 0 1 2 2v12H2V8a2 2 0 0 1 2-2Zm3-3v6m10-6v6M2 11h20",
+ image:"M4 4h16v16H4zM7 16l4-4 3 3 2-2 4 4M10 8a1.2 1.2 0 1 0 0 .01",
+ heart:"M20 12.5 12 20l-8-7.5C-2 6 7 1 12 8c5-7 14-2 8 4.5Z",
+ info:"M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm0-12v7m0-10h.01",
+ pin:"M20 10c0 5.5-8 11-8 11S4 15.5 4 10a8 8 0 0 1 16 0Zm-8 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
+ layers:"m2 7 10-5 10 5-10 5-10-5Zm0 5 10 5 10-5M2 17l10 5 10-5",
+ close:"m6 6 12 12M18 6 6 18",
+ list:"M8 5h13M8 12h13M8 19h13M3 5h.01M3 12h.01M3 19h.01",
+ shop:"M3 9h18l-2-5H5L3 9Zm2 0v11h14V9m-10 11v-6h6v6",
+ landmark:"m3 8 9-5 9 5H3Zm1.5 11h15M3 22h18M7 9v8m5-8v8m5-8v8",
+ craft:"m4 13 8-9 8 8-9 8H4zm0 7 5-5m6-7 2 2",
+ spark:"M12 2v4m0 12v4m10-10h-4M2 12h4m-.6-6.6 2.8 2.8m7.6 7.6 2.8 2.8m0-13.2-2.8 2.8m-7.6 7.6-2.8 2.8",
+ food:"M4 3v6a3 3 0 0 0 6 0V3M7 3v18m13-18c-3 2-5 6-5 10h5m0-10v18",
+ arrow:"M4 12h15m-6-6 6 6-6 6", link:"M14 4h6v6m0-6-9 9m5-1v8H4V8h8",
+ share:"M12 16V3m-5 5 5-5 5 5M5 13v8h14v-8"
+};
+const icon=name=>'<svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="'+(paths[name]||paths.pin)+'"/></svg>';
+document.querySelectorAll("[data-icon]").forEach(node=>{node.innerHTML=icon(node.dataset.icon);});
+const esc=v=>String(v??"").replace(/[&<>"']/g,s=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[s]));
+const option=(v,n)=>'<option value="'+esc(v)+'">'+esc(n)+'</option>';
+const external=(url,label,style="")=>'<a class="'+esc(style)+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+'</a>';
+const google=q=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+const direction=(dest,origin,mode="transit")=>"https://www.google.com/maps/dir/?api=1&travelmode="+mode+"&destination="+encodeURIComponent(dest)+(origin?"&origin="+encodeURIComponent(origin):"");
+const button=(name,id,label,style="btn",symbol="")=>'<button type="button" class="'+style+'" data-'+name+'="'+esc(id)+'">'+(symbol?icon(symbol):"")+esc(label)+'</button>';
+const symbol={official:"shop",rilanowa:"shop",theme:"shop",retail:"shop",heritage:"landmark",craft:"craft",food:"food",fireworks:"spark",event:"calendar"};
+const prefs=new Map(A.prefs.map(x=>[x.name,x])), regions=new Map(A.regions.map(x=>[x.key,x]));
+const byView=new Map(A.views.map(x=>[x.id,x])), routes=new Map(A.routes.map(x=>[x.id,x]));
+const stories=new Map(A.stories.map(x=>[x.key,x])), events=new Map(A.events.map(x=>[x.id,x]));
+const sectionNames={explore:"探索地點",routes:"行程規劃",calendar:"活動與限定商品",photos:"實景照片",saved:"我的收藏"};
+const savedKey="japan-atlas-favorites-v1";
+let saved=new Set();
+try { const x=JSON.parse(localStorage.getItem(savedKey)||"[]");if(Array.isArray(x))saved=new Set(x.map(id=>C.placesById.get(id)?.id).filter(Boolean));} catch {}
+const state={nav:"explore",region:"",pref:"",category:"all",q:"",view:"asakusa",mode:"list",inArea:false,limit:26,day:"",detail:null,token:0};
+let geo=null,currentResults=[],displayStations=[],flashTimer,fromButton=null;
+const standardize=value=>String(value??"").normalize("NFKC").toLowerCase().replace(/臺/g,"台").replace(/東京都|東京都/g,"東京").replace(/浅/g,"淺").replace(/静/g,"靜").replace(/広/g,"廣").replace(/国/g,"國").replace(/県/g,"縣").replace(/鎌倉/g,"鐮倉").replace(/新泻/g,"新潟").replace(/[\/／・｜_–-]+/g," ");
+const tokens=q=>standardize(q).trim().split(/\s+/).filter(Boolean);
+const matches=(q,v)=>tokens(q).every(token=>standardize(v).includes(token));
+const sourceLinks=list=>list?.length?'<div class="sources">'+list.map(([t,url])=>external(url,t+" ↗")).join("")+"</div>":"";
+function checkSaved(){
+ $("saved-count").textContent=saved.size||"";
+ try{localStorage.setItem(savedKey,JSON.stringify([...saved]));}catch{}
 }
-prefOptions();
-function selected(){
- const reg=$("region").value,pref=$("pref").value,kind=$("kind").value,q=$("q").value,only=$("saved-only").checked;
- return A.places.filter(p=>(!only||saved.has(p.id))&&(!pref||p.pref===pref)&&(!reg||prefBy.get(p.pref)?.region===reg)&&(!kind||p.kind===kind)&&matches(q,[p.pref,p.title,p.note,p.address,p.query,p.floor,kinds[p.kind]].join(" ")));
+function notify(text){
+ clearTimeout(flashTimer);$("toast").hidden=false;$("toast").textContent=text;
+ flashTimer=setTimeout(()=>$("toast").hidden=true,2400);
 }
-function shortcut(p,full=false){
- const list=[external(google(p.query),"Google Maps ↗")];
- if(full) list.push(external(directions(p.query),"大眾運輸路線 ↗"));
- if(p.tabelog) list.push(external(p.tabelog,"食べログ ↗"));
- if(p.href) list.push(external(p.href,"官方來源 ↗"));
- return list.join("");
+function mapStatus(text){
+ $("map-status").textContent=text;$("map-status").hidden=!text;
 }
-function placeCard(p){
- const isSaved=saved.has(p.id);
- const description=[p.floor,p.hours,p.address].filter(Boolean).join(" · ")||p.note;
- return "<article class=\"place\">"+badge(p.kind,([p.pref,kinds[p.kind]].filter(Boolean).join(" · ")))+
-  "<h4>"+html(p.title)+"</h4><p>"+html(description)+"</p>"+
-  "<button class=\"favorite\" data-fav=\""+html(p.id)+"\" type=\"button\" aria-label=\""+(isSaved?"移除收藏":"加入收藏")+" "+html(p.title)+"\" aria-pressed=\""+isSaved+"\">"+(isSaved?"★":"☆")+"</button>"+
-  "<div class=\"links\">"+btn("place",p.id,"詳情")+shortcut(p)+"</div></article>";
+function mapArea(q){
+ const g=regions.get(q);
+ return g?g.name:q;
 }
-function renderPlaces(){
- const items=selected(),p=prefBy.get($("pref").value),local=items.filter(p=>p.coords).length;
- $("result-count").textContent=items.length+" 筆地點 · "+local+" 個可在站內地圖顯示";
- $("pref-context").innerHTML=p?"<p class=\"pref-summary\"><b>"+html(p.name)+"｜"+html(groupBy.get(p.region)?.name)+"</b>　"+html(p.summary||(p.motif?"地方商品題材："+p.motif+"，請先查發售店與年份。":"可先從區域地圖與 Google Maps 查交通，再查看官方活動。"))+"</p>":"";
- $("places").classList.toggle("compact",$("density").value==="compact");
- $("places").innerHTML=items.length?items.slice(0,limit).map(placeCard).join(""):"<p class=\"empty\">這組條件目前沒有地點。可清除搜尋、改選鄰縣或取消只顯示收藏。</p>";
- $("more").hidden=items.length<=limit;
- renderPins(items);
+function placeMatches(p){
+ if(state.nav==="saved"&&!saved.has(p.id))return false;
+ if(state.pref&&p.pref!==state.pref)return false;
+ if(state.region&&prefs.get(p.pref)?.region!==state.region)return false;
+ if(state.inArea&&(!geo||!p.coords||!geo.bounds().contains(p.coords)))return false;
+ if(state.category==="bear"&&!["official","rilanowa","theme","retail"].includes(p.kind))return false;
+ if(!["all","bear"].includes(state.category)&&p.kind!==state.category)return false;
+ return matches(state.q,[p.title,p.aliases,p.query,p.address,p.floor,p.hours,p.pref,p.note,C.labels[p.kind]].join(" "));
 }
-function renderRoutes(){
- const p=$("route-pref").value;
- $("route-cards").innerHTML=A.routes.filter(r=>!p||r.pref===p).map(r=>
-  "<article class=\"route-card "+(r.id==="katakai-6"?"lead":"")+"\">"+badge(r.id==="katakai-6"?"fireworks":"theme",r.region)+
-  "<h3>"+html(r.title)+"</h3><p>"+html(r.subtitle)+"</p><p class=\"period\">"+html(r.period)+"</p>"+
-  btn("route",r.id,"看 "+r.steps.length+" 站安排 ↗","button ghost")+"</article>").join("");
+function comparePlace(a,b){
+ const q=standardize(state.q);
+ if(q){
+  const score=p=>Number(standardize(p.title).includes(q))*6+Number(standardize(p.query).includes(q))*3+Number(p.kind==="official")*2+Number(!!p.coords);
+  return score(b)-score(a);
+ }
+ const focused=p=>Number(p.area===state.view)*8+(C.featured.includes(p.id)?3:0)+Number(p.kind==="official")*1.2+Number(!!p.photo)+Number(!!p.coords)*.4;
+ return focused(b)-focused(a);
 }
-function renderEvents(){
- const day=$("event-day").value;
- // Separate the announced service break from the surrounding 1899 campaign dates.
- const quiet=e=>e.id==="date-3"&&day>="2026-12-27"&&day<="2027-01-07";
- const items=A.events.filter(e=>!day||(!quiet(e)&&(e.start||e.end)&&(!e.start||day>=e.start)&&(!e.end||day<=e.end)));
- $("event-list").innerHTML=items.length?items.map(e=>"<article class=\"event\"><time>"+html(e.when)+"</time><h4>"+html(e.title)+"</h4>"+
- (e.story&&storyBy.has(e.story)?btn("story",e.story,"活動細節","button ghost"):e.map?btn("event",e.id,"會場與公告","button ghost"):
- external(e.href||A.sources["おふろcafé 聯名預告"],"看官方公告 ↗","button ghost"))+"</article>").join(""):"<p class=\"empty\">這天沒有列出日期已公布的活動。</p>";
+function summary(p){
+ return [p.floor,p.hours,p.address].filter(Boolean).join(" · ")||p.note;
 }
-function renderStories(){
- const q=$("story-q").value;
- $("story-cards").innerHTML=A.stories.filter(x=>matches(q,[x.title,x.region,x.subtitle,x.period,...x.blocks.flat()].join(" "))).map(x=>
-  "<article class=\"story-card\">"+badge("theme",x.region)+"<h4>"+html(x.title)+"</h4><p>"+html(x.subtitle)+"</p>"+
-  btn("story",x.key,"開啟專題","button ghost")+"</article>").join("")||"<p class=\"empty\">沒有符合的活動或商品。</p>";
+const fmtDistance=km=>km<1?Math.round(km*1000)+" m":km.toFixed(1)+" 公里";
+function photoCredit(name){
+ const ph=P[name];if(!ph)return "";
+ return '<div class="credit">'+external(ph.source,ph.author)+" · "+(ph.licenseUrl?external(ph.licenseUrl,ph.license):esc(ph.license))+" · 調整尺寸，頁面可能裁切顯示</div>";
 }
-const sources=list=>list?.length?"<div class=\"sources\">"+list.map(([title,url])=>external(url,title+" ↗")).join("")+"</div>":"";
-const blocks=list=>list.map(([t,p])=>"<div class=\"detail-block\"><h3>"+html(t)+"</h3><p>"+html(p)+"</p></div>").join("");
-const heading=(t,p)=>"<h2 id=\"detail-title\">"+html(t)+"</h2>"+(p?"<p>"+html(p)+"</p>":"");
-function dialog(content){
- $("detail-body").innerHTML=content;
- if(!$("details").open) $("details").showModal();
- $("details").scrollTop=0;
+function thumb(name,alt,loading="lazy"){
+ const ph=P[name];
+ return ph?'<img src="./assets/'+esc(ph.src)+'" alt="'+esc(alt||ph.label)+'" loading="'+loading+'" decoding="async">':"";
 }
-function story(id){
- const d=storyBy.get(id); if(!d)return;
- dialog(badge("theme",d.region)+heading(d.title,d.subtitle)+"<p><strong>"+html(d.period)+"</strong></p>"+blocks(d.blocks)+
-  (d.photoRefs.length?"<details><summary>官方照片、商品圖與餐點索引</summary><ul class=\"photo-list\">"+d.photoRefs.map(p=>"<li>"+html(p.caption+" · "+p.credit)+"</li>").join("")+"</ul><p class=\"detail-note\">可從下方官方來源查看原圖、菜單與商品資訊。</p></details>":"")+sources(d.links));
+function resultCard({id,title,subtitle,note,photo,kind,attr,active=false,favorite=false,nearbyPhoto=false}){
+ const hasPhoto=!!P[photo], p=saved.has(id);
+ const key=esc(attr)+"=\""+esc(id)+"\"";
+ const photoAlt=P[photo]?.label;
+ return '<article class="result '+(hasPhoto?"":"no-photo ")+(active?"active":"")+'"><button type="button" class="result-visual" data-'+key+' aria-label="查看 '+esc(title)+'">'+
+ (hasPhoto?thumb(photo,photoAlt)+(nearbyPhoto?'<span class="thumb-label">區域實景</span>':""):icon(symbol[kind]||"route"))+'</button><button type="button" class="result-content" data-'+key+'><p class="result-meta">'+
+ esc(subtitle)+'</p><h2>'+esc(title)+'</h2><p class="result-note">'+esc(note)+'</p></button>'+
+ (favorite?'<div class="result-tools"><button type="button" class="icon-button" data-fav="'+esc(id)+'" aria-pressed="'+p+'" aria-label="'+(p?"移除收藏":"收藏")+" "+esc(title)+'">'+icon("heart")+"</button></div>":"<i></i>")+"</article>";
 }
-function openPlace(id){
- const p=placeBy.get(id); if(!p)return;
- const detail=[p.district,p.floor,p.address,p.hours,p.tel].filter(Boolean).join(" · ");
- dialog(badge(p.kind,p.pref+" · "+kinds[p.kind])+heading(p.title,detail)+"<p>"+html(p.note)+"</p>"+
-  ((p.kind==="rilanowa"||p.kind==="official")?"<p class=\"detail-note\">營業日與商品庫存依門市公告。</p>":"")+
-  (p.approx?"<p class=\"detail-note\">圖釘為區域位置，精確入口請看 Google Maps 搜尋與官方交通。</p>":"")+
-  "<div class=\"detail-actions\">"+shortcut(p,true)+(p.coords?btn("pin",p.id,"站內地圖","button ghost"):"")+
-  (p.story&&storyBy.has(p.story)?btn("story",p.story,"相關活動與商品","button ghost"):"")+"</div>");
+function renderList(){
+ let content="",count=0,items=[],label="";
+ if(state.nav==="explore"||state.nav==="saved"){
+  items=C.places.filter(placeMatches).sort(comparePlace);
+  currentResults=items;
+  count=items.length; label=count+" 個地點 · "+items.filter(p=>p.coords).length+" 個可定位";
+  content=items.slice(0,state.limit).map(p=>resultCard({id:p.id,title:p.title,subtitle:p.pref+" · "+C.labels[p.kind],
+    note:summary(p),photo:p.photo,kind:p.kind,attr:"place",active:state.detail?.type==="place"&&state.detail.id===p.id,favorite:true,nearbyPhoto:p.nearbyPhoto})).join("");
+  if (state.nav==="explore" && !state.q && !state.pref && !state.inArea && state.category==="all") {
+    content='<div class="callout"><strong>新潟片貝 2027/9/10–11</strong><br>四尺玉、古蹟與東京拉拉熊。 '+button("route","katakai-6","看 6 天安排")+"</div>"+content;
+  }
+ }else if(state.nav==="routes"){
+  items=A.routes.filter(r=>(!state.pref||r.pref===state.pref)&&(!state.region||prefs.get(r.pref)?.region===state.region)&&matches(state.q,[r.title,r.region,r.subtitle,r.period,...r.steps.map(s=>s.title+" "+s.note)].join(" ")));
+  count=items.length; label=count+" 條行程";
+  content=items.slice(0,state.limit).map(r=>resultCard({id:r.id,title:r.title,subtitle:r.region+" · "+r.steps.length+" 站",
+  note:r.period,photo:C.routesPhotos[r.id],kind:"event",attr:"route",active:state.detail?.type==="route"&&state.detail.id===r.id})).join("");
+ }else if(state.nav==="calendar"){
+  const day=state.day;
+  const valid=e=>!day||((e.start||e.end)&&(e.start?e.start<=day:true)&&(e.end?day<=e.end:true)&&!(e.id==="date-3"&&day>="2026-12-27"&&day<="2027-01-07"));
+  items=A.events.filter(e=>valid(e)&&matches(state.q,[e.title,e.when].join(" ")));
+  const guides=day?[]:A.stories.filter(x=>matches(state.q,[x.title,x.region,x.subtitle,x.period,...x.blocks.flat()].join(" ")));
+  count=items.length+guides.length;label=items.length+" 個活動"+(guides.length?" · "+guides.length+" 篇專題":"");
+  content=items.map(e=>resultCard({id:e.id,title:e.title,subtitle:e.when,note:e.id==="konosu-event"?"2027 詳細日期待主辦公布":"查看官方公告與活動區域",
+    kind:e.kind,photo:C.photoAreas[e.map],attr:"event",active:state.detail?.id===e.id})).join("");
+  content+=guides.slice(0,Math.max(0,state.limit-items.length)).map(x=>resultCard({id:x.key,title:x.title,subtitle:x.region,note:x.period,attr:"story",kind:"event"})).join("");
+ }else{
+  items=C.gallery.filter(k=>matches(state.q,P[k].label+" "+P[k].author));
+  count=items.length;label=count+" 張實景照";
+  content='<div class="photo-grid">'+items.map(k=>'<button class="photo-tile" data-photo="'+esc(k)+'" type="button">'+thumb(k)+'<span>'+esc(P[k].label)+'</span></button>').join("")+"</div>";
+ }
+ $("count").textContent=label;
+ if(!count){
+  content='<div class="empty"><strong>'+(state.nav==="saved"&&!state.q?"還沒有符合的收藏":"找不到符合的資料")+'</strong>'+
+  (state.nav==="saved"?"到探索清單按愛心即可收藏，也可清除目前的搜尋。":"試試地名、日文店名，或移除一個篩選條件。")+'</div>';
+ }
+ $("results").innerHTML='<div class="results-list">'+content+'</div>'+(count>state.limit&&state.nav!=="photos"?'<div class="more">'+button("more","yes","載入更多結果")+"</div>":"");
+ $("reset").hidden=!state.q&&!state.region&&!state.pref&&state.category==="all"&&!state.inArea&&!state.day;
+ $("clear-search").hidden=!state.q;
+ $("scope-label").textContent=state.pref||mapArea(state.region)||(state.inArea?"地圖範圍":"日本全區");
+ if(state.nav==="explore"||state.nav==="saved")geo?.visible(items,state.detail?.type==="place"?C.placesById.get(state.detail.id):null);
+}
+function refreshPref(){
+ $("pref").innerHTML=option("","所有都道府縣")+A.prefs.filter(p=>!state.region||p.region===state.region).map(p=>option(p.name,p.name)).join("");
+ $("pref").value=state.pref;
+}
+function renderChips(){
+ $("chips").innerHTML=C.categories.map(([k,l])=>'<button type="button" class="chip" data-category="'+k+'" aria-pressed="'+(k===state.category)+'">'+l+'</button>').join("");
+}
+function switchNav(nav){
+ if(!sectionNames[nav])return;
+ state.nav=nav;state.q="";state.pref="";state.region="";state.category="all";state.inArea=false;state.day="";state.limit=26;
+ $("search").value="";$("region").value="";$("day").value="";$("this-area").setAttribute("aria-pressed","false");
+ $("workspace-title").textContent=sectionNames[nav];
+ $("search").placeholder=({explore:"搜尋店名、站名、特色…",routes:"搜尋城市、景點、行程…",calendar:"搜尋活動或限定商品…",photos:"搜尋照片地點…",saved:"搜尋我的收藏…"})[nav];
+ $("date-filter").hidden=nav!=="calendar";
+ $("explore-filters").hidden=!["explore","routes","saved"].includes(nav);
+ $("chips").hidden=nav==="routes";
+ document.querySelectorAll("[data-nav]").forEach(b=>b.setAttribute("aria-current",b.dataset.nav===nav?"page":"false"));
+ refreshPref();renderChips();renderList();$("results").scrollTop=0;
+ setMode("list");closeDetail(false);
+}
+function setMode(mode){
+ state.mode=mode;$("workspace").dataset.mobile=mode;
+ document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.mode===mode));
+ requestAnimationFrame(()=>geo?.resize());
+}
+function clearFocusedOption(){
+ $("view").querySelector('option[value="__focus"]')?.remove();
+}
+function markFocusedPlace(p){
+ clearFocusedOption();
+ if(byView.has(p.area)){
+  state.view=p.area;
+  $("view").value=p.area;
+ }else{
+  state.view="";
+  $("view").insertAdjacentHTML("afterbegin",option("__focus",p.pref+"・"+p.title));
+  $("view").value="__focus";
+ }
+}
+function goView(id,showMap=false){
+ if(id==="__focus")return;
+ clearFocusedOption();
+ state.view=byView.has(id)?id:"";$("view").value=state.view;
+ if(showMap)setMode("map");
+ requestAnimationFrame(()=>{geo?.resize();geo?.visit(byView.get(state.view));});
+ if(!state.q&&!state.inArea)renderList();
+}
+function refreshMapArea(){
+ if(state.inArea)renderList();
+}
+function labelP(p){return (p.pref||"日本")+" · "+(C.labels[p.kind]||"地點");}
+function mapCard(){
+ const active=state.detail?.type==="place"&&C.placesById.get(state.detail.id);
+ const id=({asakusa:"official-6",tokyo:"official-4",katakai:"poi-katakai-0",ojiya:"poi-ojiya-0",settaya:"poi-settaya-0",konosu:"poi-konosu-0",kawagoe:"poi-kawagoe-0",arashiyama:"arashi-tea",kyoto:"official-13",osaka:"poi-osaka-3"})[state.view];
+ const photoPlace=active?.coords?active:(!active&&id?C.placesById.get(id):null);
+ $("map-card").innerHTML=photoPlace?'<button class="map-preview" data-place="'+esc(photoPlace.id)+'" type="button">'+thumb(photoPlace.photo)+
+ '<div><span class="card-kind">'+esc(labelP(photoPlace))+'</span><h3>'+esc(photoPlace.title)+'</h3><p>'+esc(photoPlace.floor||"查看照片、車站與路線")+"</p></div></button>":"";
+}
+function cover(name,nearby=false){
+ return P[name]?'<button class="cover-photo '+(nearby?"nearby":"")+'" type="button" data-photo="'+esc(name)+'">'+thumb(name,"","eager")+
+ "<span>"+(nearby?"附近或區域實景 · ":"")+esc(P[name].label)+" · 放大</span></button>"+photoCredit(name):"";
+}
+function openPanel(type,id,label,body){
+ state.detail={type,id};
+ $("detail-label").textContent=label;$("detail-content").innerHTML=body;
+ $("detail").hidden=false;$("workspace").classList.add("has-detail");$("detail-content").scrollTop=0;
+ requestAnimationFrame(()=>geo?.resize());
+ mapCard();
+ if(type!=="place")renderList();
+ requestAnimationFrame(()=>$("close-detail").focus({preventScroll:true}));
+}
+function closeDetail(restore=true){
+ if($("detail").hidden)return;
+ state.detail=null;state.token++;
+ $("detail").hidden=true;$("workspace").classList.remove("has-detail");
+ requestAnimationFrame(()=>geo?.resize());renderList();mapCard();
+ if(restore)(fromButton?.isConnected?fromButton:$("search")).focus({preventScroll:true});
+}
+function facts(entries){
+ const present=entries.filter(([,value])=>value);
+ return present.length?'<dl class="fact-list">'+present.map(([key,value])=>"<dt>"+esc(key)+"</dt><dd>"+esc(value)+"</dd>").join("")+"</dl>":"";
+}
+function placeBody(p){
+ return cover(p.photo,p.nearbyPhoto)+"<h2>"+esc(p.title)+"</h2><p>"+esc(p.note)+"</p>"+
+  facts([["館別／樓層",p.floor],["營業時間",p.hours],["地址",p.address],["電話",p.tel]])+
+  '<div class="detail-actions">'+external(direction(p.query),"Google Maps 路線 ↗","btn primary")+
+  external(google(p.query),"查地點 ↗","btn")+(p.tabelog?external(p.tabelog,"食べログ ↗","btn"):"")+
+  (p.coords?button("show-map",p.id,"看地圖","btn","map"):"")+button("fav",p.id,saved.has(p.id)?"移除收藏":"加入收藏","btn","heart")+button("share",p.id,"複製連結","btn","share")+"</div>"+
+  (p.coords?'<h3>附近鐵路車站</h3><div id="near-stations"><p>讀取附近車站…</p></div>':'<p class="muted">這筆門市依地址查詢。上方 Google Maps 可查看位置和附近交通。</p>')+
+  '<div id="near-links"></div>'+
+  sourceLinks(p.href?[["店家／官方資料",p.href]]:[]) +
+  (p.story&&stories.has(p.story)?'<div class="detail-actions">'+button("story",p.story,"看相關商品與活動")+"</div>":"");
+}
+async function openPlace(id,makeFocus=true){
+ const p=C.placesById.get(id);if(!p)return;
+ const seq=++state.token;
+ if(p.coords&&makeFocus)markFocusedPlace(p);
+ openPanel("place",p.id,labelP(p),placeBody(p));
+ renderList();mapCard();
+ if(p.coords&&makeFocus)requestAnimationFrame(()=>{geo?.resize();geo?.focus(p);});
+ if(!p.coords)return;
+ try {
+  const stations=await window.ATLAS_MAP.localStations(p,5,4);
+  if(seq!==state.token||state.detail?.id!==p.id)return;
+  displayStations=stations;
+  const small=p.approx?"距離根據區域圖釘估計。":"以下為直線距離，步行路線與出口可用 Google Maps 確認。";
+  $("near-stations").innerHTML=stations.length?'<p class="muted">'+small+'</p>'+stations.map((s,i)=>
+   '<div class="station-row"><strong>'+esc(s.name+"駅")+' · '+fmtDistance(s.km)+'</strong><div>'+esc(s.agency+"｜"+s.lines.join("、"))+
+   '</div><div class="detail-actions">'+button("station",i,"地圖上看站")+" "+external(direction(p.query,s.googleName,"walking"),"從站走到這裡 ↗","btn")+"</div></div>").join(""):
+   '<p class="muted">5 公里內沒有鐵路站資料。請查看接駁與巴士。</p>';
+ }catch{
+   if(seq===state.token&&$("near-stations"))$("near-stations").textContent="車站資料暫未載入，請使用 Google Maps 查看交通。";
+ }
+ if(seq!==state.token||!$("near-links"))return;
+ const around=C.places.filter(x=>x.id!==p.id&&x.coords&&x.kind!== "event").map(x=>[x,window.ATLAS_MAP.km(p.coords,x.coords)])
+   .filter(([x,d])=>d>0.07&&d<3).sort((a,b)=>a[1]-b[1]).slice(0,4);
+ if(around.length)$("near-links").innerHTML="<h3>附近也可安排</h3>"+around.map(([x,d])=>'<div class="related-row">'+button("place",x.id,x.title)+" <span>"+fmtDistance(d)+"</span></div>").join("");
 }
 function openRoute(id){
- const r=routeBy.get(id); if(!r)return;
- const steps=r.steps.map((s,i)=>{
-   const prev=r.steps[i-1];
-   return "<li><span>"+html(s.when)+"</span><b>"+html(s.title)+"</b><p>"+html(s.note)+"</p>"+
-    "<div class=\"detail-actions\">"+(s.map?btn("view",s.map,"看街道與車站","button ghost"):"")+
-    (s.query?external(google(s.query),"這一站的 Google Maps ↗","button ghost"):"")+
-    (s.query&&prev?.query?external(directions(s.query,prev.query),"上一站到這裡 ↗","button ghost"):"")+"</div></li>";
- }).join("");
- dialog(badge(id==="katakai-6"?"fireworks":"theme",r.region)+heading(r.title,r.subtitle)+"<p><b>"+html(r.period)+"</b></p>"+
-    "<ol class=\"detail-timeline\">"+steps+"</ol>"+blocks(r.notes)+
-    (r.story&&storyBy.has(r.story)?btn("story",r.story,"看商品、餐點與活動","button sub"):"")+sources(r.links));
+ const r=routes.get(id);if(!r)return;
+ const html=r.steps.map((s,i)=>'<article class="step"><small>'+esc(s.when)+'</small><h3>'+esc(s.title)+'</h3><p>'+esc(s.note)+'</p><div class="detail-actions">'+
+ (s.map?button("view",s.map,"定位到地圖","btn","map"):"")+
+ (s.query?external(google(s.query),"查看站點 ↗","btn"):"")+
+ (s.query&&r.steps[i-1]?.query?external(direction(s.query,r.steps[i-1].query),"上一站到這裡 ↗","btn"):"")+"</div></article>").join("");
+ openPanel("route",r.id,"旅行路線",cover(C.routesPhotos[r.id],true)+"<h2>"+esc(r.title)+"</h2><p>"+esc(r.subtitle)+
+  "</p><p><strong>"+esc(r.period)+"</strong></p>"+html+r.notes.map(([h,b])=>"<h3>"+esc(h)+"</h3><p>"+esc(b)+"</p>").join("")+sourceLinks(r.links)+
+  (r.story&&stories.has(r.story)?button("story",r.story,"餐點、商品與活動詳情"):""));
+}
+function openStory(id){
+ const s=stories.get(id);if(!s)return;
+ const photo=({odaiba:"odaiba",tokyo:"tokyo",kyoto:"bear-kyoto",hiroshima:"miyajima",hokkaido:"sapporo",osaka:"osaka",fuji:"fuji",
+ "fuji-food":"fuji","tokyo-shop":"bear-tokyo","chiyoda-walk":"tokyo","localplush":"bear-kyoto"})[id];
+ openPanel("story",id,"旅遊專題",cover(photo,true)+"<h2>"+esc(s.title)+"</h2><p>"+esc(s.period)+"</p>"+
+ s.blocks.map(([h,b])=>"<h3>"+esc(h)+"</h3><p>"+esc(b)+"</p>").join("")+
+ (s.photoRefs?.length?'<h3>官方圖片與商品原頁</h3><p>'+esc(s.photoRefs.slice(0,6).map(x=>x.caption).join("、"))+"</p>":"")+sourceLinks(s.links));
 }
 function openEvent(id){
- const e=events.get(id); if(!e)return;
- dialog(badge(e.kind)+heading(e.title,e.when)+
-    "<p>"+html(id==="katakai-event"?"主辦方公布 9/10 與 9/11。四尺玉往例 22:00，2027 詳細場次與交通待公告。":"鴻巢曾施放四尺玉。2027 日期、節目、座位與動線待公告。")+"</p>"+
-    "<div class=\"detail-actions\">"+btn("view",e.map,"看街道與車站","button sub")+external(e.href,"主辦方公告 ↗","button ghost")+"</div>");
+ const e=events.get(id);if(!e)return;
+ if(e.story&&stories.has(e.story)){openStory(e.story);return;}
+ const v=byView.get(e.map);
+ openPanel("event",id,"活動詳情",cover(C.photoAreas[e.map],false)+"<h2>"+esc(e.title)+"</h2><p>"+esc(e.when)+"</p>"+
+   (v?'<p>'+esc(v.period)+'</p><div class="detail-actions">'+button("view",v.id,"看會場與車站","btn primary","map")+"</div>":"")+
+   sourceLinks(e.href?[["活動官方公告",e.href]]:[]));
 }
-
-const homeView=[36.82,137.83];
-const GSI="<a href=\"https://maps.gsi.go.jp/\" target=\"_blank\" rel=\"noopener\">國土地理院</a>";
-const MLIT="<a href=\"https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html\" target=\"_blank\" rel=\"noopener\">國土交通省 N02</a>";
-const OSM="&copy; <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap contributors</a>";
-const baseTiles={
- pale:["https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",GSI,18],
- std:["https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",GSI,18],
- photo:["https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",GSI,18],
- osm:["https://tile.openstreetmap.org/{z}/{x}/{y}.png",OSM,19]
-};
-let map=null,prefLayer=null,pins=null,rail=null,stations=null;
-const railCache=new Map();
-function switchBase(){
- if(!map)return;
- if(layer) map.removeLayer(layer);
- const [url,attribution,maxNativeZoom]=baseTiles[$("basemap").value]||baseTiles.pale;
- $("map-message").textContent="";
- layer=L.tileLayer(url,{attribution,maxNativeZoom,maxZoom:19,noWrap:true});
- let errors=0;
- layer.on("tileerror",()=>{if(++errors>=3)$("map-message").textContent="部分底圖載入失敗，可改選其他圖源。";});
- layer.on("tileload",()=>{if(errors===0)$("map-message").textContent="";});
- layer.addTo(map);
+function openPhoto(id){
+ const ph=P[id];if(!ph)return;
+ $("photo-title").textContent=ph.label;$("photo-content").innerHTML=thumb(id,"","eager")+photoCredit(id);
+ if(!$("photo-dialog").open)$("photo-dialog").showModal();
 }
-function popupPlace(p){
- return "<strong>"+html(p.title)+"</strong><p>"+html(p.note)+"</p>"+btn("place",p.id,"開啟詳情")+external(google(p.query),"Google Maps ↗");
+function filterNow({resetScroll=true}={}){
+ state.limit=26;renderList();if(resetScroll)$("results").scrollTop=0;
 }
-function renderPins(items){
- if(!map||!pins)return;
- pins.clearLayers();
- items.filter(p=>p.coords).forEach(p=>{
-  const found=(!activeView||p.area===activeView), c=colors[p.kind]||"#9b5034";
-  L.circleMarker(p.coords,{radius:found?6:4,fillColor:c,color:"#fffdf8",weight:1.4,fillOpacity:.91})
-   .bindTooltip(p.title).bindPopup(popupPlace(p)).addTo(pins);
- });
+function wipe(){
+ state.region="";state.pref="";state.q="";state.day="";state.category="all";state.inArea=false;
+ $("region").value="";$("search").value="";$("day").value="";$("this-area").setAttribute("aria-pressed","false");
+ refreshPref();renderChips();filterNow();
 }
-function visibleLayers(){
- if(!map)return;
- [[prefLayer,"layer-prefs"],[pins,"layer-places"],[rail,"layer-rail"],[stations,"layer-station"]].forEach(([g,k])=>{
-   if(!g) return;
-   if($(k).checked) { if(!map.hasLayer(g)) g.addTo(map); }
-   else if(map.hasLayer(g)) map.removeLayer(g);
- });
-}
-function lineColor(line,agency,v){
- const matching=v?.filters?.find(([k])=>line.includes(k));
- if(matching) return matching[1];
- return agency.includes("旅客鉄道")?"#786595":agency.includes("地下鉄")||agency.includes("東京都")?"#a45c50":"#637d6e";
-}
-function updateRail(){
- if(!map)return;
- rail.clearLayers(); stations.clearLayers();
- if(!railsData)return;
- const v=views.get(activeView), id=$("rail-line").value;
- const visible=(a,l)=>!id||id===a+"｜"+l;
- railsData.lines.filter(x=>visible(x.agency,x.line)).forEach(x=>{
-  const c=lineColor(x.line,x.agency,v);
-  L.polyline(x.path.map(([lon,lat])=>[lat,lon]),{weight:id?4:2.6,color:c,opacity:.9})
-   .bindTooltip(x.agency+" · "+x.line).addTo(rail);
- });
- railsData.stations.filter(x=>x.lines.some(l=>visible(x.agency,l))).forEach(x=>{
-  const query=x.name+"駅 "+x.agency+" "+v.pref;
-  L.circleMarker(x.coord,{radius:4,color:"#284f75",fillColor:"#fff",weight:2,fillOpacity:1})
-   .bindTooltip(x.name).bindPopup(html(x.name+"駅｜"+x.agency)+"<p>"+html(x.lines.join("・"))+"</p>"+external(google(query),"查 Google Maps 車站出口 ↗")).addTo(stations);
- });
-}
-function fillMapDetails(v){
- const panel=$("map-details");
- if(v){panel.innerHTML="<h4>"+html(v.title)+"</h4><p>"+html(v.period)+"</p><p>"+html(v.blocks[0]?.[1])+"</p>"+btn("area",v.id,"進出站與街道詳情");return;}
- panel.innerHTML="<h4>從全日本縮小範圍</h4><p>點縣界可篩選縣市。選上方 10 個詳圖之一，即可查看當地鐵路、車站與散場動線。</p>";
-}
-async function renderView(id,center=true){
- const v=views.get(id), run=++runId;
- activeView=v?.id||""; $("view").value=activeView;
- $("rail-line").innerHTML=option("","全部鐵路線"); $("rail-line").disabled=!v;
- $("line-key").textContent=""; fillMapDetails(v);
- rail?.clearLayers();stations?.clearLayers();railsData=null;
- $("google-view").href=v?google(v.pref+" "+v.title.split("｜")[0]):google($("pref").value||"Japan");
- if(map&&center){
-  if(v){
-   const delta=v.width/185000;
-   map.fitBounds([[v.center[0]-delta*.66,v.center[1]-delta],[v.center[0]+delta*.66,v.center[1]+delta]],{maxZoom:16,padding:[15,15]});
-  } else map.setView(homeView,5);
- }
- if(!map||!v)return;
- try{
-  let d=railCache.get(id);
-  if(!d){
-    const res=await fetch("./assets/rail-"+v.id+".json");
-    if(!res.ok)throw Error(res.status);
-    d=await res.json(); railCache.set(id,d);
-  }
-  if(run!==runId)return;
-  $("map-message").textContent="";
-  railsData=d;
-  const names=[...new Set(d.lines.map(l=>l.agency+"｜"+l.line))].sort((a,b)=>a.localeCompare(b,"ja"));
-  $("rail-line").innerHTML=option("","全部鐵路線")+names.map(n=>option(n,n)).join("");
-  $("line-key").innerHTML=v.filters.filter(([key])=>d.lines.some(l=>l.line.includes(key))).map(([name,c])=>"<span><i style=\"background:"+html(c)+"\"></i>"+html(name)+"</span>").join("");
-  updateRail();
- }catch{if(run===runId) $("map-message").textContent="當地鐵路資料載入失敗。站外導航可從 Google Maps 開啟。";}
-}
-function initMap(){
- if(!window.L){$("map-message").textContent="互動地圖元件載入失敗。目錄仍可用 Google Maps 查看。";return;}
- map=L.map("map",{zoomSnap:.5,scrollWheelZoom:false,minZoom:4,maxZoom:19}).setView(homeView,5);
- map.attributionControl.setPrefix(false); map.attributionControl.addAttribution(MLIT);
- L.control.scale({imperial:false,position:"bottomleft"}).addTo(map);
- map.on("focus",()=>map.scrollWheelZoom.enable()).on("blur",()=>map.scrollWheelZoom.disable());
- pins=L.layerGroup(); rail=L.featureGroup(); stations=L.featureGroup();
- switchBase();visibleLayers();
- fetch("./assets/prefectures.json").then(res=>{if(!res.ok)throw Error(res.status);return res.json();}).then(data=>{
-  prefLayer=L.geoJSON(data,{
-   style:{color:"#476b5c",weight:.8,fillColor:"#c9d8ae",fillOpacity:.17},
-   onEachFeature(f,l){
-    const pref=A.prefs.find(p=>p.id===f.properties.id);
-    if(pref){
-     l.bindTooltip(pref.name);
-     l.on("click",()=>{ $("region").value=pref.region;prefOptions();$("pref").value=pref.name;limit=12;renderPlaces();$("google-view").href=google(pref.name+" 日本"); });
-    }
-   }
-  });
-  prefLayer.setZIndex?.(1);
-  visibleLayers();
-  if(map.hasLayer(prefLayer)) prefLayer.eachLayer(l=>l.bringToBack?.());
- }).catch(() => {$("map-message").textContent="縣界圖載入失敗。仍可使用其他底圖、車站與地點。";});
-}
-function goMap(id){
- $("details").close();
- renderView(id);
- document.getElementById("explore").scrollIntoView();
-}
+$("region").innerHTML=option("","所有地區")+A.regions.map(r=>option(r.key,r.name)).join("");
+$("view").innerHTML=option("","全日本")+Object.entries(C.viewShort).map(([id,label])=>option(id,label)).join("");
+refreshPref();renderChips();checkSaved();
+geo=window.ATLAS_MAP.init({icon,esc,option,external,google,onPref:p=>{
+ if(!["explore","saved"].includes(state.nav))switchNav("explore");
+ state.region=p.region;state.pref=p.name;$("region").value=state.region;refreshPref();filterNow();geo?.center(p.center);
+},onPlace:openPlace,onFailure:mapStatus,onAreaMove:refreshMapArea});
+$("search").addEventListener("input",e=>{state.q=e.target.value;filterNow();});
+$("clear-search").addEventListener("click",()=>{$("search").value="";state.q="";filterNow();$("search").focus();});
+$("region").addEventListener("change",e=>{state.region=e.target.value;state.pref="";refreshPref();filterNow();});
+$("pref").addEventListener("change",e=>{state.pref=e.target.value;filterNow();const p=prefs.get(state.pref);if(p)geo?.center(p.center);});
+$("day").addEventListener("change",e=>{state.day=e.target.value;filterNow();});
+$("view").addEventListener("change",e=>{goView(e.target.value);mapCard();});
+$("reset").addEventListener("click",wipe);
+$("this-area").addEventListener("click",()=>{
+ if(!geo)return;
+ const upcoming=!state.inArea;
+ if(state.nav!=="explore"&&state.nav!=="saved")switchNav("explore");
+ state.inArea=upcoming;$("this-area").setAttribute("aria-pressed",upcoming);
+ filterNow();setMode("list");if(upcoming)notify("已按可見地圖範圍篩選");
+});
+$("layers-button").addEventListener("click",()=>{
+ $("layer-box").hidden=!$("layer-box").hidden;$("layers-button").setAttribute("aria-expanded",!$("layer-box").hidden);
+});
+$("close-detail").addEventListener("click",()=>closeDetail());
+$("close-photo").addEventListener("click",()=>$("photo-dialog").close());
+$("photo-dialog").addEventListener("click",e=>{if(e.target===$("photo-dialog"))$("photo-dialog").close();});
+$("about").addEventListener("click",()=>openPanel("about","about","資料來源",'<h2>資料與照片出處</h2><p>門市、活動與營業資料以官方公告為準。實景照片附作者與授權。區域實景用來辨認周邊，不代表店內或商品照片。</p><p>鐵路及站點來自國土交通省 N02。底圖可在圖層內切換地理院與 OpenStreetMap。地點詳情有 Google Maps 導航，餐廳附可查核的食べログ店頁。</p>'+sourceLinks([
+ ["San-X 拉拉熊官方店",A.sources["官方店完整資料"]],["RilaNowa 認證門市",A.sources["認證店官方名錄"]],
+ ["實景照片", "https://commons.wikimedia.org/"],["日本國土地理院圖磚", "https://maps.gsi.go.jp/development/ichiran.html"],
+ ["國土交通省 N02", "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html"],["縣界資料","https://github.com/dataofjapan/land"],
+ ["OpenStreetMap", "https://www.openstreetmap.org/copyright"]
+])));
 document.addEventListener("click",e=>{
- const t=e.target.closest("button[data-route],button[data-story],button[data-place],button[data-view],button[data-area],button[data-event],button[data-pin],button[data-fav]");
- if(!t)return;
+ const t=e.target.closest("button");if(!t)return;
  const d=t.dataset;
- if(d.route)openRoute(d.route);
- else if(d.story)story(d.story);
- else if(d.place)openPlace(d.place);
- else if(d.view)goMap(d.view);
- else if(d.event)openEvent(d.event);
- else if(d.area){
-   const v=views.get(d.area);
-   dialog(heading(v.title,v.subtitle)+"<p><strong>"+html(v.period)+"</strong></p>"+blocks(v.blocks)+sources(v.links));
- }else if(d.pin){
-   const p=placeBy.get(d.pin);
-   $("details").close();document.getElementById("explore").scrollIntoView();
-   if(map&&p?.coords) {
-     if(p.area)renderView(p.area);
-     map.setView(p.coords,15);
-     L.popup().setLatLng(p.coords).setContent(popupPlace(p)).openOn(map);
-   }
- }else if(d.fav){
-   if(saved.has(d.fav))saved.delete(d.fav);else saved.add(d.fav);
-   updateSaved();renderPlaces();document.querySelector('[data-fav="'+d.fav+'"]')?.focus();
+ if(d.nav){switchNav(d.nav);return;}
+ if(d.mode){setMode(d.mode);return;}
+ if(d.category){state.category=d.category;renderChips();filterNow();return;}
+ if(d.more){const scroll=$("results").scrollTop;state.limit+=24;renderList();$("results").scrollTop=scroll;return;}
+ if(d.place){fromButton=t;openPlace(d.place);return;}
+ if(d.route){fromButton=t;openRoute(d.route);return;}
+ if(d.story){fromButton=t;openStory(d.story);return;}
+ if(d.event){fromButton=t;openEvent(d.event);return;}
+ if(d.photo){openPhoto(d.photo);return;}
+ if(d.view){if(matchMedia("(max-width:820px)").matches)closeDetail(false);goView(d.view,true);mapCard();return;}
+ if(d.showMap){const p=C.placesById.get(d.showMap);if(p)markFocusedPlace(p);if(matchMedia("(max-width:820px)").matches)closeDetail(false);setMode("map");requestAnimationFrame(()=>{geo?.resize();geo?.focus(p);});return;}
+ if(d.station!==undefined){const s=displayStations[Number(d.station)];if(matchMedia("(max-width:820px)").matches)closeDetail(false);setMode("map");requestAnimationFrame(()=>{geo?.resize();geo?.showStation(s);});return;}
+ if(d.fav){
+  const id=d.fav,added=!saved.has(id);if(added)saved.add(id);else saved.delete(id);
+  checkSaved();renderList();if(t.closest(".detail-content"))t.innerHTML=icon("heart")+(added?"移除收藏":"加入收藏");
+  notify(added?"已加入收藏":"已移除收藏");return;
+ }
+ if(d.share){
+  const url=new URL(location.pathname,location.origin);url.searchParams.set("place",d.share);
+  navigator.clipboard.writeText(url.href).then(()=>notify("已複製地點連結")).catch(()=>notify("瀏覽器未允許複製連結"));return;
  }
 });
-$("close-detail").addEventListener("click",()=>$("details").close());
-$("details").addEventListener("click",e=>{if(e.target===$("details"))$("details").close();});
-$("view").addEventListener("change",e=>renderView(e.target.value));
-$("basemap").addEventListener("change",switchBase);
-["layer-prefs","layer-places","layer-rail","layer-station"].forEach(id=>$(id).addEventListener("change",visibleLayers));
-$("rail-line").addEventListener("change",updateRail);
-$("bigmap").addEventListener("click",()=>{
- const state=document.querySelector(".map-workbench").classList.toggle("large");
- $("bigmap").setAttribute("aria-pressed",state); $("bigmap").textContent=state?"縮回地圖":"放大地圖";
- map?.invalidateSize();
+document.addEventListener("keydown",e=>{
+ if(e.key==="Escape"&&!$("photo-dialog").open)closeDetail();
+ if(e.key==="/"&&!["INPUT","TEXTAREA","SELECT"].includes(document.activeElement?.tagName)){e.preventDefault();setMode("list");$("search").focus();}
 });
-$("q").addEventListener("input",()=>{limit=12;renderPlaces();});
-$("region").addEventListener("change",()=>{
- prefOptions();limit=12;renderPlaces();
- const g=groupBy.get($("region").value);
- if(map&&g){
-   const [w,e,s,n]=g.bounds;
-   map.fitBounds([[s,w],[n,e]],{padding:[12,12]});
- }
-});
-["pref","kind","density","saved-only"].forEach(id=>$(id).addEventListener("change",()=>{limit=12;renderPlaces();}));
-$("pref").addEventListener("change",()=>{
- const p=prefBy.get($("pref").value);
- if (p&&!activeView) map?.setView(p.center,9);
- $("google-view").href=google(p?.name||"Japan");
-});
-$("reset").addEventListener("click",()=>{
- ["q","region","kind"].forEach(id=>$(id).value="");prefOptions();$("pref").value="";
- $("saved-only").checked=false;limit=12;renderPlaces();
-});
-$("saved-nav").addEventListener("click",()=>{
- $("reset").click();$("saved-only").checked=true;renderPlaces();
- document.querySelector(".directory").scrollIntoView();
-});
-$("more").addEventListener("click",()=>{limit+=18;renderPlaces();});
-$("route-pref").addEventListener("change",renderRoutes);
-$("event-day").addEventListener("change",renderEvents);
-$("clear-day").addEventListener("click",()=>{$("event-day").value="";renderEvents();});
-$("story-q").addEventListener("input",renderStories);
-initMap(); renderView(""); renderPlaces(); renderRoutes(); renderEvents(); renderStories();
+new ResizeObserver(()=>geo?.resize()).observe($("map-pane"));
+const requested=new URLSearchParams(location.search);
+goView(requested.get("view")||"asakusa");renderList();mapCard();
+if(requested.has("place")) openPlace(requested.get("place"));
 })();
+
 
 
