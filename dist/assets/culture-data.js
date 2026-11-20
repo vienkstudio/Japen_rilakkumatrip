@@ -50,12 +50,12 @@ window.ATLAS_CULTURE = {
       ],
       "reviews": [
         {
-          "origin": "台灣旅遊作者",
+          "origin": "凱莉哥・繁中親子旅遊作者",
           "title": "村子裡的凱莉哥",
           "url": "https://kellyla1028.pixnet.net/blog/posts/3047443866",
           "date": "2017-08-08",
           "observation": "帶孩子染布，特別提及公車間隔、回程時間和附近吃飯不便。舊站名、班次、價格均不移植。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
@@ -261,12 +261,12 @@ window.ATLAS_CULTURE = {
           "access_note": "目前僅查得摘要，全文待查閱"
         },
         {
-          "origin": "台灣旅遊作者／舊遊記",
+          "origin": "udn 部落格作者，舊遊記",
           "title": "尋訪雪國的春天（二）",
           "url": "https://blog.udn.com/article/article_print.jsp?f_ART_ID=131725542&f_CODE=1787125450950&uid=YUNLONGLIN1",
           "date": null,
           "observation": "記錄1F體驗與2F成品展示，可提供現場照片線索，舊價格不用於現行欄位。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
@@ -448,23 +448,23 @@ window.ATLAS_CULTURE = {
       ],
       "reviews": [
         {
-          "origin": "台灣PTT旅客",
+          "origin": "PTT 日本旅遊板作者，國籍與居住地未核實",
           "title": "東京競馬場日本達比",
           "url": "https://www.ptt.cc/bbs/Japan_Travel/M.1716977007.A.E1D.html",
           "date": "2024-05-29",
           "observation": "對比一般日與達比日人潮，描述現場歡呼及博物館空檔參觀。保留個人經驗，不轉成固定人數。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
         },
         {
-          "origin": "台灣網誌旅客",
+          "origin": "繁中網誌作者，居住地未核實",
           "title": "Namako 2024東京遊記",
           "url": "https://namako.tw/2024/09/09/2024-tokyo/",
           "date": "2024-09-09",
           "observation": "不是東京本場賽事日仍參觀，記錄轉乘與步橋；用來提醒先看賽程，原文路程只作個案。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
@@ -618,12 +618,12 @@ window.ATLAS_CULTURE = {
           "visit_date": null
         },
         {
-          "origin": "台灣旅客網誌",
+          "origin": "繁中網誌作者，居住地未核實",
           "title": "The Other Side帶廣競馬",
           "url": "https://nievecitas16.pixnet.net/blog/posts/16194228866",
           "date": null,
           "observation": "記錄週一趕到帯広看賽，示範賽程日對路線安排的影響；發文時間另核。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
@@ -841,12 +841,12 @@ window.ATLAS_CULTURE = {
           "visit_date": null
         },
         {
-          "origin": "台灣旅居作者",
+          "origin": "繁中旅居作者，自介詳原頁",
           "title": "香蕉草莓的雪國生活",
           "url": "https://niigata.tw/sado2021/",
           "date": "2021-09-18",
           "observation": "有太鼓體驗感受及島內行程，避免把鼓童公演與工作坊合併成同一票。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
@@ -928,12 +928,12 @@ window.ATLAS_CULTURE = {
       ],
       "reviews": [
         {
-          "origin": "台灣旅遊論壇，相關年度公演",
+          "origin": "背包客棧論壇作者，相關年度公演",
           "title": "背包客棧五花街都之賑參加分享",
           "url": "https://www.backpackers.com.tw/forum/showthread.php?t=1769647",
           "date": null,
           "observation": "原文分享五花街年度公演的舞碼差異，可作進一步認識藝能的閱讀。此篇屬年度公演，祇園角的票價、節目和合照依主辦資訊。",
-          "confidence": "論壇作者身分仍可進一步核對",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null,
@@ -1042,12 +1042,12 @@ window.ATLAS_CULTURE = {
           "visit_date": null
         },
         {
-          "origin": "台灣PTT旅客，歷史心得",
+          "origin": "PTT 日本旅遊板作者，歷史心得；國籍與居住地未核實",
           "title": "千里之行東京歌舞伎座",
           "url": "https://www.ptt.cc/man/Japan_Travel/DDE1/D586/D58C/M.1389262167.A.7DF.html",
           "date": null,
           "observation": "描述4F看服裝舞台和人物台詞的感受；舊價格、入口及取票資訊不可沿用。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
@@ -1133,23 +1133,23 @@ window.ATLAS_CULTURE = {
       ],
       "reviews": [
         {
-          "origin": "台灣旅遊作者",
+          "origin": "小氣少年・繁中旅遊作者",
           "title": "小氣少年青森站半日實走",
           "url": "https://nicklee.tw/2101/aomori-station-attractions/",
           "date": null,
           "observation": "描述敲鼓鈸與跳人體驗，可作半日路線參考，演出時間回官方。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
         },
         {
-          "origin": "台灣旅遊作者",
+          "origin": "旅行圖中・繁中旅遊作者",
           "title": "旅行圖中睡魔之家",
           "url": "https://journey.tw/nebuta/",
           "date": null,
           "observation": "館內實景與參加描述，原文時刻已有過時可能，保留照片原始頁與更新狀態。",
-          "confidence": "作者身分依原頁或平台資料；居住地仍以作者自介為準",
+          "confidence": "來源為繁中旅遊文章或台灣平台；作者國籍、居住地以原頁自介為準，未經自介核實者保留未知。",
           "group": "tw",
           "date_kind": "來源日期",
           "visit_date": null
