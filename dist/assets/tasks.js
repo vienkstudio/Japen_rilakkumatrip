@@ -49,7 +49,7 @@ const heritagePrices=v=>typeof v==='string'?para(v):api.facts(Object.entries(v).
 const imagesEntry=rows=>rows?.length?notice('以下連結可查看官方實際照片／商品圖；本站尚未取得這批圖片的重製授權。')+'<div class="sources">'+rows.map((r,i)=>link(r.page||r.url,'官方照片／商品圖 '+(i+1))).join('')+'</div>':'';
 function filters(nav){
  if(nav==='shopping')return '<div class="task-tabs" role="group" aria-label="買物任務">'+[['products','商品與比價'],['purchase','採購清單'],['watch','追蹤來源']].map(([v,l])=>btn('shop-mode',v,l,mode===v?'btn primary':'btn')).join('')+'</div><label class="task-inline">購買用途<select id="purchase-purpose"><option value="personal"'+(purpose==='personal'?' selected':'')+'>個人收藏</option><option value="commercial"'+(purpose==='commercial'?' selected':'')+'>商業採購</option></select></label>';
- if(nav==='food')return '<div class="task-filter-grid">'+[['cuisine','菜系',[['','全部'],['壽司','壽司'],['天','天婦羅／天丼'],['日本料理','日本料理']]],['meal','用餐時段',[['','全部'],['午餐','午餐'],['晚餐','晚餐']]],['budget','每人基礎餐價',[['','不限'],['2000','¥2,000 以下'],['20000','¥20,000 以下'],['50000','¥50,000 以下']]],['stars','米其林',[['','全部'],['1','2026 一星'],['2','2026 二星'],['3','2026 三星']]]].map(([k,l,options])=>'<label>'+l+'<select data-food-filter="'+k+'">'+options.map(([v,n])=>'<option value="'+v+'"'+(food[k]===v?' selected':'')+'>'+n+'</option>').join('')+'</select></label>').join('')+'</div>';
+ if(nav==='food')return notice('預算按所選用餐時段的同一份套餐／主餐篩選；每盤價不當作整餐費。飲料、追加、服務與預約費另列。')+'<div class="task-filter-grid">'+[['cuisine','菜系',[['','全部'],['壽司','壽司'],['天','天婦羅／天丼'],['日本料理','日本料理']]],['meal','用餐時段',[['','全部'],['午餐','午餐'],['晚餐','晚餐']]],['budget','每人套餐／主餐上限',[['','不限'],['2000','¥2,000 以下'],['20000','¥20,000 以下'],['50000','¥50,000 以下']]],['stars','米其林',[['','全部'],['1','2026 一星'],['2','2026 二星'],['3','2026 三星']]]].map(([k,l,options])=>'<label>'+l+'<select data-food-filter="'+k+'">'+options.map(([v,n])=>'<option value="'+v+'"'+(food[k]===v?' selected':'')+'>'+n+'</option>').join('')+'</select></label>').join('')+'</div>';
  if(nav==='routes')return '<div class="task-tabs">'+btn('plan-mode','mine','我的每日行程',planMode==='mine'?'btn primary':'btn')+btn('plan-mode','templates','主題路線範本',planMode==='templates'?'btn primary':'btn')+'</div>';
  return '';
 }
@@ -68,14 +68,26 @@ function anime(id){
  const related=C.places.filter(p=>normalizePref(a.pref)===p.pref&&p.tags?.includes('bear')).slice(0,4);
  api.openPanel('anime',id,'作品關聯與路線','<h2>'+txt(a.title)+'</h2>'+para(a.relation)+api.facts([['作品',a.work.join('・')],['期間',a.window.start?a.window.start+'–'+a.window.end:a.window.label],['入場',a.entry.conditions],['費用',a.entry.fee??'未核實']])+section('踩點順序',list(a.route))+section('買物與休憩',para(s.name)+para(s.goods||s.note||s.nearbySuggestion)+para(s.address)+para(s.hours)+para(s.access)+link(s.source||s.officialLocationLink,'店家／場地官方資訊','btn'))+(a.products?section('聯名商品',a.products.map(p=>para(p.title+'・'+p.variants+'款・價格及庫存待確認')+link(p.photoEntry,'官方商品照片','btn')).join('')):'')+(a.relatedWindows?section('其他城市檔期',a.relatedWindows.map(w=>para(normalizePref(w.pref)+' '+w.store+' '+w.start+'–'+w.end+' '+w.condition)).join('')):'')+section('附近既有拉拉熊點',related.map(p=>btn('place',p.id,p.title)).join(''))+section('官方地圖與來源',a.sources.map(s=>link(s.url,s.title,'btn')).join('')+link(a.officialMap?.pdf,'西武官方舞台探訪圖 PDF','btn')+link(a.officialImageEntry,'官方實景照片入口','btn')));
 }
+function menuMatches(m,withBudget=true){
+ if(food.meal&&!m.meal?.includes(food.meal))return false;
+ if(withBudget&&food.budget){if(m.priceJPY==null||m.priceJPY>Number(food.budget)||/盤/.test(m.priceBasis||''))return false;}
+ return true;
+}
 function foodMatches(p){
  if(p.kind!=='food')return false;const r=p.restaurant;
  if(food.cuisine&&!matched(food.cuisine,r?.cuisine||[p.title,p.note]))return false;
  if(food.stars&&Number(food.stars)!==r?.michelin?.stars)return false;
- if(food.meal&&!r?.menu.some(m=>m.meal===food.meal||m.meal?.includes(food.meal)))return false;
- if(food.budget&&!r?.menu.some(m=>m.priceJPY!=null&&m.priceJPY<=Number(food.budget)))return false;
+ if((food.meal||food.budget)&&!r?.menu.some(m=>menuMatches(m)))return false;
  return true;
 }
+function foodCaption(p){
+ const r=p.restaurant;if(!r)return p.summary||p.note;
+ const menus=r.menu.filter(m=>(api.state.q||menuMatches(m))&&m.priceJPY!=null&&!/限量/.test(m.priceBasis||''));
+ const n=menus.length?Math.min(...menus.map(m=>m.priceJPY)):null;
+ const unit=menus.length&&menus.every(m=>/盤/.test(m.priceBasis||''))?'常態每盤（整餐待估）':menus.length&&menus.every(m=>/每碗/.test(m.priceBasis||''))?'一份主餐':'每人套餐';
+ return r.cuisine.join('・')+' · '+(r.michelin.stars?'2026 米其林 '+r.michelin.stars+' 星 · ':'')+(!api.state.q&&food.meal?food.meal+' · ':'')+unit+' '+money(n)+' 起';
+}
+
 function placeExtra(p){
  const status=local.visits[p.id]||'';
  let html='<div class="visit-tools"><label>參訪紀錄<select data-visit="'+txt(p.id)+'">'+[['','未標記'],['want','想去'],['visited','已參訪'],['done','已完成體驗']].map(([v,l])=>'<option value="'+v+'"'+(status===v?' selected':'')+'>'+l+'</option>').join('')+'</select></label>'+btn('trip-add',p.id,'加入每日行程')+'</div>';
@@ -91,9 +103,10 @@ function collections(){
  const visited=C.places.filter(p=>local.visits[p.id]);
  return {count:H.collections.length,html:notice('進度只計已收錄且可核對的有限清單，不代表全日本完整覆蓋。')+groups+section('我的參訪紀錄',visited.map(p=>simpleCard(p.title,{want:'想去',visited:'已參訪',done:'已完成體驗'}[local.visits[p.id]],p.pref,btn('place',p.id,'查看與修改'))).join(''))};
 }
+const purchaseTotal=r=>r.status==='取消'?0:r.qty*r.price+r.shipping+r.fee;
 function purchase(){
- const total=local.purchase.reduce((sum,r)=>sum+r.qty*r.price+r.shipping+r.fee,0),rate=Number(local.rate);
- const html=notice('所有金額為日圓。未知附加費初始填 0 供你編輯，不代表免收；各列運費按獨立訂單估算，合單請手動調整。')+simpleCard('採購成本',local.purchase.length+' 筆・預估 '+money(total),rate?'以自填匯率估算 NT$'+Math.round(total*rate).toLocaleString():'尚未設定日圓兌台幣匯率',btn('csv','purchase','匯出 CSV'),'<label class="task-inline">自填匯率：1 JPY = TWD<input id="purchase-rate" type="number" min="0" step="0.0001" value="'+txt(local.rate)+'" placeholder="請輸入"></label>')+local.purchase.map(r=>{const p=S.products.find(p=>p.id===r.product);return '<article class="task-card"><h2>'+txt(p.name_zh)+'</h2><p>'+txt(p.manufacturer_sku||'未公開品番')+' · '+txt(p.variant)+' · '+(r.purpose==='commercial'?'商業採購':'個人收藏')+'</p>'+notice(p.commercial_purchase.note)+'<div class="task-filter-grid"><label>報價通路<select data-purchase-field="offer" data-row="'+r.id+'"><option value="">自行填價</option>'+S.offers.filter(o=>o.product_id===p.id).map(o=>'<option value="'+o.id+'"'+(r.offer===o.id?' selected':'')+'>'+txt(o.retailer)+'</option>').join('')+'</select></label>'+[['qty','數量',r.qty],['price','每件價格（依通路稅況）',r.price],['shipping','此列運費',r.shipping],['fee','手續／稅費',r.fee]].map(([k,l,v])=>'<label>'+l+'<input data-purchase-field="'+k+'" data-row="'+r.id+'" type="number" min="'+(k==='qty'?1:0)+'" step="1" value="'+v+'"></label>').join('')+'<label>採購狀態<select data-purchase-field="status" data-row="'+r.id+'">'+['待核價','計畫中','已買到','已交付','取消'].map(v=>'<option'+(r.status===v?' selected':'')+'>'+v+'</option>').join('')+'</select></label></div><p class="price">小計 '+money(r.qty*r.price+r.shipping+r.fee)+'</p><div class="detail-actions">'+btn('product',p.id,'核對商品來源')+btn('purchase-remove',r.id,'刪除此列')+'</div></article>';}).join('');
+ const total=local.purchase.reduce((sum,r)=>sum+purchaseTotal(r),0),rate=Number(local.rate);
+ const html=notice('所有金額為日圓。未知附加費初始填 0 供你編輯，不代表免收；各列運費按獨立訂單估算，合單請手動調整。')+simpleCard('採購成本',local.purchase.length+' 筆・預估 '+money(total),rate?'以自填匯率估算 NT$'+Math.round(total*rate).toLocaleString():'尚未設定日圓兌台幣匯率',btn('csv','purchase','匯出 CSV'),'<label class="task-inline">自填匯率：1 JPY = TWD<input id="purchase-rate" type="number" min="0" step="0.0001" value="'+txt(local.rate)+'" placeholder="請輸入"></label>')+local.purchase.map(r=>{const p=S.products.find(p=>p.id===r.product);return '<article class="task-card"><h2>'+txt(p.name_zh)+'</h2><p>'+txt(p.manufacturer_sku||'未公開品番')+' · '+txt(p.variant)+' · '+(r.purpose==='commercial'?'商業採購':'個人收藏')+(r.status==='取消'?'・已取消，不計入合計':'')+'</p>'+notice(p.commercial_purchase.note)+'<div class="task-filter-grid"><label>報價通路<select data-purchase-field="offer" data-row="'+r.id+'"><option value="">自行填價</option>'+S.offers.filter(o=>o.product_id===p.id).map(o=>'<option value="'+o.id+'"'+(r.offer===o.id?' selected':'')+'>'+txt(o.retailer)+'</option>').join('')+'</select></label>'+[['qty','數量',r.qty],['price','每件價格（依通路稅況）',r.price],['shipping','此列運費',r.shipping],['fee','手續／稅費',r.fee]].map(([k,l,v])=>'<label>'+l+'<input data-purchase-field="'+k+'" data-row="'+r.id+'" type="number" min="'+(k==='qty'?1:0)+'" step="1" value="'+v+'"></label>').join('')+'<label>採購狀態<select data-purchase-field="status" data-row="'+r.id+'">'+['待核價','計畫中','已買到','已交付','取消'].map(v=>'<option'+(r.status===v?' selected':'')+'>'+v+'</option>').join('')+'</select></label></div><p class="price">小計 '+money(purchaseTotal(r))+'</p><div class="detail-actions">'+btn('product',p.id,'核對商品來源')+btn('purchase-remove',r.id,'刪除此列')+'</div></article>';}).join('');
  return {count:local.purchase.length,html};
 }
 function tracking(){
@@ -108,7 +121,7 @@ function trip(){
  const groups=new Map();for(const row of local.trip){if(!api.state.day||!row.date||row.date===api.state.day){if(!groups.has(row.date))groups.set(row.date,[]);groups.get(row.date).push(row);}}
  let html=notice('從地點詳情加入每日行程，可調整日期、時間與順序。時長為可修改的規劃值；交通班次與末班車請在 Google Maps／營運方確認。');
  for(const [day,rows] of [...groups].sort(([a],[b])=>a.localeCompare(b))){
-  let end=-1,previous=null;html+=section(day||'尚未指定日期',rows.map((r,i)=>{const p=C.placesById.get(r.place);if(!p)return '';const n=r.time?r.time.split(':').reduce((a,v)=>a*60+Number(v),0):null;const overlap=n!==null&&n<end;if(n!==null)end=Math.max(end,n+r.minutes);const from=previous;previous=p;
+  let end=-1,previous=null;html+=section(day||'尚未指定日期',rows.map((r,i)=>{const p=C.placesById.get(r.place);if(!p)return '';const n=r.time?r.time.split(':').reduce((a,v)=>a*60+Number(v),0):null;const overlap=r.status!=='取消'&&n!==null&&n<end;if(r.status!=='取消'&&n!==null)end=Math.max(end,n+r.minutes);const from=r.status==='取消'?null:previous;if(r.status!=='取消')previous=p;
    return '<article class="task-card trip-stop"><h2><span class="stop-number">'+(i+1)+'</span>'+txt(p.title)+'</h2>'+para(p.pref)+(overlap?notice('時段重疊：開始時間早於前一個已排時段結束。'):'' )+'<div class="task-filter-grid"><label>日期<input type="date" data-trip-field="date" data-row="'+r.id+'" value="'+r.date+'"></label><label>開始時間<input type="time" data-trip-field="time" data-row="'+r.id+'" value="'+r.time+'"></label><label>停留分鐘<input type="number" min="1" max="1440" data-trip-field="minutes" data-row="'+r.id+'" value="'+r.minutes+'"></label><label>狀態<select data-trip-field="status" data-row="'+r.id+'">'+['計畫中','已預約','已完成','取消'].map(v=>'<option'+(r.status===v?' selected':'')+'>'+v+'</option>').join('')+'</select></label></div><div class="detail-actions">'+btn('place',p.id,'詳情與預約')+btn('trip-up',r.id,'上移')+btn('trip-down',r.id,'下移')+btn('trip-remove',r.id,'移除')+(from?link(api.direction(p.query,from.query),'上一站到這裡','btn'):'')+'</div></article>';}).join(''));
  }
  if(!local.trip.length)html+=simpleCard('開始安排第一天','每日清單','先搜尋想去的店或體驗，從詳情加入行程。',btn('nav','explore','探索地點'));
@@ -131,7 +144,7 @@ function global(q){
  return {count:products.length+anime.length,html:(products.length?section('商品・系列與價格',products.map(productCard).join('')):'')+(anime.length?section('作品・踩點',anime.map(animeCard).join('')):'')};
 }
 function csv(kind){
- let rows=kind==='purchase'?[['商品','品番','JAN','款式','數量','單價JPY','運費JPY','其他費JPY','合計JPY','狀態','用途'],...local.purchase.map(r=>{const p=S.products.find(p=>p.id===r.product);return [p.name_zh,p.manufacturer_sku,p.jan,p.variant,r.qty,r.price,r.shipping,r.fee,r.qty*r.price+r.shipping+r.fee,r.status,r.purpose];})]:[['日期','時間','地點','停留分鐘','狀態'],...local.trip.map(r=>[r.date,r.time,C.placesById.get(r.place)?.title,r.minutes,r.status])];
+ let rows=kind==='purchase'?[['商品','品番','JAN','款式','數量','單價JPY','運費JPY','其他費JPY','合計JPY','狀態','用途'],...local.purchase.map(r=>{const p=S.products.find(p=>p.id===r.product);return [p.name_zh,p.manufacturer_sku,p.jan,p.variant,r.qty,r.price,r.shipping,r.fee,purchaseTotal(r),r.status,r.purpose];})]:[['日期','時間','地點','停留分鐘','狀態'],...local.trip.map(r=>[r.date,r.time,C.placesById.get(r.place)?.title,r.minutes,r.status])];
  const text='\uFEFF'+rows.map(row=>row.map(v=>'"'+String(v??'').replace(/^[=+@\-]/,"'$&").replaceAll('"','""')+'"').join(',')).join('\r\n');
  const a=document.createElement('a'),url=URL.createObjectURL(new Blob([text],{type:'text/csv;charset=utf-8'}));a.href=url;a.download='japan-'+kind+'-'+new Date().toISOString().slice(0,10)+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
@@ -148,7 +161,7 @@ function init(v){
   if(d.watch){local.watch=local.watch.includes(d.watch)?local.watch.filter(id=>id!==d.watch):[...local.watch,d.watch];save();product(d.watch);return;}
   if(d.tripAdd){addTrip(d.tripAdd);return;}
   if(d.tripRemove||d.tripUp||d.tripDown){let id=d.tripRemove||d.tripUp||d.tripDown,i=local.trip.findIndex(r=>r.id===id);if(d.tripRemove)local.trip.splice(i,1);else{let j=i+(d.tripUp?-1:1);if(j>=0&&j<local.trip.length)[local.trip[i],local.trip[j]]=[local.trip[j],local.trip[i]];}save();api.refresh();return;}
-  if(d.tripMap){const items=local.trip.filter(r=>!api.state.day||!r.date||r.date===api.state.day).map(r=>C.placesById.get(r.place)).filter(Boolean);api.showTrip(items);return;}
+  if(d.tripMap){const items=local.trip.filter(r=>r.status!=='取消'&&(!api.state.day||!r.date||r.date===api.state.day)).map(r=>C.placesById.get(r.place)).filter(Boolean);api.showTrip(items);return;}
   if(d.csv){csv(d.csv);return;}
  });
  document.addEventListener('change',e=>{const t=e.target,d=t.dataset;
@@ -167,5 +180,5 @@ function eventExtra(e){
  return '';
 }
 const reset=()=>{food={cuisine:'',meal:'',budget:'',stars:''};};
-window.ATLAS_TASKS={eventExtra,reset,init,filters,render,global,placeExtra,foodMatches,product,anime,normalizePref,tripItems:()=>local.trip.filter(r=>!api.state.day||!r.date||r.date===api.state.day).map(r=>C.placesById.get(r.place)).filter(Boolean)};
+window.ATLAS_TASKS={eventExtra,reset,init,filters,render,global,placeExtra,foodMatches,foodCaption,product,anime,normalizePref,tripItems:()=>local.trip.filter(r=>r.status!=='取消'&&(!api.state.day||!r.date||r.date===api.state.day)).map(r=>C.placesById.get(r.place)).filter(Boolean)};
 })();

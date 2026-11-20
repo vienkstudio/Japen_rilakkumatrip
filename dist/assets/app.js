@@ -143,7 +143,7 @@ function renderList(){
   currentResults=items;
   count=items.length; label=count+" 個地點 · "+items.filter(p=>p.coords).length+" 個可定位";
   content=items.slice(0,state.limit).map(p=>resultCard({id:p.id,title:p.title,subtitle:p.pref+" · "+(p.experience?p.experience.category:C.labels[p.kind]),
-    note:p.restaurant?p.restaurant.cuisine.join("・")+" · "+(p.restaurant.michelin.stars?"2026 米其林 "+p.restaurant.michelin.stars+" 星 · ":"")+"基礎餐價 "+Math.min(...p.restaurant.menu.filter(m=>m.priceJPY!=null).map(m=>m.priceJPY)).toLocaleString("ja-JP")+" 日圓起":p.experience?p.experience.local_character:summary(p),experience:p.experience,photo:p.photo,kind:p.kind,attr:"place",active:state.detail?.type==="place"&&state.detail.id===p.id,favorite:true,nearbyPhoto:p.nearbyPhoto})).join("");
+    note:p.restaurant?T.foodCaption(p):p.experience?p.experience.local_character:summary(p),experience:p.experience,photo:p.photo,kind:p.kind,attr:"place",active:state.detail?.type==="place"&&state.detail.id===p.id,favorite:true,nearbyPhoto:p.nearbyPhoto})).join("");
   if (state.nav==="explore" && !state.q && !state.pref && !state.inArea && state.category==="all") {
     content='<div class="experience-entry"><strong>把地方文化排進旅程</strong><p>染布、織布、紡紗、賽馬與傳統藝能</p>'+button("nav","experiences","找在地體驗","btn primary","craft")+'</div><div class="callout"><strong>新潟片貝 2027/9/10–11</strong><br>四尺玉、古蹟與東京拉拉熊。 '+button("route","katakai-6","看 6 天安排")+"</div>"+content;
   }
