@@ -256,3 +256,6 @@ dialog::backdrop{background:#15291fe0}
  .experience-themes{margin-right:-7px}
  .experience-section .fact-list{grid-template-columns:3em minmax(0,1fr)}
 }
+
+.workspace{grid-template-rows:minmax(0,1fr)}
+.browse,.results{min-height:0}
