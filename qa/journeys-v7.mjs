@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {spawn} from 'node:child_process';
-import {writeFileSync} from 'node:fs';
+import {writeFileSync,mkdirSync} from 'node:fs';
 import {join} from 'node:path';
 const dir=process.cwd();
 const base=process.argv[2]||'http://127.0.0.1:18767/';
@@ -39,6 +39,8 @@ try{
   const id=++serial;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));
  });
  await c('Runtime.enable'); await c('Page.enable');
+ const downloads=join(dir,'downloads-v7');mkdirSync(downloads,{recursive:true});
+ await c('Browser.setDownloadBehavior',{behavior:'allow',downloadPath:downloads});
  const value=async expression=>{
   const r=await c('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});
   if(r.exceptionDetails)throw Error(r.exceptionDetails.exception.description);
