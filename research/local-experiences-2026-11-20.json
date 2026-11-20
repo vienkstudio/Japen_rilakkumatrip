@@ -1,0 +1,719 @@
+{
+  "version": 1,
+  "checked_at": "2026-11-20",
+  "scope": "對抗串研究資料，交由原對話串執行整合與驗證",
+  "interpretation": "使用者歌技暫涵蓋歌舞伎與藝伎／舞妓，兩類各自建立日文檢索詞。",
+  "editorial_rules": [
+    "官方營運資訊與個人心得各有來源及日期。",
+    "日文或繁中頁面語言不推定居住地／國籍；未知身分明示。",
+    "心得只摘述個案，不捏造人氣排名、平均評分、共識或台灣人偏好。",
+    "價格、休館、場次、語言、成品取回與交通依正式來源；資料衝突可見，無來源欄位留待確認。",
+    "圖片先連原頁，刊載需另取合法授權。",
+    "所有路線串接均為待實測提案，不當成已驗證時程。"
+  ],
+  "records": [
+    {
+      "id": "culture-ai-no-yakata",
+      "name": "藍之館・阿波藍染",
+      "jp": "藍住町歴史館 藍の館",
+      "pref": "德島",
+      "category": "染布",
+      "participation": "親手染布",
+      "local_character": "從阿波藍產業和舊藍商宅邸認識地方染色。",
+      "duration": "官方約30分鐘，另留參觀及交通時間",
+      "price": "體驗手帕¥1,000起，另成人入館¥300",
+      "booking": "一般買館方布料可9:00–15:30現場依序參加；10人以上或自帶布料需預約。自帶布料至少前一日電話確認。",
+      "language": "官方有日英FAQ，當日中文指導未確認。",
+      "transport": "JR德島站搭德島巴士鍛冶屋原線至奥野，步行約10分；德島站開車約25分。",
+      "contact": "088-692-6317",
+      "constraints": [
+        "火曜、年末年始休館請查行前公告。",
+        "主屋2026年10月起改修見學停止，保留公告連結。",
+        "館方FAQ寫無餐廳，體驗後用餐另排。"
+      ],
+      "route_suggestion": "德島站→藍染→返回市區；阿波舞會館另按當日場次安排。",
+      "sources": [
+        {
+          "title": "現行交通及票價",
+          "url": "https://ainoyakata.jp/access/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "2026/8/27預約公告",
+          "url": "https://ainoyakata.jp/info/80.html",
+          "type": "official",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "FAQ",
+          "url": "https://ainoyakata.jp/menu/5.html",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "主屋停看公告",
+          "url": "https://ainoyakata.jp/info/81.html",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "台灣旅遊作者",
+          "title": "村子裡的凱莉哥",
+          "url": "https://kellyla1028.pixnet.net/blog/posts/3047443866",
+          "date": "2017-08-08",
+          "observation": "帶孩子染布，特別提及公車間隔、回程時間和附近吃飯不便。舊站名、班次、價格均不移植。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        },
+        {
+          "origin": "日文參加者，居住地未核實",
+          "title": "Tripadvisor negisun",
+          "url": "https://www.tripadvisor.jp/Attraction_Review-g1121420-d3531647-Reviews-Ai_no_Yakata-Aizumi_cho_Itano_gun_Tokushima_Prefecture_Shikoku.html",
+          "date": "2026-05-03",
+          "observation": "記錄選花樣、反覆浸染及作品日常使用；其預約說法與8月官方更新有出入，以官方新公告為準。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "原始心得圖片授權",
+        "中文工作人員",
+        "行程日公車末班及候車方向"
+      ]
+    },
+    {
+      "id": "culture-kyoto-shibori",
+      "name": "京都絞染工藝館・絲巾染色",
+      "jp": "京都絞り工芸館・板締め絞り",
+      "pref": "京都",
+      "category": "染布",
+      "participation": "親手染布",
+      "local_character": "板夾防染與京都絞染作品展。",
+      "duration": "板締官方30分鐘起，完整停留依展覽及課程",
+      "price": "板締¥6,600，週六及假日加¥1,100，入館費含於課程依預約頁",
+      "booking": "官網課程預約；選清楚板締、雪花或京嵐。",
+      "language": "京都府觀光列英語可對應，中文未確認。",
+      "transport": "地下鐵二条城前步行約3分；烏丸御池步行約8分。",
+      "contact": "075-221-4252",
+      "constraints": [
+        "日曜及不定休依官方。",
+        "相同名稱不同課程價格與時間不同。",
+        "成品可當日帶走，染色後整理時間一併留白。"
+      ],
+      "route_suggestion": "二条城→絞染→四條河原町拉拉熊門市，屬交通串接提案。",
+      "sources": [
+        {
+          "title": "板締課程與加價",
+          "url": "https://www.shibori.jp/itajimescarfclass",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "京都市課程與交通",
+          "url": "https://ja.kyoto.travel/tourism/single01.php?category_id=3&tourism_id=1892",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "京都府語言資訊",
+          "url": "https://www.kyoto-kankou.or.jp/info_search/6742",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "日文已參加者，居住地未核實",
+          "title": "じゃらん參加評論",
+          "url": "https://www.jalan.net/kankou/spt_guide000000183390/kuchikomi/page_1/",
+          "date": "2024-06 / 2023-09",
+          "observation": "有指導與工藝解說的正面感受，也有尖峰時多人輪流指導的抱怨，適合呈現指導節奏差異。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "可確定台灣身分的第一手參加心得",
+        "中文服務",
+        "作品照片刊載授權"
+      ]
+    },
+    {
+      "id": "culture-ojiya-orinoza",
+      "name": "小千谷織之座・杯墊與絣織",
+      "jp": "小千谷織物工房 織之座",
+      "pref": "新潟",
+      "category": "織布",
+      "participation": "親手操作織機",
+      "local_character": "小千谷縮產地，踏板和穿梭織出杯墊或絣紋。",
+      "duration": "杯墊20分鐘起；絣織40分鐘起",
+      "price": "杯墊一般¥1,200、小學生¥800；絣織一般¥1,800、小學生¥1,300",
+      "booking": "完全預約制，0258-83-2329；體驗受理10:00–16:00，水曜休",
+      "language": "日文，中文及英文指導待確認。",
+      "transport": "小千谷市城内1-8-25サンプラザ1F，先搭JR上越線至小千谷再查接駁；不可把站直線距離當步程。",
+      "contact": "0258-83-2329",
+      "constraints": [
+        "能坐椅踏到踏板者可操作，小童需成人協助。",
+        "絲帶體驗目前休止。",
+        "手織與紡紗為不同活動，需不同搜尋標籤。"
+      ],
+      "route_suggestion": "小千谷織物→錦鯉之里→へぎそば；花火當日是否能接片貝需另核實接駁。",
+      "sources": [
+        {
+          "title": "組合現行體驗與價目",
+          "url": "https://ojiya.or.jp/koubou/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "官方交通",
+          "url": "https://ojiya.or.jp/",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "台灣大學團隊實訪，屬工藝見學",
+          "title": "中央大學USR織物產地紀錄",
+          "url": "https://ecusr.ncu.edu.tw/出國紀錄》日本織布產地巡禮3-新潟的織物/",
+          "date": null,
+          "observation": "記錄小千谷織布與圖紋安排，作工藝深度參考；搜尋可讀摘要，全文擷取失敗，保留人工查閱狀態。",
+          "confidence": "可辨識台灣機構，全文待原串核對"
+        },
+        {
+          "origin": "台灣旅遊作者／舊遊記",
+          "title": "尋訪雪國的春天（二）",
+          "url": "https://blog.udn.com/article/article_print.jsp?f_ART_ID=131725542&f_CODE=1787125450950&uid=YUNLONGLIN1",
+          "date": null,
+          "observation": "記錄1F體驗與2F成品展示，可提供現場照片線索，舊價格不用於現行欄位。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "台灣大學文章全文",
+        "JR站至工房當日公車與回程",
+        "中文指導及照片授權"
+      ]
+    },
+    {
+      "id": "culture-biman-spinning",
+      "name": "美蔓綿羊牧場・羊毛紡紗",
+      "jp": "美蔓めん羊牧場・羊の糸紡ぎ体験",
+      "pref": "北海道",
+      "category": "紡紗",
+      "participation": "親手以手腳協調紡線",
+      "local_character": "使用十勝牧場羊毛接觸纖維變成線的過程。",
+      "duration": "1小時",
+      "price": "官網標1小時¥2,000，收費單位與包含內容預約時確認",
+      "booking": "要預約，0156-62-5033",
+      "language": "日文，外語未確認。",
+      "transport": "北海道上川郡清水町美蔓西24線100；官網稱清水町東約10km，最後一段安排車輛。",
+      "contact": "0156-62-5033",
+      "constraints": [
+        "紡線、羊毛氈、剪毛各有不同預約和價目。",
+        "剪毛另為4月–5月中旬季節活動。",
+        "紡線可帶走多少線及兒童年齡需確認。"
+      ],
+      "route_suggestion": "十勝清水紡紗→帶廣；與輓曳競馬串同日需核對移動與賽程。",
+      "sources": [
+        {
+          "title": "牧場體驗現行頁",
+          "url": "https://bimantei.sakura.ne.jp/farm/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "清水町觀光協會",
+          "url": "https://www.shimizu-hokkaido-ta.jp/activities/s-10/",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [],
+      "unconfirmed": [
+        "可核實的獨立日文參加心得",
+        "台灣第一手參加心得",
+        "收費單位、材料、成品取回、語言及交通"
+      ]
+    },
+    {
+      "id": "culture-tokyo-race",
+      "name": "東京競馬場・現場觀賽",
+      "jp": "JRA 東京競馬場",
+      "pref": "東京",
+      "category": "賽馬",
+      "participation": "觀看賽事、圍場及博物館",
+      "local_character": "府中大型競馬場，賽事日現場氣氛與非賽事日參觀體驗不同。",
+      "duration": "自行安排2–4小時為提案，正式開門及賽程依日曆",
+      "price": "開催日原則¥200，15歲未滿免費；特別日另定",
+      "booking": "一般日可有當日現金票，特定G1例外，須點當期JRA入場公告。",
+      "language": "場內解說以日文，外語支援依當期官方。",
+      "transport": "府中競馬正門前→正門約2分；東府中→東門約10分；府中本町臨時改札→西門約5分。",
+      "contact": "042-363-3141",
+      "constraints": [
+        "場外售票／公園開放不代表當天府中有比賽。",
+        "入場券與指定座位須分清楚。",
+        "2026/11/29日本盃有特別入場規則，不能泛用普通日。"
+      ],
+      "route_suggestion": "新宿或吉祥寺拉拉熊店另半日；現場觀賽與市區採買避免排得過緊。",
+      "sources": [
+        {
+          "title": "JRA營業與票價",
+          "url": "https://www.jra.go.jp/facilities/race/tokyo/access/hours.html",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "JRA交通與入場門",
+          "url": "https://www.jra.go.jp/facilities/race/tokyo/access/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "當期入場公告",
+          "url": "https://www.jra.go.jp/facilities/race/tokyo/news/nyujou.html",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "台灣PTT旅客",
+          "title": "東京競馬場日本達比",
+          "url": "https://www.ptt.cc/bbs/Japan_Travel/M.1716977007.A.E1D.html",
+          "date": "2024-05-29",
+          "observation": "對比一般日與達比日人潮，描述現場歡呼及博物館空檔參觀。保留個人經驗，不轉成固定人數。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        },
+        {
+          "origin": "台灣網誌旅客",
+          "title": "Namako 2024東京遊記",
+          "url": "https://namako.tw/2024/09/09/2024-tokyo/",
+          "date": "2024-09-09",
+          "observation": "不是東京本場賽事日仍參觀，記錄轉乘與步橋；用來提醒先看賽程，原文路程只作個案。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "確定旅行日開催與售票方式",
+        "指定席外國卡與帳號流程",
+        "全站場內照片可重用授權"
+      ]
+    },
+    {
+      "id": "culture-obihiro-banei",
+      "name": "帶廣輓曳競馬",
+      "jp": "ばんえい十勝・帯広競馬場",
+      "pref": "北海道",
+      "category": "賽馬",
+      "participation": "觀看輓馬拉橇賽事",
+      "local_character": "十勝農耕馬文化，重型馬拉橇越障。",
+      "duration": "留2–3小時為提案，當日賽次依官方",
+      "price": "官方FAQ保留¥100及暫免收並列，價格有歧義，顯示待當期確認",
+      "booking": "觀賽依當日營業公告；後台導覽與體驗不可引用舊活動常態化。",
+      "language": "日文場內解說，中文導覽未確認。",
+      "transport": "帶廣站起查公車至競馬場及回程；以主辦當期交通頁為準。",
+      "contact": "主辦網站查詢",
+      "constraints": [
+        "有開門或他場賽事轉播不代表帯広有現場比賽。",
+        "週六日一只是常見型態，2026/12/4也有賽，必須查日期。",
+        "不要保證舊FAQ的免費夜間接駁仍運行。"
+      ],
+      "route_suggestion": "帶廣市區與とかちむら採買→晚場觀賽，清水町紡紗安排另半日。",
+      "sources": [
+        {
+          "title": "主辦即時日曆",
+          "url": "https://banei-keiba.or.jp/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "FAQ的價格及接駁衝突",
+          "url": "https://www.banei-keiba.or.jp/faq.php",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "帶廣市觀光",
+          "url": "https://www.city.obihiro.hokkaido.jp/tourism/1007805/1007988.html",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "北海道在地作者",
+          "title": "SPOT十勝・帶廣在地介紹",
+          "url": "https://travel.spot-app.jp/tokachi_simple/",
+          "date": null,
+          "observation": "可作地方玩法與觀賽搭配參考，價格及後台導覽是舊資料另核。",
+          "confidence": "原頁標示地元作者"
+        },
+        {
+          "origin": "台灣旅客網誌",
+          "title": "The Other Side帶廣競馬",
+          "url": "https://nievecitas16.pixnet.net/blog/posts/16194228866",
+          "date": null,
+          "observation": "記錄週一趕到帯広看賽，示範賽程日對路線安排的影響；發文時間另核。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "當期實收票價",
+        "實際公車及末班",
+        "後台導覽的2026預約",
+        "照片授權"
+      ]
+    },
+    {
+      "id": "culture-asakusa-sumo",
+      "name": "淺草相撲表演與火鍋",
+      "jp": "浅草相撲部屋 Asakusa Sumo Club",
+      "pref": "東京",
+      "category": "相撲",
+      "participation": "看示範、用餐，可自願挑戰和合照",
+      "local_character": "透過退役力士了解基本動作、技巧與相撲鍋。",
+      "duration": "120分鐘",
+      "price": "Standard成人¥16,000，VIP¥20,000；官網menu寫12歲未滿¥12,000，預約總價須對照",
+      "booking": "官方預約頁選場次，12:00／15:00／18:00／20:30，確認本店或ANNEX。",
+      "language": "日英解說；中文場次未確認。",
+      "transport": "本店台東区浅草2-10-12 1F；TX淺草站與銀座線／淺草線淺草站需分辨，官方與景點頁步時不同，開地圖確認。",
+      "contact": "03-5246-3344",
+      "constraints": [
+        "產品類型為娛樂示範，不可歸成大相撲本場所或現役部屋晨練。",
+        "菜單需提前確認素食及過敏，官網表示無法對應無麩質。",
+        "本店滿位可能改ANNEX，入口必須跟確認信。"
+      ],
+      "route_suggestion": "押上拉拉熊店→淺草散步→相撲餐敘，兩地以東武或都營線銜接。",
+      "sources": [
+        {
+          "title": "官方價格與預約",
+          "url": "https://asakusa-sumo.com/reserve/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "表演與菜單內容",
+          "url": "https://asakusa-sumo.com/menu/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "本店地址",
+          "url": "https://asakusa-sumo.com/",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "日本當地媒體實訪",
+          "title": "Umami bites日文實看",
+          "url": "https://umamibites.com/ja/food_and_drink/25156",
+          "date": null,
+          "observation": "實看紀錄示範與觀眾挑戰，餐點舊說法與現官網不同，以現行菜單為準。",
+          "confidence": "媒體採訪，不當成居民普遍評價"
+        }
+      ],
+      "unconfirmed": [
+        "可核實台灣旅客身分及親身參加的原始心得",
+        "當日中文服務",
+        "兒童參與年齡、身體接觸及方案",
+        "圖片刊載權"
+      ]
+    },
+    {
+      "id": "culture-sado-taiko",
+      "name": "佐渡太鼓體驗交流館",
+      "jp": "佐渡太鼓体験交流館 たたこう館",
+      "pref": "新潟",
+      "category": "和樂",
+      "participation": "親手打太鼓",
+      "local_character": "佐渡鼓童文化財團的太鼓課程。",
+      "duration": "一般體驗約60分鐘，當期課程再確認",
+      "price": "2025調整後成人¥3,000、小學生¥2,000有鼓童公告依據；現價待新站課程頁確認",
+      "booking": "現行官網要求3日前預約，表單時間有11:00／13:30",
+      "language": "有英文網站，預約時需確認當次英語教學。",
+      "transport": "新潟或直江津搭船抵佐渡；小木町至館無公共交通，官方說開車15分，需預約計程車或租車。",
+      "contact": "0259-86-2320",
+      "constraints": [
+        "月曜休，祝日順延次日；設施頁另列1–2月冬休，查當期公告。",
+        "舊sadotaiken.jp顯示¥2,200及舊預約表，不可繼續當現行。",
+        "船班與島內移動應另排住宿，勿視為長岡當天順路小景點。"
+      ],
+      "route_suggestion": "片貝行程後加佐渡2天為提案，與小木／宿根木文化串接。",
+      "sources": [
+        {
+          "title": "現行官方首頁",
+          "url": "https://tatakokan.jp/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "現行預約",
+          "url": "https://tatakokan.jp/contact/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "最後一段交通及冬休",
+          "url": "https://tatakokan.jp/about/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "2025鼓童價目",
+          "url": "https://www.kodo.or.jp/cms/wp-content/uploads/2025/02/dda32a65f3995ea870fac1d12ba72c8c.pdf",
+          "type": "official",
+          "date": "2025"
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "佐渡在地撰稿者親身參加，刊於觀光協會",
+          "title": "たびきち親子太鼓實訪",
+          "url": "https://niigata-kankou.or.jp/blog/detail_1161.html",
+          "date": null,
+          "observation": "記錄帶孩子和長輩參加，可補不同年齡的實際感受，仍需留主辦年齡及安排條件。",
+          "confidence": "官方觀光媒體實訪，有推廣性質"
+        },
+        {
+          "origin": "台灣旅居作者",
+          "title": "香蕉草莓的雪國生活",
+          "url": "https://niigata.tw/sado2021/",
+          "date": "2021-09-18",
+          "observation": "有太鼓體驗感受及島內行程，避免把鼓童公演與工作坊合併成同一票。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "新站當期價目，課程頁擷取超時",
+        "講師語言及參加年齡",
+        "當日船班及島內接送",
+        "照片授權"
+      ]
+    },
+    {
+      "id": "culture-taiko-lab",
+      "name": "TAIKO-LAB・旅客和太鼓課",
+      "jp": "TAIKO-LAB 和太鼓アクティビティ",
+      "pref": "東京／京都／大阪／兵庫",
+      "category": "和樂",
+      "participation": "親手演奏及看講師示範",
+      "local_character": "節奏與合奏入門，有東京青山／秋葉原等教室。",
+      "duration": "60分鐘範例課程",
+      "price": "依地點、日期、人數選正式旅客方案，價目待確認",
+      "booking": "經海外旅客預約入口選城市與日期，不使用居民月費或招生試聽價。",
+      "language": "官方明示原則英語授課，可坐椅演奏。",
+      "transport": "每城市建立獨立場館，從預約確認的教室地址導航。",
+      "contact": "東京03-5775-4507",
+      "constraints": [
+        "教室月費／招生體驗／訪日旅客課程是不同方案。",
+        "可單人私課，但不代表每時段有單人團體價。"
+      ],
+      "route_suggestion": "京都工藝日、東京原宿購物日依實際教室插入60分鐘課。",
+      "sources": [
+        {
+          "title": "旅客課程內容及語言",
+          "url": "https://www.taikolab.com/world/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "官方海外旅客預約入口",
+          "url": "https://www.taiko-reserve.com/en/",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [],
+      "unconfirmed": [
+        "每城市價目與空位",
+        "台灣第一手參加心得",
+        "獨立日本旅客心得",
+        "場館照片授權"
+      ]
+    },
+    {
+      "id": "culture-gion-corner",
+      "name": "祇園角・傳統藝能入門",
+      "jp": "ギオンコーナー 日本伝統文化入門公演",
+      "pref": "京都",
+      "category": "藝伎／舞妓與和樂",
+      "participation": "觀看舞妓京舞、箏曲等，另有茶道體驗席",
+      "local_character": "祇園甲部歌舞練場小劇場，以一小時認識數種藝能。",
+      "duration": "約60分鐘",
+      "price": "23歲以上一般¥5,500，茶道席¥6,050，Premium¥6,600",
+      "booking": "官方頁購票，全席指定；一般18:00／19:00，冬季另日曆。",
+      "language": "有英語資訊，實際導覽形式依場次；中文口譯待確認。",
+      "transport": "京阪祇園四条步行，地址京都市東山区祇園町南側570-2。",
+      "contact": "075-561-1119",
+      "constraints": [
+        "官方現行冬季12/1–3/11火–金，節假日及年末另休。",
+        "冬季6種並有會後合照，常規演目依時期為文樂或能，依官方日曆。",
+        "與舞妓變裝攝影、茶屋私人餐敘、年度都舞各有獨立產品。"
+      ],
+      "route_suggestion": "河原町拉拉熊店→祇園晚間公演，嵐山可另留白天。",
+      "sources": [
+        {
+          "title": "主辦價目與冬季節目",
+          "url": "https://www.ookinizaidan.com/gion_coner/payment/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "節目介紹",
+          "url": "https://www.ookinizaidan.com/gion_coner/",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "台灣旅遊論壇，相關年度公演",
+          "title": "背包客棧五花街都之賑參加分享",
+          "url": "https://www.backpackers.com.tw/forum/showthread.php?t=1769647",
+          "date": null,
+          "observation": "記錄五花街年度公演的舞碼差異，屬相關深度藝能心得，不是祇園角同場產品，不得移用票價或合照規定。",
+          "confidence": "論壇作者身分仍可進一步核對"
+        }
+      ],
+      "unconfirmed": [
+        "祇園角同產品的可核實台灣第一手心得",
+        "當月冬季休演日",
+        "場次語言及照片規則"
+      ]
+    },
+    {
+      "id": "culture-kabukiza",
+      "name": "歌舞伎座・一幕見席",
+      "jp": "歌舞伎座 一幕見席",
+      "pref": "東京",
+      "category": "歌舞伎",
+      "participation": "觀看單幕演出",
+      "local_character": "傳統劇場的表演、音樂、服裝與舞台。",
+      "duration": "依每幕公告，不能固定宣稱30或60分鐘",
+      "price": "票價依演目；4F字幕設備另¥1,000／台、現金，以供應商當期公告",
+      "booking": "松竹一幕見專頁及官方e-tix，詳讀當月指定席／自由席公告。",
+      "language": "供應商目前列英語及簡體中文字幕；是否適用選定演目需確認，不宣稱繁體中文或每場都有。",
+      "transport": "東銀座站，東京都中央区銀座4-12-15；一幕見與全場觀劇入口分辨。",
+      "contact": "官方票務入口",
+      "constraints": [
+        "4F距離、花道視野與幕別售票須直接展示。",
+        "以前現場排隊舊遊記不可取代現在售票流程。",
+        "觀劇時不拍攝；紀念照使用官方可拍區。"
+      ],
+      "route_suggestion": "東京站拉拉熊店→銀座→按幕別時間觀劇，交通與停留自行留白。",
+      "sources": [
+        {
+          "title": "松竹一幕見",
+          "url": "https://www.shochiku.co.jp/play/theater/kabukiza/makumi/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "歌舞伎座票務與當月公演",
+          "url": "https://www.kabuki-za.co.jp/ticket/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "官方單幕網路票",
+          "url": "https://e-tix.jp/shochiku_makumi/",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "字幕服務商",
+          "url": "https://www.eg-gm.jp/news/gekijyo.html",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "日文第一次觀劇者，居住地未核實",
+          "title": "note初めての歌舞伎",
+          "url": "https://note.com/skrmi7/n/n20c3e7284aec",
+          "date": null,
+          "observation": "即使預習人物與故事仍覺得理解有門檻，應讓用戶選字幕及短幕，而非保證看得懂。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        },
+        {
+          "origin": "台灣PTT旅客，歷史心得",
+          "title": "千里之行東京歌舞伎座",
+          "url": "https://www.ptt.cc/man/Japan_Travel/DDE1/D586/D58C/M.1389262167.A.7DF.html",
+          "date": null,
+          "observation": "描述4F看服裝舞台和人物台詞的感受；舊價格、入口及取票資訊不可沿用。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "旅行日期可購幕次及時長",
+        "選定演目字幕語種",
+        "4F目前入場方式",
+        "圖片授權"
+      ]
+    },
+    {
+      "id": "culture-warasse",
+      "name": "睡魔之家・囃子與跳人體驗",
+      "jp": "ねぶたの家 ワ・ラッセ",
+      "pref": "青森",
+      "category": "地方祭典與和樂",
+      "participation": "看囃子、親手太鼓及跳人舞",
+      "local_character": "以青森睡魔祭的鼓鈸與跳人動作入門。",
+      "duration": "一般每日11:10／13:10／15:10／17:10各20分，團體演奏日另時刻",
+      "price": "體驗在付費展區，現行入館價待官方價目確認",
+      "booking": "一般館內定時活動依當日公告；特殊包場另約。",
+      "language": "跟做型活動，中文教學未確認。",
+      "transport": "青森站旁，青森市安方1-1-1，依官方入口導航。",
+      "contact": "官方館站",
+      "constraints": [
+        "2026/4/1起太鼓體驗身高須100cm以上。",
+        "囃子演奏與津輕三味線各自查場館及節目。",
+        "旅行網誌的週末舊時刻與目前每日活動不同。"
+      ],
+      "route_suggestion": "青森站→古川市場→睡魔之家→A-FACTORY，同日路線參照台灣旅客實走。",
+      "sources": [
+        {
+          "title": "館方當期體驗時段及身高限制",
+          "url": "https://www.nebuta.jp/warasse/event/event-list.html",
+          "type": "official",
+          "date": null
+        },
+        {
+          "title": "館方首頁及公告",
+          "url": "https://www.nebuta.jp/warasse/",
+          "type": "official",
+          "date": null
+        }
+      ],
+      "reviews": [
+        {
+          "origin": "台灣旅遊作者",
+          "title": "小氣少年青森站半日實走",
+          "url": "https://nicklee.tw/2101/aomori-station-attractions/",
+          "date": null,
+          "observation": "描述敲鼓鈸與跳人體驗，可作半日路線參考，演出時間回官方。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        },
+        {
+          "origin": "台灣旅遊作者",
+          "title": "旅行圖中睡魔之家",
+          "url": "https://journey.tw/nebuta/",
+          "date": null,
+          "observation": "館內實景與參加描述，原文時刻已有過時可能，保留照片原始頁與更新狀態。",
+          "confidence": "來源身分依作者自介或平台，非旅客統計"
+        }
+      ],
+      "unconfirmed": [
+        "現行入館價",
+        "參加者心得明確造訪日期",
+        "中文指導",
+        "圖片授權"
+      ]
+    }
+  ]
+}

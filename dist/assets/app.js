@@ -29,7 +29,7 @@ const icon=name=>'<svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path
 document.querySelectorAll("[data-icon]").forEach(node=>{node.innerHTML=icon(node.dataset.icon);});
 const esc=v=>String(v??"").replace(/[&<>"']/g,s=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[s]));
 const option=(v,n)=>'<option value="'+esc(v)+'">'+esc(n)+'</option>';
-const external=(url,label,style="")=>'<a class="'+esc(style)+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+'</a>';
+const external=(url,label,style="")=>'<a class="'+esc(style)+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(String(label).replace(/\s*↗$/u,""))+'</a>';
 const google=q=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
 const direction=(dest,origin,mode="transit")=>"https://www.google.com/maps/dir/?api=1&travelmode="+mode+"&destination="+encodeURIComponent(dest)+(origin?"&origin="+encodeURIComponent(origin):"");
 const button=(name,id,label,style="btn",symbol="")=>'<button type="button" class="'+style+'" data-'+name+'="'+esc(id)+'">'+(symbol?icon(symbol):"")+esc(label)+'</button>';
@@ -37,10 +37,13 @@ const symbol={official:"shop",rilanowa:"shop",theme:"shop",retail:"shop",heritag
 const prefs=new Map(A.prefs.map(x=>[x.name,x])), regions=new Map(A.regions.map(x=>[x.key,x]));
 const byView=new Map(A.views.map(x=>[x.id,x])), routes=new Map(A.routes.map(x=>[x.id,x]));
 const stories=new Map(A.stories.map(x=>[x.key,x])), events=new Map(A.events.map(x=>[x.id,x]));
-const sectionNames={explore:"探索地點",routes:"行程規劃",calendar:"活動與限定商品",photos:"照片與圖繪",saved:"我的收藏"};
+const sectionNames={experiences:"在地體驗",explore:"探索地點",routes:"行程規劃",calendar:"活動與限定商品",photos:"照片與圖繪",saved:"我的收藏"};
 const savedKey="japan-atlas-favorites-v1";
 let saved=new Set();
 try { const x=JSON.parse(localStorage.getItem(savedKey)||"[]");if(Array.isArray(x))saved=new Set(x.map(id=>C.placesById.get(id)?.id).filter(Boolean));} catch {}
+const experienceDefaults={theme:"all",mode:"",booking:"",language:"",duration:"",budget:""};
+const experienceFilter={...experienceDefaults};
+let experienceDay="";
 const state={nav:"explore",region:"",pref:"",category:"all",q:"",view:"asakusa",mode:"list",inArea:false,limit:26,day:"",detail:null,token:0};
 let geo=null,currentResults=[],displayStations=[],flashTimer,fromButton=null,mapContext=null;
 const standardize=value=>String(value??"").normalize("NFKC").toLowerCase().replace(/臺/g,"台").replace(/東京都|東京都/g,"東京").replace(/浅/g,"淺").replace(/静/g,"靜").replace(/広/g,"廣").replace(/国/g,"國").replace(/県/g,"縣").replace(/鎌倉/g,"鐮倉").replace(/新泻/g,"新潟").replace(/[\/／・｜_–-]+/g," ");
@@ -52,7 +55,8 @@ const matches=(q,v)=>{
 const compact=value=>standardize(value).replace(/[^\p{L}\p{N}]+/gu,"");
 function searchableFields(p){
  return [p.title,p.japanese,p.aliases,p.query,p.address,p.floor,p.hours,p.pref,p.note,p.summary,C.labels[p.kind],
-  ...(p.stations||[]).map(s=>s.name+" "+s.query+" "+s.line)].filter(Boolean);
+  ...(p.stations||[]).map(s=>s.name+" "+s.query+" "+s.line),
+  ...(p.experience?CULTURE.searchFields(p.experience):[])].filter(Boolean);
 }
 const sourceLinks=list=>list?.length?'<div class="sources">'+list.map(([t,url])=>external(url,t+" ↗")).join("")+"</div>":"";
 function checkSaved(){
@@ -71,6 +75,7 @@ function mapArea(q){
  return g?g.name:q;
 }
 function placeMatches(p){
+ if(state.nav==="experiences"&&(!p.experience||!CULTURE.matches(p.experience,experienceFilter)))return false;
  if(state.nav==="saved"&&!saved.has(p.id))return false;
  if(state.pref&&p.pref!==state.pref)return false;
  if(state.region&&prefs.get(p.pref)?.region!==state.region)return false;
@@ -107,25 +112,29 @@ function photoType(name,nearby){
  const ph=P[name];
  return ph?.type||(nearby?"區域照":"實景照");
 }
-function resultCard({id,title,subtitle,note,photo,kind,attr,active=false,favorite=false,nearbyPhoto=false}){
+function resultCard({id,title,subtitle,note,photo,kind,attr,active=false,favorite=false,nearbyPhoto=false,experience=null}){
  const hasPhoto=!!P[photo], p=saved.has(id);
  const key=esc(attr)+"=\""+esc(id)+"\"";
  const photoAlt=P[photo]?.label;
- return '<article class="result '+(hasPhoto?"":"no-photo ")+(active?"active":"")+'"><button type="button" class="result-visual" data-'+key+' aria-label="查看 '+esc(title)+'">'+
+ return '<article class="result '+(experience?'experience-result ':'')+(hasPhoto?"":"no-photo ")+(active?"active":"")+'"><button type="button" class="result-visual" data-'+key+' aria-label="查看 '+esc(title)+'">'+
  (hasPhoto?thumb(photo,photoAlt)+'<span class="thumb-label">'+esc(photoType(photo,nearbyPhoto))+'</span>':icon(symbol[kind]||"route"))+'</button><button type="button" class="result-content" data-'+key+'><p class="result-meta">'+
- esc(subtitle)+'</p><h2>'+esc(title)+'</h2><p class="result-note">'+esc(note)+'</p></button>'+
+ esc(subtitle)+'</p><h2>'+esc(title)+'</h2><p class="result-note">'+esc(note)+'</p>'+
+ (experience?'<p class="experience-participation">'+esc(experience.participation)+'</p>'+
+ '<p class="experience-card-facts">'+esc(experience.time_short)+' · '+esc(experience.booking_short)+'</p>'+
+ '<p class="experience-card-price">'+esc(experience.cost_from===null?"費用／單位待確認":experience.cost_from===0?"入場免費（依現行交通頁）":"¥"+experience.cost_from.toLocaleString("ja-JP")+" 起")+'</p>'+
+ (experienceDay?'<p class="experience-card-date">'+esc(CULTURE.dateStatus(experience,experienceDay).text)+'</p>':""):"")+'</button>'+
  (favorite?'<div class="result-tools"><button type="button" class="icon-button" data-fav="'+esc(id)+'" aria-pressed="'+p+'" aria-label="'+(p?"移除收藏":"收藏")+" "+esc(title)+'">'+icon("heart")+"</button></div>":"<i></i>")+"</article>";
 }
 function renderList(){
  let content="",count=0,items=[],label="";
- if(state.nav==="explore"||state.nav==="saved"){
+ if(["explore","experiences","saved"].includes(state.nav)){
   items=C.places.filter(placeMatches).sort(comparePlace);
   currentResults=items;
   count=items.length; label=count+" 個地點 · "+items.filter(p=>p.coords).length+" 個可定位";
-  content=items.slice(0,state.limit).map(p=>resultCard({id:p.id,title:p.title,subtitle:p.pref+" · "+C.labels[p.kind],
-    note:summary(p),photo:p.photo,kind:p.kind,attr:"place",active:state.detail?.type==="place"&&state.detail.id===p.id,favorite:true,nearbyPhoto:p.nearbyPhoto})).join("");
+  content=items.slice(0,state.limit).map(p=>resultCard({id:p.id,title:p.title,subtitle:p.pref+" · "+(p.experience?p.experience.category:C.labels[p.kind]),
+    note:p.experience?p.experience.local_character:summary(p),experience:p.experience,photo:p.photo,kind:p.kind,attr:"place",active:state.detail?.type==="place"&&state.detail.id===p.id,favorite:true,nearbyPhoto:p.nearbyPhoto})).join("");
   if (state.nav==="explore" && !state.q && !state.pref && !state.inArea && state.category==="all") {
-    content='<div class="callout"><strong>新潟片貝 2027/9/10–11</strong><br>四尺玉、古蹟與東京拉拉熊。 '+button("route","katakai-6","看 6 天安排")+"</div>"+content;
+    content='<div class="experience-entry"><strong>把地方文化排進旅程</strong><p>染布、織布、紡紗、賽馬與傳統藝能</p>'+button("nav","experiences","找在地體驗","btn primary","craft")+'</div><div class="callout"><strong>新潟片貝 2027/9/10–11</strong><br>四尺玉、古蹟與東京拉拉熊。 '+button("route","katakai-6","看 6 天安排")+"</div>"+content;
   }
  }else if(state.nav==="routes"){
   items=A.routes.filter(r=>(!state.pref||r.pref===state.pref)&&(!state.region||prefs.get(r.pref)?.region===state.region)&&matches(state.q,[r.title,r.region,r.subtitle,r.period,...r.steps.map(s=>s.title+" "+s.note)].join(" ")));
@@ -146,16 +155,19 @@ function renderList(){
   count=items.length;label=count+" 張影像";
   content='<div class="photo-grid">'+items.map(k=>'<button class="photo-tile" data-photo="'+esc(k)+'" type="button">'+thumb(k)+'<span>'+esc(P[k].label)+'</span></button>').join("")+"</div>";
  }
+ if(state.nav==="experiences")label=count+" 個體驗場館 · "+new Set(items.map(p=>p.experience.theme)).size+" 種主題";
  $("count").textContent=label;
+ $("experience-selected-day").hidden=!experienceDay||state.nav!=="experiences";
+ $("experience-selected-day").textContent=experienceDay+" · 日期狀態見卡片，餘額請查官方";
  if(!count){
   content='<div class="empty"><strong>'+(state.nav==="saved"&&!state.q?"還沒有符合的收藏":"找不到符合的資料")+'</strong>'+
   (state.nav==="saved"?"到探索清單按愛心即可收藏，也可清除目前的搜尋。":"試試地名、日文店名，或移除一個篩選條件。")+'</div>';
  }
  $("results").innerHTML='<div class="results-list">'+content+'</div>'+(count>state.limit&&state.nav!=="photos"?'<div class="more">'+button("more","yes","載入更多結果")+"</div>":"");
- $("reset").hidden=!state.q&&!state.region&&!state.pref&&state.category==="all"&&!state.inArea&&!state.day;
+ $("reset").hidden=!state.q&&!state.region&&!state.pref&&state.category==="all"&&!state.inArea&&!state.day&&!experienceDay&&Object.keys(experienceDefaults).every(k=>experienceFilter[k]===experienceDefaults[k]);
  $("clear-search").hidden=!state.q;
  $("scope-label").textContent=state.pref||mapArea(state.region)||(state.inArea?"地圖範圍":"日本全區");
- if(state.nav==="explore"||state.nav==="saved")geo?.visible(items,state.detail?.type==="place"?C.placesById.get(state.detail.id):null);
+ if(["explore","experiences","saved"].includes(state.nav))geo?.visible(items,state.detail?.type==="place"?C.placesById.get(state.detail.id):null);
 }
 function refreshPref(){
  $("pref").innerHTML=option("","所有都道府縣")+A.prefs.filter(p=>!state.region||p.region===state.region).map(p=>option(p.name,p.name)).join("");
@@ -166,16 +178,20 @@ function renderChips(){
 }
 function switchNav(nav){
  if(!sectionNames[nav])return;
+ resetExperienceFilters();
+ $("workspace").dataset.section=nav;
  state.nav=nav;state.q="";state.pref="";state.region="";state.category="all";state.inArea=false;state.day="";state.limit=26;
  $("search").value="";$("region").value="";$("day").value="";$("this-area").setAttribute("aria-pressed","false");
  $("workspace-title").textContent=sectionNames[nav];
- $("search").placeholder=({explore:"找店名、車站、四尺玉…",routes:"搜尋城市、景點、行程…",calendar:"搜尋活動或限定商品…",photos:"搜尋照片地點…",saved:"搜尋我的收藏…"})[nav];
+ $("search").placeholder=({experiences:"找染布、紡紗、賽馬、和樂…",explore:"找店名、車站、四尺玉…",routes:"搜尋城市、景點、行程…",calendar:"搜尋活動或限定商品…",photos:"搜尋照片地點…",saved:"搜尋我的收藏…"})[nav];
  $("date-filter").hidden=nav!=="calendar";
- $("explore-filters").hidden=!["explore","routes","saved"].includes(nav);
- $("chips").hidden=nav==="routes";
+ $("explore-filters").hidden=!["explore","experiences","routes","saved"].includes(nav);
+ $("chips").hidden=nav==="routes"||nav==="experiences";
+ $("experience-filters").hidden=nav!=="experiences";
  document.querySelectorAll("[data-nav]").forEach(b=>b.setAttribute("aria-current",b.dataset.nav===nav?"page":"false"));
  refreshPref();renderChips();renderList();$("results").scrollTop=0;
  setMode("list");closeDetail(false);
+ if(nav==="experiences")goView("");
 }
 function setMode(mode){
  state.mode=mode;$("workspace").dataset.mobile=mode;
@@ -208,7 +224,7 @@ function goView(id,showMap=false){
 function refreshMapArea(){
  if(state.inArea)renderList();
 }
-function labelP(p){return (p.pref||"日本")+" · "+(C.labels[p.kind]||"地點");}
+function labelP(p){return (p.pref||"日本")+" · "+(p.experience?p.experience.category:C.labels[p.kind]||"地點");}
 function mapCard(){
  const active=state.detail?.type==="place"&&C.placesById.get(state.detail.id);
  const id=({asakusa:"official-6",tokyo:"official-4",katakai:"poi-katakai-0",ojiya:"poi-ojiya-0",settaya:"poi-settaya-0",konosu:"poi-konosu-0",kawagoe:"poi-kawagoe-0",arashiyama:"arashi-tea",kyoto:"official-13",osaka:"poi-osaka-3"})[state.view];
@@ -269,6 +285,7 @@ function stationPlan(p){
    external(direction(p.query,s.query,"walking"),"步行路線 ↗","btn")+"</div></div>").join("");
 }
 function placeBody(p){
+ if(p.experience)return CULTURE.body(p,{esc,external,button,facts,stationPlan,saved},experienceDay);
  const heading="<h2>"+esc(p.title)+"</h2>"+(p.japanese?'<p lang="ja" class="japanese-name">'+esc(p.japanese)+'</p>':"");
  const photo=cover(p.photo,p.nearbyPhoto);
  const mainFacts=facts([["館別／樓層",p.floor],["營業時間",p.hours],["地址",p.address],["電話",p.tel]]);
@@ -315,6 +332,7 @@ async function openPlace(id,makeFocus=true){
 function openRoute(id){
  const r=routes.get(id);if(!r)return;
  const html=r.steps.map((s,i)=>'<article class="step"><small>'+esc(s.when)+'</small><h3>'+esc(s.title)+'</h3><p>'+esc(s.note)+'</p><div class="detail-actions">'+
+ (s.place?button("place",s.place,"查看體驗與預約","btn","info"):"")+
  (s.map?button("view",s.map,"定位到地圖","btn","map"):"")+
  (s.query?external(google(s.query),"查看站點 ↗","btn"):"")+
  (s.query&&r.steps[i-1]?.query?external(direction(s.query,r.steps[i-1].query),"上一站到這裡 ↗","btn"):"")+"</div></article>").join("");
@@ -349,15 +367,45 @@ function filterNow({resetScroll=true}={}){
  state.limit=26;renderList();if(resetScroll)$("results").scrollTop=0;
 }
 function wipe(){
+ resetExperienceFilters();
  state.region="";state.pref="";state.q="";state.day="";state.category="all";state.inArea=false;
  $("region").value="";$("search").value="";$("day").value="";$("this-area").setAttribute("aria-pressed","false");
  refreshPref();renderChips();filterNow();
 }
+function renderExperienceThemes(){
+ $("experience-themes").innerHTML=CULTURE.themes.map(([key,label])=>
+  '<button type="button" data-experience-theme="'+key+'" aria-pressed="'+(experienceFilter.theme===key)+'">'+label+'</button>').join("");
+}
+function renderExperienceDate(){
+ const info=$("experience-date-info"),p=C.placesById.get(state.detail?.id);
+ if(info&&p?.experience){
+  const status=CULTURE.dateStatus(p.experience,experienceDay);
+  info.className="experience-date-status "+status.tone;
+  info.textContent=status.text;
+  const input=$("detail-content").querySelector("[data-culture-day]");
+  if(input)input.value=experienceDay;
+ }
+}
+function resetExperienceFilters(){
+ Object.assign(experienceFilter,experienceDefaults);experienceDay="";
+ for(const key of ["mode","booking","language","duration","budget","day"])$("experience-"+key).value="";
+ $("experience-options").open=false;
+ renderExperienceThemes();
+}
+renderExperienceThemes();
+for(const key of ["mode","booking","language","duration","budget"]){
+ $("experience-"+key).addEventListener("change",e=>{experienceFilter[key]=e.target.value;filterNow();});
+}
+$("experience-day").addEventListener("change",e=>{
+ experienceDay=CULTURE.checkedDay(e.target.value);
+ renderExperienceDate();filterNow();
+});
+
 $("region").innerHTML=option("","所有地區")+A.regions.map(r=>option(r.key,r.name)).join("");
 $("view").innerHTML=option("","全日本")+Object.entries(C.viewShort).map(([id,label])=>option(id,label)).join("");
 refreshPref();renderChips();checkSaved();
 geo=window.ATLAS_MAP.init({icon,esc,option,external,google,onPref:p=>{
- if(!["explore","saved"].includes(state.nav))switchNav("explore");
+ if(!["explore","experiences","saved"].includes(state.nav))switchNav("explore");
  state.region=p.region;state.pref=p.name;$("region").value=state.region;refreshPref();filterNow();geo?.center(p.center);
 },onPlace:openPlace,onFailure:mapStatus,onAreaMove:refreshMapArea});
 $("search").addEventListener("input",e=>{state.q=e.target.value;filterNow();});
@@ -404,6 +452,11 @@ document.addEventListener("click",e=>{
   if(matchMedia("(max-width:820px)").matches)closeDetail(false);
   setMode("map");requestAnimationFrame(()=>{geo?.resize();geo?.showStation(s);});return;
  }
+ if(d.experienceTheme){experienceFilter.theme=d.experienceTheme;renderExperienceThemes();filterNow();return;}
+ if(d.reviewFilter){
+  $("detail-content").querySelectorAll("[data-review-group]").forEach(section=>{section.hidden=d.reviewFilter!=="all"&&section.dataset.reviewGroup!==d.reviewFilter;});
+  $("detail-content").querySelectorAll("[data-review-filter]").forEach(b=>b.setAttribute("aria-pressed",b===t));return;
+ }
  if(d.nav){switchNav(d.nav);return;}
  if(d.mode){setMode(d.mode);return;}
  if(d.category){state.category=d.category;renderChips();filterNow();return;}
@@ -426,13 +479,21 @@ document.addEventListener("click",e=>{
   navigator.clipboard.writeText(url.href).then(()=>notify("已複製地點連結")).catch(()=>notify("瀏覽器未允許複製連結"));return;
  }
 });
+document.addEventListener("change",e=>{
+ if(!e.target.matches("[data-culture-day]"))return;
+ experienceDay=CULTURE.checkedDay(e.target.value);
+ $("experience-day").value=experienceDay;
+ renderExperienceDate();renderList();
+});
 document.addEventListener("keydown",e=>{
  if(e.key==="Escape"&&!$("photo-dialog").open)closeDetail();
  if(e.key==="/"&&!["INPUT","TEXTAREA","SELECT"].includes(document.activeElement?.tagName)){e.preventDefault();setMode("list");$("search").focus();}
 });
 new ResizeObserver(()=>geo?.resize()).observe($("map-pane"));
 const requested=new URLSearchParams(location.search);
-goView(requested.get("view")||"asakusa");renderList();mapCard();
+goView(requested.get("view")||"asakusa");
+if(requested.get("tab")==="experiences")switchNav("experiences");
+renderList();mapCard();
 if(requested.has("place")) openPlace(requested.get("place"));
 })();
 

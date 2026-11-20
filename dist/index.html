@@ -8,15 +8,17 @@
 <title>日本拉拉熊旅遊圖鑑</title>
 <link rel="icon" href="./assets/compass.svg" type="image/svg+xml">
 <link rel="stylesheet" href="./assets/leaflet.css">
-<link rel="stylesheet" href="./assets/style.css?v=3">
+<link rel="stylesheet" href="./assets/style.css?v=4">
 <script defer src="./assets/leaflet.js"></script>
 <script defer src="./assets/data.js"></script>
 <script defer src="./assets/photos.js"></script>
 <script defer src="./assets/rail-grid.js"></script>
 <script defer src="./assets/travel-details.js?v=3"></script>
-<script defer src="./assets/catalog.js?v=3"></script>
-<script defer src="./assets/map.js?v=3"></script>
-<script defer src="./assets/app.js?v=3"></script>
+<script defer src="./assets/culture-data.js?v=4"></script>
+<script defer src="./assets/catalog.js?v=4"></script>
+<script defer src="./assets/culture.js?v=4"></script>
+<script defer src="./assets/map.js?v=4"></script>
+<script defer src="./assets/app.js?v=4"></script>
 </head>
 <body>
 <a class="skip" href="#search">跳到地點搜尋</a>
@@ -24,6 +26,7 @@
  <a class="brand" href="./" aria-label="日本拉拉熊旅遊圖鑑首頁"><img src="./assets/compass.svg" alt="" width="37" height="37"><span><strong>日本拉拉熊旅遊圖鑑</strong><small>JAPAN TRAVEL ATLAS</small></span></a>
  <nav id="nav" class="main-nav" aria-label="旅遊功能">
   <button type="button" data-nav="explore" aria-current="page"><span data-icon="compass"></span>探索</button>
+  <button type="button" data-nav="experiences"><span data-icon="craft"></span>在地體驗</button>
   <button type="button" data-nav="routes"><span data-icon="route"></span>行程</button>
   <button type="button" data-nav="calendar"><span data-icon="calendar"></span>活動</button>
   <button type="button" data-nav="photos"><span data-icon="image"></span>照片</button>
@@ -41,6 +44,23 @@
     <div class="filters"><label class="select-wrap"><span>地區</span><select id="region" aria-label="地區"></select></label><label class="select-wrap"><span>都道府縣</span><select id="pref" aria-label="都道府縣"></select></label></div>
     <div class="chips" id="chips" aria-label="地點分類"></div>
    </div>
+<section id="experience-filters" hidden aria-label="體驗篩選">
+ <div class="experience-themes" id="experience-themes" aria-label="體驗主題"></div>
+ <div class="experience-quick-filters">
+  <label>參與方式<select id="experience-mode"><option value="">全部方式</option><option value="hands">親手做</option><option value="watch">觀看</option><option value="interactive">可互動</option></select></label>
+  <label>預約方式<select id="experience-booking"><option value="">全部方式</option><option value="required">需要預約</option><option value="walkin">可現場參加</option></select></label>
+ </div>
+ <details class="experience-more-filters" id="experience-options">
+  <summary>日期、語言、時間與預算</summary>
+  <div class="experience-filter-grid">
+   <label>旅行日期<input id="experience-day" type="date"></label>
+   <label>已知教學語言<select id="experience-language"><option value="">全部語言</option><option value="ja">日文</option><option value="en">可用英語</option><option value="unknown">教學語言待確認</option></select></label>
+   <label>體驗時間<select id="experience-duration"><option value="">不限時間</option><option value="short">60 分鐘內起</option><option value="medium">61–120 分鐘</option><option value="long">超過 2 小時</option><option value="variable">依幕次／場次</option></select></label>
+   <label>成人起價（日圓）<select id="experience-budget"><option value="">不限預算</option><option value="2000">¥2,000 以下起</option><option value="5000">¥5,000 以下起</option><option value="10000">¥10,000 以下起</option><option value="unknown">費用／單位待確認</option></select></label>
+  </div>
+ </details>
+ <p id="experience-selected-day" class="experience-selected-day" hidden></p>
+</section>
    <label id="date-filter" class="date-filter" hidden>指定旅行日期<input id="day" type="date"></label>
    <div class="result-head"><span id="count" aria-live="polite"></span><button type="button" id="reset" hidden>清除篩選</button></div>
   </section>
