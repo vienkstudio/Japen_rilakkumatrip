@@ -1,100 +1,77 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#faf7f0">
-<meta name="description" content="日本拉拉熊旅遊圖鑑。搜尋店舖、四尺玉與手作，從照片、附近車站和地圖開始排行程。">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#245343">
+<meta name="description" content="拉拉熊新品採買、日本古蹟與動漫踩點、在地體驗和美食，用地圖與每日行程一起安排。">
 <title>日本拉拉熊旅遊圖鑑</title>
-<link rel="icon" href="./assets/compass.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./assets/leaflet.css">
-<link rel="stylesheet" href="./assets/style.css?v=4">
-<script defer src="./assets/leaflet.js"></script>
-<script defer src="./assets/data.js"></script>
-<script defer src="./assets/photos.js"></script>
-<script defer src="./assets/rail-grid.js"></script>
-<script defer src="./assets/travel-details.js?v=3"></script>
-<script defer src="./assets/culture-data.js?v=6"></script>
-<script defer src="./assets/catalog.js?v=4"></script>
-<script defer src="./assets/culture.js?v=4"></script>
-<script defer src="./assets/map.js?v=4"></script>
-<script defer src="./assets/app.js?v=5"></script>
-</head>
-<body>
-<a class="skip" href="#search">跳到地點搜尋</a>
+<link rel="icon" href="./assets/logo-rilakkuma-heritage.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/logo-192.png">
+<link rel="stylesheet" href="./assets/leaflet.css"><link rel="stylesheet" href="./assets/style.css?v=7">
+<link rel="stylesheet" href="./assets/tasks.css?v=7">
+<script defer src="./assets/leaflet.js"></script><script defer src="./assets/data.js"></script><script defer src="./assets/photos.js"></script>
+<script defer src="./assets/rail-grid.js"></script><script defer src="./assets/travel-details.js?v=3"></script><script defer src="./assets/culture-data.js?v=7"></script>
+<script defer src="./assets/catalog.js?v=4"></script><script defer src="./assets/culture.js?v=7"></script>
+<script defer src="./assets/task-data.js?v=7"></script><script defer src="./assets/tasks.js?v=7"></script>
+<script defer src="./assets/map.js?v=7"></script><script defer src="./assets/app.js?v=7"></script>
+</head><body>
+<a class="skip" href="#search">跳到搜尋</a>
 <header class="app-header">
- <a class="brand" href="./" aria-label="日本拉拉熊旅遊圖鑑首頁"><img src="./assets/compass.svg" alt="" width="37" height="37"><span><strong>日本拉拉熊旅遊圖鑑</strong><small>JAPAN TRAVEL ATLAS</small></span></a>
- <nav id="nav" class="main-nav" aria-label="旅遊功能">
-  <button type="button" data-nav="explore" aria-current="page"><span data-icon="compass"></span>探索</button>
-  <button type="button" data-nav="experiences"><span data-icon="craft"></span>在地體驗</button>
-  <button type="button" data-nav="routes"><span data-icon="route"></span>行程</button>
-  <button type="button" data-nav="calendar"><span data-icon="calendar"></span>活動</button>
-  <button type="button" data-nav="photos"><span data-icon="image"></span>照片</button>
-  <button type="button" data-nav="saved"><span data-icon="heart"></span>收藏<span id="saved-count" class="count"></span></button>
- </nav>
- <button class="about" id="about" type="button" aria-label="資料來源"><span data-icon="info"></span><span>資料來源</span></button>
+<a class="brand" href="./" aria-label="日本拉拉熊旅遊圖鑑首頁"><img src="./assets/logo-rilakkuma-heritage.svg" alt="拉拉熊與古城標誌" width="48" height="48"><span><strong>日本拉拉熊旅遊圖鑑</strong><small>採買・文化・日本日常</small></span></a>
+<nav id="nav" class="main-nav" aria-label="主要功能">
+<button type="button" data-nav="explore" aria-current="page"><span data-icon="compass"></span>探索</button>
+<button type="button" data-nav="shopping"><span data-icon="shop"></span>買物</button>
+<button type="button" data-nav="calendar"><span data-icon="calendar"></span>活動</button>
+<button type="button" data-nav="food"><span data-icon="food"></span>美食</button>
+<button type="button" data-nav="routes"><span data-icon="route"></span>行程</button>
+</nav>
+<div class="header-tools"><button type="button" data-nav="saved" aria-label="收藏與去過紀錄"><span data-icon="heart"></span><span class="tool-text">收藏</span><span id="saved-count" class="count"></span></button><button id="about" type="button" aria-label="資料來源"><span data-icon="info"></span></button></div>
 </header>
-<main class="workspace" id="workspace" data-mobile="list">
- <aside class="browse" aria-label="搜尋、照片與行程">
-  <section class="browse-head" id="browse-head">
-   <div class="app-kicker"><span data-icon="map"></span><span id="scope-label">日本全區</span></div>
-   <h1 id="workspace-title">探索地點</h1>
-   <div class="search-field" id="search-field"><span data-icon="search"></span><input type="search" id="search" placeholder="找店名、車站、四尺玉…" aria-label="搜尋地點" autocomplete="off"><button type="button" id="clear-search" aria-label="清空搜尋" hidden>×</button><kbd>/</kbd></div>
-   <div id="explore-filters">
-    <div class="filters"><label class="select-wrap"><span>地區</span><select id="region" aria-label="地區"></select></label><label class="select-wrap"><span>都道府縣</span><select id="pref" aria-label="都道府縣"></select></label></div>
-    <div class="chips" id="chips" aria-label="地點分類"></div>
-   </div>
-<section id="experience-filters" hidden aria-label="體驗篩選">
- <div class="experience-themes" id="experience-themes" aria-label="體驗主題"></div>
- <div class="experience-quick-filters">
-  <label>參與方式<select id="experience-mode"><option value="">全部方式</option><option value="hands">親手做</option><option value="watch">觀看</option><option value="interactive">可互動</option></select></label>
-  <label>預約方式<select id="experience-booking"><option value="">全部方式</option><option value="required">需要預約</option><option value="walkin">可現場參加</option></select></label>
- </div>
- <details class="experience-more-filters" id="experience-options">
-  <summary>日期、語言、時間與預算</summary>
-  <div class="experience-filter-grid">
-   <label>旅行日期<input id="experience-day" type="date"></label>
-   <label>已知教學語言<select id="experience-language"><option value="">全部語言</option><option value="ja">日文</option><option value="en">可用英語</option><option value="unknown">教學語言待確認</option></select></label>
-   <label>體驗時間<select id="experience-duration"><option value="">不限時間</option><option value="short">60 分鐘內起</option><option value="medium">61–120 分鐘</option><option value="long">超過 2 小時</option><option value="variable">依幕次／場次</option></select></label>
-   <label>成人起價（日圓）<select id="experience-budget"><option value="">不限預算</option><option value="2000">¥2,000 以下起</option><option value="5000">¥5,000 以下起</option><option value="10000">¥10,000 以下起</option><option value="unknown">費用／單位待確認</option></select></label>
-  </div>
- </details>
- <p id="experience-selected-day" class="experience-selected-day" hidden></p>
+<section class="trip-scope" aria-label="共用旅行條件">
+<label><span>旅行地區</span><select id="pref" aria-label="旅行城市或都道府縣"></select></label>
+<label><span>旅行日期</span><input id="day" type="date" aria-label="旅行日期"></label>
+<label class="party-field"><span>同行人數</span><input id="party" type="number" min="1" max="20" step="1" value="1" aria-label="同行人數"></label>
+<button id="clear-scope" type="button" aria-label="重設旅行地區日期與人數">重設</button>
 </section>
-   <label id="date-filter" class="date-filter" hidden>指定旅行日期<input id="day" type="date"></label>
-   <div class="result-head"><span id="count" aria-live="polite"></span><button type="button" id="reset" hidden>清除篩選</button></div>
-  </section>
-  <section class="results" id="results" aria-label="搜尋結果" tabindex="0"></section>
- </aside>
- <section class="map-pane" id="map-pane" aria-label="地點與鐵路地圖">
-  <div id="map" role="region" aria-label="日本互動地圖"></div>
-  <div class="map-top">
-   <label class="map-select"><span data-icon="pin"></span><select id="view" aria-label="地圖範圍"></select></label>
-   <button type="button" id="this-area"><span data-icon="search"></span>搜尋此區域</button>
-   <button type="button" id="layers-button" aria-expanded="false"><span data-icon="layers"></span>圖層</button>
-  </div>
-  <div class="layer-box" id="layer-box" hidden>
-   <label>背景地圖<select id="base"><option value="pale">地理院淡色</option><option value="std">地理院標準</option><option value="photo">地理院航照</option><option value="osm">OpenStreetMap</option></select></label>
-   <label><input id="layer-rail" type="checkbox" checked> 鐵路線</label><label><input id="layer-station" type="checkbox" checked> 車站</label><label><input id="layer-boundary" type="checkbox" checked> 都道府縣界</label>
-   <label>篩選鐵路線<select id="line-filter"><option value="">全部線路</option></select></label>
-  </div>
-  <p class="map-status" id="map-status" aria-live="polite" hidden></p>
-  <div class="map-card" id="map-card"></div>
- </section>
- <aside class="detail" id="detail" aria-label="地點詳細資料" hidden>
-  <div class="detail-head"><span id="detail-label"></span><button id="close-detail" type="button" aria-label="關閉詳情"><span data-icon="close"></span></button></div>
-  <div class="detail-content" id="detail-content"></div>
- </aside>
-</main>
-<div id="switcher" class="switcher" aria-label="手機檢視方式">
- <button type="button" data-mode="list" aria-pressed="true"><span data-icon="list"></span>清單</button>
- <button type="button" data-mode="map" aria-pressed="false"><span data-icon="map"></span>地圖</button>
+<main class="workspace" id="workspace" data-mobile="list" data-map="on">
+<aside class="browse" aria-label="搜尋與旅行選擇">
+<section class="browse-head" id="browse-head">
+<div class="browse-title-row"><div><div class="app-kicker"><span data-icon="map"></span><span id="scope-label">日本全區</span></div><h1 id="workspace-title">今天想去哪裡？</h1></div><button id="toggle-map" type="button" class="view-toggle" aria-pressed="true"><span data-icon="map"></span><span>地圖</span></button></div>
+<div class="search-field"><span data-icon="search"></span><input type="search" id="search" placeholder="找商品、作品、地點或活動…" aria-label="搜尋商品作品地點與活動" autocomplete="off"><button id="clear-search" type="button" aria-label="清空搜尋" hidden>×</button><kbd>/</kbd></div>
+<div id="explore-filters">
+<div class="quick-paths"><button type="button" data-nav="experiences">在地體驗</button><button type="button" data-explore-theme="heritage">古蹟與國寶</button><button type="button" data-task="anime">動漫踩點</button><button type="button" data-task="collections">主題收集</button><button type="button" data-nav="photos">照片</button></div>
+<details class="more-filters"><summary>地點類型與區域</summary><label class="select-wrap">大區域<select id="region" aria-label="日本大區域"></select></label><div id="chips" class="chips" aria-label="地點分類"></div><label class="check-label"><input type="checkbox" id="only-photo">只看有照片的地點</label></details>
 </div>
-<dialog id="photo-dialog" aria-labelledby="photo-title"><div class="light-head"><h2 id="photo-title">地點照片</h2><button id="close-photo" type="button" aria-label="關閉照片">×</button></div><div id="photo-content"></div></dialog>
-<div class="status-toast" id="toast" role="status" hidden></div>
-<noscript><p class="noscript">請啟用 JavaScript 使用搜尋、照片與地圖。</p></noscript>
-</body>
-</html>
-
-
-
+<section id="experience-filters" hidden aria-label="體驗篩選">
+<div id="experience-themes" class="experience-themes"></div>
+<div class="experience-quick-filters"><label>參與方式<select id="experience-mode"><option value="">全部方式</option><option value="hands">親手做</option><option value="watch">觀看</option><option value="interactive">可互動</option></select></label><label>預約方式<select id="experience-booking"><option value="">全部方式</option><option value="required">需要預約</option><option value="walkin">可現場</option></select></label></div>
+<details id="experience-options" class="experience-more-filters"><summary>語言、時間與每人預算</summary><div class="experience-filter-grid">
+<label hidden>日期<input id="experience-day" type="date"></label>
+<label>教學語言<select id="experience-language"><option value="">全部語言</option><option value="ja">日文</option><option value="en">可用英語</option><option value="unknown">待確認</option></select></label>
+<label>體驗時間<select id="experience-duration"><option value="">不限時間</option><option value="short">60 分鐘內起</option><option value="medium">61–120 分鐘</option><option value="long">超過 2 小時</option><option value="variable">依場次</option></select></label>
+<label>每人預算（日圓）<select id="experience-budget"><option value="">不限預算</option><option value="2000">¥2,000 以下</option><option value="5000">¥5,000 以下</option><option value="10000">¥10,000 以下</option><option value="unknown">費用／單位待確認</option></select></label></div></details>
+<p id="experience-selected-day" class="experience-selected-day" hidden></p>
+</section>
+<div id="task-filters"></div><span id="date-filter" hidden></span>
+<div class="result-head"><span id="count" aria-live="polite"></span><button id="reset" type="button" hidden>清除本頁篩選</button></div>
+</section>
+<section class="results" id="results" aria-label="搜尋結果" tabindex="0"></section>
+</aside>
+<section class="map-pane" id="map-pane" aria-label="地點與行程地圖">
+<div id="map" role="region" aria-label="日本地點與鐵路互動地圖"></div>
+<div class="map-top"><label class="map-select"><select id="view" aria-label="地圖地區"></select></label><button type="button" id="this-area" aria-pressed="false">套用這個範圍</button><button type="button" id="layers-button" aria-expanded="false" aria-controls="layer-box"><span data-icon="layers"></span><span>圖層</span></button></div>
+<div id="map-summary" class="map-summary" aria-live="polite"></div>
+<div class="map-legend" aria-label="地圖圖例"><span><i class="legend-shop"></i>店家</span><span><i class="legend-culture"></i>古蹟</span><span><i class="legend-craft"></i>體驗</span><span><i class="legend-event"></i>活動</span><span><i class="legend-food"></i>美食</span></div>
+<div class="layer-box" id="layer-box" hidden><div class="layer-heading"><strong>地圖顯示</strong><button id="close-layers" type="button" aria-label="收起圖層設定">完成</button></div>
+<label>背景地圖<select id="base"><option value="pale">地理院淡色</option><option value="std">地理院標準</option><option value="photo">地理院航照</option><option value="osm">OpenStreetMap</option></select></label>
+<label><input id="layer-rail" type="checkbox"> 鐵路線</label><label><input id="layer-station" type="checkbox"> 車站</label><label><input id="layer-boundary" type="checkbox" checked> 縣市範圍</label>
+<label>指定鐵路線<select id="line-filter"><option value="">全部線路</option></select></label><p>鐵路圖層可辨認站線，班次與末班車請開交通來源。</p></div>
+<p id="map-status" class="map-status" aria-live="polite" hidden></p><div class="map-card" id="map-card"></div>
+</section>
+<aside class="detail" id="detail" aria-label="詳細資料" hidden><div class="detail-head"><span id="detail-label"></span><button id="close-detail" type="button" aria-label="關閉詳情"><span data-icon="close"></span></button></div><div id="detail-content" class="detail-content"></div></aside>
+</main>
+<div id="switcher" class="switcher"><button type="button" data-mode="list" aria-pressed="true"><span data-icon="list"></span>看清單</button><button type="button" data-mode="map" aria-pressed="false"><span data-icon="map"></span>看地圖</button></div>
+<dialog id="photo-dialog" aria-labelledby="photo-title"><div class="light-head"><h2 id="photo-title">照片</h2><button id="close-photo" type="button" aria-label="關閉照片">×</button></div><div id="photo-content"></div></dialog>
+<div id="toast" class="status-toast" role="status" hidden></div>
+<noscript><p class="noscript">請啟用 JavaScript 使用搜尋與行程。</p></noscript>
+</body></html>

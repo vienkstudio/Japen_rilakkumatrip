@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-20",
+  "scope": "餐飲研究補充；僅研究資料，未代訂、未確認空席、未下載照片、未改動原站。",
+  "integrationNotes": [
+    "合併時保留既有飯店餐廳；1899重複列以實際店址/官網識別同店後去重，不以名稱直接覆寫。",
+    "本批東京5家，涵蓋1/2/3星及平價壽司、天丼。京都及地方料理仍可擴充。",
+    "年度依Michelin官方2027公告時點及現行星級篩選交叉確認；動態頁應顯示查核日，不稱即時可訂。",
+    "圖片僅列來源及參考URL；公開站重製/熱鏈授權未確認，應先連官方相簿或取得授權。"
+  ],
+  "michelinYearEvidence": {
+    "year": 2026,
+    "source": "https://guide.michelin.com/jp/en/article/news-and-views/michelin-guide-ceremony-tokyo-kyoto-osaka-nara-2027-selection-save-the-date",
+    "note": "官方2026-06-10宣布東京、京都大阪、奈良2027名單於2027-02-16公布；2026-11-20查核採2026版。"
+  },
+  "restaurants": [
+    {
+      "id": "tokyo-ryugin-hibiya",
+      "title": "龍吟｜日比谷的季節日本料理",
+      "japanese": "日本料理 龍吟",
+      "pref": "東京都",
+      "city": "千代田區",
+      "cuisine": [
+        "日本料理",
+        "季節套餐",
+        "河豚"
+      ],
+      "tags": [
+        "米其林3星",
+        "晚餐",
+        "紀念日",
+        "日比谷銀座路線"
+      ],
+      "coords": [
+        35.673583,
+        139.759193
+      ],
+      "coordinateSource": "Michelin官方店頁的地圖參數",
+      "address": "東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷7F",
+      "description": "山本征治以日本當季食材組成完整套餐，適合安排成獨立晚間重點。1至3月的河豚特別期須核對實際供餐日期。",
+      "menu": [
+        {
+          "name": "季節おまかせ",
+          "meal": "晚餐",
+          "priceJPY": 77000,
+          "priceBasis": "每人基礎套餐",
+          "taxStatus": "含稅",
+          "serviceStatus": "一般桌另10%；包廂/半包廂另15%",
+          "estimatedTableTotalJPY": 84700,
+          "source": "https://www.nihonryori-ryugin.com/ja/menu/"
+        },
+        {
+          "name": "季節おまかせ｜OMAKASE",
+          "meal": "晚餐",
+          "priceJPY": 84700,
+          "priceBasis": "每人",
+          "taxStatus": "含稅",
+          "serviceStatus": "含一般桌服務費；每席另390日圓平台預約費",
+          "source": "https://omakase.in/r/xl754008"
+        },
+        {
+          "name": "23周年特別套餐",
+          "meal": "晚餐",
+          "priceJPY": 96800,
+          "priceBasis": "每人；頁列12/23–12/31，年份未明示",
+          "taxStatus": "含稅",
+          "serviceStatus": "含服務費；包廂追加及平台費依結帳",
+          "source": "https://omakase.in/r/xl754008"
+        }
+      ],
+      "michelin": {
+        "year": 2026,
+        "stars": 3,
+        "source": "https://guide.michelin.com/jp/en/tokyo-region/tokyo/restaurant/ryugin-1194232",
+        "starEvidence": "https://guide.michelin.com/us/en/tokyo-region/restaurants/3-stars-michelin/japanese",
+        "yearSource": "https://guide.michelin.com/jp/en/article/news-and-views/michelin-guide-ceremony-tokyo-kyoto-osaka-nara-2027-selection-save-the-date",
+        "checkedAt": "2026-11-20"
+      },
+      "booking": {
+        "url": "https://omakase.in/r/xl754008",
+        "channel": "Michelin官方店頁連出的OMAKASE",
+        "releaseWindow": "查核時列受付至2027-01-31；下次2026-12-01 12:00日本時間。官網電話一般規則：每月1日正午開放至翌翌月底。",
+        "cancellation": "OMAKASE頁：前日起取消100%。電話官網reserve頁另寫當日每人70,000日圓，與菜單及平台不同；務必依所選渠道最終條款確認。",
+        "conditions": "10歲以上且能吃成人全套；避濃香水、短褲拖鞋，半正式服裝；重度過敏或大量忌口須事先確認。",
+        "liveAvailability": "未登入、未確認空席",
+        "alternative": "電話03-6630-0007，通常12:00–17:00；5–8人請直接洽店"
+      },
+      "hours": "18:00–23:00，最晚入店19:30；不定休，依官方行事曆。",
+      "access": {
+        "stations": [
+          "日比谷",
+          "有樂町",
+          "銀座"
+        ],
+        "detail": "東京Midtown日比谷7樓；最近站由官方預約頁確認，出口與無障礙路徑待查。"
+      },
+      "images": [
+        {
+          "page": "https://www.nihonryori-ryugin.com/ja/menu/",
+          "url": "https://omakase.in/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE5MywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--07c82d16449c9213ad6dcb8274d52a0243f6e7b7/ryugin_1.jpg",
+          "rights": "官方授權訂位頁的餐點照片參考；重製授權待確認",
+          "displayStatus": "來源URL已取得，圖像抓取未成功；不保證可熱鏈"
+        }
+      ],
+      "sources": [
+        "https://www.nihonryori-ryugin.com/ja/menu/",
+        "https://www.nihonryori-ryugin.com/ja/reserve/",
+        "https://omakase.in/r/xl754008",
+        "https://guide.michelin.com/jp/en/tokyo-region/tokyo/restaurant/ryugin-1194232"
+      ],
+      "remaining": [
+        "電話reserve頁取消金額與現行菜單/OMAKASE條款不一致，不能混為單一取消政策。",
+        "包廂費及飲料需另外核價。",
+        "特別套餐年份、河豚終止日期及實際空席須在所選日期確認。"
+      ]
+    },
+    {
+      "id": "tokyo-tempura-kondo-ginza",
+      "title": "天婦羅近藤｜銀座職人吧檯",
+      "japanese": "てんぷら近藤",
+      "pref": "東京都",
+      "city": "中央區",
+      "cuisine": [
+        "天婦羅",
+        "日本料理"
+      ],
+      "tags": [
+        "米其林2星",
+        "午餐",
+        "晚餐",
+        "銀座路線"
+      ],
+      "coords": [
+        35.671184,
+        139.763104
+      ],
+      "coordinateSource": "Michelin官方店頁地圖參數",
+      "address": "東京都中央区銀座5-5-13 坂口ビル9F",
+      "description": "以薄衣、蔬菜與食材保水技法見長；招牌厚切甘藷需長時間烹調，是否包含在所選套餐須向店方確認。可與銀座購物安排在同區。",
+      "menu": [
+        {
+          "name": "菫",
+          "meal": "午餐",
+          "priceJPY": 13200,
+          "taxStatus": "含稅",
+          "serviceStatus": "官網餐價未單列服務費；海外官方窗口另加15%預約結帳費",
+          "source": "https://tempura-kondo.com/"
+        },
+        {
+          "name": "椿",
+          "meal": "午餐",
+          "priceJPY": 16500,
+          "taxStatus": "含稅",
+          "serviceStatus": "海外官方窗口另加15%",
+          "source": "https://tempura-kondo.com/"
+        },
+        {
+          "name": "藤",
+          "meal": "晚餐",
+          "priceJPY": 22000,
+          "taxStatus": "含稅",
+          "serviceStatus": "海外官方窗口另加15%",
+          "source": "https://tempura-kondo.com/"
+        },
+        {
+          "name": "楓",
+          "meal": "晚餐",
+          "priceJPY": 27500,
+          "taxStatus": "含稅",
+          "serviceStatus": "海外官方窗口另加15%",
+          "source": "https://tempura-kondo.com/"
+        },
+        {
+          "name": "蓬",
+          "meal": "晚餐",
+          "priceJPY": 33000,
+          "taxStatus": "含稅",
+          "serviceStatus": "海外官方窗口另加15%",
+          "source": "https://tempura-kondo.com/"
+        }
+      ],
+      "michelin": {
+        "year": 2026,
+        "stars": 2,
+        "source": "https://guide.michelin.com/en/tokyo-region/tokyo/restaurant/tempura-kondo",
+        "starEvidence": "https://guide.michelin.com/en/jp/tokyo-region/tokyo/restaurants/2-stars-michelin",
+        "yearSource": "https://guide.michelin.com/jp/en/article/news-and-views/michelin-guide-ceremony-tokyo-kyoto-osaka-nara-2027-selection-save-the-date",
+        "checkedAt": "2026-11-20"
+      },
+      "booking": {
+        "url": "https://mycon-jp.net/reservation/tempura-kondo/zh-TW",
+        "channel": "餐廳官網明示的My Concierge Japan海外官方窗口",
+        "releaseWindow": "公開表單未列固定放位日，待窗口回覆；提出申請不等於成立。",
+        "cancellation": "正式確認後，預約日前3天日本時間15:00前可全額退費（匯差不補）；之後至當日取消不退款。遲到超過15分鐘視同未到且不退款。",
+        "conditions": "先確認座位再郵件通知付款；完成預付才成立。12歲以上且每人完整套餐；同鍋同器具，全部料理有蛋，過敏/忌口須預告。標價另+15%。",
+        "liveAvailability": "未提交申請、未確認空席",
+        "alternative": "日本國內官方一休表單由官網進入；電話03-5568-0923僅日語"
+      },
+      "hours": "午11:30/13:30兩輪，各2小時；晚17:00/19:30兩輪，各2.5小時。官網列週日休及月曜假日規則，應再查當月行事曆。",
+      "access": {
+        "stations": [
+          "銀座"
+        ],
+        "lines": [
+          "東京Metro銀座線",
+          "丸之內線",
+          "日比谷線"
+        ],
+        "detail": "官網列銀座站步行5分鐘。"
+      },
+      "images": [
+        {
+          "url": "https://tempura-kondo.com/wp-content/uploads/2020/03/tenpura1.jpg",
+          "page": "https://tempura-kondo.com/",
+          "rights": "餐廳官方餐點照片；公開重製/熱鏈授權待確認"
+        }
+      ],
+      "sources": [
+        "https://tempura-kondo.com/",
+        "https://mycon-jp.net/reservation/tempura-kondo/zh-TW",
+        "https://guide.michelin.com/en/tokyo-region/tokyo/restaurant/tempura-kondo"
+      ],
+      "remaining": [
+        "固定放位日未公開。",
+        "15%為所選海外窗口結帳加價，不能自動套用日本國內其他渠道。",
+        "套餐品數、指定甘藷及加點費需另確認。"
+      ]
+    },
+    {
+      "id": "tokyo-sushi-ryujiro-aoyama",
+      "title": "鮨龍次郎｜青山握壽司",
+      "japanese": "鮨 龍次郎",
+      "pref": "東京都",
+      "city": "港區",
+      "cuisine": [
+        "壽司",
+        "江戶前壽司"
+      ],
+      "tags": [
+        "米其林1星",
+        "午餐",
+        "晚餐",
+        "青山原宿路線"
+      ],
+      "coords": [
+        35.671287,
+        139.720882
+      ],
+      "coordinateSource": "Michelin官方店頁地圖參數",
+      "address": "東京都港区南青山2-11-11 ARISTO南青山1F",
+      "description": "吧檯壽司套餐可區分大將與二番手；午間握壽司是較低門檻的選項，適合搭青山及表參道行程。",
+      "menu": [
+        {
+          "name": "握りコース（大將）：12貫及卷物",
+          "meal": "午餐",
+          "priceJPY": 19250,
+          "priceBasis": "每人起，季節食材可調價",
+          "taxStatus": "含稅",
+          "serviceStatus": "服務費是否另計待確認；預約每席另390",
+          "source": "https://omakase.in/r/uk638032"
+        },
+        {
+          "name": "おまかせ（大將）",
+          "meal": "午餐/晚餐",
+          "priceJPY": 33000,
+          "priceBasis": "每人起",
+          "taxStatus": "含稅",
+          "serviceStatus": "服務費待確認；預約每席另390",
+          "source": "https://omakase.in/r/uk638032"
+        },
+        {
+          "name": "おまかせ（二番手）",
+          "meal": "午餐/晚餐",
+          "priceJPY": 32450,
+          "priceBasis": "每人起",
+          "taxStatus": "含稅",
+          "serviceStatus": "服務費待確認；預約每席另390",
+          "source": "https://omakase.in/r/uk638032"
+        }
+      ],
+      "michelin": {
+        "year": 2026,
+        "stars": 1,
+        "source": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-ryujiro",
+        "starEvidence": "https://guide.michelin.com/jp/en/tokyo-region/restaurants/1-star-michelin/sushi",
+        "yearSource": "https://guide.michelin.com/jp/en/article/news-and-views/michelin-guide-ceremony-tokyo-kyoto-osaka-nara-2027-selection-save-the-date",
+        "checkedAt": "2026-11-20"
+      },
+      "booking": {
+        "url": "https://omakase.in/r/uk638032",
+        "channel": "Michelin官方店頁連出的OMAKASE",
+        "releaseWindow": "查核時列受付至2026-12-31；下次2026-12-01 14:00日本時間。需註冊或登入看空席。",
+        "cancellation": "訂妥起5%；3日前起50%；前日起100%。",
+        "conditions": "13歲以上且能吃成人全套；大量過敏可能拒接。遲到15分鐘或中途離席可能省略餐點或視為取消；勿用濃香水、護手霜等。每席390日圓預約費。",
+        "liveAvailability": "未登入、未確認空席"
+      },
+      "hours": "12:00、18:00、20:30開席；週日及國定假日休，臨時休業依平台。",
+      "access": {
+        "stations": [
+          "青山一丁目"
+        ],
+        "detail": "官方預約頁列最近站青山一丁目；出口、步行時間與無障礙路徑待查。"
+      },
+      "images": [
+        {
+          "url": "https://omakase.in/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDkxLCJwdXIiOiJibG9iX2lkIn19--d0d8dcd5a849510dbf1c4972366f08e9c4714d2e/sushiryujiro.jpg",
+          "page": "https://omakase.in/r/uk638032",
+          "rights": "官方授權訂位頁圖片；公開重製/熱鏈授權待確認"
+        }
+      ],
+      "sources": [
+        "https://omakase.in/r/uk638032",
+        "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-ryujiro"
+      ],
+      "remaining": [
+        "是否另收餐廳服務費及大將/二番手當日安排待最終方案確認。",
+        "放位資訊是查核快照，不能保證下一月相同。"
+      ]
+    },
+    {
+      "id": "tokyo-sushiro-asakusa-rokku",
+      "title": "壽司郎淺草六區店｜逛街後彈性壽司餐",
+      "japanese": "スシロー 浅草六区店",
+      "pref": "東京都",
+      "city": "台東區",
+      "cuisine": [
+        "迴轉壽司"
+      ],
+      "tags": [
+        "大眾餐飲",
+        "午餐",
+        "晚餐",
+        "淺草路線"
+      ],
+      "coords": [
+        35.71386563,
+        139.7934591
+      ],
+      "coordinateSource": "官方店頁GoogleMaps連結",
+      "address": "東京都台東区浅草2丁目6-7 東京楽天地浅草ビル3階",
+      "description": "淺草六區的連鎖壽司選項，適合購物或寺院參觀後彈性用餐。務必看本店菜單，別套用其他分店價格。",
+      "menu": [
+        {
+          "name": "常態盤價門檻",
+          "meal": "午餐/晚餐",
+          "priceJPY": 150,
+          "priceBasis": "每盤起，不是每人總餐費；限時優惠可能更低",
+          "taxStatus": "含稅",
+          "serviceStatus": "未見另列服務費，依現場結帳",
+          "source": "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2413"
+        },
+        {
+          "name": "えびアボカド",
+          "meal": "午餐/晚餐",
+          "priceJPY": 170,
+          "priceBasis": "每盤，頁列常態商品",
+          "taxStatus": "含稅",
+          "serviceStatus": "未另列",
+          "source": "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873"
+        },
+        {
+          "name": "こだわりハンバーグにぎり",
+          "meal": "午餐/晚餐",
+          "priceJPY": 190,
+          "priceBasis": "每盤，頁列常態商品",
+          "taxStatus": "含稅",
+          "serviceStatus": "未另列",
+          "source": "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873"
+        },
+        {
+          "name": "びん長大とろ",
+          "meal": "午餐/晚餐",
+          "priceJPY": 140,
+          "priceBasis": "限量盤；2026-11-20起，243萬份售完結束",
+          "taxStatus": "含稅",
+          "serviceStatus": "未另列",
+          "source": "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873"
+        }
+      ],
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "source": null,
+        "checkedAt": "2026-11-20",
+        "status": "本批未作米其林星級主張"
+      },
+      "booking": {
+        "url": "https://liff.line.me/1621199246-zJXb0Rx4/LINE-mini/ui/top/?utm_source=18linemini_topbutton",
+        "channel": "官網LINE受付/預約",
+        "releaseWindow": "需進LINE服務選分店，公開頁無固定放位時點。",
+        "cancellation": "公開店頁未列，依LINE最終條款或洽店；未作訂位。",
+        "conditions": "須選淺草六區店；入店受付和指定時間預約依服務當時顯示。",
+        "liveAvailability": "未登入LINE、未確認候位"
+      },
+      "hours": "平日11:00–23:00；週末假日10:30–23:00；最後點餐閉店前30分鐘。",
+      "access": {
+        "stations": [
+          "淺草（筑波快線）"
+        ],
+        "lines": [
+          "筑波快線TX"
+        ],
+        "detail": "官網列TX淺草站步行2分鐘；與銀座線/都營淺草線淺草站為不同站位。"
+      },
+      "images": [
+        {
+          "url": "https://cmsimage.akindo-sushiro.co.jp/menu/251001_418-2.png",
+          "page": "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873",
+          "rights": "官方えびアボカド商品圖，公開使用授權待確認"
+        }
+      ],
+      "sources": [
+        "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2413",
+        "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873",
+        "https://www.akindo-sushiro.co.jp/menu/availability/?store_id=873"
+      ],
+      "remaining": [
+        "無即時候位資料。",
+        "季節商品可能售完；每盤起價不是實際每人預算。"
+      ]
+    },
+    {
+      "id": "tokyo-tenya-asakusa",
+      "title": "天丼てんや淺草店｜實惠天丼",
+      "japanese": "天丼てんや 浅草店",
+      "pref": "東京都",
+      "city": "台東區",
+      "cuisine": [
+        "天丼",
+        "天婦羅",
+        "蕎麥麵"
+      ],
+      "tags": [
+        "大眾餐飲",
+        "午餐",
+        "晚餐",
+        "淺草路線"
+      ],
+      "coords": [
+        35.71151,
+        139.792802
+      ],
+      "coordinateSource": "官方店頁嵌入地圖參數",
+      "address": "東京都台東区浅草1-9-2",
+      "description": "適合淺草寺、雷門周邊行程的快速和食選項。常態天丼與冬季限定餐點可分別加入預算比較；分店供應仍以現場確認。",
+      "menu": [
+        {
+          "name": "オールスター天丼",
+          "meal": "午餐/晚餐",
+          "priceJPY": 860,
+          "priceBasis": "每碗；2026-06-11改價",
+          "taxStatus": "含稅",
+          "serviceStatus": "官方未另列服務費",
+          "source": "https://www.tenya.co.jp/release/pdf/20260609_release.pdf"
+        },
+        {
+          "name": "蟹と帆立の冬幸天丼",
+          "meal": "午餐/晚餐",
+          "priceJPY": 1260,
+          "priceBasis": "每碗附味噌湯；2026-11-12至2027-01中旬預定",
+          "taxStatus": "含稅",
+          "serviceStatus": "官方未另列服務費",
+          "source": "https://www.tenya.co.jp/release/pdf/20261106_release.pdf"
+        },
+        {
+          "name": "たれづけ海鮮づくし天丼",
+          "meal": "午餐/晚餐",
+          "priceJPY": 990,
+          "priceBasis": "每碗附味噌湯；冬季期間限定",
+          "taxStatus": "含稅",
+          "serviceStatus": "官方未另列服務費",
+          "source": "https://www.tenya.co.jp/release/pdf/20261106_release.pdf"
+        }
+      ],
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "source": null,
+        "checkedAt": "2026-11-20",
+        "status": "本批未作米其林星級主張"
+      },
+      "booking": {
+        "url": "https://www.tenya.co.jp/shop/tokyo/taitou/asakusa.html",
+        "channel": "官方分店頁；外帶可由該頁連到FineOrder",
+        "releaseWindow": "公開頁未提供內用訂位放位資料。",
+        "cancellation": "內用未見公開取消規則；外帶付款/取消依FineOrder最終條款。",
+        "conditions": "外帶下單不是內用訂位；官方外帶連結https://shop.fo.gnavi.co.jp/12631。",
+        "liveAvailability": "未查候位或庫存"
+      },
+      "hours": "平日10:30–22:00；週末假日10:00–22:00；最後點餐閉店前30分鐘。",
+      "access": {
+        "stations": [],
+        "detail": "地址及坐標來自官方分店頁；田原町/淺草各線最近出口及步行距離待交通官方核對。"
+      },
+      "images": [
+        {
+          "page": "https://www.tenya.co.jp/release/pdf/20261106_release.pdf",
+          "url": null,
+          "rights": "官方冬季新聞稿含商品實拍宣傳圖；僅連結PDF，未下載及重製。"
+        }
+      ],
+      "sources": [
+        "https://www.tenya.co.jp/shop/tokyo/taitou/asakusa.html",
+        "https://www.tenya.co.jp/menu/",
+        "https://www.tenya.co.jp/pdf/menu.pdf",
+        "https://www.tenya.co.jp/release/pdf/20260609_release.pdf",
+        "https://www.tenya.co.jp/release/pdf/20261106_release.pdf"
+      ],
+      "remaining": [
+        "冬季商品供應店別及售完情況待分店確認。",
+        "同店地鐵出口/步行分鐘尚未完成交通官方核對。"
+      ]
+    }
+  ]
+}

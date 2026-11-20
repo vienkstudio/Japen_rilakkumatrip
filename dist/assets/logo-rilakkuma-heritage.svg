@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+<title id="title">拉拉熊與日本古城</title>
+<path d="M21 13h22v17H21z" fill="#fff3d5" stroke="#184c39" stroke-width="2"/>
+<path d="M5 17c10 1 18-4 27-12 9 8 17 13 27 12-3 7-13 8-27 4C18 25 8 24 5 17z" fill="#245b43" stroke="#123b2d" stroke-width="2" stroke-linejoin="round"/>
+<path d="M13 18c7-1 13-4 19-9 6 5 12 8 19 9" fill="none" stroke="#edc357" stroke-width="2" stroke-linecap="round"/>
+<path d="M29 22h6v7h-6z" fill="#245b43"/>
+<g stroke="#6c472c" stroke-width="2">
+<circle cx="13" cy="28" r="9" fill="#b77b39"/><circle cx="51" cy="28" r="9" fill="#b77b39"/>
+</g>
+<circle cx="13" cy="28" r="4.5" fill="#f2ca51"/><circle cx="51" cy="28" r="4.5" fill="#f2ca51"/>
+<ellipse cx="32" cy="42" rx="26" ry="19" fill="#b77b39" stroke="#6c472c" stroke-width="2"/>
+<ellipse cx="32" cy="47" rx="9" ry="7" fill="#fff5dd"/>
+<circle cx="21" cy="39" r="2.5" fill="#37271e"/><circle cx="43" cy="39" r="2.5" fill="#37271e"/>
+<ellipse cx="32" cy="44.5" rx="2.5" ry="2" fill="#37271e"/>
+<path d="M32 46v2m0 0c-1.8 2.5-3 3-5 3m5-3c1.8 2.5 3 3 5 3" fill="none" stroke="#37271e" stroke-width="2" stroke-linecap="round"/>
+</svg>

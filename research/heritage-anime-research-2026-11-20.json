@@ -1,0 +1,800 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-20",
+  "language": "zh-Hant",
+  "scope": "4座古蹟深讀＋2條完整官方動漫關聯路線＋1條已核實場景、買物待補路線。不是全日本古蹟或動漫聖地全集。",
+  "coordinatePolicy": "未從第一方資料核到經緯度的條目 coords 為 null；可由 existingPoiIds 對接既有圖釘，但原圖釘本身仍需地址/座標驗證。",
+  "imagePolicy": "沒有下載或轉存官方圖片。officialImageEntry 是可觀看實際照片/商品圖的官方原頁入口，不代表取得公開網站重製授權。",
+  "heritage": [
+    {
+      "id": "heritage-tenryuji",
+      "existingPoiIds": [
+        "poi-arashiyama-1"
+      ],
+      "title": "天龍寺：先看庭園，再分票區看重建諸堂",
+      "japanese": "天龍寺・曹源池庭園",
+      "pref": "京都府",
+      "coords": null,
+      "address": "京都市右京區嵯峨天龍寺芒ノ馬場町68",
+      "history": {
+        "founded": "1339",
+        "completion": "1345",
+        "origin": "足利尊氏為追薦後醍醐天皇創建，夢窗疏石開山；天龍寺船對元貿易收益支應造寺。",
+        "originalVsRebuilt": "主要伽藍歷經8次火災；現法堂、大方丈、庫院1899年建成，書院1924年、多寶殿1934年重建。曹源池庭園保存古庭骨架，也曾整修，不能把現有建築說成1339年原構。"
+      },
+      "designation": [
+        {
+          "name": "天龍寺庭園",
+          "type": "史跡・特別名勝",
+          "object": "庭園，非整座寺所有建築均為國寶",
+          "designated": "1923-03-07",
+          "specialDesignation": "1955-05-30"
+        },
+        {
+          "name": "古都京都的文化財",
+          "type": "世界遺產構成資產",
+          "object": "天龍寺"
+        }
+      ],
+      "highlights": [
+        "先從大方丈一側理解借景嵐山、曹源池與石組層次，再走池畔；方丈觀景的構圖是此園深讀重點。",
+        "看龍門瀑、石橋與岩島如何營造山水；文化廳指出北岸至東岸曾多次改造，1983年也做護岸石組修復。",
+        "另票法堂的雲龍圖屬不同參觀單元，不可把庭園票當作全區通票。"
+      ],
+      "visit": {
+        "hours": "8:30–17:00；活動及法堂另有停開日期，出發前看寺方通告。",
+        "price": {
+          "currency": "JPY",
+          "gardenAdult": 500,
+          "gardenSchoolChild": 300,
+          "gardenPreschool": 0,
+          "buildingsAdditional": 300,
+          "hattoSeparate": 500,
+          "note": "庭園成人為高中以上；小中學生300。諸堂票價中文頁措辭為『各另加300』，建議在日文售票處再核；不要自行乘上3館。"
+        },
+        "areas": [
+          {
+            "name": "曹源池庭園・百花苑",
+            "ticket": "庭園票",
+            "planMinutes": 45
+          },
+          {
+            "name": "大方丈・書院・多寶殿",
+            "ticket": "諸堂另加票",
+            "planMinutes": 25
+          },
+          {
+            "name": "法堂雲龍圖",
+            "ticket": "另購¥500",
+            "condition": "通常週六日及日本國定假日；春秋有每日開放期間，並非全年每天開放。",
+            "planMinutes": 20
+          }
+        ],
+        "route": {
+          "start": "嵐電嵐山站",
+          "steps": [
+            "站前步行進寺",
+            "選擇庭園/諸堂票區",
+            "曹源池庭園",
+            "視開放情形另看法堂",
+            "再接渡月橋或北門方向竹林"
+          ],
+          "duration": "約90–120分鐘，為編輯建議，不含排隊。"
+        },
+        "access": [
+          "嵐電嵐山站下車即到",
+          "JR嵯峨嵐山站步行13分鐘",
+          "阪急嵐山站步行15分鐘"
+        ],
+        "photography": {
+          "status": "unverified",
+          "note": "未找到本次可核實的全寺攝影細則；法堂、室內及商用拍攝以現場標示/寺方答覆為準。"
+        }
+      },
+      "goshuin": {
+        "status": "unverified",
+        "note": "本輪未核實受理處、費用及直書條件，不預填可領取。"
+      },
+      "officialImageEntry": "https://www.tenryuji.com/cn/precincts/",
+      "sources": [
+        {
+          "title": "天龍寺緣起與重建",
+          "url": "https://www.tenryuji.com/cn/about/",
+          "publisher": "天龍寺",
+          "claims": "1339/1345、火災與1899/1924/1934重建",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "參拜交通",
+          "url": "https://www.tenryuji.com/cn/visit/index.html",
+          "publisher": "天龍寺",
+          "claims": "票區、費用、開放、車站步行",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "天龍寺庭園指定資料",
+          "url": "https://kunishitei.bunka.go.jp/heritage/detail/401/1649",
+          "publisher": "文化廳",
+          "claims": "史跡、特別名勝與指定日期",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "文化廳天龍寺構成資產",
+          "url": "https://kunishitei.bunka.go.jp/heritage/detail/911/15",
+          "publisher": "文化廳",
+          "claims": "庭園保存、石組、1983修復",
+          "checkedAt": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "heritage-todaiji",
+      "existingPoiIds": [
+        "regional-nara"
+      ],
+      "title": "東大寺：國寶大佛殿、分堂拜觀與御朱印",
+      "japanese": "東大寺・金堂（大仏殿）",
+      "pref": "奈良縣",
+      "coords": null,
+      "address": "奈良市雑司町406-1",
+      "history": {
+        "founded": "奈良時代；創建金堂751年完成，大佛開眼752年",
+        "currentBuilding": "1705年上棟、1709年落慶",
+        "originalVsRebuilt": "金堂1180、1567兩度兵火焚毀；現大佛殿為江戶重建。文化廳年代欄1705指上棟，寺方1709指落慶，兩者不矛盾。"
+      },
+      "designation": [
+        {
+          "name": "東大寺金堂（大仏殿）",
+          "type": "國寶（建造物）",
+          "object": "1棟，附棟札1枚",
+          "nationalTreasureDesignation": "1952-03-29",
+          "period": "江戶中期",
+          "recordYear": "1705"
+        }
+      ],
+      "highlights": [
+        "從南大門步入，理解大佛殿仍保有巨大尺度但現正面較創建時縮短。",
+        "國寶金堂寬57公尺、深50.5公尺、高47.5公尺；五間、裳階及粗大柱的結構值得近看。",
+        "大佛殿、法華堂、戒壇堂、博物館各有獨立票區；只買大佛殿票不能逛完全部。"
+      ],
+      "visit": {
+        "hours": "大佛殿4–10月7:30–17:30、11–3月8:00–17:00；法華堂/戒壇堂8:30–16:00。博物館9:30起，4–10月17:30閉館（17:00末入）、11–3月17:00閉館（16:30末入）。",
+        "price": {
+          "currency": "JPY",
+          "perAreaAdult": 800,
+          "perAreaElementary": 400,
+          "payment": "官方寫明拜觀費僅現金",
+          "note": "成人含中學生以上；以下四區各別計費。組合券未在本輪確認，請另查官方售票。"
+        },
+        "areas": [
+          {
+            "name": "大佛殿",
+            "ticket": "¥800 / 小學生¥400",
+            "planMinutes": 45
+          },
+          {
+            "name": "法華堂（三月堂）",
+            "ticket": "¥800 / 小學生¥400",
+            "planMinutes": 25
+          },
+          {
+            "name": "戒壇院戒壇堂",
+            "ticket": "¥800 / 小學生¥400",
+            "planMinutes": 25
+          },
+          {
+            "name": "東大寺博物館",
+            "ticket": "¥800 / 小學生¥400",
+            "planMinutes": 45
+          }
+        ],
+        "route": {
+          "start": "南大門",
+          "steps": [
+            "南大門外觀",
+            "大佛殿購票/參拜",
+            "大佛殿御朱印",
+            "二月堂周邊",
+            "選擇法華堂或戒壇堂追加拜觀"
+          ],
+          "duration": "約2–3小時，為編輯建議；各堂受理時間不同，下午先安排16:00結束票區。"
+        },
+        "photography": {
+          "status": "unverified",
+          "note": "本輪FAQ文字未解析出攝影細則；不能據此承諾所有佛像/博物館可攝影，照現場標示。"
+        }
+      },
+      "goshuin": {
+        "status": "verified",
+        "priceJPY": 300,
+        "per": "各御朱印",
+        "conditions": "基本為參拜時使用專用御朱印帳；寺內亦售御朱印帳，並非一般紀念章。",
+        "counters": [
+          {
+            "name": "大佛殿『華嚴』",
+            "hours": "4–10月7:30–17:30；11–3月8:00–17:00"
+          },
+          {
+            "name": "法華堂『不空羂索』",
+            "hours": "8:30–16:00"
+          },
+          {
+            "name": "二月堂『南無觀』等",
+            "hours": "4–10月7:30–17:30；11–3月8:00–17:00"
+          },
+          {
+            "name": "戒壇堂『國寶四天王』",
+            "hours": "8:30–16:00"
+          }
+        ],
+        "notices": [
+          "四月堂耐震工事閉堂，御朱印停止授予。",
+          "法華堂『執金剛神』僅12月16日，不可當作每日可領。",
+          "各堂另有特殊公開日，參拜費與御朱印費分別計算。"
+        ]
+      },
+      "officialImageEntry": "https://www.todaiji.or.jp/information/daibutsuden/",
+      "sources": [
+        {
+          "title": "文化廳國寶金堂資料",
+          "url": "https://kunishitei.bunka.go.jp/heritage/detail/102/2438",
+          "publisher": "文化廳",
+          "claims": "指定物件、1952國寶指定、1705上棟/1709落慶、尺度",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "東大寺文化廳構成資產",
+          "url": "https://kunishitei.bunka.go.jp/bsys/maindetails/911/26",
+          "publisher": "文化廳",
+          "claims": "751金堂完成、752開眼",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "東大寺拜觀時間與費用",
+          "url": "https://www.todaiji.or.jp/information/haikan/",
+          "publisher": "東大寺",
+          "claims": "四個票區、各¥800、季節時間",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "東大寺御朱印",
+          "url": "https://www.todaiji.or.jp/sutra-and-goshuin/goshuin/",
+          "publisher": "東大寺",
+          "claims": "各¥300、受理堂別、季節時間、四月堂停止",
+          "checkedAt": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "heritage-himeji",
+      "existingPoiIds": [],
+      "title": "姬路城：現存天守結構與2026新版入城費",
+      "japanese": "姫路城大天守",
+      "pref": "兵庫縣",
+      "coords": null,
+      "address": "姬路市本町68",
+      "history": {
+        "currentBuilding": "大天守1608–1609年建造；城域整備1601–1609。",
+        "originalVsRebuilt": "現存近世天守，並非戰後新建仿古城。昭和大修理包含解體、替換損壞構件及現代補強；不能說所有材料都未改換。"
+      },
+      "designation": [
+        {
+          "name": "姫路城大天守",
+          "type": "國寶（建造物）",
+          "object": "大天守1棟；不是所有城內構造物都各自列國寶",
+          "nationalTreasureDesignation": "1951-06-09",
+          "period": "桃山",
+          "recordYear": "1608"
+        },
+        {
+          "name": "姬路城",
+          "type": "世界文化遺產"
+        }
+      ],
+      "highlights": [
+        "大天守外觀五重、內部六階並有地下1階；用外觀與內部層數差異理解天守結構。",
+        "觀察大天守與三座小天守、渡櫓組成的連立式天守群，及銃眼/狹間的防禦視線。",
+        "先完成天守，再看西之丸百間廊下；有窄陡階梯與爬坡，拖行李與晚到都會降低體驗。"
+      ],
+      "visit": {
+        "hours": "9:00–17:00；16:00最終入城。16:30起建築窗戶等順次關閉。12/29、12/30休城。",
+        "price": {
+          "currency": "JPY",
+          "adultGeneral": 2500,
+          "adultHimejiResident": 1000,
+          "under18": 0,
+          "castleAndKokoen": 2600,
+          "effective": "2026-03-01起",
+          "note": "一般為18歲以上；未滿18包含滿18後第一個3/31前。市民優惠需姬路住址證明，旅客不要套用。"
+        },
+        "areas": [
+          {
+            "name": "城內大天守・西之丸等通常公開區",
+            "ticket": "入城券；特別公開區另查當期公告",
+            "planMinutes": 120
+          },
+          {
+            "name": "好古園",
+            "ticket": "可選¥2,600共通券；不是城內票自然包含",
+            "planMinutes": 45
+          }
+        ],
+        "route": {
+          "start": "JR姬路站北口／山陽姬路站",
+          "steps": [
+            "大手前通往城",
+            "大手門・三之丸外觀",
+            "購票入城",
+            "大天守",
+            "西之丸",
+            "視票種接好古園"
+          ],
+          "duration": "半日約3–4小時，編輯建議"
+        },
+        "access": [
+          "JR姬路站／山陽姬路站步行20分鐘",
+          "北口神姬巴士至大手門前，再步行5分鐘"
+        ],
+        "booking": "可預購日時指定『しらさぎチケット』；不保證城內優先，天守每小時人數限制仍可能排隊。",
+        "photography": {
+          "status": "unverified",
+          "note": "未在本輪核對個人/商用/腳架的完整規則；特別公開區以當期公告及標示為準。"
+        }
+      },
+      "goshuin": {
+        "status": "not-applicable",
+        "note": "城郭不是寺社；百名城章/御城印與御朱印是不同項目，本輪未核實御城印售價與售處。"
+      },
+      "officialImageEntry": "https://www.city.himeji.lg.jp/castle/",
+      "sources": [
+        {
+          "title": "文化廳大天守國寶資料",
+          "url": "https://kunishitei.bunka.go.jp/heritage/detail/102/2264",
+          "publisher": "文化廳",
+          "claims": "國寶物件、1608年代與1608–1609建造、五重六階地下一階",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "姬路城利用案內",
+          "url": "https://www.city.himeji.lg.jp/castle/0000007671.html",
+          "publisher": "姬路市",
+          "claims": "2026現行¥2500/共通¥2600、時間、步行、數位票",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "2026入城費調整",
+          "url": "https://www.city.himeji.lg.jp/castle/0000030746.html",
+          "publisher": "姬路市",
+          "claims": "2026-03-01新費率",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "昭和大修理",
+          "url": "https://www.city.himeji.lg.jp/castle/category/10-2-0-0-0-0-0-0-0-0.html",
+          "publisher": "姬路市",
+          "claims": "解體修理、更換損件、補強",
+          "checkedAt": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "heritage-sensoji",
+      "existingPoiIds": [
+        "poi-asakusa-0"
+      ],
+      "title": "淺草寺：江戶二天門與影向堂御朱印",
+      "japanese": "浅草寺・二天門・影向堂",
+      "pref": "東京都",
+      "coords": null,
+      "address": "東京都台東區淺草2-3-1",
+      "history": {
+        "founded": "寺傳628年，漁民感得觀音像；應標為寺院傳說，非考古定年。",
+        "originalVsRebuilt": "二天門官方正文稱現門1649年創建，頁內另列1618年舊沿革並註有諸說；2007–2009年大修復。影向堂是1994年新建的鋼筋混凝土堂宇，不能稱古代原構。"
+      },
+      "designation": [
+        {
+          "name": "二天門",
+          "type": "國家重要文化財（建造物）",
+          "object": "二天門；不要把整座淺草寺或雷門稱國寶",
+          "date": null
+        }
+      ],
+      "highlights": [
+        "以東側二天門八腳門對照常見雷門入口，避免只拍燈籠而錯過江戶建築。",
+        "二天門門體與其中現有兩尊天像的來歷不同：現像1957年從寬永寺移入，並非原門神像。",
+        "本堂西北影向堂供奉干支守護本尊，也設御朱印所；從參拜後再領御朱印形成完整流程。"
+      ],
+      "visit": {
+        "hours": "本堂6:00–17:00；10–3月6:30開始。其他堂宇受理時段不能直接套用本堂。",
+        "price": {
+          "currency": "JPY",
+          "ordinaryPrecinct": 0,
+          "note": "一般境內參拜；未核實特別開放或庭園活動費用，不包含在免費承諾內。"
+        },
+        "areas": [
+          {
+            "name": "雷門・仲見世・本堂動線",
+            "ticket": "一般境內參拜",
+            "planMinutes": 40
+          },
+          {
+            "name": "二天門",
+            "ticket": "外觀參觀",
+            "planMinutes": 15
+          },
+          {
+            "name": "影向堂",
+            "ticket": "參拜與御朱印；御朱印費另計",
+            "planMinutes": 25
+          }
+        ],
+        "route": {
+          "start": "淺草站，站別出口需在地圖核對",
+          "steps": [
+            "雷門",
+            "仲見世",
+            "本堂參拜",
+            "東側二天門",
+            "西北影向堂領御朱印"
+          ],
+          "duration": "約90分鐘，編輯建議；仲見世各店營業時間另計"
+        },
+        "photography": {
+          "status": "unverified",
+          "note": "內陣、御朱印書寫與工作人員是否可拍攝未核實；看現場標示並先詢問。"
+        }
+      },
+      "goshuin": {
+        "status": "verified",
+        "counter": "影向堂",
+        "subjects": [
+          "聖觀世音菩薩",
+          "大黑天"
+        ],
+        "priceJPY": null,
+        "hours": null,
+        "conditions": "寺方明示為參拜證明；本輪未核到官方受理時段、現行費用與直書/書置規則，欄位保留未知。"
+      },
+      "officialImageEntry": "https://www.senso-ji.jp/guide/guide11.html",
+      "sources": [
+        {
+          "title": "淺草寺歷史",
+          "url": "https://www.senso-ji.jp/about/",
+          "publisher": "淺草寺",
+          "claims": "寺傳628感得本尊",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "二天門",
+          "url": "https://www.senso-ji.jp/guide/guide11.html",
+          "publisher": "淺草寺",
+          "claims": "重文、1649現門、1618沿革諸說、修復與現天像",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "影向堂",
+          "url": "https://www.senso-ji.jp/guide/guide07.html",
+          "publisher": "淺草寺",
+          "claims": "1994新建、兩種御朱印",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "參拜指南",
+          "url": "https://www.senso-ji.jp/guide/",
+          "publisher": "淺草寺",
+          "claims": "本堂季節時段",
+          "checkedAt": "2026-11-20"
+        }
+      ]
+    }
+  ],
+  "anime": [
+    {
+      "id": "anime-haikyu-rilakkuma",
+      "title": "排球少年!! × 拉拉熊：原宿官方聯名快閃",
+      "japanese": "リラックマ×ハイキュー!! POP UP STORE",
+      "pref": "東京都",
+      "coords": null,
+      "work": [
+        "ハイキュー!!",
+        "リラックマ"
+      ],
+      "relationType": "official-collaboration-event",
+      "source": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/",
+      "relation": "PAL官方說明為兩部由Production I.G參與製作動畫的聯名企畫；這是官方合作快閃，並非作品取景地。",
+      "relatedStore": {
+        "name": "baseyard tokyo 原宿店",
+        "officialLocationLink": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/",
+        "nearbySuggestion": "可接原宿拉拉熊專門店；先用各店官方地址核對步行，未宣稱兩店同址。"
+      },
+      "entry": {
+        "reservationDates": [
+          "2026-11-20",
+          "2026-11-21",
+          "2026-11-22"
+        ],
+        "conditions": "前三日事前預約；該輪申請10/30 12:00–11/8 23:59已截止。11/23起一般入場仍可能因擁擠限制。無預約勿把11/20當作隨到隨入。",
+        "fee": null,
+        "unknown": [
+          "入場預約是否有遞補請查Livepocket",
+          "當日庫存、購買限量細則以官方圖片/現場為準",
+          "本輪未核到全店現行營業時段"
+        ]
+      },
+      "window": {
+        "start": "2026-11-20",
+        "end": "2026-12-06",
+        "statusAtCheck": "今日起舉行，仍需預約資格"
+      },
+      "products": [
+        {
+          "title": "各校球衣ぶらさげぬいぐるみ",
+          "variants": 21,
+          "priceJPY": null,
+          "photoEntry": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/",
+          "stock": "unknown"
+        }
+      ],
+      "relatedWindows": [
+        {
+          "pref": "大阪府",
+          "store": "baseyard tokyo あべのキューズモール店",
+          "start": "2026-11-20",
+          "end": "2026-12-06",
+          "condition": "11/20–22事前預約；大阪另有11/21–22二次先着申請，自11/16起，剩餘名額未確認。"
+        },
+        {
+          "pref": "京都府",
+          "store": "baseyard tokyo 河原町OPA店",
+          "start": "2026-12-18",
+          "end": "2027-01-17",
+          "condition": "12/18事前預約，11/30 12:00–12/6 23:59申請。"
+        },
+        {
+          "pref": "北海道",
+          "store": "baseyard tokyo 札幌Stellar Place店",
+          "start": "2026-12-18",
+          "end": "2027-01-17",
+          "condition": "12/18事前預約，同輪11/30–12/6申請。"
+        },
+        {
+          "pref": "廣島縣",
+          "store": "baseyard tokyo minamoa廣島店",
+          "start": "2026-12-18",
+          "end": "2027-01-17",
+          "condition": "12/18事前預約，同輪11/30–12/6申請。"
+        }
+      ],
+      "route": [
+        "先核對日期及預約資格",
+        "開啟官方原宿店Google Maps入口",
+        "到快閃看聯名展示/商品",
+        "再接原宿周邊既有拉拉熊買物點"
+      ],
+      "sources": [
+        {
+          "title": "聯名快閃官方",
+          "url": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/",
+          "publisher": "baseyard tokyo / PAL",
+          "claims": "Production I.G關聯、21款、各城市檔期、申請日期與入場限制",
+          "checkedAt": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "anime-anohana-chichibu",
+      "title": "未聞花名：市方標記聖地、免費地圖與老街買物",
+      "japanese": "あの日見た花の名前を僕達はまだ知らない。・秩父",
+      "pref": "埼玉縣",
+      "coords": null,
+      "work": [
+        "あの日見た花の名前を僕達はまだ知らない。"
+      ],
+      "relationType": "municipal-official-location-route-and-railway-map",
+      "source": "https://navi.city.chichibu.lg.jp/travel/ja/course/2018/11/925/",
+      "relation": "秩父市官方路線以[あ]標註秩父神社、ほっとすぽっと秩父館、定林寺、秩父橋等關聯；西武鐵道也有官方沿線動漫地圖入口。是市方/鐵路營運方確認關聯，沒有擴張成所有相似街景都獲製作委員會認證。",
+      "officialMap": {
+        "landing": "https://www.seiburailway.jp/life/activities/",
+        "pdf": "https://www.seiburailway.jp/life/file/fileskyomahu_seibuseichimap.pdf.pdf",
+        "verification": "官方入口與PDF可連線確認；PDF為掃描圖，本輪未逐點轉錄，因此具體場景採市方文字路線交叉核對。"
+      },
+      "relatedStore": {
+        "name": "ほっとすぽっと秩父館",
+        "address": "秩父市宮側町18-2",
+        "hours": "10:00–17:00；週三、年末年始休，可能臨休。",
+        "entry": "1樓免費休憩空間",
+        "goods": "官方確認手工藝、陶藝等租賃櫃展示販售；本輪未第一方核實當日動畫商品品項與庫存，不能保證買到聯名品。",
+        "source": "https://navi.city.chichibu.lg.jp/p_sightseeingr/861/",
+        "access": "西武秩父站步行約18分鐘；秩父鐵道秩父站約5分鐘。"
+      },
+      "entry": {
+        "conditions": "先在西武秩父站前秩父觀光情報館取免費舞台探訪圖；寺院各自參拜規則、門票與御朱印另查。",
+        "fee": "市內官方舞台探訪紙本地圖免費；交通與個別設施費另計。"
+      },
+      "window": {
+        "start": null,
+        "end": null,
+        "label": "常設地點關聯；市方舊示範行程中的列車車次/時刻已老舊，不作2026時刻表。"
+      },
+      "route": [
+        "西武秩父站前觀光情報館取圖",
+        "番場通・秩父神社",
+        "ほっとすぽっと秩父館休憩/手作商品",
+        "秩父站周邊買物",
+        "另安排交通至定林寺/秩父橋，避免把市郊橋段塞進全程步行"
+      ],
+      "expiredEvents": [
+        {
+          "name": "2026龍勢奉納金受理",
+          "start": "2026-07-24",
+          "end": "2026-10-11",
+          "status": "查核日已結束；不可當成11月可報名活動"
+        }
+      ],
+      "officialImageEntry": "https://navi.city.chichibu.lg.jp/anime/2023/04/2586/",
+      "sources": [
+        {
+          "title": "市方作品聖地路線",
+          "url": "https://navi.city.chichibu.lg.jp/travel/ja/course/2018/11/925/",
+          "publisher": "秩父市",
+          "claims": "標記作品關聯場所，不沿用舊車次時刻",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "市方動畫資訊",
+          "url": "https://navi.city.chichibu.lg.jp/anime/2023/04/2586/",
+          "publisher": "秩父市",
+          "claims": "免費地圖、配布處、2026已結束活動",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "市方秩父館資訊",
+          "url": "https://navi.city.chichibu.lg.jp/p_sightseeingr/861/",
+          "publisher": "秩父市",
+          "claims": "免費休憩、手作販售、時間與步行",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "西武官方動漫地圖入口",
+          "url": "https://www.seiburailway.jp/life/activities/",
+          "publisher": "西武鐵道",
+          "claims": "沿線動漫聖地地圖官方下載入口",
+          "checkedAt": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "anime-yamanosusume-hanno",
+      "title": "前進吧！登山少女：飯能官方標記場景",
+      "japanese": "ヤマノススメ・飯能",
+      "pref": "埼玉縣",
+      "coords": null,
+      "work": [
+        "ヤマノススメ"
+      ],
+      "relationType": "railway-official-scene-reference",
+      "source": "https://www.seiburailway.jp/railways/hiking/syoshinsya/tounosuyama/index.html",
+      "relation": "西武鐵道官方健行介紹明文指出吾妻峽等地出現在作品，不以旅人照片相似性判定。",
+      "readiness": "verified-scenes-commerce-pending",
+      "relatedStore": {
+        "name": null,
+        "note": "本輪未找到足夠第一方資料確認仍營業的指定作品合作商店；不列虛構合作或保證能買到周邊。"
+      },
+      "entry": {
+        "conditions": "戶外健行段；河谷踏石橋遇雨、增水應迴避，是否封路須查當地公告。",
+        "fee": null
+      },
+      "window": {
+        "start": null,
+        "end": null,
+        "label": "作品場景為常設關聯；2015市方/西武集章活動屬歷史，不作當期活動。"
+      },
+      "route": [
+        "飯能站",
+        "市區至天覽山",
+        "依體能選吾妻峽/飯能河原",
+        "回飯能站"
+      ],
+      "routeNote": "僅作可選半日健行構想，非已核實2026合作商品購物線；完整距離與交通依西武官方健行圖。",
+      "officialImageEntry": "https://www.seiburailway.jp/railways/hiking/syoshinsya/tounosuyama/index.html",
+      "sources": [
+        {
+          "title": "西武鐵道官方健行介紹",
+          "url": "https://www.seiburailway.jp/railways/hiking/syoshinsya/tounosuyama/index.html",
+          "publisher": "西武鐵道",
+          "claims": "作品出現場景、天覽山195m、多峰主山271m、吾妻峽",
+          "checkedAt": "2026-11-20"
+        },
+        {
+          "title": "2015官方歷史合作發布",
+          "url": "https://www.seiburailway.jp/file.jsp?news%2Fnews-release%2F2015%2F20150716hanno_anime.pdf=",
+          "publisher": "西武鐵道",
+          "claims": "僅確認曾有市方/西武合作集章；活動已結束",
+          "checkedAt": "2026-11-20"
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "id": "collection-heritage-four",
+      "title": "四座古蹟深讀",
+      "scope": "只計本批收錄的天龍寺、東大寺、姬路城、淺草寺4座；不是全日本世界遺產/國寶全集。",
+      "itemIds": [
+        "heritage-tenryuji",
+        "heritage-todaiji",
+        "heritage-himeji",
+        "heritage-sensoji"
+      ],
+      "total": 4,
+      "progressUnit": "完成參訪1座",
+      "initialCompleted": 0,
+      "statusOptions": [
+        "想去",
+        "已排入行程",
+        "已參訪"
+      ],
+      "completionRule": "使用者手動勾選已參訪，完成數/4；御朱印不作進入寺院的必要條件。"
+    },
+    {
+      "id": "collection-national-treasure-two",
+      "title": "兩棟已核實國寶建築",
+      "scope": "只收東大寺金堂、姬路城大天守2個文化廳可核實指定物件；不把整座寺/城所有物件算成國寶。",
+      "itemIds": [
+        "heritage-todaiji",
+        "heritage-himeji"
+      ],
+      "total": 2,
+      "initialCompleted": 0,
+      "statusOptions": [
+        "想看",
+        "已看"
+      ],
+      "completionRule": "各指定建築參訪後手動勾選，完成數/2。"
+    },
+    {
+      "id": "collection-goshuin-two",
+      "title": "兩寺御朱印計畫",
+      "scope": "只含寺方確認設朱印所的東大寺、淺草寺；淺草寺現行費用/時段未知需出發前補查。",
+      "itemIds": [
+        "heritage-todaiji",
+        "heritage-sensoji"
+      ],
+      "total": 2,
+      "initialCompleted": 0,
+      "statusOptions": [
+        "想參拜",
+        "已參拜",
+        "已領御朱印"
+      ],
+      "completionRule": "依使用者選定的寺院各計1，不將東大寺多堂重複計為多座寺。"
+    },
+    {
+      "id": "collection-anime-official-two",
+      "title": "兩條官方關聯主線",
+      "scope": "兩條可從官方關聯走到活動/買物入口的路線：原宿聯名快閃、秩父市方聖地線。飯能場景是延伸候選，買物待補，不計完成分母。",
+      "itemIds": [
+        "anime-haikyu-rilakkuma",
+        "anime-anohana-chichibu"
+      ],
+      "candidateIds": [
+        "anime-yamanosusume-hanno"
+      ],
+      "total": 2,
+      "initialCompleted": 0,
+      "statusOptions": [
+        "想去",
+        "資格已確認",
+        "已完成"
+      ],
+      "completionRule": "路線手動勾選完成，過期快閃應顯示已結束並保留參訪紀錄，不提供假預約按鈕。"
+    }
+  ],
+  "gaps": [
+    "四寺/城的完整個人與商用攝影規則未找到可確定條文，不允許以unknown推定可拍。",
+    "天龍寺御朱印費用/受理處未核實；淺草寺朱印所與種類已核實，但時段/費用保留null。",
+    "所有coords因本次未第一方核實經緯度保留null；可用既有地點ID與官方地址做後續定位。",
+    "飯能有官方場景證據，但當期作品合作商店與買物條件未核實，標為候選。",
+    "官方圖像只有原頁入口，公開網站使用需另核授權；不能自動把官方網站圖片轉存為自有素材。"
+  ]
+}

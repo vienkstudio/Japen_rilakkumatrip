@@ -68,6 +68,7 @@ function dateStatus(e,selected){
  if(e.calendar_rule==="kabuki")return {tone:"pending",text:"依所選公演核對幕次、時長、票價與字幕"};
  return {tone:"pending",text:e.booking_options.includes("required")?"請向官方確認此日可預約場次":"一般可現場受理，臨時休館與名額請查官方"};
 }
+const price=(e,n=Number(document.getElementById("party")?.value)||1)=>e.id.startsWith("culture-taiko-lab-")?(e.groupPricing?e.groupPricing[Math.min(3,Math.max(1,n))]:null):e.cost_from;
 function matches(e,f){
  if(f.theme!=="all"&&e.theme!==f.theme)return false;
  if(f.mode&&!e.modes.includes(f.mode))return false;
@@ -78,8 +79,8 @@ function matches(e,f){
  if(f.duration==="medium"&&!(e.minutes_from>60&&e.minutes_from<=120))return false;
  if(f.duration==="long"&&!(e.minutes_from>120))return false;
  if(f.duration==="variable"&&e.minutes_from!==null)return false;
- if(f.budget==="unknown"&&e.cost_from!==null)return false;
- if(f.budget&&f.budget!=="unknown"&&!(e.cost_from!==null&&e.cost_from<=Number(f.budget)))return false;
+ if(f.budget==="unknown"&&price(e)!==null)return false;
+ if(f.budget&&f.budget!=="unknown"&&!(price(e)!==null&&price(e)<=Number(f.budget)))return false;
  return true;
 }
 function searchFields(e){
@@ -136,6 +137,6 @@ function body(p,h,day){
   links(e.photo_links.map(s=>[s.title,s.url]))+'</div><div class="sources">'+links(official,"")+'</div></section>'+
   (e.unconfirmed.length?'<section class="experience-section"><h3>仍待確認</h3><ul class="experience-conditions">'+e.unconfirmed.map(v=>'<li>'+esc(v)+'</li>').join("")+'</ul></section>':"");
 }
-window.CULTURE={themes,modes,matches,searchFields,dateStatus,body,checkedDay};
+window.CULTURE={price,themes,modes,matches,searchFields,dateStatus,body,checkedDay};
 })();
 

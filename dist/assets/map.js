@@ -135,27 +135,44 @@ function init({icon,esc,option,external,google,onPref,onPlace,onFailure,onAreaMo
  const marks={official:"shop",rilanowa:"shop",theme:"shop",retail:"shop",food:"food",craft:"craft",heritage:"landmark",fireworks:"spark",event:"calendar"};
  const colors={official:"#98583a",rilanowa:"#927036",theme:"#8c5537",retail:"#765f43",food:"#a1712a",craft:"#8f599e",heritage:"#4a6b79",fireworks:"#9d4548",event:"#407457"};
  function pinRender(){
-  markerBy.clear(); pins.clearLayers();
+  markerBy.clear();pins.clearLayers();
   const entries=[...visiblePlaces];
-  if(selected&&!entries.some(p=>p.id===selected.id))entries.push(selected);
-  if(nearbyFocus&&!entries.some(p=>p.id===nearbyFocus.id))entries.push(nearbyFocus);
-  const markPosition=new Set();
-  entries.sort((a,b)=>Number(b.id===selected?.id)-Number(a.id===selected?.id));
-  for(const p of entries){
-    if(!p.coords)continue;
-    const key=p.coords.map(x=>x.toFixed(4)).join("-");
-    if(markPosition.has(key))continue;
-    markPosition.add(key);
-    const active=p.id===selected?.id||p.id===nearbyFocus?.id;
-    const marker=L.marker(p.coords,{title:p.title,alt:p.title,zIndexOffset:active?1000:400,icon:L.divIcon({
-      className:"pin-symbol"+(active?" active":""),iconSize:[26,26],iconAnchor:[13,13],
-      html:'<span style="--pin:'+colors[p.kind]+'">'+icon(marks[p.kind]||"pin")+'</span>'
-    })});
-    marker.bindTooltip(esc(p.title),{className:"marker-label",direction:"top",offset:[0,-10]});
-    marker.on("click",()=>onPlace(p.id,"map"));
-    marker.addTo(pins);markerBy.set(p.id,marker);
+  for(const p of [selected,nearbyFocus])if(p&&!entries.some(x=>x.id===p.id))entries.push(p);
+  const located=entries.filter(p=>p.coords),zoom=map.getZoom(),groups=new Map();
+  for(const p of located){
+   if(p.id===selected?.id||p.id===nearbyFocus?.id){draw(p);continue;}
+   const point=map.project(p.coords,zoom);
+   const key=zoom<6.5?(window.ATLAS.prefs.find(x=>x.name===p.pref)?.region||p.pref):zoom<9?p.pref:zoom<13?Math.floor(point.x/70)+"|"+Math.floor(point.y/70):p.coords.map(x=>x.toFixed(5)).join("|");
+   if(!groups.has(key))groups.set(key,[]);groups.get(key).push(p);
+  }
+  function draw(p){
+   const active=p.id===selected?.id||p.id===nearbyFocus?.id;
+   const marker=L.marker(p.coords,{title:p.title+(p.approx?"（附近位置）":""),alt:p.title,zIndexOffset:active?1000:400,icon:L.divIcon({
+    className:"pin-symbol"+(active?" active":"")+(p.approx?" approximate":""),iconSize:[44,44],iconAnchor:[22,22],
+    html:'<span style="--pin:'+colors[p.kind]+'">'+icon(marks[p.kind]||"pin")+'</span>'
+   })}).bindTooltip(esc(p.title+(p.approx?" · 附近位置":"")),{className:"marker-label",direction:"top",offset:[0,-20]});
+   marker.on("click",()=>onPlace(p.id,"map"));marker.addTo(pins);markerBy.set(p.id,marker);
+  }
+  const occupied=[];
+  for(const group of groups.values()){
+   if(group.length===1&&zoom>=9){draw(group[0]);continue;}
+   const center=group.reduce((a,p)=>[a[0]+p.coords[0]/group.length,a[1]+p.coords[1]/group.length],[0,0]);
+   const name=zoom<6.5?(window.ATLAS.regions.find(r=>r.key===(window.ATLAS.prefs.find(x=>x.name===group[0].pref)?.region))?.name||group[0].pref):zoom<9?group[0].pref:group.length+" 個地點";
+   let dx=0,dy=0;
+   if(zoom<9){const projected=map.project(center,zoom);for(const [x,y] of [[0,0],[0,-52],[0,52],[-104,0],[104,0],[-104,-52],[104,52],[0,-104],[0,104]]){const rect={x:projected.x+x,y:projected.y+y};if(!occupied.some(r=>Math.abs(r.x-rect.x)<106&&Math.abs(r.y-rect.y)<50)){dx=x;dy=y;occupied.push(rect);break;}}if(dx||dy)L.polyline([center,map.unproject([projected.x+dx,projected.y+dy],zoom)],{color:"#48745e",weight:1,opacity:.6,interactive:false}).addTo(pins);}
+   const marker=L.marker(center,{title:name+"・放大檢視",icon:L.divIcon({className:"cluster-marker",iconSize:[100,46],iconAnchor:[50-dx,23-dy],html:'<span>'+esc(name)+(zoom<9?'<b>'+group.length+'</b>':'')+'</span>'})});
+   if(zoom>=13){marker.bindPopup('<strong>同一位置 '+group.length+' 筆</strong>'+group.map(p=>'<p><button class="btn" type="button" data-place="'+esc(p.id)+'">'+esc(p.title)+'</button></p>').join(""));}
+   else marker.on("click",()=>{map.fitBounds(L.latLngBounds(group.map(p=>p.coords)),{maxZoom:zoom<9?11:15,padding:[70,110],animate:false});if(map.getZoom()<=zoom)map.setZoom(zoom+2);});
+   marker.addTo(pins);
   }
  }
+ const tripLayer=L.layerGroup().addTo(map);
+ function showTrip(items){
+  tripLayer.clearLayers();visible(items,null);
+  items.forEach((p,i)=>{if(!p.coords)return;L.marker(p.coords,{title:(i+1)+". "+p.title,icon:L.divIcon({className:"trip-marker",iconSize:[38,38],iconAnchor:[19,19],html:'<span>'+(i+1)+'</span>'})}).on("click",()=>onPlace(p.id,"map")).addTo(tripLayer);if(i&&items[i-1].coords)L.polyline([items[i-1].coords,p.coords],{dashArray:"5 7",color:"#245343"}).bindTooltip("行程序列直線示意；實際交通請開導航").addTo(tripLayer);});
+  const positioned=items.filter(p=>p.coords);if(positioned.length)map.fitBounds(L.latLngBounds(positioned.map(p=>p.coords)),{maxZoom:15,padding:[60,100],animate:false});
+ }
+
  function visible(items,active){visiblePlaces=items;selected=active;pinRender();}
  function focus(p){
   if(!p?.coords)return false;
@@ -177,7 +194,7 @@ function init({icon,esc,option,external,google,onPref,onPlace,onFailure,onAreaMo
   map.setView(record.coords,Math.max(14,map.getZoom()),{animate:false});
   L.popup().setLatLng(record.coords).setContent("<strong>"+esc(name)+"</strong><p>"+esc(line)+"</p>"+external(google(query),"開啟 Google Maps ↗")).openOn(map);
  }
- map.on("moveend",()=>{updateRail();onAreaMove?.();});
+ map.on("moveend",()=>{updateRail();pinRender();onAreaMove?.();});
  byId("base").addEventListener("change",e=>base(e.target.value));
  byId("line-filter").addEventListener("change",e=>{lineQuery=e.target.value;renderLines();});
  ["layer-rail","layer-station","layer-boundary"].forEach(k=>byId(k).addEventListener("change",syncLayers));
@@ -185,7 +202,7 @@ function init({icon,esc,option,external,google,onPref,onPlace,onFailure,onAreaMo
  .then(d=>{prefectures.addData(d);syncLayers();})
  .catch(()=>onFailure("縣界暫時讀不到，仍可搜尋地點與切換地圖。"));
  base("pale");
- return {map,visible,focus,visit,showStation,localStations,km,
+ return {map,visible,focus,visit,showStation,localStations,km,showTrip,
   resize:()=>{map.invalidateSize({pan:false,debounceMoveend:true});},
   center:p=>map.setView(p,9,{animate:false}),bounds:()=>map.getBounds(),
   get zoom(){return map.getZoom();}

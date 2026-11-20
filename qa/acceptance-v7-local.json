@@ -1,0 +1,122 @@
+{
+  "testedAt": "2026-11-20T03:33:35.834Z",
+  "base": "http://127.0.0.1:18767/",
+  "evidence": [
+    {
+      "id": "C2",
+      "status": "pass",
+      "note": "national groups and explicit unlocated coverage"
+    },
+    {
+      "id": "F1",
+      "status": "pass",
+      "note": "series query crosses products and stories"
+    },
+    {
+      "id": "F2",
+      "status": "pass",
+      "note": "two exact SKU taxed offers, shipping, point conditions, stock unknown"
+    },
+    {
+      "id": "D1",
+      "status": "pass",
+      "note": "quantity and fee recalculate and actual CSV contains SKU total"
+    },
+    {
+      "id": "D2",
+      "status": "pass",
+      "note": "commercial forbidden product excluded and add prevented"
+    },
+    {
+      "id": "A1",
+      "status": "pass",
+      "note": "Akihabara does not return Kyoto Osaka Kobe branches"
+    },
+    {
+      "id": "A2",
+      "status": "pass",
+      "note": "work links current popup, admission, variants and city phases"
+    },
+    {
+      "id": "H1",
+      "status": "pass",
+      "note": "object designation, reconstructed building and goshuin suspension"
+    },
+    {
+      "id": "H2",
+      "status": "pass",
+      "note": "history, separate ticket areas and readable price labels"
+    },
+    {
+      "id": "C1",
+      "status": "pass",
+      "note": "finite collection progress survives reload"
+    },
+    {
+      "id": "E1",
+      "status": "pass",
+      "note": "culture filters and separate visitor source groups preserved"
+    },
+    {
+      "id": "E2",
+      "status": "pass",
+      "note": "1 2 3 participants change actual price"
+    },
+    {
+      "id": "R1",
+      "status": "pass",
+      "note": "collaboration pause excludes Dec30 and allows Dec20"
+    },
+    {
+      "id": "R2-partial",
+      "status": "pass",
+      "note": "source watchlist persists; live monitoring explicitly unavailable"
+    },
+    {
+      "id": "M1",
+      "status": "pass",
+      "note": "same restaurant merged, legacy alias retained"
+    },
+    {
+      "id": "M2",
+      "status": "pass",
+      "note": "ordinary sushi under 2000 and geographic scope"
+    },
+    {
+      "id": "G1",
+      "status": "pass",
+      "note": "current guide year and three stars distinct"
+    },
+    {
+      "id": "G2",
+      "status": "pass",
+      "note": "tax service, booking channel fee release cancellation availability"
+    },
+    {
+      "id": "UX-route",
+      "status": "pass",
+      "note": "shared city preserved, actual photo expands, per-day itinerary overlap detected"
+    },
+    {
+      "id": "UX-mobile",
+      "status": "pass",
+      "note": "390px no overflow, full detail, map layers close, selected place retained"
+    },
+    {
+      "id": "regression-rail",
+      "status": "pass",
+      "note": "real N02 line geometry and station layer available"
+    },
+    {
+      "id": "regression-fireworks",
+      "status": "pass",
+      "note": "both four-shaku event access plans and uncertain next-date labeling preserved"
+    },
+    {
+      "id": "new-records",
+      "status": "pass",
+      "note": "all four heritage and five restaurant details render fully"
+    }
+  ],
+  "errors": []
+}

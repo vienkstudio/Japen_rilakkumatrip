@@ -1,0 +1,1004 @@
+{
+  "checked_at": "2026-11-20",
+  "language": "zh-TW",
+  "scope": "有界商品與採購規則研究；非即時庫存、非代購報價。",
+  "products": [
+    {
+      "id": "sanx-mz13501",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "ぶらさげぬいぐるみ リラックマ",
+      "name_zh": "拉拉熊和服吊飾娃娃",
+      "manufacturer": "San-X",
+      "manufacturer_sku": "MZ13501",
+      "jan": "4974413925471",
+      "identity_status": "SKU與JAN已交叉核對",
+      "variant": "リラックマ・和服",
+      "unit": "1隻／新品",
+      "specifications": {
+        "height_mm": 140,
+        "width_mm": 95,
+        "depth_mm": 65,
+        "material": "ポリエステル",
+        "source_id": "yodobashi-mz13501"
+      },
+      "official_msrp": {
+        "amount": 4180,
+        "currency": "JPY",
+        "tax_included": true,
+        "source_id": "kimono-special"
+      },
+      "release": {
+        "status": "conflicting",
+        "claims": [
+          {
+            "date": "2026-11-14",
+            "source_id": "kimono-special",
+            "context": "特設頁圖片替代文字"
+          },
+          {
+            "date": "2026-12-05",
+            "source_id": "kimono-release",
+            "context": "11月9日官方文章明文"
+          }
+        ],
+        "display": "發售日期有衝突：11/14與12/5；未確認前不可排成已上市現貨"
+      },
+      "stock_status": "未知庫存",
+      "commercial_purchase": {
+        "status": "待確認",
+        "note": "商品頁未見明文允許商業代購；需逐通路核對，不等同已允許。"
+      },
+      "limit_per_person": null,
+      "limit_note": "未於已讀商品頁查得可適用限購數。",
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932430263-lrhs0v76fgi/a5108688-d5d2-457e-ab8d-fea83b0c4436.webp",
+          "source_id": "kimono-special",
+          "type": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得",
+          "usage": "只保留官方原圖與來源URL；公開站須確認使用規範，未取得授權不下載、重製或冒稱實拍。"
+        }
+      ],
+      "source_ids": [
+        "kimono-special",
+        "kimono-release",
+        "kawada-identifiers",
+        "yodobashi-mz13501"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13901",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "あつめてぬいぐるみ リラックマ",
+      "name_zh": "拉拉熊和服收藏娃娃",
+      "manufacturer": "San-X",
+      "manufacturer_sku": "MZ13901",
+      "jan": "4974413925518",
+      "identity_status": "SKU與JAN已交叉核對",
+      "variant": "リラックマ・和服",
+      "unit": "1隻／新品",
+      "specifications": {
+        "retailer_reported_dimensions": "楽天Books欄位：幅23×高さ16×奥行10cm",
+        "dimension_verification": "此為零售頁原樣欄位，尚待官方規格核對，勿與吊飾尺寸混用。",
+        "source_id": "rakutenbooks-mz13901"
+      },
+      "official_msrp": {
+        "amount": 6050,
+        "currency": "JPY",
+        "tax_included": true,
+        "source_id": "kimono-special"
+      },
+      "release": {
+        "status": "conflicting",
+        "claims": [
+          {
+            "date": "2026-11-14",
+            "source_id": "kimono-special",
+            "context": "特設頁圖片替代文字"
+          },
+          {
+            "date": "2026-12-05",
+            "source_id": "kimono-release",
+            "context": "11月9日官方文章明文"
+          }
+        ],
+        "display": "發售日期有衝突：11/14與12/5；未確認前不可排成已上市現貨"
+      },
+      "stock_status": "未知庫存",
+      "commercial_purchase": {
+        "status": "待確認",
+        "note": "未查得明文許可，需核通路條款。"
+      },
+      "limit_per_person": null,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932431015-ra2xnvc0dms/fe078e15-e4ac-44f1-bbab-83b00b810157.webp",
+          "source_id": "kimono-special",
+          "type": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得",
+          "usage": "只保留官方原圖與來源URL；公開站須確認使用規範，未取得授權不下載、重製或冒稱實拍。"
+        }
+      ],
+      "source_ids": [
+        "kimono-special",
+        "rakutenbooks-mz13901",
+        "kawada-identifiers"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22201",
+      "series": "コリラックマクローゼット",
+      "name_ja": "ぶらさげぬいぐるみ ココアウサギ",
+      "name_zh": "可可兔吊飾娃娃",
+      "manufacturer": "San-X",
+      "manufacturer_sku": "MZ22201",
+      "jan": "4974413928724",
+      "identity_status": "SKU/JAN/角色已核對；非コリラックマ吊飾兩款",
+      "variant": "ココアウサギ",
+      "unit": "1隻／新品",
+      "specifications": {
+        "height_mm": 100,
+        "width_mm": 70,
+        "depth_mm": 55,
+        "source_id": "closet-supplier",
+        "verification": "供應商規格，非自行量測"
+      },
+      "official_msrp": {
+        "amount": 2750,
+        "currency": "JPY",
+        "tax_included": true,
+        "source_id": "closet-release"
+      },
+      "release": {
+        "manufacturer_window": "2026年12月頃",
+        "retailer_window": "いしだ屋：2026年12月下旬入荷予定／頁面發售欄12月31日",
+        "note": "12/31是店家頁面時段，不能覆蓋官方12月頃。"
+      },
+      "stock_status": "未知庫存",
+      "commercial_purchase": {
+        "status": "待確認",
+        "note": "供應商會員B2B交易不代表任一零售通路允許商業代購。"
+      },
+      "limit_per_person": null,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335677969-v1vj2r2eood/4b37cb96-4b2a-4c81-afa9-ee1a192c64bf.webp",
+          "source_id": "closet-special",
+          "type": "官方系列商品合成圖，含可可兔與其他商品；非單品實拍",
+          "downloaded": false,
+          "republication_permission": "未取得",
+          "usage": "只保留官方原圖與來源URL；公開站須確認使用規範，未取得授權不下載、重製或冒稱實拍。"
+        }
+      ],
+      "source_ids": [
+        "closet-special",
+        "closet-release",
+        "closet-supplier",
+        "ishidaya-cocoa"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "kushiya-wave2-a4file",
+      "series": "串家物語×リラックマ ごゆるりまんぷくパーティー 第2弾",
+      "name_ja": "オリジナルA4クリアファイル",
+      "name_zh": "串家物語聯名A4透明文件夾",
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_status": "官方名稱、A4尺寸與PP材質可辨；官方頁未提供品番/JAN，未自造商品碼",
+      "variant": "官方說可選款；確切款式與現場選擇待門市核對",
+      "unit": "1個",
+      "specifications": {
+        "format": "A4",
+        "material": "PP",
+        "source_id": "kushiya-wave2"
+      },
+      "official_msrp": {
+        "amount": 440,
+        "currency": "JPY",
+        "tax_included": true,
+        "source_id": "kushiya-wave2"
+      },
+      "release": {
+        "campaign_start": "2026-11-20",
+        "campaign_end": "2026-12-20",
+        "restock_announcement": "官方寫配合11/20再入荷，數量有限；不等於目前有貨",
+        "campaign_start_at": "2026-11-20T09:00:00+08:00"
+      },
+      "stock_status": "未知庫存",
+      "commercial_purchase": {
+        "status": "禁止",
+        "allowed": false,
+        "note": "活動主辦明文禁止轉售、再販售、營利目的購買；不可列入專業代購清單。",
+        "source_id": "kushiya-wave2"
+      },
+      "limit_per_person": 1,
+      "limit_note": "每位點自助餐者，每個品項最多1件；自助餐為必要額外費用，非440日圓即可單買。結帳時訂購；不接受預訂與保留。",
+      "images": [
+        {
+          "url": "https://www.kushi-ya.com/manpukuparty/rilakkuma2026/img/img_goods04_02_2nd.webp",
+          "source_id": "kushiya-wave2",
+          "type": "官方文件夾商品與價格圖",
+          "downloaded": false,
+          "republication_permission": "未取得",
+          "usage": "只保留官方原圖與來源URL；公開站須確認使用規範，未取得授權不下載、重製或冒稱實拍。"
+        }
+      ],
+      "source_ids": [
+        "kushiya-wave2",
+        "kushiya-sanx-announcement"
+      ],
+      "checked_at": "2026-11-20"
+    }
+  ],
+  "offers": [
+    {
+      "id": "offer-mz13501-yodobashi",
+      "product_id": "sanx-mz13501",
+      "retailer": "ヨドバシ.com",
+      "product_url": "https://www.yodobashi.com/product/100000001010265381/",
+      "price": {
+        "amount": 3770,
+        "currency": "JPY",
+        "tax_included": true
+      },
+      "price_type": "零售頁標價",
+      "verification": "實際產品頁已讀",
+      "stock_status": "未知庫存",
+      "advertised_status": "預購受付中；發售後交貨（頁面文字，非即時訂單保證）",
+      "shipping": {
+        "domestic_japan_advertised": 0,
+        "currency": "JPY",
+        "international": null
+      },
+      "points": {
+        "amount": 377,
+        "rate_percent": 10,
+        "note": "Gold Points另列，不當現金扣除；會員與使用資格待核。"
+      },
+      "purchase_limit": null,
+      "commercial_purchase": "待核通路條款",
+      "valid_from": null,
+      "valid_until": null,
+      "source_id": "yodobashi-mz13501",
+      "checked_at": "2026-11-20",
+      "comparison_eligible": true
+    },
+    {
+      "id": "offer-mz13501-amiami-pending",
+      "product_id": "sanx-mz13501",
+      "retailer": "あみあみ",
+      "product_url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905825&page=top",
+      "price": {
+        "amount": 3340,
+        "currency": "JPY",
+        "tax_included": true
+      },
+      "price_type": "零售清單價，非完整詳頁核價",
+      "verification": "零售商官方清單價已核，SKU與角色一致；FAQ確認未特註含稅及無中古標記為新品。詳頁限購與可購按鈕待核。",
+      "advertised_release": "2026年12月上旬",
+      "commercial_purchase": "待核",
+      "valid_from": null,
+      "valid_until": null,
+      "source_id": "amiami-plush",
+      "checked_at": "2026-11-20",
+      "comparison_eligible": true,
+      "condition": "新品（官方FAQ：無中古標記）",
+      "stock_status": "未知庫存",
+      "advertised_status": "清單列2026年12月上旬；實際可下單/預購按鈕未讀到，不能保證可買",
+      "purchase_limit": "品項數量未知；全站/分店/同住所/實質同人合計限購，禁止多帳號繞限",
+      "shipping": {
+        "domestic_japan_advertised": 630,
+        "currency": "JPY",
+        "tax_included": true,
+        "international_supported": false,
+        "notes": "日本站不收日本海外訂單、不國際寄；通常不寄旅館等臨時住宿；結帳重核。",
+        "source_id": "amiami-faq"
+      },
+      "source_ids": [
+        "amiami-plush",
+        "amiami-faq",
+        "amiami-terms"
+      ]
+    },
+    {
+      "id": "offer-mz13901-rakutenbooks",
+      "product_id": "sanx-mz13901",
+      "retailer": "楽天ブックス",
+      "product_url": "https://books.rakuten.co.jp/rb/18897862/",
+      "price": {
+        "amount": 6050,
+        "currency": "JPY",
+        "tax_included": true
+      },
+      "price_type": "零售頁標價",
+      "verification": "實際商品頁已讀，JAN一致",
+      "stock_status": "未知庫存",
+      "advertised_status": "予約受付中（頁面文字）",
+      "shipping": {
+        "domestic_japan_advertised": 0,
+        "currency": "JPY",
+        "international": null
+      },
+      "purchase_limit": null,
+      "commercial_purchase": "待核通路條款",
+      "advertised_release": "2026-12-05頃",
+      "valid_from": null,
+      "valid_until": null,
+      "source_id": "rakutenbooks-mz13901",
+      "checked_at": "2026-11-20",
+      "comparison_eligible": true
+    },
+    {
+      "id": "offer-mz13901-amiami-pending",
+      "product_id": "sanx-mz13901",
+      "retailer": "あみあみ",
+      "product_url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905829&page=top",
+      "price": {
+        "amount": 4840,
+        "currency": "JPY",
+        "tax_included": true
+      },
+      "verification": "零售商官方清單價已核，SKU與角色一致；FAQ確認未特註含稅及無中古標記為新品。詳頁限購與可購按鈕待核。",
+      "commercial_purchase": "待核",
+      "source_id": "amiami-plush",
+      "checked_at": "2026-11-20",
+      "comparison_eligible": true,
+      "condition": "新品（官方FAQ：無中古標記）",
+      "stock_status": "未知庫存",
+      "advertised_status": "清單列2026年12月上旬；實際可下單/預購按鈕未讀到，不能保證可買",
+      "purchase_limit": "品項數量未知；全站/分店/同住所/實質同人合計限購，禁止多帳號繞限",
+      "shipping": {
+        "domestic_japan_advertised": 630,
+        "currency": "JPY",
+        "tax_included": true,
+        "international_supported": false,
+        "notes": "日本站不收日本海外訂單、不國際寄；通常不寄旅館等臨時住宿；結帳重核。",
+        "source_id": "amiami-faq"
+      },
+      "source_ids": [
+        "amiami-plush",
+        "amiami-faq",
+        "amiami-terms"
+      ]
+    },
+    {
+      "id": "offer-mz22201-ishidaya",
+      "product_id": "sanx-mz22201",
+      "retailer": "いしだ屋 Yahoo!ショッピング",
+      "product_url": "https://store.shopping.yahoo.co.jp/ishidaya-co/320zak967m.html",
+      "price": {
+        "amount": 2777,
+        "currency": "JPY",
+        "tax_included": null
+      },
+      "verification": "實際商品頁與搜尋結果對應JAN；頁面顯示2777円，含稅字樣本次未確證。",
+      "comparison_eligible": false,
+      "stock_status": "未知庫存",
+      "advertised_status": "預約，2026年12月下旬入荷予定",
+      "shipping": {
+        "tokyo_amount": 600,
+        "currency": "JPY",
+        "free_shipping_threshold": 5000,
+        "note": "同店門檻及地區條件，結帳重核；未包含國際轉寄。"
+      },
+      "purchase_limit": null,
+      "commercial_purchase": "待核通路條款",
+      "source_id": "ishidaya-cocoa",
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "offer-kushiya-file",
+      "product_id": "kushiya-wave2-a4file",
+      "retailer": "串家物語 活動參加店",
+      "product_url": "https://www.kushi-ya.com/manpukuparty/rilakkuma2026/",
+      "price": {
+        "amount": 440,
+        "currency": "JPY",
+        "tax_included": true
+      },
+      "verification": "官方活動商品頁",
+      "stock_status": "未知庫存",
+      "online_sale": false,
+      "mandatory_extra_cost": {
+        "type": "自助餐餐費",
+        "amount": null,
+        "reason": "依分店/時段/年齡核對，不虛構總價。"
+      },
+      "purchase_limit": "點自助餐1名，每品項1件；結帳時購買；不預留",
+      "commercial_purchase": "禁止轉售、再販售、營利用購買",
+      "valid_from": "2026-11-20",
+      "valid_until": "2026-12-20",
+      "source_id": "kushiya-wave2",
+      "checked_at": "2026-11-20"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "yodobashi-price-mz13501",
+      "type": "零售標價與原希望售價差額",
+      "product_id": "sanx-mz13501",
+      "price": 3770,
+      "reference_msrp": 4180,
+      "cash_difference": 410,
+      "currency": "JPY",
+      "period": {
+        "start": null,
+        "end": null,
+        "note": "未查得期限，僅核價日觀察。"
+      },
+      "points_separate": 377,
+      "source_id": "yodobashi-mz13501"
+    },
+    {
+      "id": "kimono-x-giveaway",
+      "type": "抽獎，不是購物折扣",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-20",
+      "end_time": null,
+      "eligibility": "日本國內居住者；X登入、追蹤官方公開帳號並轉發指定文。",
+      "prize": "吊飾娃娃抽4人，角色不可選",
+      "source_id": "kimono-release"
+    },
+    {
+      "id": "kushiya-wave2",
+      "type": "聯名商品活動，非折扣",
+      "start_date": "2026-11-20",
+      "end_date": "2026-12-20",
+      "flagship_decoration_start": "2026-10-16",
+      "eligibility": "商品需先點自助餐；A4文件夾結帳買；商業購買禁止。",
+      "source_id": "kushiya-wave2",
+      "start_at": "2026-11-20T09:00:00+08:00",
+      "start_time_source": "kushiya-sanx-announcement"
+    },
+    {
+      "id": "kushiya-x-giveaway",
+      "type": "官方X抽獎，非折扣",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-27",
+      "end_time": null,
+      "eligibility": "官方頁僅可見追蹤與轉發摘要；完整資格仍待活動貼文。",
+      "source_id": "kushiya-wave2"
+    }
+  ],
+  "sources": [
+    {
+      "id": "kimono-special",
+      "title": "San-X もっと着物2026 特設商品頁",
+      "url": "https://www.san-x.co.jp/ja/special/kimono_motto2026/",
+      "kind": "manufacturer_product_special",
+      "checked_at": "2026-11-20",
+      "evidence": "吊飾四款含稅4180；收藏娃娃兩款含稅6050；頁面圖片仍標11月14日。"
+    },
+    {
+      "id": "kimono-release",
+      "title": "San-X もっと着物官方發布與X活動",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-10-post-0045470/",
+      "kind": "manufacturer_announcement",
+      "checked_at": "2026-11-20",
+      "evidence": "11月9日文章寫12月5日發售；X抽獎11月9日至20日，限日本居住者。",
+      "published_at": "2026-11-09"
+    },
+    {
+      "id": "kimono-pdf",
+      "title": "San-X 2026-11-09新聞稿",
+      "url": "https://www.san-x.co.jp/release/26.11-09_RK_KAWADA_kimono.pdf",
+      "kind": "manufacturer_press_release",
+      "checked_at": "2026-11-20",
+      "evidence": "12月5日發售，與特設頁11月14日有衝突。",
+      "published_at": "2026-11-09"
+    },
+    {
+      "id": "yodobashi-mz13501",
+      "title": "Yodobashi MZ13501實際商品頁",
+      "url": "https://www.yodobashi.com/product/100000001010265381/",
+      "kind": "retail_product",
+      "checked_at": "2026-11-20",
+      "evidence": "含稅3770；原希望售價4180；377點另計；預購文字；高140寬95深65mm、聚酯。"
+    },
+    {
+      "id": "amiami-plush",
+      "title": "AmiAmi 零售商品清單",
+      "url": "https://www.amiami.jp/top/page/c/plush.html",
+      "kind": "retail_product_listing",
+      "checked_at": "2026-11-20",
+      "evidence": "MZ13501單件清單價3340；MZ13901單件清單價4840；官方FAQ確認未特註皆含稅、無中古為新品。詳頁抓取失敗，限購/可購按鈕待核。"
+    },
+    {
+      "id": "amiami-mz13501",
+      "title": "AmiAmi MZ13501實際商品連結",
+      "url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905825&page=top",
+      "kind": "retail_product_fetch_failed",
+      "checked_at": "2026-11-20",
+      "evidence": "由AmiAmi官方商品清單連出；詳頁抓取失敗。含稅與新品規則已由官方FAQ補核，品項限購與可下單按鈕仍未知。"
+    },
+    {
+      "id": "amiami-mz13901",
+      "title": "AmiAmi MZ13901實際商品連結",
+      "url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905829&page=top",
+      "kind": "retail_product_fetch_failed",
+      "checked_at": "2026-11-20",
+      "evidence": "由AmiAmi官方商品清單連出；詳頁抓取失敗。含稅與新品規則已由官方FAQ補核，品項限購與可下單按鈕仍未知。"
+    },
+    {
+      "id": "rakutenbooks-mz13901",
+      "title": "楽天Books 收藏娃娃拉拉熊實際商品頁",
+      "url": "https://books.rakuten.co.jp/rb/18897862/",
+      "kind": "retail_product",
+      "checked_at": "2026-11-20",
+      "evidence": "JAN4974413925518；含稅6050免運；12月5日頃；預購文字；尺寸欄寬23高16深10cm。"
+    },
+    {
+      "id": "kawada-identifiers",
+      "title": "玩具卸売カワダ 預約商品目錄",
+      "url": "https://ganguoroshi.jp/category/YOYAKU/?__pc_site_mode=pc",
+      "kind": "wholesale_identity",
+      "checked_at": "2026-11-20",
+      "evidence": "MZ13501對應JAN4974413925471；MZ13901對應JAN4974413925518。卸價需登入，非消費者零售價。"
+    },
+    {
+      "id": "closet-special",
+      "title": "San-X コリラックマクローゼット特設商品頁",
+      "url": "https://www.san-x.co.jp/ja/special/goods_2612_rk/",
+      "kind": "manufacturer_product_special",
+      "checked_at": "2026-11-20",
+      "evidence": "商品圖與各系列、商店條件說明；數量有限、各店發售時段及販售品項可異。"
+    },
+    {
+      "id": "closet-release",
+      "title": "San-X官方發布 コリラックマクローゼット",
+      "url": "https://prtimes.jp/main/html/rd/p/000000987.000018631.html",
+      "kind": "manufacturer_press_release",
+      "checked_at": "2026-11-20",
+      "evidence": "發布者サンエックス株式会社，11月6日；12月頃發售；可可兔吊飾含稅2750。",
+      "published_at": "2026-11-06T09:00:00+08:00"
+    },
+    {
+      "id": "closet-supplier",
+      "title": "SuperDelivery 型號與JAN核對商品頁",
+      "url": "https://www.superdelivery.com/p/r/pd_p/18185869/",
+      "kind": "wholesale_identity",
+      "checked_at": "2026-11-20",
+      "evidence": "MZ22201可可兔、JAN4974413928724、單件；未稅希望售價2500。會員卸價不公開，不能拿來跟單件零售比較。"
+    },
+    {
+      "id": "ishidaya-cocoa",
+      "title": "Yahoo いしだ屋 可可兔實際商品頁",
+      "url": "https://store.shopping.yahoo.co.jp/ishidaya-co/320zak967m.html",
+      "kind": "retail_product",
+      "checked_at": "2026-11-20",
+      "evidence": "JAN4974413928724、頁面顯示2777円、東京都運600；店家預約12月下旬入荷／12月31日，含稅字樣本次擷取未確認。"
+    },
+    {
+      "id": "kushiya-wave2",
+      "title": "串家物語官方第2弾活動與商品頁",
+      "url": "https://www.kushi-ya.com/manpukuparty/rilakkuma2026/",
+      "kind": "official_campaign_product",
+      "checked_at": "2026-11-20",
+      "evidence": "第2弾11月20日至12月20日。A4文件夾含稅440、可選；需點自助餐，每人每品1件、結帳買、不得營利用或轉售、不預留。"
+    },
+    {
+      "id": "parco-kiddy",
+      "title": "心斎橋PARCO キデイランド官方商場頁",
+      "url": "https://shinsaibashi.parco.jp/shop/detail/?cd=026328",
+      "kind": "mall_store",
+      "checked_at": "2026-11-20",
+      "evidence": "KiddyLand列5F、免稅對象；Rilakkuma另有專用電話06-6243-0702，不能直接推定相同櫃位。"
+    },
+    {
+      "id": "sanx-stores",
+      "title": "San-X各店所在地官方表",
+      "url": "https://www.san-x.co.jp/ja/store-blogs/2026-06-post-0741260/",
+      "kind": "manufacturer_store_directory",
+      "checked_at": "2026-11-20",
+      "evidence": "既有對抗評估記錄心斎橋6F。此次讀取正文未能重現心斎橋段落，保留前次來源衝突並待門市確認。"
+    },
+    {
+      "id": "amiami-faq",
+      "title": "AmiAmi 官方利用指南（稅別、新品、送料與可購狀態）",
+      "url": "https://www.amiami.jp/top/page/t/faq.html",
+      "kind": "retailer_official_purchase_policy",
+      "checked_at": "2026-11-20",
+      "published_at": null,
+      "publication_precision": "頁面未提供統一發布時間；內文部分配送細項有2022年12月註記，使用前仍須結帳重核",
+      "evidence": "未特註皆含稅；無中古字樣為新品；日本國內一單運630含稅。日本站不收海外訂單、不國際寄送；通常不寄旅館。實際可購要看產品頁按鈕；限購跨同地址/同人/各分站合計。"
+    },
+    {
+      "id": "amiami-terms",
+      "title": "AmiAmi 官方交易條款",
+      "url": "https://www.amiami.jp/top/page/t/terms.html",
+      "kind": "retailer_terms",
+      "checked_at": "2026-11-20",
+      "published_at": null,
+      "evidence": "申請當時價格適用；成立前可因誤價/規格變更通知改價；日本國內配送，運費另付。"
+    },
+    {
+      "id": "kushiya-sanx-announcement",
+      "title": "San-X 串家物語第2弾官方11月16日公告",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-11-post-0806140/",
+      "kind": "manufacturer_announcement",
+      "checked_at": "2026-11-20",
+      "published_at": "2026-11-16",
+      "publication_precision": "day",
+      "evidence": "第2弾2026年11月20日10:00至12月20日。新款文件夾/貼紙及旗艦商品再入荷；不受理物販庫存詢問。"
+    },
+    {
+      "id": "kushiya-stock-history",
+      "title": "串家物語11月19日歷史庫存公告",
+      "url": "https://www.kushi-ya.com/news/",
+      "kind": "official_historical_inventory_announcement",
+      "checked_at": "2026-11-20",
+      "published_at": "2026-11-19",
+      "publication_precision": "day",
+      "evidence": "11/19旗艦店庫存快照及11/20第一弾めじるしキーホルダー復刻預告；歷史快照不代表11/20即時庫存。"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "kimono-release-dates",
+      "status": "未解",
+      "claims": [
+        {
+          "date": "2026-11-14",
+          "source_id": "kimono-special",
+          "context": "特設頁圖片替代文字"
+        },
+        {
+          "date": "2026-12-05",
+          "source_id": "kimono-release",
+          "context": "11月9日官方文章明文"
+        }
+      ],
+      "handling": "UI同時呈現來源、日期與待確認標記；不可算成11/20已上市現貨。"
+    },
+    {
+      "id": "shinsaibashi-floor",
+      "status": "保留既有衝突，未解",
+      "claims": [
+        {
+          "value": "KiddyLand 5F",
+          "source_id": "parco-kiddy",
+          "independently_verified_this_pass": true
+        },
+        {
+          "value": "Rilakkuma Store 6F",
+          "source_id": "sanx-stores",
+          "independently_verified_this_pass": false,
+          "carried_from": "九角色對抗評估-2026-11-20.md"
+        }
+      ],
+      "handling": "可能為櫃位差異或搬遷；尚未證實，不替使用者選定樓層，也不把KiddyLand免稅自動套用所有商品。"
+    }
+  ],
+  "remaining": [
+    {
+      "priority": "P0",
+      "item": "所有庫存未知",
+      "detail": "網頁預約/再入荷/前日庫存公告均不是即時現貨保證。預約單成立與到貨時間須於結帳核對。"
+    },
+    {
+      "priority": "P0",
+      "item": "串家物語商業代購阻擋",
+      "detail": "專業代購模式應阻止把此活動商品加入代購清單；個人行程仍可顯示餐費、限購與結帳流程。"
+    },
+    {
+      "priority": "P1",
+      "item": "和服日期與心齋橋樓層待原店確認",
+      "detail": "保留衝突，不覆寫。未致電門市或代發訊息。"
+    },
+    {
+      "priority": "P1",
+      "item": "コリラックマクローゼット更多零售含稅核價",
+      "detail": "已讀商品特設頁與可可兔零售頁；未以會員卸價2750作消費者第二通路。15件てのり組合不可跟單隻比價。"
+    },
+    {
+      "priority": "P1",
+      "item": "圖片使用權與出圖",
+      "detail": "官方圖片URL已保留，未下載。商品圖不等於實拍店況；公開站使用需依官方規範與權利確認。"
+    },
+    {
+      "priority": "P2",
+      "item": "落地總成本",
+      "detail": "運費、國際轉寄、代購費、支付匯差、餐費、免稅適用與會員點數均需分開列示；未提供假折扣/假省錢總額。"
+    },
+    {
+      "priority": "P1",
+      "item": "F2單價比較已核，交易條件仍待核",
+      "detail": "MZ13501 Yodobashi含稅3770與AmiAmi清單含稅3340；日本境內單件加運後3770 vs3970。AmiAmi詳頁限購與可下單狀態待核，不保證現貨。MZ13901另有6050 vs4840含稅單價。"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "comparison-mz13501",
+      "product_id": "sanx-mz13501",
+      "manufacturer_sku": "MZ13501",
+      "jan": "4974413925471",
+      "comparison_eligible": true,
+      "verification_status": "同SKU、同角色、新品單件含稅標價已核；AmiAmi詳頁限購與可購按鈕待核",
+      "unit": "1隻／新品",
+      "currency": "JPY",
+      "checked_at": "2026-11-20",
+      "offers": [
+        {
+          "offer_id": "offer-mz13501-yodobashi",
+          "item_tax_included": 3770,
+          "domestic_shipping_advertised": 0,
+          "domestic_single_item_total_before_payment_fees": 3770
+        },
+        {
+          "offer_id": "offer-mz13501-amiami-pending",
+          "item_tax_included": 3340,
+          "domestic_shipping_advertised": 630,
+          "domestic_single_item_total_before_payment_fees": 3970
+        }
+      ],
+      "item_price_difference": 430,
+      "domestic_delivered_difference": 200,
+      "item_price_lower_retailer": "あみあみ",
+      "single_item_delivered_lower_retailer": "ヨドバシ.com",
+      "conditions": "比較日本境內收件、一單僅此一隻、普通付款且無額外付款手續費。無國際運、匯差、會員券或點數扣抵。AmiAmi頁面FAQ送料630為當前查閱規則，結帳重核。",
+      "purchase_ready": false,
+      "stock_status": "兩店即時庫存皆未知",
+      "source_ids": [
+        "yodobashi-mz13501",
+        "amiami-plush",
+        "amiami-faq",
+        "kawada-identifiers"
+      ]
+    },
+    {
+      "id": "comparison-mz13901",
+      "product_id": "sanx-mz13901",
+      "manufacturer_sku": "MZ13901",
+      "jan": "4974413925518",
+      "comparison_eligible": true,
+      "verification_status": "同SKU/角色新品單件含稅清單價與楽天Books詳頁價；AmiAmi詳頁限購與可購按鈕待核",
+      "unit": "1隻／新品",
+      "currency": "JPY",
+      "checked_at": "2026-11-20",
+      "offers": [
+        {
+          "offer_id": "offer-mz13901-rakutenbooks",
+          "item_tax_included": 6050,
+          "domestic_shipping_advertised": 0,
+          "domestic_single_item_total_before_payment_fees": 6050
+        },
+        {
+          "offer_id": "offer-mz13901-amiami-pending",
+          "item_tax_included": 4840,
+          "domestic_shipping_advertised": 630,
+          "domestic_single_item_total_before_payment_fees": 5470
+        }
+      ],
+      "item_price_difference": 1210,
+      "domestic_delivered_difference": 580,
+      "conditions": "同上日本境內單件收件條件；AmiAmi下單資格與數量限制仍待詳頁核對。",
+      "purchase_ready": false,
+      "stock_status": "兩店即時庫存皆未知",
+      "source_ids": [
+        "rakutenbooks-mz13901",
+        "amiami-plush",
+        "amiami-faq",
+        "kawada-identifiers"
+      ]
+    }
+  ],
+  "tracking_watchlist": [
+    {
+      "id": "watch-mz13501",
+      "product_ids": [
+        "sanx-mz13501"
+      ],
+      "tracked_fields": [
+        "含稅售價",
+        "預購/停止預購文字",
+        "可下單按鈕",
+        "限購",
+        "發售/出貨日",
+        "日本境內運費"
+      ],
+      "sources": [
+        {
+          "source_id": "yodobashi-mz13501",
+          "source_published_at": null,
+          "observed_release_claim": "2026年12月發售",
+          "observed_price": 3770
+        },
+        {
+          "source_id": "amiami-plush",
+          "source_published_at": null,
+          "observed_release_claim": "2026年12月上旬",
+          "observed_price": 3340
+        },
+        {
+          "source_id": "amiami-mz13501",
+          "source_published_at": null,
+          "observation_status": "詳頁抓取失敗，需人工核對"
+        },
+        {
+          "source_id": "amiami-faq",
+          "source_published_at": null,
+          "observed_shipping": 630
+        }
+      ],
+      "baseline_observed_at": "2026-11-20",
+      "baseline_precision": "day",
+      "last_confirmed_change_at": null,
+      "next_check_triggers": [
+        "詳頁可讀或可下單狀態變更",
+        "12月發售前重核",
+        "結帳前"
+      ],
+      "instruction": "僅追蹤清單定義，本次未建立背景排程/提醒，也未下單。"
+    },
+    {
+      "id": "watch-mz13901",
+      "product_ids": [
+        "sanx-mz13901"
+      ],
+      "tracked_fields": [
+        "價格",
+        "發售日",
+        "限購",
+        "可購狀態"
+      ],
+      "sources": [
+        {
+          "source_id": "rakutenbooks-mz13901",
+          "source_published_at": null,
+          "observed_release_claim": "2026-12-05頃",
+          "observed_price": 6050
+        },
+        {
+          "source_id": "amiami-plush",
+          "source_published_at": null,
+          "observed_release_claim": "2026年12月上旬",
+          "observed_price": 4840
+        }
+      ],
+      "baseline_observed_at": "2026-11-20",
+      "last_confirmed_change_at": null,
+      "next_check_triggers": [
+        "12/5前發售狀態更新",
+        "結帳前"
+      ]
+    },
+    {
+      "id": "watch-kimono-conflict",
+      "product_ids": [
+        "sanx-mz13501",
+        "sanx-mz13901"
+      ],
+      "tracked_fields": [
+        "官方特設頁11/14圖片日期",
+        "11/9官方文章12/5日期",
+        "商品規格"
+      ],
+      "sources": [
+        {
+          "source_id": "kimono-special",
+          "source_published_at": null,
+          "observed_release_claim": "2026-11-14"
+        },
+        {
+          "source_id": "kimono-release",
+          "source_published_at": "2026-11-09",
+          "publication_precision": "day",
+          "observed_release_claim": "2026-12-05"
+        },
+        {
+          "source_id": "kimono-pdf",
+          "source_published_at": "2026-11-09",
+          "publication_precision": "day",
+          "observed_release_claim": "2026-12-05"
+        }
+      ],
+      "baseline_observed_at": "2026-11-20",
+      "last_confirmed_change_at": null,
+      "next_check_triggers": [
+        "官方日期更正",
+        "出發及購買前"
+      ],
+      "conflict_open": true
+    },
+    {
+      "id": "watch-mz22201",
+      "product_ids": [
+        "sanx-mz22201"
+      ],
+      "tracked_fields": [
+        "官方發售窗口",
+        "零售入荷日",
+        "JAN/款式",
+        "含稅字樣",
+        "售價"
+      ],
+      "sources": [
+        {
+          "source_id": "closet-release",
+          "source_published_at": "2026-11-06T09:00:00+08:00",
+          "publication_precision": "minute",
+          "observed_release_claim": "2026年12月頃"
+        },
+        {
+          "source_id": "closet-supplier",
+          "source_published_at": "2026-10-19",
+          "publication_precision": "day",
+          "observed_release_claim": "2026年12月中旬出荷預計；非官方統一上市日"
+        },
+        {
+          "source_id": "ishidaya-cocoa",
+          "source_published_at": null,
+          "observed_release_claim": "2026年12月下旬入荷予定／頁面12月31日",
+          "observed_price": 2777
+        }
+      ],
+      "baseline_observed_at": "2026-11-20",
+      "last_confirmed_change_at": null,
+      "next_check_triggers": [
+        "2026年12月官方/店家更新",
+        "結帳前"
+      ],
+      "instruction": "不把12/31店家到貨欄當San-X統一發售日。"
+    },
+    {
+      "id": "watch-kushiya-wave2",
+      "product_ids": [
+        "kushiya-wave2-a4file"
+      ],
+      "tracked_fields": [
+        "活動開始/結束",
+        "新品款式",
+        "再入荷公告",
+        "商業購買限制",
+        "文件夾價",
+        "參加店"
+      ],
+      "sources": [
+        {
+          "source_id": "kushiya-sanx-announcement",
+          "source_published_at": "2026-11-16",
+          "publication_precision": "day",
+          "observed_event_start": "2026-11-20T09:00:00+08:00",
+          "observed_event_end_date": "2026-12-20"
+        },
+        {
+          "source_id": "kushiya-stock-history",
+          "source_published_at": "2026-11-19",
+          "publication_precision": "day",
+          "observed_change_claim": "11/20第一弾めじるしキーホルダー復刻預告；不是現貨保證"
+        },
+        {
+          "source_id": "kushiya-wave2",
+          "source_published_at": null,
+          "observed_change_claim": "配合11/20第2弾再入荷，數量有限"
+        }
+      ],
+      "baseline_observed_at": "2026-11-20",
+      "last_confirmed_change_at": null,
+      "next_check_triggers": [
+        "主辦官網更新",
+        "個人行程到店前",
+        "2026-12-20活動結束"
+      ],
+      "instruction": "官方不受理物販庫存詢問；不得對外宣稱本機清單是即時庫存。商業代購仍禁止。"
+    }
+  ],
+  "f2": {
+    "status": "verified_price_comparison_with_purchase_limits_pending",
+    "same_sku_tax_included_comparison_count": 2,
+    "comparison_eligible": true,
+    "scope": "同SKU同角色新品單件含稅標價比較。第二通路以零售商自己清單+官方FAQ核稅別/新品規則，非MSRP。",
+    "transaction_ready": false,
+    "pending": [
+      "AmiAmi實際詳頁抓取失敗，品項限購與可下單按鈕未知",
+      "即時庫存及訂單受理未保證",
+      "跨國下單、收件資格與國際總成本未完成"
+    ],
+    "updated_at": "2026-11-20"
+  }
+}
