@@ -418,7 +418,7 @@ $("reset").addEventListener("click",wipe);
 $("this-area").addEventListener("click",()=>{
  if(!geo)return;
  const upcoming=!state.inArea;
- if(state.nav!=="explore"&&state.nav!=="saved")switchNav("explore");
+ if(!["explore","experiences","saved"].includes(state.nav))switchNav("explore");
  state.inArea=upcoming;$("this-area").setAttribute("aria-pressed",upcoming);
  filterNow();setMode("list");if(upcoming)notify("已按可見地圖範圍篩選");
 });
