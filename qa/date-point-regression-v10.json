@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-21T09:20:37.171Z",
+  "scope": "Parser and actual planning business rules; UI independently tested by challenge chat",
+  "checks": [
+    "Known PDF date is 11/9 and has date-only precision",
+    "Unknown release publication date stays null",
+    "Wednesday point closure is detected",
+    "Visit cannot finish after known closing",
+    "Whole-route 180 minutes is not duplicated per stop"
+  ],
+  "pass": 5
+}

@@ -2,6 +2,7 @@
 'use strict';
 const D=window.ATLAS_TASK_DATA,C=window.ATLAS_CATALOG,A=window.ATLAS;
 const S=D.shopping,H=D.culture,F=D.dining;
+const mismatchedOffer=S.offers.find(o=>o.id==='offer-mz22201-ishidaya');if(mismatchedOffer){mismatchedOffer.comparison_eligible=false;mismatchedOffer.stock_status='原來源目前顯示其他商品，排除同款比價';}
 const normalizePref=v=>A.prefs.find(p=>p.name===v||v.replace(/[都道府縣県]$/,'')===p.name)?.name||v;
 const canonical=new Map();
 for(const h of H.heritage){
@@ -15,12 +16,13 @@ if(old1899&&main1899&&JSON.stringify(old1899.coords)===JSON.stringify(main1899.c
  main1899.aliases=[...(main1899.aliases||[]),old1899.title];C.places=C.places.filter(p=>p.id!==old1899.id);C.placesById.set(old1899.id,main1899);
 }
 for(const f of F.restaurants){
+ if(f.id==='tokyo-tempura-kondo-ginza')for(const m of f.menu){m.defaultBookingChannel='overseas';m.bookingFees={overseas:{rate:0.15,source:'https://mycon-jp.net/reservation/tempura-kondo/zh-TW'},direct:{unknown:true}};}
  const p={id:f.id,title:f.title,japanese:f.japanese,pref:normalizePref(f.pref),kind:'food',coords:f.coords,address:f.address,hours:f.hours,query:f.japanese+' '+f.address,note:f.description,summary:f.cuisine.join('・'),restaurant:f,photo:null,href:f.sources[0],sources:f.sources.map((url,i)=>['餐廳來源 '+(i+1),url]),aliases:f.tags};C.places.push(p);C.placesById.set(p.id,p);
 }
 for(const x of H.animePlaces||[]){
  if(C.placesById.has(x.id))continue;
  const kind=/store|shop|post/.test(x.kind||'')?'retail':/cafe|restaurant/.test(x.kind||'')?'food':'heritage';
- const p={id:x.id,title:x.title,japanese:x.japanese||x.title,pref:normalizePref(x.pref),coords:x.coords||null,approx:!!x.coords,address:x.address||'',query:x.title+' '+(x.address||x.pref),kind,hours:typeof x.hours==='string'?x.hours:'營業條件見官方來源',note:x.warning||'作品關聯依官方來源；指定日期開放與商品庫存另核',summary:x.warning||'查看作品關聯與官方來源',coordinateSource:x.coordinateSource,href:x.officialSource||x.sourceUrl||x.sources?.[0],sources:[["官方點位來源",x.officialSource||x.sourceUrl||x.coordinateSource?.url]].filter(([,url])=>url),photo:null};
+ const p={id:x.id,title:x.title,japanese:x.japanese||x.title,pref:normalizePref(x.pref),coords:x.coords||null,approx:!!x.coords,address:x.address||'',query:x.title+' '+(x.address||x.pref),kind,hours:typeof x.hours==='string'?x.hours:'營業條件見官方來源',note:x.warning||'作品關聯依官方來源；指定日期開放與商品庫存另核',summary:x.warning||'查看作品關聯與官方來源',openingRules:typeof x.hours==='object'?x.hours:null,coordinateSource:x.coordinateSource,href:x.officialSource||x.sourceUrl||x.sources?.[0],sources:[["官方點位來源",x.officialSource||x.sourceUrl||x.coordinateSource?.url]].filter(([,url])=>url),photo:null};
  C.places.push(p);C.placesById.set(p.id,p);
 }
 for(const p of C.places.filter(p=>p.experience?.id.startsWith('culture-taiko-lab-'))){
@@ -100,7 +102,7 @@ function product(id){
  const best=comparable.length>1?notice('同款已查單價最低：'+low.retailer+' '+money(low.price.amount)+'；'+(delivered?'日本境內單件已列含運最低：'+delivered.retailer+' '+money(delivered.price.amount+delivered.shipping.domestic_japan_advertised):'此組為現場公開價，沒有可比較的日本宅配總額')+'。'+(comparison?.conditions||'條件、入場、附加費、庫存及可下單狀態均須在來源核對。')+' 所選旅客收貨方式不會自動變成可行，限制如下。'):notice('不足獨立、同款可比報價；官方售價或單一標價不能當全網最低。');
 
  const actions=btn('purchase-add',id,blocked&&purpose==='commercial'?'禁止商業採購':'加入'+(purpose==='commercial'?'商業':'個人')+'清單')+btn('watch',id,local.watch.includes(id)?'取消本機追蹤':'追蹤這個商品');
- api.openPanel('product',id,'商品・來源比價','<h2>'+txt(p.name_zh)+'</h2><p lang="ja">'+txt(p.name_ja)+'</p>'+notice(p.commercial_purchase.note)+(blocked?notice(p.limit_note):'')+api.facts([['系列',p.series],['款式',p.variant],['商品編號',p.manufacturer_sku||'未公開'],['JAN',p.jan||'未公開'],['規格單位',p.unit],['發售',release(p)],['限購',p.limit_note||'待核通路規則'],['核價日',p.checked_at]])+section('同款價格與成本條件',best+'<div class="table-scroll"><table><caption>'+txt(p.manufacturer_sku?'同 SKU、同款、新品報價；點數另列':'同名稱、角色與制服款式；官方未公開品番，不與相似款混比')+'</caption><thead><tr><th>通路</th><th>商品單價</th><th>日本境內運費</th><th>庫存</th><th>來源</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+offers.map(o=>para(o.retailer+'：'+(o.advertised_status||'可購狀態待確認')+'；'+(o.points?.note||'會員、付款手續費與優惠條件請查原頁')+'；限購：'+(o.purchase_limit||'未知')+'；'+((o.shipping?.notes||o.shipping?.note||'境外轉寄費用另計')+'；'+deliveryText(o)+'；核價 '+o.checked_at))).join(''))+'<div class="detail-actions">'+actions+'</div>'+section('官方商品圖片',imagesEntry(p.images))+section('已核取扱與購買地點',productLocations(p))+section('核對來源',sources([...new Set([...p.source_ids,...S.offers.filter(o=>o.product_id===p.id).flatMap(o=>o.source_ids||[o.source_id])])])));
+ api.openPanel('product',id,'商品・來源比價','<h2>'+txt(p.name_zh)+'</h2><p lang="ja">'+txt(p.name_ja)+'</p>'+notice(p.commercial_purchase.note)+(blocked?notice(p.limit_note):'')+api.facts([['系列',p.series],['款式',p.variant],['商品編號',p.manufacturer_sku||'未公開'],['JAN',p.jan||'未公開'],['規格單位',p.unit],['發售',release(p)],['限購',p.limit_note||'待核通路規則'],['核價日',p.checked_at]])+section('同款價格與成本條件',best+'<div class="table-scroll"><table><caption>'+txt(p.manufacturer_sku?'同 SKU、同款、新品報價；點數另列':'同名稱、角色與制服款式；官方未公開品番，不與相似款混比')+'</caption><thead><tr><th>通路</th><th>商品單價</th><th>日本境內運費</th><th>庫存</th><th>來源</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+offers.map(o=>para(o.retailer+'：'+(o.advertised_status||'可購狀態待確認')+'；'+(o.points?.note||'會員、付款手續費與優惠條件請查原頁')+'；限購：'+(o.purchase_limit||'未知')+'；'+((o.shipping?.notes||o.shipping?.note||'境外轉寄費用另計')+'；'+deliveryText(o)+'；核價 '+o.checked_at+(o.latestObservation?'；本次來源判讀：'+o.latestObservation.sourceNote:'')))).join(''))+'<div class="detail-actions">'+actions+'</div>'+section('官方商品圖片',imagesEntry(p.images))+section('已核取扱與購買地點',productLocations(p))+section('核對來源',sources([...new Set([...p.source_ids,...S.offers.filter(o=>o.product_id===p.id).flatMap(o=>o.source_ids||[o.source_id])])])));
 }
 function anime(id){
  const a=H.anime.find(x=>x.id===id);if(!a)return;
@@ -108,10 +110,11 @@ function anime(id){
  const related=C.places.filter(p=>normalizePref(a.pref)===p.pref&&p.tags?.includes('bear')).slice(0,4);
  api.openPanel('anime',id,'作品關聯與路線','<h2>'+txt(a.title)+'</h2>'+para(a.relation)+api.facts([['作品',a.work.join('・')],['期間',a.window.start?a.window.start+'–'+a.window.end:a.window.label],['入場',a.entry.conditions],['費用',a.entry.fee??'未核實']])+section('踩點順序',list(a.route)+(a.placeIds?'<div class="detail-actions">'+a.placeIds.map(id=>C.placesById.get(id)).filter(Boolean).map(p=>btn('place',p.id,p.title)).join('')+btn('anime-plan',a.id,'把實際點位加入選定日'):''))+section('買物與休憩',para(s.name)+para(s.goods||s.note||s.nearbySuggestion)+para(s.address)+para(s.hours)+para(s.access)+link(s.source||s.officialLocationLink,'店家／場地官方資訊','btn'))+(a.products?section('聯名商品',a.products.map(p=>para(p.title+'・'+p.variants+'款・價格及庫存待確認')+link(p.photoEntry,'官方商品照片','btn')).join('')):'')+(a.relatedWindows?section('其他城市檔期',a.relatedWindows.map(w=>para(normalizePref(w.pref)+' '+w.store+' '+w.start+'–'+w.end+' '+w.condition)).join('')):'')+section('附近既有拉拉熊點',related.map(p=>btn('place',p.id,p.title)).join(''))+section('官方地圖與來源',a.sources.map(s=>link(s.url,s.title,'btn')).join('')+link(a.officialMap?.pdf,'西武官方舞台探訪圖 PDF','btn')+link(a.officialImageEntry,'官方實景照片入口','btn')));
 }
-function menuCost(m){
+function menuCost(m,channel=m.defaultBookingChannel){
  let total=m.estimatedTableTotalJPY??m.estimatedFoodTotalJPY??m.priceJPY;if(total==null)return null;
  if(m.platformFee?.amountJPY!=null)total+=m.platformFee.amountJPY;
  else if(String(m.source||'').includes('omakase.in')&&/390/.test(m.serviceStatus||''))total+=390;
+ if(m.bookingFees?.[channel]?.rate)total+=Math.round((m.priceJPY||0)*m.bookingFees[channel].rate);
  return Math.round(total);
 }
 function menuMatches(m,withBudget=true,restaurant=null){

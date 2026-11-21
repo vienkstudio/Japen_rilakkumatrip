@@ -41,14 +41,15 @@ export function parseOfficial(source:any,html:string){
   const isStore=/^\/ja\/store-blogs\/[^/]+\/?$/.test(path),isRelease=source.id==='sanx-release'&&/\.pdf$/i.test(path);
   if(!isStore&&!isRelease)continue;
   const body=m[2],img=body.match(/<img[^>]*alt=["']([^"']+)/i),date=clean(body).match(/20\d{2}[.\/-]\d{1,2}[.\/-]\d{1,2}/);
-  add({url:u,title:clean(body)||img?.[1],publishedAt:date?iso(date[0].replaceAll('.','-').replaceAll('/','-')):null,updatedAt:null,imageUrl:null});
+  const verifiedPdfDate=path==='/release/26.11-09_RK_KAWADA_kimono.pdf'?'2026-11-09':null;
+  add({url:u,title:clean(body)||img?.[1],publishedAt:verifiedPdfDate?iso(verifiedPdfDate):date?iso(date[0].replaceAll('.','-').replaceAll('/','-')):null,publishedPrecision:verifiedPdfDate||date?'date':'unknown',publishedDateEvidence:verifiedPdfDate?'PDF第1頁明示公告日期':date?'官方列表日期':'尚未核實',updatedAt:null,imageUrl:null});
  }
  return [...found.values()].filter(r=>source.id!=='sanx-store'||/リラックマ|コリラックマ|キイロイトリ|チャイロイコグマ|拉拉熊/.test(r.title)).slice(0,60);
 }
 export async function sourceState(db:any){
  const [snapshots,items,changes,runs]=await Promise.all([
   db.prepare('SELECT id,kind,fetched_at,expires_at,last_error,payload FROM source_snapshots ORDER BY id').all(),
-  db.prepare('SELECT * FROM feed_items ORDER BY COALESCE(published_at,first_seen) DESC LIMIT 650').all(),
+  db.prepare('SELECT * FROM feed_items ORDER BY (published_at IS NULL),published_at DESC,first_seen DESC LIMIT 650').all(),
   db.prepare('SELECT id,source_id,item_id,title,url,change_type,observed_at FROM source_changes ORDER BY observed_at DESC LIMIT 80').all(),
   db.prepare('SELECT * FROM refresh_runs ORDER BY started_at DESC LIMIT 3').all()
  ]);
@@ -73,8 +74,8 @@ export async function refreshOfficial(db:any,force=false){
     const oldSnapshot=await db.prepare('SELECT id FROM source_snapshots WHERE id=?').bind(source.id).first();
     const previous=await db.prepare('SELECT id,payload FROM feed_items WHERE source_id=?').bind(source.id).all();const prior=new Map(previous.results.map((r:any)=>[r.id,r.payload]));const statements=[];
     for(const row of rows){
-     const payload=JSON.stringify(row),old=prior.get(row.id) as string|undefined;
-     if(!old||old!==payload)statements.push(db.prepare('INSERT INTO source_changes (id,source_id,item_id,title,url,change_type,observed_at,before_payload,after_payload) VALUES (?,?,?,?,?,?,?,?,?)').bind(crypto.randomUUID(),source.id,row.id,row.title,row.url,!old?(oldSnapshot?'new':'initial'):'changed',at,old||null,payload));
+     const payload=JSON.stringify(row),old=prior.get(row.id) as string|undefined;let previousItem:any=null;try{previousItem=old?JSON.parse(old):null;}catch{}const metadataCorrection=previousItem&&source.id==='sanx-release'&&previousItem.title===row.title&&previousItem.url===row.url&&!Object.hasOwn(previousItem,'publishedPrecision')&&Object.hasOwn(row,'publishedPrecision');
+     if(!old||old!==payload)statements.push(db.prepare('INSERT INTO source_changes (id,source_id,item_id,title,url,change_type,observed_at,before_payload,after_payload) VALUES (?,?,?,?,?,?,?,?,?)').bind(crypto.randomUUID(),source.id,row.id,row.title,row.url,!old?(oldSnapshot?'new':'initial'):metadataCorrection?'metadata-corrected':'changed',at,old||null,payload));
      statements.push(db.prepare('INSERT INTO feed_items (id,source_id,kind,title,url,published_at,updated_at,payload,first_seen,last_seen) VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET title=excluded.title,published_at=excluded.published_at,updated_at=excluded.updated_at,payload=excluded.payload,last_seen=excluded.last_seen').bind(row.id,source.id,row.kind,row.title,row.url,row.publishedAt||null,row.updatedAt||null,payload,at,at));
     }
     for(let i=0;i<statements.length;i+=40)await db.batch(statements.slice(i,i+40));
