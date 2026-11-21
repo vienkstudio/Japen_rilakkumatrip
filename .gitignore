@@ -1,0 +1,19 @@
+
+# Sites server build and local tools
+node_modules/
+.sites-runtime/
+.wrangler/
+.vinext/
+.env*
+.dev.vars*
+*.tsbuildinfo
+dist/client/
+dist/server/
+outputs/
+
+.next/
+dist/.openai/
+lib/atlas-markup.ts
+
+atlas-browser*/
+downloads*/

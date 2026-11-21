@@ -1,0 +1,351 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-21",
+  "asset_root": "D:\\Coding\\日本旅遊\\設計規劃\\licensed-media",
+  "purpose": "公開旅遊App的已授權真實照片素材；不是聊天顯示限制的規避",
+  "count": 6,
+  "attribution_requirement": "公開App需在圖片旁或可直接到達的圖片出處介面，逐張提供作者、來源與授權連結。CC BY-SA照片如有改作須用相同授權分享改作圖片並註明修改；不把整個網站代碼改成該授權。CC0照片仍保留出處便於追溯。",
+  "exclusions": [
+    "未取得合適授權的澀谷ONE PIECE店外觀未下載；第6張改為宇治街景，只能標區域照，不能貼成澀谷店照。",
+    "未下載任何San-X或排球聯名受限官方商品圖。",
+    "同名中國定林寺與三重伊勢神宮宇治橋不採用。"
+  ],
+  "assets": [
+    {
+      "id": "todaiji-daibutsuden",
+      "filename": "todaiji-daibutsuden-2011-1280.jpg",
+      "local_path": "D:\\Coding\\日本旅遊\\設計規劃\\licensed-media\\todaiji-daibutsuden-2011-1280.jpg",
+      "original_file_title": "File:Todai-ji Daibutsuden front view in 2011.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Todai-ji_Daibutsuden_front_view_in_2011.jpg",
+      "downloaded_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Todai-ji_Daibutsuden_front_view_in_2011.jpg/1280px-Todai-ji_Daibutsuden_front_view_in_2011.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Todai-ji_Daibutsuden_front_view_in_2011.jpg",
+      "metadata_api": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&titles=File%3ATodai-ji%20Daibutsuden%20front%20view%20in%202011.jpg%7CFile%3AHimeji%20castle%20in%20may%202015.jpg%7CFile%3AChichibu%2017%20Jorin-ji%20201906.jpg%7CFile%3AHanno%20Mt.Tenran%201.jpg%7CFile%3AUji-Bridge%202023.jpg%7CFile%3AByodoin%20Omote-Sando%20Street.jpg",
+      "author": "ONO Masanobu",
+      "author_html_as_provided": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:ONO_Masanobu&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ONO Masanobu (page does not exist)\">ONO Masanobu</a>",
+      "original_source_credit": "Own work",
+      "original_source_credit_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": {
+        "name": "CC0",
+        "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "chosen_from_commons_metadata": true,
+        "commercial_reuse_permitted": true,
+        "attribution_required": false,
+        "share_alike_for_adaptations": false,
+        "additional_restrictions_as_reported": ""
+      },
+      "location": {
+        "country": "日本",
+        "prefecture": "奈良縣",
+        "city": "奈良市",
+        "place": "東大寺大佛殿"
+      },
+      "capture_date": "2011-07-22",
+      "capture_year": 2011,
+      "capture_date_as_reported": "2011-07-22 07:54:26",
+      "image_role": "landmark_photo",
+      "caption_zh_tw": "東大寺大佛殿正面（2011年實景資料照）",
+      "description_as_reported": "Front view of the Daibutsuden (Great Buddha Hall) at Todai-ji temple in Nara, Japan.",
+      "attribution_text": "Todai-ji Daibutsuden front view in 2011.jpg — ONO Masanobu / CC0 / Wikimedia Commons；下載1280px縮圖，未另行裁切或調色。",
+      "changes": "Commons產生1280px等比例縮圖；未另行裁切、改色或疊字",
+      "original_dimensions": {
+        "width": 2044,
+        "height": 1653
+      },
+      "downloaded_dimensions": {
+        "width": 1280,
+        "height": 1035
+      },
+      "download_status": 200,
+      "download_content_type": [
+        "image/jpeg"
+      ],
+      "bytes": 251017,
+      "sha256": "4dd44066e673881fe542f7919214b76fee3b3b5ed42d6c431bebb0ee7ecf68a6",
+      "verified_at": "2026-11-21",
+      "source_license_confirmed_before_download": true,
+      "visual_qa": "passed: 已目視確認東大寺大佛殿正面；大面積天空、寺殿外觀，非大佛室內照。",
+      "attribution_html": "<a href=\"https://commons.wikimedia.org/wiki/File:Todai-ji_Daibutsuden_front_view_in_2011.jpg\">Todai-ji Daibutsuden front view in 2011.jpg</a> — ONO Masanobu / <a href=\"http://creativecommons.org/publicdomain/zero/1.0/deed.en\">CC0</a>；1280px縮圖，未另行裁切或調色。",
+      "attribution_markdown": "[Todai-ji Daibutsuden front view in 2011.jpg](https://commons.wikimedia.org/wiki/File:Todai-ji_Daibutsuden_front_view_in_2011.jpg) — ONO Masanobu / [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)；1280px縮圖。"
+    },
+    {
+      "id": "himeji-castle",
+      "filename": "himeji-castle-2015-1280.jpg",
+      "local_path": "D:\\Coding\\日本旅遊\\設計規劃\\licensed-media\\himeji-castle-2015-1280.jpg",
+      "original_file_title": "File:Himeji castle in may 2015.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Himeji_castle_in_may_2015.jpg",
+      "downloaded_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Himeji_castle_in_may_2015.jpg/1280px-Himeji_castle_in_may_2015.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Himeji_castle_in_may_2015.jpg",
+      "metadata_api": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&titles=File%3ATodai-ji%20Daibutsuden%20front%20view%20in%202011.jpg%7CFile%3AHimeji%20castle%20in%20may%202015.jpg%7CFile%3AChichibu%2017%20Jorin-ji%20201906.jpg%7CFile%3AHanno%20Mt.Tenran%201.jpg%7CFile%3AUji-Bridge%202023.jpg%7CFile%3AByodoin%20Omote-Sando%20Street.jpg",
+      "author": "Nikos Kitsakis",
+      "author_html_as_provided": "<a href=\"//commons.wikimedia.org/wiki/User:Nubero\" title=\"User:Nubero\">Nikos Kitsakis</a>",
+      "original_source_credit": "Own work",
+      "original_source_credit_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "chosen_from_commons_metadata": true,
+        "commercial_reuse_permitted": true,
+        "attribution_required": true,
+        "share_alike_for_adaptations": true,
+        "additional_restrictions_as_reported": ""
+      },
+      "location": {
+        "country": "日本",
+        "prefecture": "兵庫縣",
+        "city": "姬路市",
+        "place": "姬路城"
+      },
+      "capture_date": "2015-05-10",
+      "capture_year": 2015,
+      "capture_date_as_reported": "2015-05-10 10:39:07",
+      "image_role": "landmark_photo",
+      "caption_zh_tw": "姬路城（2015年修復後實景資料照）",
+      "description_as_reported": "Himeji castle in may 2015 after the five year renovation of the roof and walls.",
+      "attribution_text": "Himeji castle in may 2015.jpg — Nikos Kitsakis / CC BY-SA 4.0 / Wikimedia Commons；下載1280px縮圖，未另行裁切或調色。",
+      "changes": "Commons產生1280px等比例縮圖；未另行裁切、改色或疊字",
+      "original_dimensions": {
+        "width": 5632,
+        "height": 3754
+      },
+      "downloaded_dimensions": {
+        "width": 1280,
+        "height": 853
+      },
+      "download_status": 200,
+      "download_content_type": [
+        "image/jpeg"
+      ],
+      "bytes": 359074,
+      "sha256": "639e9114ea4382ee13405ce60072631af36f9292a8cca7d577f81e4fa52597eb",
+      "verified_at": "2026-11-21",
+      "source_license_confirmed_before_download": true,
+      "visual_qa": "passed: 已目視確認姬路城主天守/石垣與白牆，橫幅。",
+      "attribution_html": "<a href=\"https://commons.wikimedia.org/wiki/File:Himeji_castle_in_may_2015.jpg\">Himeji castle in may 2015.jpg</a> — Nikos Kitsakis / <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>；1280px縮圖，未另行裁切或調色。",
+      "attribution_markdown": "[Himeji castle in may 2015.jpg](https://commons.wikimedia.org/wiki/File:Himeji_castle_in_may_2015.jpg) — Nikos Kitsakis / [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)；1280px縮圖。"
+    },
+    {
+      "id": "chichibu-jorinji",
+      "filename": "chichibu-jorinji-2019-1280.jpg",
+      "local_path": "D:\\Coding\\日本旅遊\\設計規劃\\licensed-media\\chichibu-jorinji-2019-1280.jpg",
+      "original_file_title": "File:Chichibu 17 Jorin-ji 201906.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Chichibu_17_Jorin-ji_201906.jpg",
+      "downloaded_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Chichibu_17_Jorin-ji_201906.jpg/1280px-Chichibu_17_Jorin-ji_201906.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Chichibu_17_Jorin-ji_201906.jpg",
+      "metadata_api": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&titles=File%3ATodai-ji%20Daibutsuden%20front%20view%20in%202011.jpg%7CFile%3AHimeji%20castle%20in%20may%202015.jpg%7CFile%3AChichibu%2017%20Jorin-ji%20201906.jpg%7CFile%3AHanno%20Mt.Tenran%201.jpg%7CFile%3AUji-Bridge%202023.jpg%7CFile%3AByodoin%20Omote-Sando%20Street.jpg",
+      "author": "tak1701d",
+      "author_html_as_provided": "<a href=\"//commons.wikimedia.org/wiki/User:Tak1701d\" title=\"User:Tak1701d\">tak1701d</a>",
+      "original_source_credit": "Own work",
+      "original_source_credit_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "chosen_from_commons_metadata": true,
+        "commercial_reuse_permitted": true,
+        "attribution_required": true,
+        "share_alike_for_adaptations": true,
+        "additional_restrictions_as_reported": ""
+      },
+      "location": {
+        "country": "日本",
+        "prefecture": "埼玉縣",
+        "city": "秩父市",
+        "place": "秩父札所十七番定林寺"
+      },
+      "capture_date": "2019-06-09",
+      "capture_year": 2019,
+      "capture_date_as_reported": "Taken on 9 June 2019",
+      "image_role": "landmark_photo",
+      "caption_zh_tw": "秩父定林寺（2019年實景資料照）",
+      "description_as_reported": "Jōrin-ji temple in <a href=\"https://en.wikipedia.org/wiki/Chichibu,_Saitama\" class=\"extiw\" title=\"en:Chichibu, Saitama\">Chichibu, Saitama Prefecture</a>",
+      "attribution_text": "Chichibu 17 Jorin-ji 201906.jpg — tak1701d / CC BY-SA 3.0 / Wikimedia Commons；下載1280px縮圖，未另行裁切或調色。",
+      "changes": "Commons產生1280px等比例縮圖；未另行裁切、改色或疊字",
+      "original_dimensions": {
+        "width": 2000,
+        "height": 1500
+      },
+      "downloaded_dimensions": {
+        "width": 1280,
+        "height": 960
+      },
+      "download_status": 200,
+      "download_content_type": [
+        "image/jpeg"
+      ],
+      "bytes": 471350,
+      "sha256": "d20d0f9cef0291134ec13c0526d0e4804837c633cd9f854cbb05dfe1b11bed90",
+      "verified_at": "2026-11-21",
+      "source_license_confirmed_before_download": true,
+      "visual_qa": "passed: 已目視確認寺堂與門前階梯，與Commons秩父定林寺資料相符。",
+      "attribution_html": "<a href=\"https://commons.wikimedia.org/wiki/File:Chichibu_17_Jorin-ji_201906.jpg\">Chichibu 17 Jorin-ji 201906.jpg</a> — tak1701d / <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>；1280px縮圖，未另行裁切或調色。",
+      "attribution_markdown": "[Chichibu 17 Jorin-ji 201906.jpg](https://commons.wikimedia.org/wiki/File:Chichibu_17_Jorin-ji_201906.jpg) — tak1701d / [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)；1280px縮圖。"
+    },
+    {
+      "id": "hanno-tenranzan",
+      "filename": "hanno-tenranzan-2011-1280.jpg",
+      "local_path": "D:\\Coding\\日本旅遊\\設計規劃\\licensed-media\\hanno-tenranzan-2011-1280.jpg",
+      "original_file_title": "File:Hanno Mt.Tenran 1.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Hanno_Mt.Tenran_1.jpg",
+      "downloaded_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Hanno_Mt.Tenran_1.jpg/1280px-Hanno_Mt.Tenran_1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hanno_Mt.Tenran_1.jpg",
+      "metadata_api": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&titles=File%3ATodai-ji%20Daibutsuden%20front%20view%20in%202011.jpg%7CFile%3AHimeji%20castle%20in%20may%202015.jpg%7CFile%3AChichibu%2017%20Jorin-ji%20201906.jpg%7CFile%3AHanno%20Mt.Tenran%201.jpg%7CFile%3AUji-Bridge%202023.jpg%7CFile%3AByodoin%20Omote-Sando%20Street.jpg",
+      "author": "京浜にけ at Japanese Wikipedia",
+      "author_html_as_provided": "<a href=\"https://en.wikipedia.org/wiki/ja:User:%E4%BA%AC%E6%B5%9C%E3%81%AB%E3%81%91\" class=\"extiw\" title=\"w:ja:User:京浜にけ\">京浜にけ</a> at <a href=\"https://en.wikipedia.org/wiki/ja:\" class=\"extiw\" title=\"w:ja:\">Japanese Wikipedia</a>",
+      "original_source_credit": "Own work",
+      "original_source_credit_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "chosen_from_commons_metadata": true,
+        "commercial_reuse_permitted": true,
+        "attribution_required": true,
+        "share_alike_for_adaptations": true,
+        "additional_restrictions_as_reported": ""
+      },
+      "location": {
+        "country": "日本",
+        "prefecture": "埼玉縣",
+        "city": "飯能市",
+        "place": "天覽山"
+      },
+      "capture_date": "2011-10-04",
+      "capture_year": 2011,
+      "capture_date_as_reported": "2011-10-04",
+      "image_role": "landscape_photo",
+      "caption_zh_tw": "飯能天覽山遠景（2011年實景資料照，非山頂展望）",
+      "description_as_reported": "Mount Tenran in Hanno City, Saitama Prefecture, Japan",
+      "attribution_text": "Hanno Mt.Tenran 1.jpg — 京浜にけ at Japanese Wikipedia / CC BY-SA 3.0 / Wikimedia Commons；下載1280px縮圖，未另行裁切或調色。",
+      "changes": "Commons產生1280px等比例縮圖；未另行裁切、改色或疊字",
+      "original_dimensions": {
+        "width": 3264,
+        "height": 2448
+      },
+      "downloaded_dimensions": {
+        "width": 1280,
+        "height": 960
+      },
+      "download_status": 200,
+      "download_content_type": [
+        "image/jpeg"
+      ],
+      "bytes": 380831,
+      "sha256": "1664ee8fa6dbd8ac4c4bc190b1e312b886f25bb40c3798532ca26ebc1b5e598a",
+      "verified_at": "2026-11-21",
+      "source_license_confirmed_before_download": true,
+      "visual_qa": "passed: 已目視確認山體遠景與山下街區；不能標成山頂展望。",
+      "attribution_html": "<a href=\"https://commons.wikimedia.org/wiki/File:Hanno_Mt.Tenran_1.jpg\">Hanno Mt.Tenran 1.jpg</a> — 京浜にけ at Japanese Wikipedia / <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>；1280px縮圖，未另行裁切或調色。",
+      "attribution_markdown": "[Hanno Mt.Tenran 1.jpg](https://commons.wikimedia.org/wiki/File:Hanno_Mt.Tenran_1.jpg) — 京浜にけ at Japanese Wikipedia / [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)；1280px縮圖。"
+    },
+    {
+      "id": "uji-bridge",
+      "filename": "uji-bridge-2023-1280.jpg",
+      "local_path": "D:\\Coding\\日本旅遊\\設計規劃\\licensed-media\\uji-bridge-2023-1280.jpg",
+      "original_file_title": "File:Uji-Bridge 2023.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Uji-Bridge_2023.jpg",
+      "downloaded_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Uji-Bridge_2023.jpg/1280px-Uji-Bridge_2023.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Uji-Bridge_2023.jpg",
+      "metadata_api": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&titles=File%3ATodai-ji%20Daibutsuden%20front%20view%20in%202011.jpg%7CFile%3AHimeji%20castle%20in%20may%202015.jpg%7CFile%3AChichibu%2017%20Jorin-ji%20201906.jpg%7CFile%3AHanno%20Mt.Tenran%201.jpg%7CFile%3AUji-Bridge%202023.jpg%7CFile%3AByodoin%20Omote-Sando%20Street.jpg",
+      "author": "御影守駒氏",
+      "author_html_as_provided": "<a href=\"//commons.wikimedia.org/wiki/User:%E5%BE%A1%E5%BD%B1%E5%AE%88%E9%A7%92%E6%B0%8F\" title=\"User:御影守駒氏\">御影守駒氏</a>",
+      "original_source_credit": "Own work",
+      "original_source_credit_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "chosen_from_commons_metadata": true,
+        "commercial_reuse_permitted": true,
+        "attribution_required": true,
+        "share_alike_for_adaptations": true,
+        "additional_restrictions_as_reported": ""
+      },
+      "location": {
+        "country": "日本",
+        "prefecture": "京都府",
+        "city": "宇治市",
+        "place": "宇治橋（京都府宇治市）"
+      },
+      "capture_date": "2023-07-27",
+      "capture_year": 2023,
+      "capture_date_as_reported": "2023-07-27 12:47:34",
+      "image_role": "landmark_photo",
+      "caption_zh_tw": "宇治橋西詰橋欄（京都府宇治市，2023年實景資料照）",
+      "description_as_reported": "宇治市の宇治橋",
+      "attribution_text": "Uji-Bridge 2023.jpg — 御影守駒氏 / CC BY-SA 4.0 / Wikimedia Commons；下載1280px縮圖，未另行裁切或調色。",
+      "changes": "Commons產生1280px等比例縮圖；未另行裁切、改色或疊字",
+      "original_dimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "downloaded_dimensions": {
+        "width": 1280,
+        "height": 1707
+      },
+      "download_status": 200,
+      "download_content_type": [
+        "image/jpeg"
+      ],
+      "bytes": 723128,
+      "sha256": "d52b205fb60e329aa3de22556fdd7e0f22ad4a32728b8caf78c0107215e9a448",
+      "verified_at": "2026-11-21",
+      "source_license_confirmed_before_download": true,
+      "visual_qa": "passed: 已目視確認橋欄擬寶珠及宇治橋西詰路牌；直幅，非整座橋遠景。",
+      "attribution_html": "<a href=\"https://commons.wikimedia.org/wiki/File:Uji-Bridge_2023.jpg\">Uji-Bridge 2023.jpg</a> — 御影守駒氏 / <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>；1280px縮圖，未另行裁切或調色。",
+      "attribution_markdown": "[Uji-Bridge 2023.jpg](https://commons.wikimedia.org/wiki/File:Uji-Bridge_2023.jpg) — 御影守駒氏 / [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)；1280px縮圖。"
+    },
+    {
+      "id": "uji-omotesando-area",
+      "filename": "uji-omotesando-street-2017-1280.jpg",
+      "local_path": "D:\\Coding\\日本旅遊\\設計規劃\\licensed-media\\uji-omotesando-street-2017-1280.jpg",
+      "original_file_title": "File:Byodoin Omote-Sando Street.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Byodoin_Omote-Sando_Street.jpg",
+      "downloaded_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Byodoin_Omote-Sando_Street.jpg/1280px-Byodoin_Omote-Sando_Street.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Byodoin_Omote-Sando_Street.jpg",
+      "metadata_api": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&titles=File%3ATodai-ji%20Daibutsuden%20front%20view%20in%202011.jpg%7CFile%3AHimeji%20castle%20in%20may%202015.jpg%7CFile%3AChichibu%2017%20Jorin-ji%20201906.jpg%7CFile%3AHanno%20Mt.Tenran%201.jpg%7CFile%3AUji-Bridge%202023.jpg%7CFile%3AByodoin%20Omote-Sando%20Street.jpg",
+      "author": "bethom33",
+      "author_html_as_provided": "bethom33",
+      "original_source_credit": "https://www.flickr.com/photos/92475647@N05/42651494614",
+      "original_source_credit_html": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/92475647@N05/42651494614\">https://www.flickr.com/photos/92475647@N05/42651494614</a>",
+      "license": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "chosen_from_commons_metadata": true,
+        "commercial_reuse_permitted": true,
+        "attribution_required": true,
+        "share_alike_for_adaptations": true,
+        "additional_restrictions_as_reported": ""
+      },
+      "location": {
+        "country": "日本",
+        "prefecture": "京都府",
+        "city": "宇治市",
+        "place": "平等院表參道街景"
+      },
+      "capture_date": "2017-04-18",
+      "capture_year": 2017,
+      "capture_date_as_reported": "2017-04-18",
+      "image_role": "area_photo",
+      "caption_zh_tw": "宇治平等院表參道街景（2017年區域資料照，非澀谷ONE PIECE店照）",
+      "description_as_reported": "This is the street called: Byodoin Omote-Sando Street",
+      "attribution_text": "Byodoin Omote-Sando Street.jpg — bethom33 / CC BY-SA 2.0 / Wikimedia Commons；下載1280px縮圖，未另行裁切或調色。",
+      "changes": "Commons產生1280px等比例縮圖；未另行裁切、改色或疊字",
+      "original_dimensions": {
+        "width": 4704,
+        "height": 3136
+      },
+      "downloaded_dimensions": {
+        "width": 1280,
+        "height": 853
+      },
+      "download_status": 200,
+      "download_content_type": [
+        "image/jpeg"
+      ],
+      "bytes": 318350,
+      "sha256": "bf5fd9e7078db245623a094b23232a94297b3897a5e46f58b45efe833595e85f",
+      "verified_at": "2026-11-21",
+      "source_license_confirmed_before_download": true,
+      "visual_qa": "passed: 已目視確認平等院表參道茶舖街景；區域照，不能標澀谷店面。",
+      "attribution_html": "<a href=\"https://commons.wikimedia.org/wiki/File:Byodoin_Omote-Sando_Street.jpg\">Byodoin Omote-Sando Street.jpg</a> — bethom33 / <a href=\"https://creativecommons.org/licenses/by-sa/2.0\">CC BY-SA 2.0</a>；1280px縮圖，未另行裁切或調色。",
+      "attribution_markdown": "[Byodoin Omote-Sando Street.jpg](https://commons.wikimedia.org/wiki/File:Byodoin_Omote-Sando_Street.jpg) — bethom33 / [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0)；1280px縮圖。"
+    }
+  ]
+}

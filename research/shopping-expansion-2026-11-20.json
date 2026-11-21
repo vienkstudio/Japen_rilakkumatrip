@@ -1,0 +1,2091 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-20",
+  "scope": "官方商品擴充與自動更新來源研究。未修改網站/Git；沒有登入、購買、註冊或建立自動排程。",
+  "counting_note": "原4款由舊研究檔補入；本檔新表有22款加原文件夾1款，共23。19筆有SKU/JAN，其中MZ21901是15件批發assort，只計1筆且不可當單隻固定款下單；4筆官方名稱規格可辨但SKU/JAN未知。",
+  "products": [
+    {
+      "id": "sanx-mz13101",
+      "manufacturer_sku": "MZ13101",
+      "jan": "4974413925433",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "根付ぬいぐるみ リラックマ",
+      "variant": "リラックマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 2420,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932429697-gmhnmgqs9dm/740f3ab9-e225-44d0-bee9-b591daf52748.webp",
+          "source_id": "kimono-special",
+          "note": "官方兩角色合圖，非單隻實拍",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13201",
+      "manufacturer_sku": "MZ13201",
+      "jan": "4974413925440",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "根付ぬいぐるみ コリラックマ",
+      "variant": "コリラックマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 2420,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932429697-gmhnmgqs9dm/740f3ab9-e225-44d0-bee9-b591daf52748.webp",
+          "source_id": "kimono-special",
+          "note": "官方兩角色合圖，非單隻實拍",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13301",
+      "manufacturer_sku": "MZ13301",
+      "jan": "4974413925457",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "根付ぬいぐるみ キイロイトリ",
+      "variant": "キイロイトリ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 2420,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932429892-r2r4xv3h9vb/726a38b4-4bd1-4d54-8847-63ead3743dd4.webp",
+          "source_id": "kimono-special",
+          "note": "官方兩角色合圖，非單隻實拍",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13401",
+      "manufacturer_sku": "MZ13401",
+      "jan": "4974413925464",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "根付ぬいぐるみ チャイロイコグマ",
+      "variant": "チャイロイコグマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 2420,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932429892-r2r4xv3h9vb/726a38b4-4bd1-4d54-8847-63ead3743dd4.webp",
+          "source_id": "kimono-special",
+          "note": "官方兩角色合圖，非單隻實拍",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13501",
+      "manufacturer_sku": "MZ13501",
+      "jan": "4974413925471",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "ぶらさげぬいぐるみ リラックマ",
+      "variant": "リラックマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 4180,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "see_original_four_product_update",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932430263-lrhs0v76fgi/a5108688-d5d2-457e-ab8d-fea83b0c4436.webp",
+          "source_id": "kimono-special",
+          "note": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13601",
+      "manufacturer_sku": "MZ13601",
+      "jan": "4974413925488",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "ぶらさげぬいぐるみ コリラックマ",
+      "variant": "コリラックマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 4180,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932430422-w3orwe6158/89c515c8-03f5-49e4-8bd5-5d2866d57ad3.webp",
+          "source_id": "kimono-special",
+          "note": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13701",
+      "manufacturer_sku": "MZ13701",
+      "jan": "4974413925495",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "ぶらさげぬいぐるみ キイロイトリ",
+      "variant": "キイロイトリ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 4180,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932430598-57pyo300zpr/4b850268-efc8-4788-a571-b8422251284f.webp",
+          "source_id": "kimono-special",
+          "note": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13801",
+      "manufacturer_sku": "MZ13801",
+      "jan": "4974413925501",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "ぶらさげぬいぐるみ チャイロイコグマ",
+      "variant": "チャイロイコグマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 4180,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932430792-9yymlzmvnoo/871ac03d-78f6-45bc-b493-999727712eca.webp",
+          "source_id": "kimono-special",
+          "note": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz13901",
+      "manufacturer_sku": "MZ13901",
+      "jan": "4974413925518",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "あつめてぬいぐるみ リラックマ",
+      "variant": "リラックマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 6050,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "see_original_four_product_update",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932431015-ra2xnvc0dms/fe078e15-e4ac-44f1-bbab-83b00b810157.webp",
+          "source_id": "kimono-special",
+          "note": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz14001",
+      "manufacturer_sku": "MZ14001",
+      "jan": "4974413925525",
+      "series": "もっと着物シリーズ2026",
+      "name_ja": "あつめてぬいぐるみ コリラックマ",
+      "variant": "コリラックマ・2026和服",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 6050,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "not_retail_offer": true
+      },
+      "release": {
+        "date": "2026-12-05",
+        "source_id": "kimono-release",
+        "conflicting_date": "2026-11-14",
+        "conflicting_source_id": "kimono-special",
+        "status": "conflict_open"
+      },
+      "identity_source_ids": [
+        "kimono-identifiers",
+        "kimono-special"
+      ],
+      "physical_handling": {
+        "evidence_level": "series_confirmed_only",
+        "evidence_ref": "kimono-series-branches",
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知"
+      },
+      "online_handling": {
+        "status": "AmiAmi清單可見同SKU；需詳頁和收件條件核對",
+        "source_id": "amiami-plush"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1788932431200-kv89piwnlks/a07e8561-79ad-474f-aee3-e0ba0a843857.webp",
+          "source_id": "kimono-special",
+          "note": "官方商品圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz21901",
+      "manufacturer_sku": "MZ21901",
+      "jan": "4974413928694",
+      "series": "コリラックマクローゼット",
+      "name_ja": "てのりぬいぐるみアソート",
+      "variant": "全5種・供應商15件組",
+      "unit": "批發15件assort；官方單隻售價另列",
+      "price": {
+        "amount": 1980,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每隻（不是15件總價）",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335677969-v1vj2r2eood/4b37cb96-4b2a-4c81-afa9-ee1a192c64bf.webp",
+          "source_id": "closet-special",
+          "note": "官方系列合圖入口；圖中非所有商品均對應此張，需以原特設頁核對個別圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22001",
+      "manufacturer_sku": "MZ22001",
+      "jan": "4974413928700",
+      "series": "コリラックマクローゼット",
+      "name_ja": "ぶらさげぬいぐるみ コリラックマ",
+      "variant": "シニヨンキャップ",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 3080,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335677969-v1vj2r2eood/4b37cb96-4b2a-4c81-afa9-ee1a192c64bf.webp",
+          "source_id": "closet-special",
+          "note": "官方系列合圖入口；圖中非所有商品均對應此張，需以原特設頁核對個別圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22101",
+      "manufacturer_sku": "MZ22101",
+      "jan": "4974413928717",
+      "series": "コリラックマクローゼット",
+      "name_ja": "ぶらさげぬいぐるみ コリラックマ",
+      "variant": "バブーシュカ",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 3080,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335677969-v1vj2r2eood/4b37cb96-4b2a-4c81-afa9-ee1a192c64bf.webp",
+          "source_id": "closet-special",
+          "note": "官方系列合圖入口；圖中非所有商品均對應此張，需以原特設頁核對個別圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22201",
+      "manufacturer_sku": "MZ22201",
+      "jan": "4974413928724",
+      "series": "コリラックマクローゼット",
+      "name_ja": "ぶらさげぬいぐるみ ココアウサギ",
+      "variant": "ココアウサギ",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 2750,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "see_original_four_product_update",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335677969-v1vj2r2eood/4b37cb96-4b2a-4c81-afa9-ee1a192c64bf.webp",
+          "source_id": "closet-special",
+          "note": "官方系列合圖入口；圖中非所有商品均對應此張，需以原特設頁核對個別圖",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22301",
+      "manufacturer_sku": "MZ22301",
+      "jan": "4974413928731",
+      "series": "コリラックマクローゼット",
+      "name_ja": "おきがえリラックマ",
+      "variant": "シニヨンキャップとワンピース",
+      "unit": "服裝1組；娃娃本體另購",
+      "price": {
+        "amount": 2200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335678124-i2uz0738spa/10a9f495-8f37-4fc0-b786-7dedff2f4fb4.webp",
+          "source_id": "closet-special",
+          "note": "官方服裝/收藏娃娃/M合圖；非單一SKU實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22401",
+      "manufacturer_sku": "MZ22401",
+      "jan": "4974413928748",
+      "series": "コリラックマクローゼット",
+      "name_ja": "おきがえリラックマ",
+      "variant": "バブーシュカとドレス",
+      "unit": "服裝1組；娃娃本體另購",
+      "price": {
+        "amount": 2200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335678124-i2uz0738spa/10a9f495-8f37-4fc0-b786-7dedff2f4fb4.webp",
+          "source_id": "closet-special",
+          "note": "官方服裝/收藏娃娃/M合圖；非單一SKU實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22501",
+      "manufacturer_sku": "MZ22501",
+      "jan": "4974413928755",
+      "series": "コリラックマクローゼット",
+      "name_ja": "あつめてぬいぐるみ コリラックマ",
+      "variant": "ヘッドドレス",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 4400,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335678124-i2uz0738spa/10a9f495-8f37-4fc0-b786-7dedff2f4fb4.webp",
+          "source_id": "closet-special",
+          "note": "官方服裝/收藏娃娃/M合圖；非單一SKU實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22601",
+      "manufacturer_sku": "MZ22601",
+      "jan": "4974413928762",
+      "series": "コリラックマクローゼット",
+      "name_ja": "あつめてぬいぐるみ コリラックマ",
+      "variant": "ワンピース",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 3850,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335678124-i2uz0738spa/10a9f495-8f37-4fc0-b786-7dedff2f4fb4.webp",
+          "source_id": "closet-special",
+          "note": "官方服裝/收藏娃娃/M合圖；非單一SKU實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sanx-mz22701",
+      "manufacturer_sku": "MZ22701",
+      "jan": "4974413928779",
+      "series": "コリラックマクローゼット",
+      "name_ja": "ぬいぐるみ（M）コリラックマ",
+      "variant": "バブーシュカ",
+      "unit": "1隻／新品",
+      "price": {
+        "amount": 6930,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_price",
+        "unit": "每個",
+        "not_retail_offer": true
+      },
+      "identity_source_ids": [
+        "closet-identifiers",
+        "closet-special",
+        "closet-release"
+      ],
+      "release": {
+        "window": "2026年12月頃",
+        "precision": "month",
+        "source_id": "closet-release",
+        "not_exact_day": true
+      },
+      "physical_handling": {
+        "evidence_level": "unknown",
+        "branch_ids": [],
+        "sku_at_named_branch_confirmed": false,
+        "stock": "未知",
+        "note": "一般店表和12/12店限公告不能證明一般MZ品番取扱"
+      },
+      "online_handling": {
+        "status": "未取得消費者零售SKU實際頁",
+        "wholesale_identity_not_retail_offer": true
+      },
+      "purchase_ready": false,
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1793335678124-i2uz0738spa/10a9f495-8f37-4fc0-b786-7dedff2f4fb4.webp",
+          "source_id": "closet-special",
+          "note": "官方服裝/收藏娃娃/M合圖；非單一SKU實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sabo-5colors-koguma-kiiroitori-2026",
+      "manufacturer_sku": null,
+      "jan": null,
+      "identification_status": "官方名稱+固定款式+2026發售公告可辨識；SKU/JAN未公開",
+      "series": "りらっくま茶房・りらっくまの湯2026",
+      "name_ja": "5Colorsぬいぐるみ チャイロイコグマ",
+      "variant": "りらっくま茶房・湯限定色「だいすきなキイロイトリ」",
+      "unit": "1個",
+      "price": {
+        "amount": 1980,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "historical_official_launch_price",
+        "not_current_retail_quote": true
+      },
+      "release": {
+        "date": "2026-05-13",
+        "source_id": "sabo-fivecolors"
+      },
+      "physical_handling": {
+        "evidence_level": "brand_only",
+        "branches": [],
+        "stock": "未知",
+        "note": "官方公告列茶房・湯品牌及大阪催事，未逐店列名，故不補推分店。"
+      },
+      "purchase_limit": "每人每會計1個；可變更",
+      "online_handling": {
+        "source_id": "sabo-fivecolors",
+        "status": "公告列T-CHARACTER STORE品牌通路，未取得SKU實際商品頁"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1777258464563-6aivrggbjtd/b5f6bffe-183b-44dc-b216-92ca0f78bf51.webp",
+          "source_id": "sabo-fivecolors",
+          "note": "官方商品圖片",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "source_ids": [
+        "sabo-fivecolors"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sabo-anime-koguma-episode23-2026",
+      "manufacturer_sku": null,
+      "jan": null,
+      "identification_status": "官方名稱+固定款式+2026發售公告可辨識；SKU/JAN未公開",
+      "series": "りらっくま茶房・りらっくまの湯2026",
+      "name_ja": "アニメ「リラックマ」ぬいぐるみ チャイロイコグマ",
+      "variant": "2026動畫第23集登場衣裝・全1種",
+      "unit": "1個",
+      "price": {
+        "amount": 4620,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "historical_official_launch_price",
+        "not_current_retail_quote": true
+      },
+      "release": {
+        "date": "2026-09-05",
+        "source_id": "sabo-anime"
+      },
+      "physical_handling": {
+        "evidence_level": "named_branch_launch_announcement",
+        "branches": [
+          "嵐山りらっくま茶房",
+          "宮島りらっくま茶房",
+          "道後りらっくまの湯",
+          "草津りらっくまの湯",
+          "黒川りらっくまの湯",
+          "嵐山りらっくまの湯"
+        ],
+        "stock": "未知",
+        "note": "官方逐店公告之歷史發售證據；不是11/20庫存。"
+      },
+      "purchase_limit": "每人1個；可變更",
+      "online_handling": {
+        "source_id": "sabo-anime",
+        "status": "公告列T-CHARACTER STORE品牌通路，未取得SKU實際商品頁"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1787276751615-8ltfzw3blw6/a6d974d4-7fc9-4768-beec-b950e66a9cfe.webp",
+          "source_id": "sabo-anime",
+          "note": "官方商品圖片",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "source_ids": [
+        "sabo-anime"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "sabo-honey-biscuit-2026",
+      "manufacturer_sku": null,
+      "jan": null,
+      "identification_status": "官方名稱+固定款式+2026發售公告可辨識；SKU/JAN未公開",
+      "series": "りらっくま茶房・りらっくまの湯2026",
+      "name_ja": "はちみつビスケット",
+      "variant": "焦糖、香蕉風味、香草、可可4味組合",
+      "unit": "1個",
+      "price": {
+        "amount": 1188,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "historical_official_launch_price",
+        "not_current_retail_quote": true
+      },
+      "release": {
+        "date": "2026-08-08",
+        "source_id": "sabo-biscuit"
+      },
+      "physical_handling": {
+        "evidence_level": "named_branch_launch_announcement",
+        "branches": [
+          "嵐山りらっくま茶房",
+          "宮島りらっくま茶房"
+        ],
+        "stock": "未知",
+        "note": "官方逐店取扱；發售日是當時予定。公告說無線上販售計畫。"
+      },
+      "purchase_limit": "可能有數量限制，未公開固定上限",
+      "online_handling": {
+        "source_id": "sabo-biscuit",
+        "status": "公告無線上販售計畫"
+      },
+      "images": [
+        {
+          "url": "https://www.san-x.co.jp/uploads/1784699870889-9p94vvc48fi/feb7f966-d40d-4d3d-8fac-0ba3af9dd1fb.webp",
+          "source_id": "sabo-biscuit",
+          "note": "官方商品圖片",
+          "downloaded": false,
+          "republication_permission": "未取得，不下載或重製"
+        }
+      ],
+      "source_ids": [
+        "sabo-biscuit"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "id": "kushiya-wave2-a4file",
+      "series": "串家物語×リラックマ ごゆるりまんぷくパーティー 第2弾",
+      "name_ja": "オリジナルA4クリアファイル",
+      "name_zh": "串家物語聯名A4透明文件夾",
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_status": "官方名稱、A4尺寸與PP材質可辨；官方頁未提供品番/JAN，未自造商品碼",
+      "variant": "官方說可選款；確切款式與現場選擇待門市核對",
+      "unit": "1個",
+      "specifications": {
+        "format": "A4",
+        "material": "PP",
+        "source_id": "kushiya-wave2"
+      },
+      "official_msrp": {
+        "amount": 440,
+        "currency": "JPY",
+        "tax_included": true,
+        "source_id": "kushiya-wave2"
+      },
+      "release": {
+        "campaign_start": "2026-11-20",
+        "campaign_end": "2026-12-20",
+        "restock_announcement": "官方寫配合11/20再入荷，數量有限；不等於目前有貨",
+        "campaign_start_at": "2026-11-20T09:00:00+08:00"
+      },
+      "stock_status": "未知庫存",
+      "commercial_purchase": {
+        "status": "禁止",
+        "allowed": false,
+        "note": "活動主辦明文禁止轉售、再販售、營利目的購買；不可列入專業代購清單。",
+        "source_id": "kushiya-wave2"
+      },
+      "limit_per_person": 1,
+      "limit_note": "每位點自助餐者，每個品項最多1件；自助餐為必要額外費用，非440日圓即可單買。結帳時訂購；不接受預訂與保留。",
+      "images": [
+        {
+          "url": "https://www.kushi-ya.com/manpukuparty/rilakkuma2026/img/img_goods04_02_2nd.webp",
+          "source_id": "kushiya-wave2",
+          "type": "官方文件夾商品與價格圖",
+          "downloaded": false,
+          "republication_permission": "未取得",
+          "usage": "只保留官方原圖與來源URL；公開站須確認使用規範，未取得授權不下載、重製或冒稱實拍。"
+        }
+      ],
+      "source_ids": [
+        "kushiya-wave2",
+        "kushiya-sanx-announcement"
+      ],
+      "checked_at": "2026-11-20"
+    }
+  ],
+  "sources": [
+    {
+      "id": "topics-list",
+      "title": "San-X 拉拉熊最新消息",
+      "url": "https://www.san-x.co.jp/ja/topics/?ip=2",
+      "kind": "official_list",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "HTTP200原始回應；RSC data陣列成功解析12篇。"
+    },
+    {
+      "id": "goods-list",
+      "title": "San-X 拉拉熊新品列表",
+      "url": "https://www.san-x.co.jp/ja/goods-info/?ip=2",
+      "kind": "official_series_list",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "HTTP200原始回應；系列卡片有date與releaseDate，後者可能為月份邊界。"
+    },
+    {
+      "id": "storeblog-list",
+      "title": "San-X門市公告",
+      "url": "https://www.san-x.co.jp/ja/store-blogs/",
+      "kind": "official_store_article_list",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "HTTP200；SSR卡片有標題/日期/實際href。"
+    },
+    {
+      "id": "press-list",
+      "title": "San-X新聞稿列表",
+      "url": "https://www.san-x.co.jp/release/",
+      "kind": "official_press_list",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "HTTP200；簡單HTML日期和PDF相對路徑。"
+    },
+    {
+      "id": "kimono-special",
+      "title": "もっと着物2026官方商品頁",
+      "url": "https://www.san-x.co.jp/ja/special/kimono_motto2026/",
+      "kind": "manufacturer_product_special",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "圖片標11/14；官方含稅價2420/4180/6050。RSC csvTextSets有分店，警告並非全款皆有。",
+      "raw_response_branch_names_reverified_at": "2026-11-20"
+    },
+    {
+      "id": "kimono-release",
+      "title": "もっと着物官方發售文章",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-10-post-0045470/",
+      "kind": "manufacturer_announcement",
+      "published_at": "2026-11-09",
+      "checked_at": "2026-11-20",
+      "evidence": "明文12/5發售；與特設頁日期有衝突。"
+    },
+    {
+      "id": "kimono-identifiers",
+      "title": "Kawada 型號/JAN對照",
+      "url": "https://ganguoroshi.jp/category/YOYAKU/?__pc_site_mode=pc",
+      "kind": "wholesale_identity",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "MZ13101–MZ14001與JAN；卸價須登入，不能當零售價。"
+    },
+    {
+      "id": "closet-special",
+      "title": "コリラックマクローゼット官方商品頁",
+      "url": "https://www.san-x.co.jp/ja/special/goods_2612_rk/",
+      "kind": "manufacturer_product_special",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "系列官方圖片；未提供每款實體分店取扱證據。"
+    },
+    {
+      "id": "closet-release",
+      "title": "San-X發布：コリラックマクローゼット",
+      "url": "https://prtimes.jp/main/html/rd/p/000000987.000018631.html",
+      "kind": "manufacturer_press_release",
+      "published_at": "2026-11-06T09:00:00+08:00",
+      "checked_at": "2026-11-20",
+      "evidence": "12月頃；官方含稅發表價格，非店面即時實售價。"
+    },
+    {
+      "id": "closet-identifiers",
+      "title": "SuperDelivery公開商品品番/JAN",
+      "url": "https://www.superdelivery.com/p/r/pd_p/18185869/",
+      "kind": "wholesale_identity",
+      "published_at": "2026-10-19",
+      "checked_at": "2026-11-20",
+      "evidence": "MZ21901–MZ22701及JAN；MZ21901為15件全5款批發assort，非一隻固定角色SKU。"
+    },
+    {
+      "id": "sabo-fivecolors",
+      "title": "茶房5Colors小熊限定色",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-04-post-0830090/",
+      "kind": "manufacturer_announcement",
+      "published_at": "2026-04-30",
+      "checked_at": "2026-11-20",
+      "evidence": "だいすきなキイロイトリ色，5/13、含稅1980，一人一會計1個；未公開JAN。"
+    },
+    {
+      "id": "sabo-anime",
+      "title": "茶房/湯動畫小熊娃娃",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-08-post-0145520/",
+      "kind": "manufacturer_product_announcement",
+      "published_at": "2026-08-24",
+      "checked_at": "2026-11-20",
+      "evidence": "9/5、含稅4620、一款、一人1個，明列嵐山茶房/湯、宮島、道後、草津、黑川及品牌線上店。"
+    },
+    {
+      "id": "sabo-biscuit",
+      "title": "茶房蜂蜜餅乾與贈品",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-07-post-0557530/",
+      "kind": "manufacturer_product_announcement",
+      "published_at": "2026-07-27",
+      "checked_at": "2026-11-20",
+      "evidence": "8/8預計發售含稅1188；嵐山及宮島；無線上販售計畫。滿額贈品直到送完，現況未知。"
+    },
+    {
+      "id": "sabo-current-stores",
+      "title": "茶房現行官方店表",
+      "url": "https://rilakkumasabo.jp/",
+      "kind": "brand_store_directory",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "現行ACCESS列嵐山、宮島；未列鎌倉，不能據此推定鎌倉仍營業或宣告閉店日期。"
+    },
+    {
+      "id": "dec-store-announcement",
+      "title": "12月門市限定商品和贈品",
+      "url": "https://www.san-x.co.jp/ja/store-blogs/2026-11-post-0717240/",
+      "kind": "official_store_item_announcement",
+      "published_at": "2026-11-20",
+      "checked_at": "2026-11-20",
+      "evidence": "原始HTTP正文已讀；12/12實體全店，12/14 12:00官方Yahoo，部分12/15 10:00 San-X線上。此是店限新品，不能冒充一般MZ22001取扱。"
+    },
+    {
+      "id": "haikyu-sanx",
+      "title": "排球少年聯名第2弾官方公告",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-10-post-0720240/",
+      "kind": "manufacturer_event_product",
+      "published_at": "2026-10-30",
+      "checked_at": "2026-11-20",
+      "evidence": "吊飾全21款每款3200，11/20；5城巡迴與限購，未拆成21筆無法識別款式的假SKU。"
+    },
+    {
+      "id": "haikyu-producer",
+      "title": "製作方聯名專頁",
+      "url": "https://www.igport-onlinestore.com/pages/rilakkuma-haikyu",
+      "kind": "official_event_product_special",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "五城期間/3點日限額/滿3300隨機卡；海外販售不含21款吊飾，不能用台灣12/20販售推定娃娃可在台買。"
+    },
+    {
+      "id": "haikyu-retailer",
+      "title": "baseyard實際活動店與入場條件",
+      "url": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/",
+      "kind": "official_retail_event",
+      "published_at": "2026-10-30",
+      "checked_at": "2026-11-20",
+      "evidence": "東京大阪11/20–22預約；札幌京都廣島12/18預約。後段抽選報名11/30 12:00–12/6 23:59。"
+    },
+    {
+      "id": "yodo-pickup",
+      "title": "Yodobashi店取官方說明",
+      "url": "https://www.yodobashi.com/ec/support/service/receive/index.html",
+      "kind": "retailer_policy",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "必須商品頁顯示店舗受け取りが可能です。7天保留；店頭付款。一般服務不等於MZ13501已可店取。"
+    },
+    {
+      "id": "yodo-pickup-current",
+      "title": "Yodobashi店取條款",
+      "url": "https://www.yodobashi.com/ec/support/beginner/delivery/receive",
+      "kind": "retailer_policy",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "預約發售後取貨；須收到準備完成信，7天內；現金/本人信用卡等店頭支付。"
+    },
+    {
+      "id": "yodo-no-overseas",
+      "title": "Yodobashi海外配送FAQ",
+      "url": "https://www.yodobashi.com/ec/support/faq/detail/1213342326434/index.html",
+      "kind": "retailer_policy",
+      "published_at": "2008-07-15",
+      "checked_at": "2026-11-20",
+      "evidence": "目前仍可讀官方FAQ僅日本國內配送；不是近期公布的新規。"
+    },
+    {
+      "id": "visa-tw-bic",
+      "title": "Visa台灣官方：BicCamera回饋",
+      "url": "https://www.visa.com.tw/zh_tw/visa-commercial-offers/visa-select%E5%84%AA%E9%81%B8%E5%9B%9E%E9%A5%8B/180370",
+      "kind": "payment_network_promotion",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "官方搜尋內容列2026/9/1–11/30、台灣發行Visa先報名、指定實體Bic 10%現金回饋，上限Bic10000日圓等值，預算用盡提前結束；主頁JS正文擷取為空。"
+    },
+    {
+      "id": "visa-registration",
+      "title": "Visa Select活動與名額核對入口",
+      "url": "https://visaselectrewardtw.com/campaign/C202608140001",
+      "kind": "payment_network_registration",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "動態頁本次無可讀正文；未登入、未註冊、未確認剩餘預算。"
+    },
+    {
+      "id": "yuanta-bic",
+      "title": "元大銀行Bic電子券活動",
+      "url": "https://www.yuantabank.com.tw/bank/activity/in.do?id=50cd70085e000004dae1",
+      "kind": "issuer_promotion",
+      "published_at": null,
+      "checked_at": "2026-11-20",
+      "evidence": "官方搜尋摘要列2026/11/1–2027/4/30、最高7%指定品折扣；完整券面/支付資格與排除品未讀，故不可自動套在拉拉熊SKU。"
+    },
+    {
+      "id": "kimono-pdf",
+      "title": "San-X 2026-11-09新聞稿",
+      "url": "https://www.san-x.co.jp/release/26.11-09_RK_KAWADA_kimono.pdf",
+      "kind": "manufacturer_press_release",
+      "checked_at": "2026-11-20",
+      "evidence": "12月5日發售，與特設頁11月14日有衝突。",
+      "published_at": "2026-11-09"
+    },
+    {
+      "id": "yodobashi-mz13501",
+      "title": "Yodobashi MZ13501實際商品頁",
+      "url": "https://www.yodobashi.com/product/100000001010265381/",
+      "kind": "retail_product",
+      "checked_at": "2026-11-20",
+      "evidence": "含稅3770；原希望售價4180；377點另計；預購文字；高140寬95深65mm、聚酯。"
+    },
+    {
+      "id": "amiami-plush",
+      "title": "AmiAmi 零售商品清單",
+      "url": "https://www.amiami.jp/top/page/c/plush.html",
+      "kind": "retail_product_listing",
+      "checked_at": "2026-11-20",
+      "evidence": "MZ13501單件清單價3340；MZ13901單件清單價4840；官方FAQ確認未特註皆含稅、無中古為新品。詳頁抓取失敗，限購/可購按鈕待核。"
+    },
+    {
+      "id": "amiami-mz13501",
+      "title": "AmiAmi MZ13501實際商品連結",
+      "url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905825&page=top",
+      "kind": "retail_product_fetch_failed",
+      "checked_at": "2026-11-20",
+      "evidence": "由AmiAmi官方商品清單連出；詳頁抓取失敗。含稅與新品規則已由官方FAQ補核，品項限購與可下單按鈕仍未知。"
+    },
+    {
+      "id": "amiami-mz13901",
+      "title": "AmiAmi MZ13901實際商品連結",
+      "url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905829&page=top",
+      "kind": "retail_product_fetch_failed",
+      "checked_at": "2026-11-20",
+      "evidence": "由AmiAmi官方商品清單連出；詳頁抓取失敗。含稅與新品規則已由官方FAQ補核，品項限購與可下單按鈕仍未知。"
+    },
+    {
+      "id": "rakutenbooks-mz13901",
+      "title": "楽天Books 收藏娃娃拉拉熊實際商品頁",
+      "url": "https://books.rakuten.co.jp/rb/18897862/",
+      "kind": "retail_product",
+      "checked_at": "2026-11-20",
+      "evidence": "JAN4974413925518；含稅6050免運；12月5日頃；預購文字；尺寸欄寬23高16深10cm。"
+    },
+    {
+      "id": "kawada-identifiers",
+      "title": "玩具卸売カワダ 預約商品目錄",
+      "url": "https://ganguoroshi.jp/category/YOYAKU/?__pc_site_mode=pc",
+      "kind": "wholesale_identity",
+      "checked_at": "2026-11-20",
+      "evidence": "MZ13501對應JAN4974413925471；MZ13901對應JAN4974413925518。卸價需登入，非消費者零售價。"
+    },
+    {
+      "id": "closet-supplier",
+      "title": "SuperDelivery 型號與JAN核對商品頁",
+      "url": "https://www.superdelivery.com/p/r/pd_p/18185869/",
+      "kind": "wholesale_identity",
+      "checked_at": "2026-11-20",
+      "evidence": "MZ22201可可兔、JAN4974413928724、單件；未稅希望售價2500。會員卸價不公開，不能拿來跟單件零售比較。"
+    },
+    {
+      "id": "ishidaya-cocoa",
+      "title": "Yahoo いしだ屋 可可兔實際商品頁",
+      "url": "https://store.shopping.yahoo.co.jp/ishidaya-co/320zak967m.html",
+      "kind": "retail_product",
+      "checked_at": "2026-11-20",
+      "evidence": "JAN4974413928724、頁面顯示2777円、東京都運600；店家預約12月下旬入荷／12月31日，含稅字樣本次擷取未確認。"
+    },
+    {
+      "id": "kushiya-wave2",
+      "title": "串家物語官方第2弾活動與商品頁",
+      "url": "https://www.kushi-ya.com/manpukuparty/rilakkuma2026/",
+      "kind": "official_campaign_product",
+      "checked_at": "2026-11-20",
+      "evidence": "第2弾11月20日至12月20日。A4文件夾含稅440、可選；需點自助餐，每人每品1件、結帳買、不得營利用或轉售、不預留。"
+    },
+    {
+      "id": "parco-kiddy",
+      "title": "心斎橋PARCO キデイランド官方商場頁",
+      "url": "https://shinsaibashi.parco.jp/shop/detail/?cd=026328",
+      "kind": "mall_store",
+      "checked_at": "2026-11-20",
+      "evidence": "KiddyLand列5F、免稅對象；Rilakkuma另有專用電話06-6243-0702，不能直接推定相同櫃位。"
+    },
+    {
+      "id": "sanx-stores",
+      "title": "San-X各店所在地官方表",
+      "url": "https://www.san-x.co.jp/ja/store-blogs/2026-06-post-0741260/",
+      "kind": "manufacturer_store_directory",
+      "checked_at": "2026-11-20",
+      "evidence": "既有對抗評估記錄心斎橋6F。此次讀取正文未能重現心斎橋段落，保留前次來源衝突並待門市確認。"
+    },
+    {
+      "id": "amiami-faq",
+      "title": "AmiAmi 官方利用指南（稅別、新品、送料與可購狀態）",
+      "url": "https://www.amiami.jp/top/page/t/faq.html",
+      "kind": "retailer_official_purchase_policy",
+      "checked_at": "2026-11-20",
+      "published_at": null,
+      "publication_precision": "頁面未提供統一發布時間；內文部分配送細項有2022年12月註記，使用前仍須結帳重核",
+      "evidence": "未特註皆含稅；無中古字樣為新品；日本國內一單運630含稅。日本站不收海外訂單、不國際寄送；通常不寄旅館。實際可購要看產品頁按鈕；限購跨同地址/同人/各分站合計。"
+    },
+    {
+      "id": "amiami-terms",
+      "title": "AmiAmi 官方交易條款",
+      "url": "https://www.amiami.jp/top/page/t/terms.html",
+      "kind": "retailer_terms",
+      "checked_at": "2026-11-20",
+      "published_at": null,
+      "evidence": "申請當時價格適用；成立前可因誤價/規格變更通知改價；日本國內配送，運費另付。"
+    },
+    {
+      "id": "kushiya-sanx-announcement",
+      "title": "San-X 串家物語第2弾官方11月16日公告",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-11-post-0806140/",
+      "kind": "manufacturer_announcement",
+      "checked_at": "2026-11-20",
+      "published_at": "2026-11-16",
+      "publication_precision": "day",
+      "evidence": "第2弾2026年11月20日10:00至12月20日。新款文件夾/貼紙及旗艦商品再入荷；不受理物販庫存詢問。"
+    },
+    {
+      "id": "kushiya-stock-history",
+      "title": "串家物語11月19日歷史庫存公告",
+      "url": "https://www.kushi-ya.com/news/",
+      "kind": "official_historical_inventory_announcement",
+      "checked_at": "2026-11-20",
+      "published_at": "2026-11-19",
+      "publication_precision": "day",
+      "evidence": "11/19旗艦店庫存快照及11/20第一弾めじるしキーホルダー復刻預告；歷史快照不代表11/20即時庫存。"
+    }
+  ],
+  "source_mechanisms": [
+    {
+      "id": "sanx-topics-rsc",
+      "url": "https://www.san-x.co.jp/ja/topics/?ip=2",
+      "layer": "新聞/合作/活動文章",
+      "http_test": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "body_characters": 518528,
+        "tested_at": "2026-11-20",
+        "parsed_records": 12
+      },
+      "parser": "安全JSON解碼Next.js公開RSC。取self.__next_f.push參數的JSON陣列，拼channel=1字串，逐行解冒號後JSON，React tuple第4項props.data為新聞。",
+      "parser_js": "function extractTopicRecords(html) {\n const blocks = [...html.matchAll(/self\\.__next_f\\.push\\((\\[[\\s\\S]*?\\])\\)<\\/script>/g)];\n const text = blocks.map(m => { try { return JSON.parse(m[1]); } catch { return []; } })\n  .filter(a => a[0] === 1 && typeof a[1] === 'string').map(a => a[1]).join('');\n const rows = [];\n for (const line of text.split('\\n')) {\n  const p = line.indexOf(':'); if (p < 1) continue;\n  try { const v = JSON.parse(line.slice(p+1)); const props = Array.isArray(v) ? v[3] : null;\n   if (props && Array.isArray(props.data)) rows.push(...props.data.filter(x => x && x.slug && x.publishedAt));\n  } catch {}\n }\n return [...new Map(rows.map(x=>[x.id,x])).values()];\n}\n// 不可eval。公開HTML內嵌資料不是有穩定性承諾的API；欄位不存在要停止覆寫並保留舊資料。",
+      "fields": [
+        "id",
+        "slug",
+        "pageTitle",
+        "ipIds",
+        "shopIds",
+        "thumbnailImageUrl",
+        "publishedAt",
+        "updatedAt"
+      ],
+      "timestamp_rules": "毫秒Unix時間轉ISO；publishedAt是發布，updatedAt是CMS修改，不是上市時間。slug結合/ja/blog/<slug>/。",
+      "sample": {
+        "id": 33103,
+        "slug": "2026-11-post-0846200",
+        "title": "リラックマのあたたかい防風フリースが登場♪",
+        "publishedAt": 1795149000000,
+        "updatedAt": 1795148635621,
+        "published_at": "2026-11-20T12:30:00+08:00",
+        "updated_at": "2026-11-20T12:23:55.621+08:00",
+        "ipIds": [
+          2
+        ],
+        "shopIds": []
+      },
+      "limitations": "私有實作格式可改；不是有版本承諾的公開API。新聞條目沒有SKU、售價或分店庫存，不可直接生成已證實商品。"
+    },
+    {
+      "id": "sanx-goods-rsc",
+      "url": "https://www.san-x.co.jp/ja/goods-info/?ip=2",
+      "layer": "系列新品",
+      "http_test": {
+        "status": 200,
+        "body_characters": 526450,
+        "tested_at": "2026-11-20"
+      },
+      "parser": "同樣解RSC；遞迴找有href/title/imageSrc/date/releaseDate之卡片物件，去除pc/sp重複。將/special/...標準化為/ja/special/...並GET驗證後才採用。",
+      "sample": {
+        "href": "/special/goods_2612_rk",
+        "title": "リラックマ「コリラックマクローゼット」",
+        "date": "$D2026-11-06T01:00:07.000Z",
+        "releaseDate": "$D2026-11-30T15:00:00.000Z"
+      },
+      "timestamp_rules": "$D為RSC Date，去前綴後ISO解析。此releaseDate是12月月份標籤的邊界，不作12/1精確上市承諾；精度應標month。",
+      "limitations": "系列頁不等於單品庫；還要跟商品特設頁、官方價格及零售SKU對照。"
+    },
+    {
+      "id": "sanx-store-ssr",
+      "url": "https://www.san-x.co.jp/ja/store-blogs/",
+      "layer": "實體/官方網店取扱及限購",
+      "http_test": {
+        "status": 200,
+        "body_characters": 109930,
+        "tested_at": "2026-11-20"
+      },
+      "parser": "DOM卡片含CommonArticleLinkCard類名前綴，取h3、time/date、a[href^='/ja/store-blogs/']及縮圖。勿依賴雜湊CSS後綴；逐文章GET正文。",
+      "sample_article": "https://www.san-x.co.jp/ja/store-blogs/2026-11-post-0717240/",
+      "limitations": "頁面分頁不應只抓第1頁；實際URL參數未測，先記錄缺口。正文有日期/分通路上市，圖片常有價與品名，文字取不到就標待人工，不OCR自造SKU。"
+    },
+    {
+      "id": "sanx-press-html",
+      "url": "https://www.san-x.co.jp/release/",
+      "layer": "新聞稿/發表日期/PDF",
+      "http_test": {
+        "status": 200,
+        "body_characters": 15342,
+        "tested_at": "2026-11-20"
+      },
+      "parser": "HTML列表日期加a[href$='.pdf']，以/release/解析相對路徑；建立PDF原文來源鏈。",
+      "sample_relative_href": "26.11-16 RK_kushi-ya_2.pdf",
+      "limitations": "新聞稿發表日不是發售日。PDF抓取/文字失敗要顯示來源不足。"
+    },
+    {
+      "id": "sanx-rss-probe",
+      "layer": "RSS檢查",
+      "status": "沒有找到可用RSS，改走公開官方HTML；不宣稱不存在其他RSS",
+      "tested_at": "2026-11-20",
+      "html_autodiscovery_found": false,
+      "probes": [
+        {
+          "url": "https://www.san-x.co.jp/blog/index.xml",
+          "status": 404
+        },
+        {
+          "url": "https://www.san-x.co.jp/blog/atom.xml",
+          "status": 404
+        },
+        {
+          "url": "https://www.san-x.co.jp/rss.xml",
+          "status": 404
+        },
+        {
+          "url": "https://www.san-x.co.jp/ja/rss.xml",
+          "status": 404
+        }
+      ]
+    }
+  ],
+  "update_pipeline_notes": {
+    "layers": [
+      "新聞：新增題材候選",
+      "系列：新品月份/特設入口",
+      "產品：SKU/JAN/規格/官方價",
+      "通路：實際商品頁含稅價",
+      "分店：官方指定商品/系列取扱",
+      "旅客：付款/收件/入場/優惠",
+      "庫存：獨立未知或具時間快照"
+    ],
+    "recommended_refresh": "每6小時抓列表一次，實際SKU/期限在行程前或結帳前重核；這只是建議，未建排程。",
+    "dedupe_keys": [
+      "官方article id",
+      "SKU+JAN+variant+unit",
+      "source URL"
+    ],
+    "change_detection": "publishedAt/updatedAt+標題+正文摘要雜湊；數值/時間轉型與欄位完整性失敗則保留舊版並標stale，不以空陣列覆蓋。",
+    "do_not_infer": [
+      "普通門市存在→某SKU取扱",
+      "新商品新聞→即時有貨",
+      "月份邊界→精確發售日",
+      "全店系列→每款皆有",
+      "未稅MSRP→實售含稅價",
+      "有免稅標章→所有櫃位/商品適用",
+      "促銷摘要→尚有名額",
+      "海外聯名販售→21款娃娃也能台灣買"
+    ]
+  },
+  "handling_evidence": [
+    {
+      "id": "kimono-series-branches",
+      "series": "もっと着物シリーズ2026",
+      "source_id": "kimono-special",
+      "raw_evidence_path": "解RSC後搜尋csvTextSets；names.ja / addresses.ja / text(電話)",
+      "branches": [
+        {
+          "id": "tokyo-station",
+          "region": "東京",
+          "name": "リラックマストア東京駅店",
+          "address": "東京都千代田区丸の内1-9-1 東京駅一番街B1",
+          "phone": "03-3213-5501",
+          "evidence_level": "series_confirmed_only",
+          "source_id": "kimono-special",
+          "sku_at_branch_confirmed": false,
+          "stock": "未知",
+          "warning": "特設頁稱非全種類皆取扱；同系列名不代表指定SKU可買。"
+        },
+        {
+          "id": "harajuku",
+          "region": "東京",
+          "name": "リラックマストア原宿店",
+          "address": "東京都渋谷区神宮前6-1-9 キデイランド原宿店4F",
+          "phone": "03-3409-3431",
+          "evidence_level": "series_confirmed_only",
+          "source_id": "kimono-special",
+          "sku_at_branch_confirmed": false,
+          "stock": "未知",
+          "warning": "特設頁稱非全種類皆取扱；同系列名不代表指定SKU可買。"
+        },
+        {
+          "id": "ikebukuro",
+          "region": "東京",
+          "name": "リラックマストア池袋サンシャインシティ店",
+          "address": "東京都豊島区東池袋3-1-2 サンシャインシティアルパ2F",
+          "phone": "03-5952-5312",
+          "evidence_level": "series_confirmed_only",
+          "source_id": "kimono-special",
+          "sku_at_branch_confirmed": false,
+          "stock": "未知",
+          "warning": "特設頁稱非全種類皆取扱；同系列名不代表指定SKU可買。"
+        },
+        {
+          "id": "sapporo",
+          "region": "北海道",
+          "name": "リラックマストア札幌パルコ店",
+          "address": "北海道札幌市中央区南1条西3丁目3 札幌PARCO本館B2",
+          "phone": "011-211-0730",
+          "evidence_level": "series_confirmed_only",
+          "source_id": "kimono-special",
+          "sku_at_branch_confirmed": false,
+          "stock": "未知",
+          "warning": "特設頁稱非全種類皆取扱；同系列名不代表指定SKU可買。"
+        },
+        {
+          "id": "kyoto",
+          "region": "京都",
+          "name": "リラックマストア京都四条河原町店",
+          "address": null,
+          "phone": "075-241-3377",
+          "evidence_level": "series_confirmed_only",
+          "source_id": "kimono-special",
+          "sku_at_branch_confirmed": false,
+          "stock": "未知",
+          "warning": "特設頁稱非全種類皆取扱；同系列名不代表指定SKU可買。"
+        },
+        {
+          "id": "umeda",
+          "region": "大阪",
+          "name": "リラックマストア大阪梅田店",
+          "address": "大阪府大阪市北区芝田1-1-3 阪急三番街北館1F",
+          "phone": "06-6372-7708",
+          "evidence_level": "series_confirmed_only",
+          "source_id": "kimono-special",
+          "sku_at_branch_confirmed": false,
+          "stock": "未知",
+          "warning": "特設頁稱非全種類皆取扱；同系列名不代表指定SKU可買。"
+        },
+        {
+          "id": "shinsaibashi",
+          "region": "大阪",
+          "name": "リラックマストア心斎橋パルコ店",
+          "address": "大阪府大阪市中央区心斎橋筋1-8-3 心斎橋PARCO6F",
+          "phone": "06-6243-0702",
+          "evidence_level": "series_confirmed_only",
+          "source_id": "kimono-special",
+          "sku_at_branch_confirmed": false,
+          "stock": "未知",
+          "warning": "特設頁稱非全種類皆取扱；同系列名不代表指定SKU可買。"
+        }
+      ],
+      "note": "可指引詢問/規劃同區備案；指定SKU仍待分店確認。"
+    },
+    {
+      "id": "sabo-anime-branches",
+      "product_id": "sabo-anime-koguma-episode23-2026",
+      "source_id": "sabo-anime",
+      "branches": [
+        "嵐山りらっくま茶房",
+        "宮島りらっくま茶房",
+        "道後りらっくまの湯",
+        "草津りらっくまの湯",
+        "黒川りらっくまの湯",
+        "嵐山りらっくまの湯"
+      ],
+      "evidence_level": "named_branch_launch_announcement",
+      "stock": "未知"
+    },
+    {
+      "id": "kamakura-gap",
+      "region": "鎌倉",
+      "source_id": "sabo-current-stores",
+      "evidence": "現行品牌ACCESS僅列嵐山/宮島，未取得鎌倉現行官方店/單品取扱公告。",
+      "status": "不加入確定購物路線",
+      "closure_date": null
+    }
+  ],
+  "regional_event_handling": {
+    "series": "リラックマ×ハイキュー!! 第2弾",
+    "single_plush_tax_included_jpy": 3200,
+    "plush_variant_count": 21,
+    "precise_sku_variants_verified": false,
+    "counted_as_21_products": false,
+    "source_ids": [
+      "haikyu-sanx",
+      "haikyu-producer",
+      "haikyu-retailer"
+    ],
+    "events": [
+      {
+        "region": "東京",
+        "branch": "baseyard tokyo 原宿店",
+        "from": "2026-11-20",
+        "to": "2026-12-06",
+        "reservation_dates": [
+          "2026-11-20",
+          "2026-11-21",
+          "2026-11-22"
+        ],
+        "free_entry_from": "2026-11-23"
+      },
+      {
+        "region": "大阪",
+        "branch": "baseyard tokyo あべのキューズモール店",
+        "from": "2026-11-20",
+        "to": "2026-12-06",
+        "reservation_dates": [
+          "2026-11-20",
+          "2026-11-21",
+          "2026-11-22"
+        ],
+        "free_entry_from": "2026-11-23",
+        "second_round": "11/21、22先著追加申請11/16 12:00開始，剩餘名額未知"
+      },
+      {
+        "region": "北海道",
+        "branch": "baseyard tokyo 札幌ステラプレイス店",
+        "from": "2026-12-18",
+        "to": "2027-01-17",
+        "reservation_dates": [
+          "2026-12-18"
+        ],
+        "free_entry_from": "2026-12-19"
+      },
+      {
+        "region": "京都",
+        "branch": "baseyard tokyo 河原町オーパ店",
+        "from": "2026-12-18",
+        "to": "2027-01-17",
+        "reservation_dates": [
+          "2026-12-18"
+        ],
+        "free_entry_from": "2026-12-19"
+      },
+      {
+        "region": "廣島",
+        "branch": "baseyard tokyo ミナモア広島店",
+        "from": "2026-12-18",
+        "to": "2027-01-17",
+        "reservation_dates": [
+          "2026-12-18"
+        ],
+        "free_entry_from": "2026-12-19"
+      }
+    ],
+    "late_city_lottery_application_from": "2026-11-30T11:00:00+08:00",
+    "late_city_lottery_application_to": "2026-12-06T22:59:00+08:00",
+    "late_city_lottery_result_date": "2026-12-07",
+    "purchase_limits": "一般open商品每人每天每款3件；blind每種3BOX(36點)；現場可能調整。",
+    "taiwan_visitor": "不得假設當天可自由進場；需按官方抽選/入場條件申請，未替使用者登入。",
+    "overseas_note": "官方列台灣12/20起其他聯名商品，但明文海外店不販售全21款吊飾。"
+  },
+  "december_limited_store_layer": {
+    "source_id": "dec-store-announcement",
+    "not_regular_closet_sku": true,
+    "products_identification": "店限定コリラックマ/ココアウサギ吊飾、羊睡衣等，圖片未逐SKU識別所以不當MZ22001–MZ22701取扱證據",
+    "physical_start": "2026-12-12",
+    "physical_scope": "リラックマストア全店（官方公告）",
+    "yahoo_official_start": "2026-12-14T11:00:00+08:00",
+    "sanx_netshop_some_items_start": "2026-12-15T09:00:00+08:00",
+    "limits": "前兩組每會計各1；其他組依商品段落；不接受事先預約，部分店員手渡不得挑個體。",
+    "source_image_entries": [
+      "https://www.san-x.co.jp/uploads/1794899842771-vkq942zombj/1338aac8-72fe-47f9-8c6e-897de1d7811e.webp",
+      "https://www.san-x.co.jp/uploads/1794899843011-mvk23yztjda/92c23fee-0276-4e27-acb0-98c064bd7b75.webp",
+      "https://www.san-x.co.jp/uploads/1794899843194-j7n0k8wbbq/f3d63de8-4b7d-4fa3-91f1-f620332d6f8b.webp"
+    ],
+    "images_downloaded": false
+  },
+  "taiwan_visitor_promotions": [
+    {
+      "id": "visa-tw-bic-2026autumn",
+      "type": "事後現金回饋，非結帳折扣",
+      "verification": "官方網路卡組織公開公告內容已讀；即時預算狀態待動態活動頁確認",
+      "from": "2026-09-01",
+      "to": "2026-11-30",
+      "rate_percent": 10,
+      "retailer": "BicCamera指定日本實體店（部分排除）",
+      "eligible": "台灣發卡機構發行Visa，必須消費前到Visa Select註冊並報名，報名前交易不算",
+      "maximum_bic_jpy_equivalent": 10000,
+      "total_merchant_campaign_jpy_equivalent": 20000,
+      "payout_currency": "TWD",
+      "availability": "名額/預算有限，可能提前結束，未知目前剩餘",
+      "source_ids": [
+        "visa-tw-bic",
+        "visa-registration"
+      ],
+      "sku_match_confirmed": false,
+      "note": "尚未取得MZ13501於指定Bic分店可購證據，故不得計入該娃娃確定省錢總額。"
+    },
+    {
+      "id": "yuanta-bic-coupon-pending",
+      "type": "電子券折扣候選",
+      "from": "2026-11-01",
+      "to": "2027-04-30",
+      "status": "partial：完整券面/支付資格/商品排除待核",
+      "source_id": "yuanta-bic",
+      "auto_apply": false
+    },
+    {
+      "id": "arashiyama-cafe-card-wave3",
+      "type": "滿額贈品，非折扣",
+      "from": "2026-11-01",
+      "to": null,
+      "end_condition": "送完為止，剩餘未知",
+      "eligible": "嵐山茶房2F咖啡餐廳同會計每滿3000含稅1張限定卡；公告未限制日本居民",
+      "source_id": "sabo-biscuit",
+      "auto_deduct_from_price": false
+    },
+    {
+      "id": "sabo-bottle-holder",
+      "type": "滿額贈品，非折扣",
+      "from": "2026-08-08",
+      "to": null,
+      "end_condition": "送完為止，剩餘未知",
+      "eligible": "嵐山/宮島含稅4000以上，1人1次；贈品只在goods shop櫃台發，takeout僅併設店可合算；線上/出張店與道後草津黑川不適用",
+      "source_id": "sabo-biscuit",
+      "auto_deduct_from_price": false
+    },
+    {
+      "id": "dec-glasses-cloth",
+      "type": "未來滿額贈品，非折扣",
+      "from": "2026-12-12",
+      "to": null,
+      "end_condition": "送完為止",
+      "eligible": "Rilakkuma Store全店買拉拉熊商品滿4400含稅，每會計1件；未限制日本居民；線上不自動套用",
+      "source_id": "dec-store-announcement",
+      "active_on_checked_date": false,
+      "auto_deduct_from_price": false
+    }
+  ],
+  "remaining": [
+    "鎌倉現行專店及真正指定商品取扱仍缺官方證據，不能把舊茶房攻略沿用成營業。",
+    "19個SKU/JAN除既有零售查核者外，多數只有官方發表價，不能畫成跨店現貨實售卡。",
+    "和服指定分店只確認系列，不確認每一款；一般Closet品番尚缺單店取扱證據；12/12店限版本必須另建商品。",
+    "地域商品3款沒有公開SKU/JAN，雖名稱/款式可辨，仍不能做嚴格同JAN比價。",
+    "San-X列表分頁URL與參數未實測；RSC格式是目前可解析，不是官方承諾的公共API。",
+    "台灣旅客AmiAmi日本站直接海外下單/旅館收件不適合；Yodobashi指定SKU可店取尚未確認；楽天Books與いしだ屋短期旅客收件條件未核足。",
+    "當期Visa需卡與事先報名、預算未知；沒有把抽獎、點數、免稅或贈品當現金折扣。",
+    "所有庫存未知；發布時間、商品發售、零售入荷與觀察時間保持分離。",
+    "圖片僅保留官方URL/來源；未下載，公開重製授權未取得。"
+  ],
+  "original_four_product_updates": [
+    {
+      "product_id": "sanx-mz13501",
+      "retailers": [
+        {
+          "name": "Yodobashi",
+          "product_url": "https://www.yodobashi.com/product/100000001010265381/",
+          "sku_confirmed": true,
+          "tax_included_jpy": 3770,
+          "shipping_jpy": 0,
+          "pickup_sku_confirmed": false
+        },
+        {
+          "name": "AmiAmi",
+          "product_url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905825&page=top",
+          "sku_confirmed_from_listing": true,
+          "tax_included_jpy": 3340,
+          "shipping_jpy": 630,
+          "detail_page_read": false
+        }
+      ],
+      "physical_evidence_ref": "kimono-series-branches",
+      "taiwan_visitor": "實店只證實系列。Yodobashi必須此商品頁顯示可店取，發售後收到備貨信並7天內店付取；目前不能指定Akiba/梅田已可取。AmiAmi日本站不接受海外訂單，通常不寄旅館，不列台灣短期旅客直接可行路徑。",
+      "stock": "未知",
+      "guaranteed_purchase": false
+    },
+    {
+      "product_id": "sanx-mz13901",
+      "retailers": [
+        {
+          "name": "楽天Books",
+          "product_url": "https://books.rakuten.co.jp/rb/18897862/",
+          "jan_confirmed": true,
+          "tax_included_jpy": 6050,
+          "shipping_jpy": 0
+        },
+        {
+          "name": "AmiAmi",
+          "product_url": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905829&page=top",
+          "sku_confirmed_from_listing": true,
+          "tax_included_jpy": 4840,
+          "shipping_jpy": 630
+        }
+      ],
+      "physical_evidence_ref": "kimono-series-branches",
+      "taiwan_visitor": "楽天Books接受台灣短期旅客的註冊付款、玩具便利店取貨/旅館代收未核足，不保證可行。日本實店只證實系列。",
+      "stock": "未知",
+      "guaranteed_purchase": false
+    },
+    {
+      "product_id": "sanx-mz22201",
+      "retailers": [
+        {
+          "name": "いしだ屋 Yahoo",
+          "product_url": "https://store.shopping.yahoo.co.jp/ishidaya-co/320zak967m.html",
+          "jan_confirmed": true,
+          "price_jpy": 2777,
+          "tax_included": null,
+          "tokyo_shipping_jpy": 600
+        }
+      ],
+      "physical_evidence_ref": null,
+      "taiwan_visitor": "缺MZ22201指定實店公告。店家預計12月下旬，不保證配合旅館停留；海外付款/收件資格未核。12/12店限可可兔可能另一SKU，禁止合併。",
+      "stock": "未知",
+      "guaranteed_purchase": false
+    },
+    {
+      "product_id": "kushiya-wave2-a4file",
+      "retailers": [],
+      "physical_evidence": "參加店範圍，本次未將官方圖片店表逐店轉為指定SKU名單",
+      "taiwan_visitor": "個人旅客需點自助餐、結帳時購買，每人每品1；餐費分店核對，不可預留。轉售/營利購買禁止，代購模式不可加入。",
+      "commercial_purchase_allowed": false,
+      "stock": "未知",
+      "guaranteed_purchase": false
+    }
+  ],
+  "inherited_verified_comparisons": [
+    {
+      "id": "comparison-mz13501",
+      "product_id": "sanx-mz13501",
+      "manufacturer_sku": "MZ13501",
+      "jan": "4974413925471",
+      "comparison_eligible": true,
+      "verification_status": "同SKU、同角色、新品單件含稅標價已核；AmiAmi詳頁限購與可購按鈕待核",
+      "unit": "1隻／新品",
+      "currency": "JPY",
+      "checked_at": "2026-11-20",
+      "offers": [
+        {
+          "offer_id": "offer-mz13501-yodobashi",
+          "item_tax_included": 3770,
+          "domestic_shipping_advertised": 0,
+          "domestic_single_item_total_before_payment_fees": 3770
+        },
+        {
+          "offer_id": "offer-mz13501-amiami-pending",
+          "item_tax_included": 3340,
+          "domestic_shipping_advertised": 630,
+          "domestic_single_item_total_before_payment_fees": 3970
+        }
+      ],
+      "item_price_difference": 430,
+      "domestic_delivered_difference": 200,
+      "item_price_lower_retailer": "あみあみ",
+      "single_item_delivered_lower_retailer": "ヨドバシ.com",
+      "conditions": "比較日本境內收件、一單僅此一隻、普通付款且無額外付款手續費。無國際運、匯差、會員券或點數扣抵。AmiAmi頁面FAQ送料630為當前查閱規則，結帳重核。",
+      "purchase_ready": false,
+      "stock_status": "兩店即時庫存皆未知",
+      "source_ids": [
+        "yodobashi-mz13501",
+        "amiami-plush",
+        "amiami-faq",
+        "kawada-identifiers"
+      ]
+    },
+    {
+      "id": "comparison-mz13901",
+      "product_id": "sanx-mz13901",
+      "manufacturer_sku": "MZ13901",
+      "jan": "4974413925518",
+      "comparison_eligible": true,
+      "verification_status": "同SKU/角色新品單件含稅清單價與楽天Books詳頁價；AmiAmi詳頁限購與可購按鈕待核",
+      "unit": "1隻／新品",
+      "currency": "JPY",
+      "checked_at": "2026-11-20",
+      "offers": [
+        {
+          "offer_id": "offer-mz13901-rakutenbooks",
+          "item_tax_included": 6050,
+          "domestic_shipping_advertised": 0,
+          "domestic_single_item_total_before_payment_fees": 6050
+        },
+        {
+          "offer_id": "offer-mz13901-amiami-pending",
+          "item_tax_included": 4840,
+          "domestic_shipping_advertised": 630,
+          "domestic_single_item_total_before_payment_fees": 5470
+        }
+      ],
+      "item_price_difference": 1210,
+      "domestic_delivered_difference": 580,
+      "conditions": "同上日本境內單件收件條件；AmiAmi下單資格與數量限制仍待詳頁核對。",
+      "purchase_ready": false,
+      "stock_status": "兩店即時庫存皆未知",
+      "source_ids": [
+        "rakutenbooks-mz13901",
+        "amiami-plush",
+        "amiami-faq",
+        "kawada-identifiers"
+      ]
+    }
+  ],
+  "original_four_research_source": "D:\\Coding\\日本旅遊\\設計規劃\\shopping-research.json",
+  "conflicts": [
+    {
+      "id": "kimono-release-dates",
+      "status": "未解",
+      "claims": [
+        {
+          "date": "2026-11-14",
+          "source_id": "kimono-special",
+          "context": "特設頁圖片替代文字"
+        },
+        {
+          "date": "2026-12-05",
+          "source_id": "kimono-release",
+          "context": "11月9日官方文章明文"
+        }
+      ],
+      "handling": "UI同時呈現來源、日期與待確認標記；不可算成11/20已上市現貨。"
+    },
+    {
+      "id": "shinsaibashi-floor",
+      "status": "保留既有衝突，未解",
+      "claims": [
+        {
+          "value": "KiddyLand 5F",
+          "source_id": "parco-kiddy",
+          "independently_verified_this_pass": true
+        },
+        {
+          "value": "Rilakkuma Store 6F",
+          "source_id": "kimono-special",
+          "independently_verified_this_pass": true,
+          "carried_from": "九角色對抗評估-2026-11-20.md"
+        }
+      ],
+      "handling": "此次官方和服頁原始RSC獨立重現心斎橋PARCO6F，仍與商場KiddyLand5F並列；可能櫃位差異，未解。"
+    }
+  ]
+}

@@ -1,0 +1,1125 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-20",
+  "trip_window": {
+    "from": "2026-11-20",
+    "to": "2026-11-25",
+    "timezone": "Asia/Tokyo"
+  },
+  "scope": "本趟行程的具名商品與已公告販售檔期；不是現貨保證、不是訂單受理保證。未下單、未登入或報名。",
+  "result": {
+    "identified_products": 21,
+    "sku_jan_publicly_verified": 0,
+    "identification_method": "IG Port官方商品合圖，讀取12+3+3+3款文字標籤；名稱/角色/制服號碼可區分。",
+    "trip_confirmed_venue_count": 2,
+    "no_invented_sku": true
+  },
+  "items": [
+    {
+      "local_record_id": "haikyu-wave2-visual-01",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（日向翔陽）",
+      "character": "リラックマ",
+      "uniform_character": "日向翔陽",
+      "uniform_number": 10,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-02",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（影山飛雄）",
+      "character": "リラックマ",
+      "uniform_character": "影山飛雄",
+      "uniform_number": 9,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-03",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（月島蛍）",
+      "character": "リラックマ",
+      "uniform_character": "月島蛍",
+      "uniform_number": 11,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-04",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（山口忠）",
+      "character": "リラックマ",
+      "uniform_character": "山口忠",
+      "uniform_number": 12,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-05",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（及川徹）",
+      "character": "リラックマ",
+      "uniform_character": "及川徹",
+      "uniform_number": 1,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-06",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（岩泉一）",
+      "character": "リラックマ",
+      "uniform_character": "岩泉一",
+      "uniform_number": 4,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-07",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（黒尾鉄朗）",
+      "character": "リラックマ",
+      "uniform_character": "黒尾鉄朗",
+      "uniform_number": 1,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-08",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（孤爪研磨）",
+      "character": "リラックマ",
+      "uniform_character": "孤爪研磨",
+      "uniform_number": 5,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-09",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（木兎光太郎）",
+      "character": "リラックマ",
+      "uniform_character": "木兎光太郎",
+      "uniform_number": 4,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-10",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（赤葦京治）",
+      "character": "リラックマ",
+      "uniform_character": "赤葦京治",
+      "uniform_number": 5,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-11",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（宮侑）",
+      "character": "リラックマ",
+      "uniform_character": "宮侑",
+      "uniform_number": 7,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-12",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ リラックマ（宮治）",
+      "character": "リラックマ",
+      "uniform_character": "宮治",
+      "uniform_number": 11,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-13",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ コリラックマ（影山飛雄）",
+      "character": "コリラックマ",
+      "uniform_character": "影山飛雄",
+      "uniform_number": 9,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-14",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ コリラックマ（孤爪研磨）",
+      "character": "コリラックマ",
+      "uniform_character": "孤爪研磨",
+      "uniform_number": 5,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-15",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ コリラックマ（宮侑）",
+      "character": "コリラックマ",
+      "uniform_character": "宮侑",
+      "uniform_number": 7,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-16",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ キイロイトリ（月島蛍）",
+      "character": "キイロイトリ",
+      "uniform_character": "月島蛍",
+      "uniform_number": 11,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-17",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ キイロイトリ（岩泉一）",
+      "character": "キイロイトリ",
+      "uniform_character": "岩泉一",
+      "uniform_number": 4,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-18",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ キイロイトリ（木兎光太郎）",
+      "character": "キイロイトリ",
+      "uniform_character": "木兎光太郎",
+      "uniform_number": 4,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-19",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ チャイロイコグマ（山口忠）",
+      "character": "チャイロイコグマ",
+      "uniform_character": "山口忠",
+      "uniform_number": 12,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-20",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ チャイロイコグマ（赤葦京治）",
+      "character": "チャイロイコグマ",
+      "uniform_character": "赤葦京治",
+      "uniform_number": 5,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    },
+    {
+      "local_record_id": "haikyu-wave2-visual-21",
+      "local_record_id_is_not_sku": true,
+      "name_ja": "ぶらさげぬいぐるみ チャイロイコグマ（宮治）",
+      "character": "チャイロイコグマ",
+      "uniform_character": "宮治",
+      "uniform_number": 11,
+      "manufacturer_sku": null,
+      "jan": null,
+      "identity_evidence": "官方全21款商品圖的角色/制服人物文字標籤已放大目視核對；不自造SKU/JAN",
+      "unit": "1隻／open款式（非隨機盲盒）",
+      "price": {
+        "amount": 3200,
+        "currency": "JPY",
+        "tax_included": true,
+        "type": "official_announced_event_retail_price"
+      },
+      "release_date": "2026-11-20",
+      "trip_sale_period_supported": true,
+      "eligible_branch_ids": [
+        "baseyard-harajuku",
+        "baseyard-abeno"
+      ],
+      "physical_stock_status": "未知",
+      "online_order_supported_for_trip": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+          "source_id": "producer-poster",
+          "type": "全21款官方商品合圖；非此單款獨立實拍",
+          "downloaded": false,
+          "republication_permission": "未取得"
+        }
+      ],
+      "source_ids": [
+        "producer-poster",
+        "sanx-haikyu",
+        "baseyard-event"
+      ],
+      "checked_at": "2026-11-20"
+    }
+  ],
+  "venues": [
+    {
+      "id": "baseyard-harajuku",
+      "name": "baseyard tokyo 原宿店",
+      "region": "東京",
+      "sale_from": "2026-11-20",
+      "sale_to": "2026-12-06",
+      "trip_overlap_from": "2026-11-20",
+      "trip_overlap_to": "2026-11-25",
+      "evidence_level": "official_event_named_branch",
+      "reservation_required_dates": [
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "initial_lottery_application": {
+        "from": "2026-10-30T11:00:00+08:00",
+        "to": "2026-11-08T22:59:00+08:00",
+        "status_on_trip_start": "已過申請期；不能把今天現場排隊當已可入場"
+      },
+      "free_entry_from": "2026-11-23",
+      "recommended_trip_dates": [
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25"
+      ],
+      "free_entry_note": "仍可能按混雜情況限流，非保證隨到隨進。",
+      "inventory": "未知",
+      "source_ids": [
+        "sanx-haikyu",
+        "baseyard-event",
+        "producer-special"
+      ]
+    },
+    {
+      "id": "baseyard-abeno",
+      "name": "baseyard tokyo あべのキューズモール店",
+      "region": "大阪",
+      "sale_from": "2026-11-20",
+      "sale_to": "2026-12-06",
+      "trip_overlap_from": "2026-11-20",
+      "trip_overlap_to": "2026-11-25",
+      "evidence_level": "official_event_named_branch",
+      "reservation_required_dates": [
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "initial_lottery_application": {
+        "from": "2026-10-30T11:00:00+08:00",
+        "to": "2026-11-08T22:59:00+08:00",
+        "status_on_trip_start": "已過"
+      },
+      "second_application": {
+        "dates": [
+          "2026-11-21",
+          "2026-11-22"
+        ],
+        "application_from": "2026-11-16T11:00:00+08:00",
+        "method": "先著追加，限尚未1次中籤者",
+        "current_slots": "未知",
+        "registration_performed": false
+      },
+      "free_entry_from": "2026-11-23",
+      "recommended_trip_dates": [
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25"
+      ],
+      "free_entry_note": "仍可能限流；不得推定任一款有貨。",
+      "inventory": "未知",
+      "source_ids": [
+        "sanx-haikyu",
+        "baseyard-event",
+        "producer-special"
+      ]
+    }
+  ],
+  "purchase_conditions": {
+    "open_items_limit": "每人每天每款3點；本21款屬open款，非blind套用36點限制。",
+    "blind_items_limit": "其他blind商品才是各種3BOX(36點)，不可混套。",
+    "seller_inventory": "未知",
+    "resale_or_proxy_commercial_permission": "未於本次已讀頁確認明文允許商業代購，勿推定已允許。",
+    "visitor_eligibility": "活動商品頁沒有日本居住限定條款；但預約制日期仍需符合官方入場程序，票務帳號/身分核對細則未完全核實。未替旅客註冊。",
+    "delivery": "本檔支持到店販售檔期；官方說日後事後販售，時間未公告，不能當11/20–25網購收貨方案。"
+  },
+  "promotion": {
+    "id": "haikyu-postcard",
+    "type": "達門檻贈品，非折扣或保證抽獎",
+    "branch_ids": [
+      "baseyard-harajuku",
+      "baseyard-abeno"
+    ],
+    "validity": "各店活動期間，送完為止",
+    "threshold": {
+      "amount": 3300,
+      "currency": "JPY",
+      "tax_included": true,
+      "per_amount_one": true
+    },
+    "gift": "ポストカード 全13種，隨機1張",
+    "conditions": [
+      "單一會計的対象商品金額；不可合併多張收據",
+      "贈品送完即止，不能選圖",
+      "庫存和贈品餘量未知"
+    ],
+    "examples": [
+      {
+        "plush_count": 1,
+        "total_jpy": 3200,
+        "threshold_qualified_cards": 0
+      },
+      {
+        "plush_count": 2,
+        "total_jpy": 6400,
+        "threshold_qualified_cards": 1
+      },
+      {
+        "plush_count": 3,
+        "total_jpy": 9600,
+        "threshold_qualified_cards": 2
+      }
+    ],
+    "example_note": "僅門檻計算，不保證贈品實發；不假造100日圓湊單商品。",
+    "source_ids": [
+      "sanx-haikyu",
+      "producer-special"
+    ]
+  },
+  "excluded_from_this_trip": [
+    {
+      "item": "コリラックマクローゼット一般MZ21901–MZ22701",
+      "reason": "官方2026年12月頃，不在11/20–25；不列成本趟可買。"
+    },
+    {
+      "item": "もっと着物MZ13101–MZ14001",
+      "reason": "特設圖11/14與11/9文章12/5互相衝突，未解；不把這趟當已確定上市。"
+    },
+    {
+      "item": "12月Rilakkuma Store限定Closet/羊睡衣等",
+      "reason": "實店12/12，官方網店12/14–15，排除本趟。"
+    },
+    {
+      "item": "baseyard札幌/京都/廣島這次聯名巡迴",
+      "reason": "12/18才開始；本趟不能在這三地假定買21款。"
+    },
+    {
+      "item": "Visa台灣BicCamera優惠套娃娃",
+      "reason": "沒有證明Bic取扱本21款。禁止套用；回饋不計入本趟娃娃預算。"
+    }
+  ],
+  "kamakura_assessment": {
+    "current_first_party_rilakkuma_specialty_store_confirmed": false,
+    "product_handling_confirmed": false,
+    "status": "不安排確定購物任務",
+    "closure_date": null,
+    "evidence": "目前茶房官方ACCESS只有嵐山與宮島，本次未取得鎌倉現行第一方證據；不以此虛構閉店日。",
+    "alternatives": [
+      {
+        "place": "原宿",
+        "reason": "本趟有官方排球聯名販售檔期；優先11/23–25自由入場日期（可能限流）。",
+        "source_ids": [
+          "baseyard-event"
+        ]
+      },
+      {
+        "place": "嵐山",
+        "reason": "官方現行茶房，已具名公告動畫小棕熊/蜂蜜餅乾等取扱；當期庫存仍未知，屬文化體驗與店面備案。",
+        "source_ids": [
+          "sabo-current",
+          "sabo-anime",
+          "sabo-biscuit"
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "producer-special",
+      "title": "IG Port官方聯名專頁",
+      "url": "https://www.igport-onlinestore.com/pages/rilakkuma-haikyu",
+      "checked_at": "2026-11-20",
+      "evidence": "官方21款合圖入口；東京大阪檔期與限購；3300贈卡；海外店不販售21款吊飾。"
+    },
+    {
+      "id": "producer-poster",
+      "title": "IG Port官方21款吊飾商品原圖",
+      "url": "https://cdn.shopify.com/s/files/1/0591/6999/6951/files/x__A3_POP_RGB.png?v=1793258742",
+      "source_page": "https://www.igport-onlinestore.com/pages/rilakkuma-haikyu",
+      "checked_at": "2026-11-20",
+      "visual_verification": {
+        "method": "在獨立Chrome分頁開原圖並點擊放大，閱讀全部標籤",
+        "native_image_pixels": "1508×2120",
+        "labels_read": 21,
+        "downloaded": false,
+        "screenshots_saved_to_disk": false
+      },
+      "evidence": "12拉拉熊+3小白熊+3黃雞+3小棕熊；每款3200含稅。"
+    },
+    {
+      "id": "sanx-haikyu",
+      "title": "San-X官方第2弾公告",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-10-post-0720240/",
+      "published_at": "2026-10-30",
+      "checked_at": "2026-11-20",
+      "evidence": "21款11/20發售；五城分段檔期；每open款單日3點及3300門檻。"
+    },
+    {
+      "id": "baseyard-event",
+      "title": "實際零售商baseyard活動頁",
+      "url": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/",
+      "published_at": "2026-10-30",
+      "checked_at": "2026-11-20",
+      "evidence": "原宿/阿倍野11/20–12/6，11/20–22預約；11/23起自由入場；札幌京都廣島12/18起。"
+    },
+    {
+      "id": "sabo-current",
+      "title": "茶房官方現行ACCESS",
+      "url": "https://rilakkumasabo.jp/",
+      "checked_at": "2026-11-20",
+      "evidence": "目前列嵐山和宮島，未列鎌倉；不推導閉店時間。"
+    },
+    {
+      "id": "sabo-anime",
+      "title": "茶房動畫娃娃官方商品公告",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-08-post-0145520/",
+      "published_at": "2026-08-24",
+      "checked_at": "2026-11-20",
+      "evidence": "9/5發售小棕熊動畫衣裝單款4620含稅，明列嵐山/宮島/各湯店與品牌網店，一人1件。"
+    },
+    {
+      "id": "sabo-biscuit",
+      "title": "茶房蜂蜜餅乾官方商品公告",
+      "url": "https://www.san-x.co.jp/ja/blog/2026-07-post-0557530/",
+      "published_at": "2026-07-27",
+      "checked_at": "2026-11-20",
+      "evidence": "8/8預計發售1188含稅，嵐山/宮島；舊發售公告不能當現在有貨。"
+    }
+  ],
+  "remaining": [
+    "本21款官方未提供可讀SKU/JAN，名稱與制服人物作識別，不能做同JAN跨店比價。",
+    "11/20–22入場申請已結束/追加名額待核，不能把官方檔期直接說成今日可入場。",
+    "本趟任何一日指定款庫存/售完/贈卡餘量都未知，不能保證21款齊全。",
+    "不提供尚未實際取扱的Bic折扣、不用未上市12月商品充本趟清單。"
+  ]
+}

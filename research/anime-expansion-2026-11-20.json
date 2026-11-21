@@ -1,0 +1,733 @@
+{
+  "schemaVersion": 2,
+  "checkedAt": "2026-11-20",
+  "timezone": "Asia/Tokyo",
+  "scope": "6組方案，東京2組、秩父2組、飯能1組、京都宇治1組。各方案保留官方關係類型，非宣稱全是作品取景地。",
+  "places": [
+    {
+      "id": "baseyard-harajuku-naname",
+      "title": "baseyard tokyo HARAJUKU ／",
+      "pref": "東京都",
+      "coords": [
+        35.6663632,
+        139.70363
+      ],
+      "coordinateSource": {
+        "provider": "Google Maps（活動主辦官方連結）",
+        "url": "https://maps.app.goo.gl/k1mxS2P9Sq5YikV47",
+        "extraction": "redirect place !3d35.6663632!4d139.70363；不是@鏡頭中心35.6669797",
+        "checkedAt": "2026-11-20"
+      },
+      "officialSource": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/",
+      "kind": "official-collaboration-store",
+      "hours": null,
+      "warning": "以活動頁所指原宿分店為準；不要沿用其他baseyard舊址或泛原宿中心。"
+    },
+    {
+      "id": "mugiwara-shibuya",
+      "title": "ONE PIECE 麥草帽商店 澀谷本店",
+      "pref": "東京都",
+      "address": "東京都渋谷区神南1-23-10 MAGNET by SHIBUYA109 6F",
+      "coords": [
+        35.6597925,
+        139.7009365
+      ],
+      "coordinateSource": {
+        "provider": "店方內嵌Google Maps",
+        "url": "https://www.mugiwara-store.com/store/shibuya/",
+        "extraction": "iframe pb !2d139.7009365!3d35.6597925",
+        "precision": "MAGNET大樓地圖代表點，店在6F",
+        "checkedAt": "2026-11-20"
+      },
+      "officialSource": "https://www.mugiwara-store.com/store/shibuya/",
+      "hours": {
+        "start": "10:00",
+        "end": "21:00",
+        "timezone": "Asia/Tokyo",
+        "note": "依MAGNET營業；擁擠可能整理券/限制入場。"
+      }
+    },
+    {
+      "id": "jorinji-chichibu",
+      "title": "札所17番定林寺",
+      "pref": "埼玉縣",
+      "address": "秩父市桜木町21-3",
+      "coords": [
+        36.0057798,
+        139.0843212
+      ],
+      "coordinateSource": {
+        "provider": "OpenStreetMap / Nominatim",
+        "url": "https://www.openstreetmap.org/way/1513865577",
+        "checkedAt": "2026-11-20",
+        "precision": "開放圖資地物代表點，非入口/樓層導航",
+        "license": "© OpenStreetMap contributors, ODbL"
+      },
+      "officialSource": "https://navi.city.chichibu.lg.jp/travel/ja/course/2018/11/925/",
+      "kind": "municipal-confirmed-scene",
+      "hours": null,
+      "warning": "參拜/御朱印受理時間、堂內攝影另向寺方確認；市方舊示範行程車次不作當期時刻表。"
+    },
+    {
+      "id": "chichibu-hotspot",
+      "title": "ほっとすぽっと秩父館",
+      "pref": "埼玉縣",
+      "address": "秩父市宮側町18-2",
+      "coords": null,
+      "coordinateSource": null,
+      "mapQuery": "ほっとすぽっと秩父館 秩父市宮側町18-2",
+      "officialSource": "https://navi.city.chichibu.lg.jp/p_sightseeingr/861/",
+      "hours": {
+        "start": "10:00",
+        "end": "17:00",
+        "timezone": "Asia/Tokyo",
+        "excludedWeekdays": [
+          "WE"
+        ],
+        "note": "年末年始/臨休另查"
+      },
+      "entry": "一樓免費休憩區",
+      "goods": "第一方確認手作/陶藝販售，沒有保證當日動畫周邊庫存。"
+    },
+    {
+      "id": "chichibu-jibasan",
+      "title": "秩父じばさん商店",
+      "pref": "埼玉縣",
+      "address": "秩父市宮側町1-7 秩父地場產業中心1F（店方地址待行前二核）",
+      "coords": null,
+      "coordinateSource": null,
+      "mapQuery": "秩父じばさん商店 秩父駅",
+      "officialSource": "https://www.cospa.com/nijigencospa/event/id/28179",
+      "kind": "manufacturer-confirmed-anime-goods-retailer",
+      "hours": null
+    },
+    {
+      "id": "chichibu-michinoeki",
+      "title": "道之驛秩父",
+      "pref": "埼玉縣",
+      "address": "埼玉縣秩父市大宮4625",
+      "coords": null,
+      "coordinateSource": null,
+      "excludedGeocode": "Nominatim返回『道の駅ちちぶ入口』公車站兩筆，未當作設施座標",
+      "mapQuery": "道の駅ちちぶ 秩父市大宮4625",
+      "officialSource": "https://www.michinoeki-network.jp/chichibu/",
+      "hours": {
+        "start": "09:30",
+        "end": "17:30",
+        "timezone": "Asia/Tokyo"
+      }
+    },
+    {
+      "id": "hanno-south-post",
+      "title": "飯能站南口郵局",
+      "pref": "埼玉縣",
+      "address": "埼玉縣飯能市南町9-23",
+      "coords": [
+        35.8493,
+        139.317876
+      ],
+      "coordinateSource": {
+        "provider": "OpenStreetMap / Nominatim",
+        "url": "https://www.openstreetmap.org/node/1420205009",
+        "checkedAt": "2026-11-20",
+        "precision": "開放圖資地物代表點，非入口/樓層導航",
+        "license": "© OpenStreetMap contributors, ODbL"
+      },
+      "officialSource": "https://www.post.japanpost.jp/enjoy/culture/stamp/frame/detail.php?id=3959",
+      "kind": "official-collaboration-product-retailer",
+      "hours": null,
+      "warning": "郵局窗口時段未核；11/8週日13–17特別販售已結束，不能當日常窗口時段。"
+    },
+    {
+      "id": "tenranzan",
+      "title": "天覽山",
+      "pref": "埼玉縣",
+      "coords": [
+        35.8620377,
+        139.308305
+      ],
+      "coordinateSource": {
+        "provider": "OpenStreetMap / Nominatim",
+        "url": "https://www.openstreetmap.org/node/323812061",
+        "checkedAt": "2026-11-20",
+        "precision": "開放圖資地物代表點，非入口/樓層導航",
+        "license": "© OpenStreetMap contributors, ODbL"
+      },
+      "officialSource": "https://www.seiburailway.jp/railways/hiking/syoshinsya/tounosuyama/index.html",
+      "kind": "railway-confirmed-anime-area-route",
+      "hours": null,
+      "note": "標高195m山頂點，不是登山口。"
+    },
+    {
+      "id": "ujibashi",
+      "title": "宇治橋",
+      "pref": "京都府",
+      "coords": [
+        34.8928016,
+        135.805996
+      ],
+      "coordinateSource": {
+        "provider": "OpenStreetMap / Nominatim",
+        "url": "https://www.openstreetmap.org/way/174839484",
+        "checkedAt": "2026-11-20",
+        "precision": "開放圖資地物代表點，非入口/樓層導航",
+        "license": "© OpenStreetMap contributors, ODbL"
+      },
+      "officialSource": "https://www.keihan.co.jp/euphonium/",
+      "kind": "official-anime-map-location",
+      "hours": null,
+      "warning": "2026秋官方前期集章點；後期不能當仍有效集章點，但實體場景可看。"
+    },
+    {
+      "id": "agata-jinja",
+      "title": "縣神社",
+      "pref": "京都府",
+      "coords": [
+        34.8885411,
+        135.8057702
+      ],
+      "coordinateSource": {
+        "provider": "OpenStreetMap / Nominatim",
+        "url": "https://www.openstreetmap.org/way/497475255",
+        "checkedAt": "2026-11-20",
+        "precision": "開放圖資地物代表點，非入口/樓層導航",
+        "license": "© OpenStreetMap contributors, ODbL"
+      },
+      "officialSource": "https://www.keihan.co.jp/euphonium/",
+      "kind": "official-current-stamp-location",
+      "hours": null
+    },
+    {
+      "id": "uji-waterpipe",
+      "title": "宇治川河川敷（水管橋）",
+      "pref": "京都府",
+      "coords": null,
+      "coordinateSource": null,
+      "mapQuery": "宇治川 水管橋 響けユーフォニアム",
+      "officialSource": "https://www.keihan.co.jp/euphonium/",
+      "kind": "official-current-stamp-location",
+      "warning": "水管橋與宇治橋不同；未核精確入口點，不互換座標。"
+    },
+    {
+      "id": "uji-kohata-jinja",
+      "title": "許波多神社（官方後期集章點）",
+      "pref": "京都府",
+      "coords": null,
+      "coordinateSource": null,
+      "officialSource": "https://www.keihan.co.jp/euphonium/",
+      "warning": "宇治有同名神社，先看官方探訪PDF確定地址，不用名字自動選第一筆。"
+    },
+    {
+      "id": "kyoto-hachijo-cafe",
+      "title": "Hotel Keihan 京都八條口餐廳",
+      "pref": "京都府",
+      "coords": null,
+      "coordinateSource": null,
+      "mapQuery": "ホテル京阪 京都八条口 レストラン",
+      "officialSource": "https://www.hotelkeihan.co.jp/kyoto-h/restaurant/menu/1/",
+      "hours": {
+        "start": "11:30",
+        "end": "15:00",
+        "lastOrder": "14:30",
+        "timezone": "Asia/Tokyo",
+        "weekdays": [
+          "FR",
+          "SA",
+          "SU",
+          "MO"
+        ],
+        "validWindow": {
+          "start": "2026-09-04",
+          "end": "2026-12-20"
+        }
+      },
+      "warning": "不是京都站前同名其他分館；用官方預約確認實際入店時刻。"
+    },
+    {
+      "id": "kyoto-tower-eupho",
+      "title": "Nidec京都塔展望室聯名區",
+      "pref": "京都府",
+      "coords": null,
+      "coordinateSource": null,
+      "mapQuery": "ニデック京都タワー 展望室",
+      "officialSource": "https://www.kyoto-tower.jp/event/eupho26autumn/",
+      "hours": null,
+      "window": {
+        "start": "2026-09-01",
+        "end": "2026-12-20"
+      },
+      "entry": "需依展望室票種/販售處規則，未核到免票買物條件，不承諾免費購物。"
+    }
+  ],
+  "routes": [
+    {
+      "id": "anime-route-harajuku",
+      "title": "原宿：排球×拉拉熊聯名＋原宿買物",
+      "pref": "東京都",
+      "work": [
+        "ハイキュー!!",
+        "リラックマ"
+      ],
+      "relationType": "official-collaboration-not-filming-location",
+      "placeIds": [
+        "baseyard-harajuku-naname"
+      ],
+      "transport": {
+        "station": "原宿 / 明治神宮前",
+        "lines": [
+          "JR山手線",
+          "東京Metro千代田線",
+          "東京Metro副都心線"
+        ],
+        "walkingEstimateMinutes": [
+          5,
+          15
+        ],
+        "estimateBasis": "編輯依街區粗估，從指定出入口到官方地點重新路由，非Google即時步行值"
+      },
+      "visitEstimateMinutes": [
+        45,
+        90
+      ],
+      "window": {
+        "start": "2026-11-20",
+        "end": "2026-12-06"
+      },
+      "entry": {
+        "sessionStart": null,
+        "sessionEnd": null,
+        "doorsOpen": null,
+        "bookingDeadline": "2026-11-08T23:59:00+09:00",
+        "conditions": "11/20–22事前抽選券指定入場時刻；11/23起一般入場仍可能管制。總檔期不當場次。"
+      },
+      "goods": [
+        {
+          "title": "各校球衣ぶらさげぬいぐるみ",
+          "variants": 21,
+          "priceJPY": null,
+          "stock": "unknown"
+        }
+      ],
+      "sourceURLs": [
+        "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/"
+      ],
+      "photoEntry": "https://www.palcloset.jp/shared/pc_pal/event/baseyard/2026/haikyu-rilakkuma-byt/"
+    },
+    {
+      "id": "anime-route-onepiece-shibuya",
+      "title": "澀谷：ONE PIECE 官方旗艦商品",
+      "pref": "東京都",
+      "work": [
+        "ONE PIECE"
+      ],
+      "relationType": "official-franchise-shop-not-story-setting",
+      "placeIds": [
+        "mugiwara-shibuya"
+      ],
+      "transport": {
+        "station": "渋谷",
+        "lines": [
+          "JR山手線",
+          "東京Metro銀座線/半藏門線/副都心線",
+          "東急東橫線/田園都市線",
+          "京王井之頭線"
+        ],
+        "officialWalk": "八公改札步行1分鐘；A12直結",
+        "source": "https://www.mugiwara-store.com/store/shibuya/"
+      },
+      "visitEstimateMinutes": [
+        30,
+        60
+      ],
+      "entry": {
+        "sessionStart": null,
+        "sessionEnd": null,
+        "doorsOpen": "10:00",
+        "lastEntry": null,
+        "conditions": "一般店面營業10–21不代表每分鐘保證可入；新品/擁擠可能整理券。特別抽選品另查。"
+      },
+      "goods": [
+        {
+          "title": "Store Name系列 SHIBUYA迷你托特",
+          "priceJPY": 1980
+        },
+        {
+          "title": "Store Name系列 SHIBUYA原子筆",
+          "priceJPY": 550
+        }
+      ],
+      "goodsReleaseDate": "2026-11-13",
+      "stock": "unknown",
+      "sourceURLs": [
+        "https://www.mugiwara-store.com/store/shibuya/",
+        "https://one-piece.com/news/83030/index.html"
+      ],
+      "warning": "官方ONE PIECE主站與店方對MAGNET門牌有1-22-6 / 1-23-10差異，本條採店方最新地址與同棟iframe，不把兩者拆成不同店。"
+    },
+    {
+      "id": "anime-route-anohana-chichibu",
+      "title": "秩父：未聞花名市方標記場景",
+      "pref": "埼玉縣",
+      "work": [
+        "あの日見た花の名前を僕達はまだ知らない。"
+      ],
+      "relationType": "municipal-official-scene-route",
+      "placeIds": [
+        "jorinji-chichibu",
+        "chichibu-hotspot",
+        "chichibu-michinoeki"
+      ],
+      "transport": {
+        "station": "西武秩父／秩父",
+        "lines": [
+          "西武秩父線",
+          "秩父鐵道"
+        ],
+        "officialWalk": "西武秩父至秩父館約18分鐘；秩父站至秩父館約5分鐘",
+        "source": "https://navi.city.chichibu.lg.jp/p_sightseeingr/861/"
+      },
+      "steps": [
+        "站前觀光情報館取免費官方舞台探訪圖",
+        "番場通/秩父神社周邊",
+        "秩父館休憩",
+        "定林寺參拜",
+        "依當日交通選舊秩父橋延伸"
+      ],
+      "visitEstimateMinutes": [
+        180,
+        300
+      ],
+      "estimateBasis": "編輯半日估算，不沿用2018示範巴士時刻",
+      "commerce": {
+        "physicalStockStatus": "not-first-party-confirmed-today",
+        "officialOnlineStore": "https://www.chichitetsu.jp/html/products/list.php?category_id=35",
+        "products": [
+          {
+            "title": "超平和バスターズ列車磁鐵組",
+            "priceJPY": 600
+          },
+          {
+            "title": "あの花×秩父鐵道立牌鑰匙圈",
+            "priceJPY": 800
+          }
+        ],
+        "warning": "現場哪站有貨未核；不能把線上列品當秩父站保證有貨。"
+      },
+      "entry": {
+        "sessionStart": null,
+        "sessionEnd": null,
+        "bookingDeadline": null
+      },
+      "sourceURLs": [
+        "https://navi.city.chichibu.lg.jp/travel/ja/course/2018/11/925/",
+        "https://navi.city.chichibu.lg.jp/anime/2023/04/2586/",
+        "https://www.chichitetsu.jp/html/products/list.php?category_id=35"
+      ],
+      "expired": "2026生日會/龍勢/11月7日SL均已結束，不提供可報名。"
+    },
+    {
+      "id": "anime-route-botan-chichibu",
+      "title": "秩父：上伊那牡丹官方探訪圖＋製造商確認商品店",
+      "pref": "埼玉縣",
+      "work": [
+        "上伊那ぼたん、酔へる姿は百合の花"
+      ],
+      "relationType": "municipal-map-and-manufacturer-confirmed-goods",
+      "placeIds": [
+        "chichibu-jibasan",
+        "chichibu-hotspot",
+        "chichibu-michinoeki"
+      ],
+      "transport": {
+        "station": "秩父",
+        "lines": [
+          "秩父鐵道"
+        ],
+        "walkingEstimateMinutes": [
+          1,
+          10
+        ],
+        "estimateBasis": "編輯站前與市街短程估算，非實測導航"
+      },
+      "steps": [
+        "秩父站地場產業中心1Fじばさん商店",
+        "取得市方作品探訪圖",
+        "依圖安排指定實際場景，避免從飲酒氣氛推定所有酒吧是聖地"
+      ],
+      "visitEstimateMinutes": [
+        60,
+        150
+      ],
+      "goods": [
+        {
+          "title": "牡丹/伊吹T恤",
+          "priceJPY": 3300,
+          "releaseWindow": "2026-11下旬，精確日期未公告"
+        },
+        {
+          "title": "大型托特",
+          "priceJPY": 1980,
+          "releaseWindow": "2026-11下旬"
+        },
+        {
+          "title": "票卡套",
+          "priceJPY": 1650,
+          "releaseWindow": "2026-11下旬"
+        },
+        {
+          "title": "壓克力立牌",
+          "priceJPY": 1650,
+          "releaseWindow": "2026-12中旬，屬11/5公告另一批"
+        }
+      ],
+      "entry": {
+        "sessionStart": null,
+        "sessionEnd": null,
+        "bookingDeadline": null,
+        "conditions": "實店現貨買物，未核實特別排隊/預約規則，需店方核對新品是否已到貨。"
+      },
+      "sourceURLs": [
+        "https://navi.city.chichibu.lg.jp/anime/2023/04/2586/",
+        "https://www.cospa.com/nijigencospa/event/id/28179",
+        "https://www.cospa.com/nijigencospa/event/id/28297"
+      ],
+      "warning": "11/20查核日不等同『11月下旬』全部商品已開賣；不同批次不混日期。"
+    },
+    {
+      "id": "anime-route-hanno",
+      "title": "飯能：登山少女場景＋15周年郵票",
+      "pref": "埼玉縣",
+      "work": [
+        "ヤマノススメ"
+      ],
+      "relationType": "railway-scene-reference-and-official-collaboration-retailer",
+      "placeIds": [
+        "hanno-south-post",
+        "tenranzan"
+      ],
+      "steps": [
+        "飯能站南口郵局先確認商品庫存/窗口時間",
+        "由市區步行至天覽山登山口",
+        "天覽山195m展望",
+        "體能允許再選吾妻峽，與市區回程分開估時"
+      ],
+      "transport": {
+        "station": "飯能",
+        "lines": [
+          "西武池袋線"
+        ],
+        "walkingEstimateMinutes": {
+          "stationToPost": [
+            3,
+            8
+          ],
+          "stationToMountainBase": [
+            25,
+            40
+          ]
+        },
+        "estimateBasis": "編輯粗估，天覽山座標是山頂，不得直線當步程"
+      },
+      "visitEstimateMinutes": [
+        150,
+        240
+      ],
+      "goods": [
+        {
+          "title": "登山少女連載15周年紀念框郵票＋大型明信片",
+          "priceJPY": 1950,
+          "quantityReleased": 800,
+          "salesStart": "2026-11-09",
+          "storeListSource": "https://www.post.japanpost.jp/enjoy/culture/stamp/frame/disp.php?type=pdf&name=3959.pdf",
+          "storeConfirmed": "販售清單明列飯能站南口局、飯能市南町9-23",
+          "stock": "unknown"
+        }
+      ],
+      "entry": {
+        "sessionStart": null,
+        "sessionEnd": null,
+        "doorsOpen": null,
+        "conditions": "11/8 13–17特別活動已結束，不作一般郵局營業時間。郵局窗口當日時段另查；戶外路段白天安排。"
+      },
+      "sourceURLs": [
+        "https://www.seiburailway.jp/railways/hiking/syoshinsya/tounosuyama/index.html",
+        "https://www.post.japanpost.jp/enjoy/culture/stamp/frame/detail.php?id=3959"
+      ],
+      "onlineFallback": {
+        "url": "https://www.shop.post.japanpost.jp/shop/g/gCS9961220037EC/",
+        "window": {
+          "start": "2026-11-15",
+          "end": "2027-11-30"
+        },
+        "limitPerOrder": 5,
+        "shippingJPY": 400,
+        "note": "在庫售完提前結束；需ゆうID，日本境內寄送/旅客飯店收件條件另確認。"
+      }
+    },
+    {
+      "id": "anime-route-uji-kyoto",
+      "title": "宇治＋京都：上低音號官方後期點位與聯名餐/商品",
+      "pref": "京都府",
+      "work": [
+        "響け！ユーフォニアム"
+      ],
+      "relationType": "production-official-and-railway-collaboration",
+      "placeIds": [
+        "ujibashi",
+        "agata-jinja",
+        "uji-waterpipe",
+        "uji-kohata-jinja",
+        "kyoto-hachijo-cafe",
+        "kyoto-tower-eupho"
+      ],
+      "steps": [
+        "京阪宇治站取官方2026秋探訪圖/看角色板",
+        "宇治橋看場景",
+        "後期集章依官方圖走水管橋/縣神社/許波多神社",
+        "搭電車回京都站",
+        "選京都八條口合作餐或京都塔展望室商品"
+      ],
+      "transport": {
+        "station": "宇治／三條／京都",
+        "lines": [
+          "京阪宇治線",
+          "京阪本線",
+          "JR奈良線"
+        ],
+        "travelEstimateMinutes": {
+          "kyotoToUji": [
+            20,
+            45
+          ],
+          "ujiWalkLoop": [
+            60,
+            120
+          ],
+          "kyotoStationToHachijoHotel": [
+            10,
+            20
+          ]
+        },
+        "estimateBasis": "編輯概估含步行/轉乘緩衝，非2026指定班次；許波多神社選址須依官方圖確認"
+      },
+      "visitEstimateMinutes": [
+        300,
+        480
+      ],
+      "window": {
+        "start": "2026-11-01",
+        "end": "2026-12-20",
+        "meaning": "秋後期集章"
+      },
+      "goods": [
+        {
+          "title": "京阪線合作一日券＋透明卡",
+          "priceJPY": 1700,
+          "quantityReleased": 6000,
+          "saleStart": "2026-10-17T10:00:00+09:00",
+          "saleEndDate": "2027-03-31",
+          "retailStations": [
+            "淀屋橋",
+            "京橋",
+            "枚方市",
+            "中書島",
+            "丹波橋",
+            "三條"
+          ],
+          "stock": "unknown"
+        },
+        {
+          "title": "京都塔聯名限定商品",
+          "priceJPY": null,
+          "retailer": "Nidec京都塔展望室",
+          "stock": "unknown"
+        },
+        {
+          "title": "迷你等身面板",
+          "priceJPY": 3000,
+          "orderDeadline": "2026-12-20T23:59:00+09:00",
+          "retailer": "e-kenet線上受注",
+          "delivery": "2027年3月中旬以後，非當日帶走"
+        }
+      ],
+      "entry": {
+        "sessionStart": null,
+        "sessionEnd": null,
+        "conditions": "合作餐11:30–15:00、LO14:30，9/4–12/20只金土日一；實際用餐slot須官方預約確認。展望室入場與買物條件另核。"
+      },
+      "sourceURLs": [
+        "https://www.keihan.co.jp/euphonium/",
+        "https://anime-eupho.com/news/?page=8",
+        "https://www.hotelkeihan.co.jp/kyoto-h/restaurant/menu/1/",
+        "https://www.kyoto-tower.jp/event/eupho26autumn/"
+      ],
+      "warning": "宇治橋屬前期集章點；11/1後只作場景看點，不能冒稱可補集已過前期。京阪線合作券與大津線合作券使用區間不同。"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-sensoji-asakusa-shrine",
+      "severity": "identity-critical",
+      "existingPoiIdToPreserve": "poi-asakusa-0",
+      "existingPoiMeaning": "淺草神社（Asakusa Shrine）",
+      "removeIncorrectLink": {
+        "researchId": "heritage-sensoji",
+        "field": "existingPoiIds",
+        "value": "poi-asakusa-0"
+      },
+      "createSeparatePlace": {
+        "id": "heritage-sensoji",
+        "title": "淺草寺",
+        "japanese": "浅草寺",
+        "address": "東京都台東區淺草2-3-1",
+        "coords": [
+          35.714634,
+          139.79673
+        ],
+        "coordinateSource": {
+          "provider": "淺草寺官網第一方OpenLayers marker",
+          "url": "https://www.senso-ji.jp/access/",
+          "extraction": "原始HTML var marker geometry convertCoordinate(139.796730, 35.714634)，參數次序lon,lat",
+          "checkedAt": "2026-11-20"
+        },
+        "precision": "寺方標示的寺院marker；未自稱本堂入口測量點"
+      },
+      "separateGate": {
+        "title": "雷門",
+        "coords": [
+          35.71112,
+          139.79635
+        ],
+        "source": "同頁markermon convertCoordinate(139.79635,35.71112)"
+      },
+      "designationRule": "淺草寺二天門是國家重要文化財；不得寫整寺國寶。淺草神社是另一祭祀設施，不承接淺草寺票價/朱印/歷史。",
+      "sources": [
+        "https://www.senso-ji.jp/access/",
+        "https://www.senso-ji.jp/guide/guide11.html"
+      ],
+      "rejectedGeocode": "Nominatim『浅草寺 本堂』返回京都石峰寺本堂，地名/縣市不符已排除；不得以第一筆搜尋結果自動定位。"
+    },
+    {
+      "id": "correction-kyoani-shop",
+      "severity": "closed-place",
+      "closedPlace": "京アニ＆Doショップ！實地店",
+      "closedSince": "2022-03-14",
+      "source": "https://www.kyotoanimation.co.jp/information/?id=5255",
+      "rule": "不列宇治木幡舊店為可購物店；2026/9/23官方經銷名單頁改修，舊作品販售名單不能視現行店表。",
+      "retailerSource": "https://www.kyotoanimation.co.jp/shop/retailer/"
+    },
+    {
+      "id": "correction-map-meaning",
+      "rule": "OSM座標代表地物；官方Google Maps的@鏡頭中心不等於place marker；公車站、廁所、同名神社與校園不代替真正目的地。"
+    }
+  ],
+  "coordinatePolicy": "有明確來源才給coords；未核點保留null+官方地址/mapQuery供後續定位。OSM標記依地名/縣市檢查；估算不宣稱Google即時路由。",
+  "imagePolicy": "僅官方商品/活動原頁入口，未下載重製圖像。COSPA與寺方頁明示禁止無斷轉載，不把可觀看當公開網站授權。",
+  "gaps": [
+    "3條路線仍有部分點位coords=null，已保留地址與官方來源；許波多同名神社須官方PDF確認精確點，不能自動選第一筆。",
+    "未聞花名實店當日商品庫存未核，官方鐵道線上商城作購物證據；與牡丹製造商確認的實店商品區別。",
+    "所有步行/交通範圍是規劃粗估，沒有宣稱已取Google Routes API或實測。",
+    "原宿入場券個人slot、郵局窗口時間、實店庫存與京都塔免票買物條件仍需個別確認。",
+    "京都各限定企畫有效期不同：集章12/20、合作券至2027/3/31、線上受注寄送2027/3後，不混成同一檔期。"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-21T00:20:20.263Z",
+  "scope": "Isolated Node SQLite business/protocol test. Synthetic identities, not Cloudflare authentication or production authorization test.",
+  "passed": 9,
+  "cases": [
+    "MCP discovery",
+    "Three declared tools",
+    "Anonymous writer denied without writes",
+    "Non-whitelist source denied",
+    "Owner business write stays unavailable for purchase",
+    "Same observation does not duplicate changes",
+    "Failed fetch preserves last success",
+    "Changed price logged once",
+    "Readback persists latest quote"
+  ]
+}

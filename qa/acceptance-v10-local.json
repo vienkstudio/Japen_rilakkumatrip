@@ -1,0 +1,193 @@
+{
+  "at": "2026-11-21T00:22:36.044Z",
+  "base": "http://127.0.0.1:18770/",
+  "scope": "Nine bounded persona tasks plus 55 date-control checkpoints. Not full completion of nine itineraries, bookings or inventory.",
+  "evidence": [
+    {
+      "name": "Nine role date-range controls, daily date preservation (not daily content completion)",
+      "pass": true,
+      "actual": {
+        "roles": 9,
+        "checkpoints": 55
+      }
+    },
+    {
+      "name": "Fan: named variant, SKU honesty and venue rules",
+      "pass": true,
+      "actual": "ぶらさげぬいぐるみ リラックマ（日向翔陽）\n\nぶらさげぬいぐるみ リラックマ（日向翔陽）\n\n須遵守活動購買限制及轉售條款；不能以本地資料ID冒充官方SKU。\n\n系列\n排球少年!! × 拉拉熊 第2彈\n款式\nリラックマ／日向翔陽／球衣10\n商品編號\n未公開\nJAN\n未公開\n規格單位\n1隻／open款式（非隨機盲盒）\n發售\n2026-11-20起；指定原宿／阿倍野門市至12/6，其他城市另期\n限購\n一般Open商品每人每天每款最多3件；以官方當日限制為準，不繞限購。\n核價日\n2026-11-20\n同"
+    },
+    {
+      "name": "Fan: inline official product image elements",
+      "pass": true,
+      "actual": 1
+    },
+    {
+      "name": "Official product image actual network load",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "name": "Fan purchase keeps selected day",
+      "pass": true,
+      "actual": "2026-11-21"
+    },
+    {
+      "name": "Anime route exposes actual place buttons",
+      "pass": true,
+      "actual": 3
+    },
+    {
+      "name": "Anime points carry selected date and source",
+      "pass": true,
+      "actual": [
+        {
+          "date": "2026-11-24",
+          "place": "jorinji-chichibu",
+          "source": "https://navi.city.chichibu.lg.jp/travel/ja/course/2018/11/925/"
+        },
+        {
+          "date": "2026-11-24",
+          "place": "chichibu-hotspot",
+          "source": "https://navi.city.chichibu.lg.jp/travel/ja/course/2018/11/925/"
+        },
+        {
+          "date": "2026-11-24",
+          "place": "chichibu-michinoeki",
+          "source": "https://navi.city.chichibu.lg.jp/travel/ja/course/2018/11/925/"
+        }
+      ]
+    },
+    {
+      "name": "Commercial prohibition does not add row",
+      "pass": true,
+      "actual": 1
+    },
+    {
+      "name": "Professional procurement keeps price/source snapshot",
+      "pass": true,
+      "actual": {
+        "id": "975d3271-41b6-42d0-a2a0-1b475a1b35b0",
+        "product": "sanx-mz13501",
+        "qty": 4,
+        "price": 3340,
+        "shipping": 630,
+        "fee": 0,
+        "status": "待核價",
+        "purpose": "personal",
+        "offer": "offer-mz13501-amiami-pending",
+        "buyers": 1,
+        "purchaseDate": "2026-11-22",
+        "quoteSnapshot": {
+          "offerId": "offer-mz13501-amiami-pending",
+          "retailer": "あみあみ",
+          "sourceURL": "https://www.amiami.jp/top/detail/detail?gcode=GOODS-04905825&page=top",
+          "checkedAt": "2026-11-20",
+          "unitPrice": 3340,
+          "taxIncluded": true,
+          "shipping": 630
+        },
+        "manualPrice": false,
+        "feesConfirmed": false
+      }
+    },
+    {
+      "name": "Cancelled row shows zero effective subtotal",
+      "pass": true,
+      "actual": "紀錄有效小計 ¥0"
+    },
+    {
+      "name": "Heritage deep read distinguishes buildings/tickets",
+      "pass": true,
+      "actual": "東大寺：國寶大佛殿、分堂拜觀與御朱印\n\n東大寺・金堂（大仏殿）\n\n參訪紀錄\n未標記\n想去\n已參訪\n已完成體驗\n加入每日行程\n歷史與現有建築\n\n奈良時代；創建金堂751年完成，大佛開眼752年\n\n金堂1180、1567兩度兵火焚毀；現大佛殿為江戶重建。文化廳年代欄1705指上棟，寺方1709指落慶，兩者不矛盾。\n\n指定對象\n\n東大寺金堂（大仏殿）｜國寶（建造物）｜1棟，附棟札1枚\n\n參觀重點\n從南大門步入，理解大佛殿仍保有巨大尺度但現正面較創建時縮短。\n國寶金堂寬57公尺、深50.5公尺、高47.5公尺；五間、裳階及粗大柱的結構值得近看。\n大佛殿、法華堂、戒壇堂、博物館各有獨立票區；只買大佛殿票不能逛完全部。\n分區門票與參訪安排\n開放\n大佛殿4–10月7:30–17:30、11–3月8:00–17:00；法華堂/戒壇堂8:30–16:00。博物館9:30起，4–10月17:30閉館（17:00末入）、11–3月17:00閉館（16:30末入）。\n票價\n各票區如下\n路線時間\n約2–3小時，為編輯建議；各堂受理時間不同，下午先安排16:00結束票區。\n各區成人\n¥800\n各區小學生\n¥400"
+    },
+    {
+      "name": "Heritage licensed photo expands with credit",
+      "pass": true,
+      "actual": "1280px image rendered"
+    },
+    {
+      "name": "Collector progress survives page changes",
+      "pass": true,
+      "actual": "visited"
+    },
+    {
+      "name": "Experience: exact eight winter sessions",
+      "pass": true,
+      "actual": 9
+    },
+    {
+      "name": "Experience: date/start/derived duration/party cost",
+      "pass": true,
+      "actual": {
+        "id": "e546927d-b22b-45d3-9b47-307bc39d7dc6",
+        "place": "culture-gion-corner",
+        "entityType": "place",
+        "title": "祇園角・傳統藝能入門",
+        "pref": "京都",
+        "query": "ギオンコーナー 日本伝統文化入門公演 京都市東山区祇園町南側570-2 祇園甲部歌舞練場小劇場",
+        "coords": [
+          35.00143776371507,
+          135.7749888849155
+        ],
+        "date": "2026-12-03",
+        "time": "19:00",
+        "minutes": 60,
+        "queueMinutes": 15,
+        "mealMinutes": null,
+        "pickupMinutes": null,
+        "transferMinutes": null,
+        "transferBasis": "未確認",
+        "status": "場次已選・待預約",
+        "sourceUrl": "https://www.ookinizaidan.com/gion_coner/payment/",
+        "checkedAt": "2026-11-20",
+        "confirmedTime": true,
+        "expenseJPY": 11000,
+        "durationBasis": "官方概述約 60 分，結束為推算",
+        "sessionId": "culture-gion-corner:2026-12-03:19:00:1",
+        "activityId": "culture-gion-corner",
+        "venue": "祇園角・傳統藝能入門",
+        "venueVerified": true,
+        "availability": "unknown",
+        "publicationStatus": "依現行規則，指定日期與餘額需再核",
+        "bookingDeadline": null,
+        "leadDays": null,
+        "queueBasis": "報到／排隊預留估算15分，依確認信修正",
+        "expenseBasis": "目前人數成人價；附加費另核"
+      }
+    },
+    {
+      "name": "Limited: Katakai planned 22:00 4-shaku visible",
+      "pass": true,
+      "actual": "片貝祭・四尺玉\n\n片貝まつり 浅原神社秋季例大祭奉納大煙火\n\n參訪紀錄\n未標記\n想去\n已參訪\n已完成體驗\n加入每日行程\n選日期與活動場次\n\n全部為日本時間。已公布時段不等於尚有名額；選定後會把日期、起訖、場地與來源一起帶入行程。\n\n參與日期\n已核場次\n請選擇已公布場次\n2027-09-10 19:30–22:20・片貝祭奉納大煙火2027\n2027-09-11 19:30–22:20・片貝祭奉納大煙火2027\n\n主辦現行概況19:30–22:20，兩晚四尺玉預定22:00；2027個別番付、售票及當日異動仍需核對。\n\n加入所選場次\n加入待確認事項\n入場\n待確認\n最後入場\n待確認\n售票／報名截止\n待確認\n名額\n未確認餘額\n查核\n2026-11-20\n官方時刻／預約來源\n\n2027/9/10–11 已公告 · 新潟小千谷\n\n四尺玉打揚時刻、觀覽席及交通細節待主辦方公告。\n\n地圖上看會場\n在 Google Maps 看會場\n加入收藏\n複製連結\n活動進出場\n\n以下為 2026 年歷屆動線。2027 年的站位、班次與票券待主辦方公布。\n\n進場\n散場\n從 JR 長岡站出發\n長岡站大手口\n越後交通往片貝\n五之町臨時巴士站\n淺原神社／觀覽區\n\n臨時站與道路管制請對照當年官方交通圖。\n\n2026 官方交通圖 PDF\n活動舊照 · 片貝祭花火（歷屆） · 放大\nKropsoq ( talk ) · CC BY 3.0 · 調整尺寸，頁面可能裁切顯示\n官方資訊\n主辦方｜2027 日期\n2026 主辦方交通與接駁\n奉納煙火介紹"
+    },
+    {
+      "name": "Food dinner budget excludes lunch prices",
+      "pass": true,
+      "actual": "東京 · 餐廳\n\n天丼てんや淺草店｜實惠天丼\n\n天丼・天婦羅・蕎麥麵 · 晚餐 · 一份主餐 ¥860 起"
+    },
+    {
+      "name": "Michelin: explicit menu and cancellation source",
+      "pass": true,
+      "actual": "天婦羅近藤｜銀座職人吧檯\n\nてんぷら近藤\n\n參訪紀錄\n未標記\n想去\n已參訪\n已完成體驗\n加入每日行程\n把餐點排入某一天\n菜單與時段\n請選餐點\n菫・午餐・已列費用¥13200／每人套餐\n椿・午餐・已列費用¥16500／每人套餐\n藤・晚餐・已列費用¥22000／每人套餐\n楓・晚餐・已列費用¥27500／每人套餐\n蓬・晚餐・已列費用¥33000／每人套餐\n加入所選餐點\n\n預約窗口、休業及菜單日期仍須核對；不會送出訂位。\n\n料理與評鑑\n菜系\n天婦羅・日本料理\n米其林\n2026 年 2 星\n星級查核\n2026-11-20\nMichelin 官方店頁\n菜單與總價條件\n菫\n\n¥13,200 · 午餐\n\n含稅；官網餐價未單列服務費；海外官方窗口另加15%預約結帳費\n\n菜單原頁\n椿\n\n¥16,500 · 午餐\n\n含稅；海外官方窗口另加15%\n\n菜單原頁\n藤\n\n¥22,000 · 晚餐\n\n含稅；海外官方窗口另加15%\n\n菜單原頁\n楓\n\n¥27,500 · 晚餐\n\n含稅；海外官方窗口另加15%\n\n菜單原頁\n蓬\n\n¥33,000 · 晚餐\n\n含稅；海外官方窗口另加15%\n\n菜單原頁\n預約與取消\n預約渠道\n餐廳官網明示的My Concierge Japan海外官方窗口\n開放預約\n公開表單未列固定放位日，待窗口回覆；提出申請不等於成立。\n取消規則\n正式確認後，預約日前3天日本時間15:00前可全額退費（匯差不補）；之後至當日取消不退款。遲到超過15分鐘視同未到且不退款。\n入店條件\n先確認座位再郵件通知付款；完成預付才成立。12歲以上且每人完整套餐；同鍋同器具，全部料理有蛋，過敏/忌口須預告。標價另+15%"
+    },
+    {
+      "name": "390px no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "width": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "Mobile range stays expanded",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "name": "No runtime exceptions",
+      "pass": true,
+      "actual": []
+    }
+  ],
+  "errors": []
+}

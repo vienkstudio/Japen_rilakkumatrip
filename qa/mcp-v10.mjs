@@ -1,0 +1,25 @@
+import {registerHooks} from 'node:module';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
+import {DatabaseSync} from 'node:sqlite';
+import assert from 'node:assert/strict';
+const repo='D:/Coding/日本旅遊/網站';
+const sqlite=new DatabaseSync(':memory:');sqlite.exec(readFileSync(repo+'/drizzle/0000_sticky_vivisector.sql','utf8'));
+const wrap=(sql,values=[])=>({bind(...v){return wrap(sql,v)},async all(){return {results:sqlite.prepare(sql).all(...values)}},async first(){return sqlite.prepare(sql).get(...values)||null},execute(){const r=sqlite.prepare(sql).run(...values);return {success:true,meta:{changes:Number(r.changes)}}},async run(){return this.execute()}});
+globalThis.__qaEnv={DB:{prepare:s=>wrap(s),batch:async commands=>commands.map(c=>c.execute())},ATLAS_EDITOR_EMAIL:'unit-owner@example.invalid'};
+registerHooks({resolve(specifier,context,next){if(specifier==='cloudflare:workers')return {url:'data:text/javascript,export const env=globalThis.__qaEnv',shortCircuit:true};if(specifier.startsWith('.')&&context.parentURL?.endsWith('.ts')&&!/\.[a-z]+$/.test(specifier))return next(specifier+'.ts',context);return next(specifier,context);}});
+const {POST}=await import(pathToFileURL(repo+'/app/mcp/route.ts').href);
+const {OFFER_SOURCES}=await import(pathToFileURL(repo+'/lib/verified-offers.ts').href);
+const cases=[];
+async function call(method,params={},identity=false){const headers={'content-type':'application/json'};if(identity){headers['oai-authenticated-user-id']='unit-owner';headers['oai-authenticated-user-email']='unit-owner@example.invalid';}return (await POST(new Request('https://unit.invalid/mcp',{method:'POST',headers,body:JSON.stringify({jsonrpc:'2.0',id:1,method,params})}))).json();}
+const discovery=await call('server/discover');assert.deepEqual(discovery.result.supportedVersions,['2026-07-28']);cases.push('MCP discovery');
+const listed=await call('tools/list');assert.equal(listed.result.tools.length,3);cases.push('Three declared tools');
+const [offerId,definition]=Object.entries(OFFER_SOURCES)[0];const args={offerId,sourceURL:definition.sourceURL,amountJPY:1234,taxIncluded:true,shippingJPY:null,condition:'new',availability:'unknown',observedAt:new Date().toISOString(),sourceNote:'UNIT TEST verified business operation, not production source observation.'};
+assert.equal((await call('tools/call',{name:'record_verified_offer',arguments:args})).result.isError,true);assert.equal(sqlite.prepare("SELECT count(*) n FROM source_snapshots").get().n,0);cases.push('Anonymous writer denied without writes');
+assert.equal((await call('tools/call',{name:'record_verified_offer',arguments:{...args,sourceURL:'https://untrusted.invalid'}},true)).result.isError,true);cases.push('Non-whitelist source denied');
+const saved=(await call('tools/call',{name:'record_verified_offer',arguments:args},true)).result;assert(!saved.isError);assert.equal(JSON.parse(saved.content[0].text).offer.purchaseReady,false);cases.push('Owner business write stays unavailable for purchase');
+await call('tools/call',{name:'record_verified_offer',arguments:args},true);assert.equal(sqlite.prepare('SELECT count(*) n FROM source_changes').get().n,1);cases.push('Same observation does not duplicate changes');
+await call('tools/call',{name:'record_verified_offer',arguments:{...args,amountJPY:null,availability:'fetch-failed',sourceNote:'UNIT TEST source failed, prior success must remain.'}},true);const previous=JSON.parse(sqlite.prepare('SELECT payload FROM source_snapshots').get().payload);assert.equal(previous.amountJPY,1234);assert(previous.lastError);cases.push('Failed fetch preserves last success');
+await call('tools/call',{name:'record_verified_offer',arguments:{...args,amountJPY:1500}},true);assert.equal(sqlite.prepare('SELECT count(*) n FROM source_changes').get().n,2);cases.push('Changed price logged once');
+const state=(await call('tools/call',{name:'official_source_status'})).result;assert.equal(JSON.parse(state.content[0].text).offers[0].amountJPY,1500);cases.push('Readback persists latest quote');
+const report={at:new Date().toISOString(),scope:'Isolated Node SQLite business/protocol test. Synthetic identities, not Cloudflare authentication or production authorization test.',passed:cases.length,cases};writeFileSync(repo+'/qa/mcp-business-v10.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));sqlite.close();

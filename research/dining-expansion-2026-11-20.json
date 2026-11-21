@@ -1,0 +1,2963 @@
+{
+  "schemaVersion": 2,
+  "checkedAt": "2026-11-20",
+  "timezone": "Asia/Tokyo",
+  "scope": "東京以外12家官方餐飲研究；只寫研究檔，不修改原網站/Git，不訂位、不付款、不下載照片。",
+  "coverage": {
+    "restaurants": 12,
+    "menuRows": 34,
+    "prefectures": [
+      "京都府",
+      "大阪府",
+      "新潟縣",
+      "埼玉縣",
+      "北海道"
+    ],
+    "michelinCurrentClaims": [
+      {
+        "id": "kyoto-kikunoi-honten",
+        "year": 2026,
+        "stars": 3
+      }
+    ],
+    "personaMapping": "使用personaTags；九角色實際多日起訖與餐期由主程式檢查，未宣稱任何未提供的九角色行程均可訂。"
+  },
+  "integrationPolicy": [
+    "availabilityRules weekday以JavaScript習慣0=週日、1=週一…6=週六；weekOfMonth意為第N個該週日。",
+    "關門/停餐/預約排除規則優先於一般供餐窗口；requires_confirmation或半月日期不得自動視為可用。",
+    "priceJPY的unit必須顯示；每盤、每組多人份、100g、單品都不能冒充完整每人餐費。",
+    "餐期只可使用menu.meal；未明午餐截止、晚餐未確認、budgetEligible:false者不得自動算作確定滿足預算。",
+    "服務/平台費未明示不是0；estimatedFoodTotalJPY只涵蓋已知餐食與明列服務費，不含未核飲料、交通或其他費用。",
+    "applicableDates未列生效日不代表永久有效；2026-11-20為查核日。旅行日期超出需重查；照片來源不等於授權。",
+    "coords=null者不製造精確位置；officialMapViewport是官方地圖視窗中心，可能偏離實際入口，禁止當作精確導航。",
+    "保留既有飯店餐廳與東京研究；本檔為追加，僅以穩定id合併，勿覆寫同品牌不同分店。"
+  ],
+  "restaurants": [
+    {
+      "id": "kyoto-kikunoi-honten",
+      "title": "菊乃井本店｜東山懷石",
+      "japanese": "菊乃井 本店",
+      "pref": "京都府",
+      "cuisine": [
+        "日本料理",
+        "懷石"
+      ],
+      "address": "京都市東山区下河原町459",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": 2026,
+        "stars": 3,
+        "status": "官方交叉核對",
+        "source": "https://guide.michelin.com/jp/en/kyoto-region/kyoto/restaurant/kikunoi-honten",
+        "starEvidence": "https://guide.michelin.com/jp/en/kyoto-region/restaurants/3-stars-michelin",
+        "yearEvidence": "https://kikunoi.jp/restaurant/",
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://kikunoi.jp/restaurant/",
+        "https://kikunoi.jp/reserve/",
+        "https://kikunoi.jp/ch/",
+        "https://guide.michelin.com/jp/en/kyoto-region/kyoto/restaurant/kikunoi-honten"
+      ],
+      "remaining": [
+        "取消條件、海外平台費及固定放位日未公開可核對。",
+        "入店時段不是閉店時間，未宣稱19:30閉店。",
+        "地圖座標僅官方嵌入地圖視窗中心，勿當作精確入口。"
+      ],
+      "description": "可與高台寺、八坂神社及東山傳統街區同日；午餐、晚餐不同價與入店時間，不把午懷石價格套用晚餐。",
+      "routePairs": [
+        {
+          "anchor": "高台寺、八坂神社、東山古街",
+          "basis": "餐廳官網明述高台寺與八坂神社周邊；路線時間待交通服務計算"
+        }
+      ],
+      "personaTags": [
+        "米其林日料",
+        "古蹟",
+        "傳統文化",
+        "紀念日"
+      ],
+      "menu": [
+        {
+          "name": "昼懐石入門",
+          "meal": [
+            "lunch"
+          ],
+          "timeWindow": "12:00–12:30入店",
+          "priceJPY": 16500,
+          "unit": "每人",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "另收",
+            "rate": 0.15,
+            "note": "官網15%服務費"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kikunoi.jp/restaurant/",
+          "estimatedFoodTotalJPY": 18975
+        },
+        {
+          "name": "夜懐石簡式",
+          "meal": [
+            "dinner"
+          ],
+          "timeWindow": "17:00–19:30入店",
+          "priceJPY": 22000,
+          "unit": "每人",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "另收",
+            "rate": 0.15,
+            "note": "官網15%服務費"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kikunoi.jp/restaurant/",
+          "estimatedFoodTotalJPY": 25300
+        },
+        {
+          "name": "夜懐石標準",
+          "meal": [
+            "dinner"
+          ],
+          "timeWindow": "17:00–19:30入店",
+          "priceJPY": 33000,
+          "unit": "每人",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "另收",
+            "rate": 0.15,
+            "note": "官網15%服務費"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kikunoi.jp/restaurant/",
+          "estimatedFoodTotalJPY": 37950
+        }
+      ],
+      "booking": {
+        "url": "https://kikunoi.jp/reserve/",
+        "channel": "官方電話；海外客由官方英/中文頁線上入口",
+        "releaseWindow": "電話10:00–22:00；未公開固定放位日或最遠接受日",
+        "cancellation": "本店公開日文頁未列取消百分比，須詢店並以最終確認為準；不可套用無碍山房的取消規則",
+        "conditions": "075-561-0015；海外頁仍展示2024星級，當期星級採日文2026頁及Michelin。海外線上外連在文字工具未解析，從官方語言頁進入。",
+        "availability": {
+          "lookupCapability": "電話需洽店；官方海外頁線上入口可見但本次無法解析，不宣稱即時可查或有位",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "lunch": {
+          "entry": "12:00–12:30",
+          "lastOrder": null,
+          "close": null
+        },
+        "dinner": {
+          "entry": "17:00–19:30",
+          "lastOrder": null,
+          "close": null
+        },
+        "break": "午晚間不應視為連續供餐",
+        "closed": "第1、3週二及年末年始，可能調整",
+        "source": "https://kikunoi.jp/restaurant/"
+      },
+      "access": {
+        "stations": [],
+        "detail": "高台寺、八坂神社附近；步行出口尚待驗證"
+      },
+      "officialMapViewport": [
+        35.0011678058,
+        135.7795671096
+      ],
+      "images": [
+        {
+          "page": "https://kikunoi.jp/restaurant/",
+          "url": null,
+          "subject": "本店官方餐點與庭園相簿",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "kikunoi-first-third-tue",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            2
+          ],
+          "weekOfMonth": [
+            1,
+            3
+          ],
+          "exclusions": "月によって休業日変更あり；最新行事曆優先",
+          "source": "https://kikunoi.jp/restaurant/"
+        },
+        {
+          "id": "kikunoi-entry",
+          "effect": "entry_window",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "12:00",
+            "end": "12:30"
+          },
+          "source": "https://kikunoi.jp/restaurant/"
+        },
+        {
+          "id": "kikunoi-dinner-entry",
+          "effect": "entry_window",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "17:00",
+            "end": "19:30"
+          },
+          "source": "https://kikunoi.jp/restaurant/"
+        },
+        {
+          "id": "kikunoi-yearend",
+          "effect": "requires_confirmation",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": null,
+          "namedPeriod": "年末年始休業；確切日期未公開",
+          "source": "https://kikunoi.jp/restaurant/"
+        }
+      ]
+    },
+    {
+      "id": "kyoto-yudofu-sagano",
+      "title": "湯豆腐嵯峨野｜嵐山庭園豆腐餐",
+      "japanese": "湯豆腐 嵯峨野",
+      "pref": "京都府",
+      "cuisine": [
+        "豆腐料理",
+        "京料理"
+      ],
+      "address": "京都府京都市右京区嵯峨天竜寺芒ノ馬場町45",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://kyoto-sagano.jp/",
+        "https://kyoto-sagano.jp/cuisine",
+        "https://kyoto-sagano.jp/access"
+      ],
+      "remaining": [
+        "不供一般晚餐；不可排18:00晚餐。",
+        "官網夏季鵜飼套餐頁有跨年度日期/曜日資訊，未納入可訂菜單。",
+        "服務費及線上平台費未明示，需結帳前確認。"
+      ],
+      "description": "嵐山、天龍寺與拉拉熊購物區的午餐候選；以湯豆腐及湯葉、京野菜搭配庭園空間。紅葉旺季事前預約停收，必須留候位彈性。",
+      "routePairs": [
+        {
+          "anchor": "嵐山、天龍寺、渡月橋周邊拉拉熊行程",
+          "basis": "同區規劃配對，未承諾步行時間"
+        }
+      ],
+      "personaTags": [
+        "拉拉熊嵐山",
+        "古蹟",
+        "傳統文化",
+        "家庭"
+      ],
+      "menu": [
+        {
+          "name": "湯豆腐定食",
+          "meal": [
+            "lunch"
+          ],
+          "timeWindow": "11:00–16:30最後點餐",
+          "priceJPY": 4400,
+          "unit": "每人一份",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kyoto-sagano.jp/cuisine"
+        },
+        {
+          "name": "嵯峨野御膳",
+          "meal": [
+            "lunch"
+          ],
+          "timeWindow": "11:00–16:30；原則須預約",
+          "priceJPY": 6600,
+          "unit": "每人一份",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kyoto-sagano.jp/cuisine"
+        }
+      ],
+      "booking": {
+        "url": "https://kyoto-sagano.jp/",
+        "channel": "官方電話/官網所示網路入口",
+        "releaseWindow": "一般最晚2日前；11月中旬–12月初電話與網路均不受事前預約，現場依空位",
+        "cancellation": "2日前無取消費；前日及當日有通知50%；當日無通知100%；退款手續費客負",
+        "conditions": "電話075-871-6946，營業中受理變更。查核日屬停止事前預約時期；不推定2027相同精確日期。",
+        "availability": {
+          "lookupCapability": "本次未查現場排隊；旺季不可線上預約",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "open": "11:00",
+        "close": "17:30",
+        "lastOrder": "16:30",
+        "lastEntry": null,
+        "break": null,
+        "closed": "不定休；豆腐售完提早結束，季節可能調整",
+        "source": "https://kyoto-sagano.jp/access"
+      },
+      "access": {
+        "stations": [
+          "JR嵯峨嵐山"
+        ],
+        "detail": "官網JR嵯峨嵐山步行10分鐘；嵐山天龍寺巴士站步行5分鐘",
+        "source": "https://kyoto-sagano.jp/access"
+      },
+      "officialMapViewport": [
+        35.0144375,
+        135.6744928
+      ],
+      "images": [
+        {
+          "page": "https://kyoto-sagano.jp/cuisine",
+          "url": "https://kyoto-sagano.jp/wp/img/2023/05/yudofu_teishoku.jpg",
+          "subject": "官方湯豆腐定食照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "tabelog": "https://tabelog.com/kyoto/A2601/A260403/26000814/",
+      "availabilityRules": [
+        {
+          "id": "sagano-no-dinner",
+          "effect": "not_offered",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "17:30",
+            "end": "24:00"
+          },
+          "note": "一般營業僅至17:30，不能排一般18點晚餐",
+          "source": "https://kyoto-sagano.jp/access"
+        },
+        {
+          "id": "sagano-last-order",
+          "effect": "last_order",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "end": "16:30"
+          },
+          "source": "https://kyoto-sagano.jp/access"
+        },
+        {
+          "id": "sagano-autumn-booking",
+          "effect": "advance_booking_disabled",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": {
+            "start": null,
+            "end": null,
+            "recurring": true,
+            "startMonth": 11,
+            "startMonthPart": "mid",
+            "endMonth": 12,
+            "endMonthPart": "early",
+            "precision": "月上中下旬；不可自行轉成精確日"
+          },
+          "namedPeriod": "11月中旬至12月初",
+          "status": "manual_date_review_required",
+          "source": "https://kyoto-sagano.jp/"
+        },
+        {
+          "id": "sagano-soldout",
+          "effect": "may_close_early",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "trigger": "tofu_sold_out",
+          "source": "https://kyoto-sagano.jp/access"
+        }
+      ]
+    },
+    {
+      "id": "osaka-ganko-dotonbori",
+      "title": "がんこ道頓堀店｜壽司與天婦羅",
+      "japanese": "がんこ 寿司・道頓堀店",
+      "pref": "大阪府",
+      "cuisine": [
+        "壽司",
+        "天婦羅",
+        "和食"
+      ],
+      "address": "大阪府大阪市中央区道頓堀1-8-24",
+      "coords": [
+        34.6685738,
+        135.501952
+      ],
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://www.gankofood.co.jp/shop/detail/su-dotonbori",
+        "https://www.gankofood.co.jp/uploads/pdf/20261101_%E9%81%93%E9%A0%93%E5%A0%80%E3%83%8F%E3%82%9A%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf?1795165756=",
+        "https://booking.ebica.jp/webrsv/search/e014099201/31749?isfixshop=true"
+      ],
+      "remaining": [
+        "午間套餐截止時間、晚間套餐最晚開席、一般服務費未明示。",
+        "年末年始10%必須由旅行日期觸發，不能當全年費用。"
+      ],
+      "description": "道頓堀同區的多人和食選項，151席但仍需按人數訂位；午間壽司套餐及晚間季節套餐分開比較。",
+      "routePairs": [
+        {
+          "anchor": "道頓堀、難波拉拉熊商店與大阪市區行程",
+          "basis": "同區規劃配對；非已算交通路線"
+        }
+      ],
+      "personaTags": [
+        "大眾壽司",
+        "家庭",
+        "多人同行"
+      ],
+      "coordinateSource": "官方店頁GoogleMaps q參數",
+      "menu": [
+        {
+          "name": "寿司コース梅：壽司8貫、天婦羅、烏龍麵",
+          "meal": [
+            "lunch"
+          ],
+          "timeWindow": "午餐限定；午餐結束時點未明示，預約時確認",
+          "priceJPY": 2800,
+          "unit": "每人",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": "2026-11-01",
+            "validTo": null,
+            "note": "官網現行道頓堀宴會PDF，午餐限定，結束日未列"
+          },
+          "source": "https://www.gankofood.co.jp/uploads/pdf/20261101_%E9%81%93%E9%A0%93%E5%A0%80%E3%83%8F%E3%82%9A%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf?1795165756="
+        },
+        {
+          "name": "季節の個食コース あやめ",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "店營業12:00–22:30；L.O.22:00，套餐最晚開始待店確認",
+          "priceJPY": 4000,
+          "unit": "每人",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": "2026-11-01",
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://www.gankofood.co.jp/uploads/pdf/20261101_%E9%81%93%E9%A0%93%E5%A0%80%E3%83%8F%E3%82%9A%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf?1795165756=",
+          "notes": "不含加購飲料；宴會菜單需預約"
+        }
+      ],
+      "booking": {
+        "url": "https://booking.ebica.jp/webrsv/search/e014099201/31749?isfixshop=true",
+        "channel": "官網連出ebica",
+        "releaseWindow": "先指定日期/時間/人數才列可預約方案；固定放位日未列",
+        "cancellation": "公開初始表單未列取消費；需依所選方案最終條款或洽店",
+        "conditions": "1人或13人以上須洽店。2026-12-28至2027-01-03餐費另10%，原價已含服務費料理除外。",
+        "availability": {
+          "lookupCapability": "可進入條件式訂位頁，未輸入特定旅行日期/人數查詢，未確認空席",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "open": "12:00",
+        "close": "22:30",
+        "lastOrder": "22:00",
+        "lastEntry": null,
+        "break": "公開頁未列",
+        "closed": "公開頁未列固定公休",
+        "source": "https://www.gankofood.co.jp/shop/detail/su-dotonbori"
+      },
+      "access": {
+        "stations": [
+          "心齋橋（官網標示）"
+        ],
+        "detail": "官網地鐵最近站標心齋橋，未提供分鐘；地址位道頓堀，應由路線服務比較難波等站，勿直接套最短路線。"
+      },
+      "images": [
+        {
+          "page": "https://www.gankofood.co.jp/shop/detail/su-dotonbori",
+          "url": null,
+          "subject": "官方道頓堀分店餐點/室內相簿",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "ganko-hours",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "12:00",
+            "end": "22:30",
+            "lastOrder": "22:00"
+          },
+          "source": "https://www.gankofood.co.jp/shop/detail/su-dotonbori"
+        },
+        {
+          "id": "ganko-newyear",
+          "effect": "surcharge",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": {
+            "start": "2026-12-28",
+            "end": "2027-01-03",
+            "inclusive": true
+          },
+          "rate": 0.1,
+          "exclusions": "價格已含服務費的料理不再加此項",
+          "source": "https://www.gankofood.co.jp/shop/detail/su-dotonbori"
+        },
+        {
+          "id": "ganko-lunch-only",
+          "effect": "lunch_menu_only",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "menuNames": [
+            "寿司コース梅：壽司8貫、天婦羅、烏龍麵"
+          ],
+          "timeWindow": null,
+          "note": "精確午餐截止未公布，晚餐不得引用2800日圓午套餐",
+          "source": "https://www.gankofood.co.jp/uploads/pdf/20261101_%E9%81%93%E9%A0%93%E5%A0%80%E3%83%8F%E3%82%9A%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf?1795165756="
+        }
+      ]
+    },
+    {
+      "id": "osaka-takohachi-dotonbori",
+      "title": "たこ八道頓堀總本店｜章魚燒與大阪燒",
+      "japanese": "たこ八 道頓堀総本店",
+      "pref": "大阪府",
+      "cuisine": [
+        "章魚燒",
+        "大阪燒",
+        "明石燒"
+      ],
+      "address": "大阪市中央区道頓堀1-5-10",
+      "coords": [
+        34.6688517,
+        135.5033436
+      ],
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://www.takohachi.jp/shop/doutonbori/",
+        "https://www.takohachi.jp/wp-content/uploads/2026/09/2d61f5d40e4a8919d0e2835b6e812967.pdf",
+        "https://www.takohachi.jp/contact/"
+      ],
+      "remaining": [
+        "PDF在2026/09目錄但沒有明示生效/終止日，不把目錄日期當適用日期。",
+        "服務費/最低消費/平台費未公開確認；每盤不是整餐預算。"
+      ],
+      "description": "可從單盤章魚燒到2人分享套餐；1樓與2/3樓供餐及最後點餐時間不同，鐵板單品限2/3樓。",
+      "routePairs": [
+        {
+          "anchor": "道頓堀、難波、法善寺周邊",
+          "basis": "同區規劃配對；未查古蹟當日開放時間"
+        }
+      ],
+      "personaTags": [
+        "大阪地方料理",
+        "平價",
+        "家庭",
+        "小食"
+      ],
+      "coordinateSource": "官方嵌入地圖顯示中心；非入口驗證",
+      "menu": [
+        {
+          "name": "たこ焼6個",
+          "meal": [
+            "lunch",
+            "dinner",
+            "snack"
+          ],
+          "timeWindow": "1F10:00–22:00 L.O.；2/3F11:00–21:30 L.O.",
+          "priceJPY": 650,
+          "unit": "每盤6個；非整餐每人價",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://www.takohachi.jp/wp-content/uploads/2026/09/2d61f5d40e4a8919d0e2835b6e812967.pdf"
+        },
+        {
+          "name": "豚玉大阪燒",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "樓層及可點餐時段向店確認",
+          "priceJPY": 1200,
+          "unit": "每份",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://www.takohachi.jp/wp-content/uploads/2026/09/2d61f5d40e4a8919d0e2835b6e812967.pdf"
+        },
+        {
+          "name": "選べる粉もんセット",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "2/3F11:00–21:30 L.O.；樓層/適用時段待確認",
+          "priceJPY": 3500,
+          "unit": "每組2人份，非每人3500",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://www.takohachi.jp/wp-content/uploads/2026/09/2d61f5d40e4a8919d0e2835b6e812967.pdf",
+          "notes": "章魚燒/明石燒擇一、大阪燒擇一及沙拉；均分1750僅計算值，並非獨立單人套餐"
+        }
+      ],
+      "booking": {
+        "url": "https://www.takohachi.jp/contact/",
+        "channel": "官方電話/詢問頁",
+        "releaseWindow": "未公開固定放位；06-6211-4684詢問內用/多人安排",
+        "cancellation": "公開分店/菜單/聯絡頁未列取消費，須洽店",
+        "conditions": "未承諾可預約或指定樓層；不可用外帶排隊資訊作內用空席。",
+        "availability": {
+          "lookupCapability": "官網未提供已驗證即時座位頁，本次未查現場候位",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "floor1": {
+          "open": "10:00",
+          "close": "22:30",
+          "lastOrder": "22:00"
+        },
+        "floor2_3": {
+          "open": "11:00",
+          "close": "22:30",
+          "lastOrder": "21:30"
+        },
+        "lastEntry": null,
+        "break": "公開頁未列",
+        "closed": "1月1日",
+        "source": "https://www.takohachi.jp/shop/doutonbori/"
+      },
+      "access": {
+        "stations": [
+          "難波"
+        ],
+        "detail": "官網各線難波14號出口步行5分鐘",
+        "source": "https://www.takohachi.jp/shop/doutonbori/"
+      },
+      "images": [
+        {
+          "page": "https://www.takohachi.jp/shop/doutonbori/",
+          "url": null,
+          "subject": "官方章魚燒、明石燒及店內照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        },
+        {
+          "page": "https://www.takohachi.jp/wp-content/uploads/2026/09/2d61f5d40e4a8919d0e2835b6e812967.pdf",
+          "url": null,
+          "subject": "官方現行菜單的商品照片（圖片僅示意）",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "takohachi-jan1",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner",
+            "snack"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": {
+            "recurring": true,
+            "startMonthDay": "01-01",
+            "endMonthDay": "01-01"
+          },
+          "source": "https://www.takohachi.jp/shop/doutonbori/"
+        },
+        {
+          "id": "takohachi-floor1",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner",
+            "snack"
+          ],
+          "timezone": "Asia/Tokyo",
+          "floor": "1F",
+          "timeWindow": {
+            "start": "10:00",
+            "end": "22:30",
+            "lastOrder": "22:00"
+          },
+          "source": "https://www.takohachi.jp/shop/doutonbori/"
+        },
+        {
+          "id": "takohachi-floor23",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "floor": "2F/3F",
+          "timeWindow": {
+            "start": "11:00",
+            "end": "22:30",
+            "lastOrder": "21:30"
+          },
+          "source": "https://www.takohachi.jp/shop/doutonbori/"
+        }
+      ]
+    },
+    {
+      "id": "niigata-suzakaya-ekimae",
+      "title": "須坂屋新潟站前店｜へぎそば與鄉土料理",
+      "japanese": "須坂屋そば 新潟駅前店",
+      "pref": "新潟縣",
+      "cuisine": [
+        "へぎそば",
+        "鄉土料理",
+        "天婦羅"
+      ],
+      "address": "新潟県新潟市中央区弁天1-4-29 IMAビル1F～3F",
+      "coords": [
+        37.9142495,
+        139.0592183
+      ],
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://suzakaya-ekimae.owst.jp/",
+        "https://suzakaya-ekimae.owst.jp/foods",
+        "https://suzakayasobaekimae.com/"
+      ],
+      "remaining": [
+        "取消文字衝突待店方澄清。",
+        "花火夜不能假定常態營業與訂位可用。",
+        "官方首頁與其他指南曾有營業差異，採餐廳現行兩官網一致的翌0點。"
+      ],
+      "description": "新潟站前轉車或花火延伸住宿的晚餐備選；へぎそば小份為1.5人份，不能誤當一人套餐或把小份價平均算保證飽食。",
+      "routePairs": [
+        {
+          "anchor": "新潟站、長岡/片貝花火往返的新潟住宿",
+          "basis": "行程用途推論；與長岡/小千谷並非步行鄰近，需另計鐵路末班與擁擠"
+        }
+      ],
+      "personaTags": [
+        "花火",
+        "地方料理",
+        "蕎麥麵",
+        "晚餐"
+      ],
+      "coordinateSource": "官方OWST地圖q參數",
+      "menu": [
+        {
+          "name": "へぎそば小",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "11:00–23:30 L.O.",
+          "priceJPY": 1100,
+          "unit": "每器1.5人份",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "另有お通し",
+            "amountJPY": 170,
+            "note": "官方首頁列170含稅；觸發條件待詢，不自動假定所有純蕎麥內用皆加"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://suzakaya-ekimae.owst.jp/foods"
+        },
+        {
+          "name": "へぎそば中",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "11:00–23:30 L.O.",
+          "priceJPY": 2300,
+          "unit": "每器2–3人份",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "お通し條件待確認",
+            "amountJPY": 170
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://suzakaya-ekimae.owst.jp/foods"
+        },
+        {
+          "name": "のっぺ",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "店營業時段，當日供應待確認",
+          "priceJPY": 650,
+          "unit": "每份單品；非完整一餐",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://suzakaya-ekimae.owst.jp/"
+        }
+      ],
+      "booking": {
+        "url": "https://www.hotpepper.jp/strJ000331268/yoyaku/hpds/?ROUTE_KBN=20",
+        "channel": "官網OWST連HotPepper",
+        "releaseWindow": "指定日期/人數/時間；固定放位日未公開",
+        "cancellation": "官方首頁同時寫『當日18點後套餐50%』及『當日100%』，互相衝突；不得宣稱統一費率，預約前詢店書面確認",
+        "conditions": "電話025-241-7705；需保留訂位方案當次條款。",
+        "availability": {
+          "lookupCapability": "可進入條件式訂位頁，未輸入特定旅行日期/人數查詢，未確認空席",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "open": "11:00",
+        "close": "翌00:00",
+        "lastOrder": "23:30（料理/飲料）",
+        "lastEntry": null,
+        "break": "官方未列中休",
+        "closed": "1月1、2日",
+        "source": "https://suzakayasobaekimae.com/"
+      },
+      "access": {
+        "stations": [
+          "新潟"
+        ],
+        "detail": "官網JR新潟萬代口步行4分鐘",
+        "source": "https://suzakaya-ekimae.owst.jp/"
+      },
+      "images": [
+        {
+          "page": "https://suzakaya-ekimae.owst.jp/",
+          "url": "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/e120ve7x/11590118/umgh_w1140h600.jpg",
+          "subject": "官方へぎそば照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "tabelog": "https://tabelog.com/niigata/A1501/A150101/15000031/",
+      "availabilityRules": [
+        {
+          "id": "suzakaya-newyear",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": {
+            "recurring": true,
+            "startMonthDay": "01-01",
+            "endMonthDay": "01-02"
+          },
+          "source": "https://suzakaya-ekimae.owst.jp/"
+        },
+        {
+          "id": "suzakaya-hours",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "11:00",
+            "end": "00:00",
+            "endDayOffset": 1,
+            "lastOrder": "23:30"
+          },
+          "source": "https://suzakaya-ekimae.owst.jp/"
+        },
+        {
+          "id": "suzakaya-cancel-conflict",
+          "effect": "requires_confirmation",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "trigger": "before_booking",
+          "note": "同官方頁同時寫50%及100%，不可自動選較低比例",
+          "source": "https://suzakaya-ekimae.owst.jp/"
+        }
+      ]
+    },
+    {
+      "id": "niigata-nagaokakojimaya-tonomachi",
+      "title": "長岡小嶋屋殿町本店｜花火前地方蕎麥",
+      "japanese": "長岡小嶋屋 殿町本店",
+      "pref": "新潟縣",
+      "cuisine": [
+        "へぎそば",
+        "醬汁豬排丼",
+        "天丼"
+      ],
+      "address": "新潟県長岡市殿町2-2-9",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://www.nagaokakojimaya.com/access.html",
+        "https://www.nagaokakojimaya.com/menu.html",
+        "https://www.nagaokakojimaya.com/menu/2026/2609-hontenmenu-food.pdf",
+        "https://nagaokakojimaya.owst.jp/foods"
+      ],
+      "remaining": [
+        "OWST公開價尚未與2026年9月官方PDF逐項視覺比對；出發前重查。",
+        "黃金週及長岡祭可能停供部分菜單，不把上述常態價套花火日。",
+        "地圖僅視窗中心，精確入口需另定位。"
+      ],
+      "description": "長岡站大手口步行範圍，適合花火日前提早午餐；長岡祭期間可能停供部分常態菜單，必須用活動日特別供餐重查。",
+      "routePairs": [
+        {
+          "anchor": "長岡站、長岡花火日；片貝四尺玉行程的長岡住宿",
+          "basis": "站旁餐廳；前往花火會場/片貝須另計接駁，不稱會場旁餐廳"
+        }
+      ],
+      "personaTags": [
+        "四尺玉旅行",
+        "花火",
+        "地方料理",
+        "平價選擇"
+      ],
+      "officialMapViewport": [
+        37.4456972388,
+        138.8476866158
+      ],
+      "menu": [
+        {
+          "name": "へぎそば",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "11:00–21:00 L.O.",
+          "priceJPY": 1078,
+          "unit": "每人一份",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://nagaokakojimaya.owst.jp/foods"
+        },
+        {
+          "name": "へぎそば與タレかつ丼セット",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "11:00–21:00 L.O.",
+          "priceJPY": 2145,
+          "unit": "每人套餐",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://nagaokakojimaya.owst.jp/foods"
+        },
+        {
+          "name": "天へぎ",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "11:00–21:00 L.O.",
+          "priceJPY": 2486,
+          "unit": "每人套餐",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://nagaokakojimaya.owst.jp/foods"
+        },
+        {
+          "name": "天へぎ御膳",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "指定預約時段；套餐最晚開始需詢",
+          "priceJPY": 3388,
+          "unit": "每人套餐",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://nagaokakojimaya.owst.jp/foods",
+          "notes": "最晚前日預約；當日取消/減人有費，金額待確認"
+        }
+      ],
+      "booking": {
+        "url": "https://www.nagaokakojimaya.com/access.html",
+        "channel": "官方電話0120-005-548；OWST/HotPepper餐廳頁可作輔助",
+        "releaseWindow": "官網未公開固定放位日；御膳最晚前日",
+        "cancellation": "御膳當日取消/減人收費，但公開菜單未列百分比或金額；週三休息時變更請於週二聯繫",
+        "conditions": "官網明示不接受AutoReserve代理訂位，須直接電話確認。",
+        "availability": {
+          "lookupCapability": "官網本店以電話確認；HotPepper連結抓取未成功，不作即時可查保證",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "open": "11:00",
+        "close": "22:00",
+        "lastOrder": "21:00",
+        "lastEntry": null,
+        "break": "官網未列中休",
+        "closed": "週三（國定假日除外），另可能臨休",
+        "source": "https://www.nagaokakojimaya.com/access.html"
+      },
+      "access": {
+        "stations": [
+          "長岡"
+        ],
+        "detail": "官網長岡大手口步行6–7分鐘",
+        "source": "https://www.nagaokakojimaya.com/access.html"
+      },
+      "images": [
+        {
+          "page": "https://www.nagaokakojimaya.com/menu.html",
+          "url": null,
+          "subject": "官方2026年9月本店菜單與餐點照",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "tabelog": "https://tabelog.com/niigata/A1502/A150201/15000049/",
+      "availabilityRules": [
+        {
+          "id": "nagaoka-wednesday",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            3
+          ],
+          "exclusions": "國定假日除外；需日本國定假日曆",
+          "source": "https://www.nagaokakojimaya.com/access.html"
+        },
+        {
+          "id": "nagaoka-hours",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "11:00",
+            "end": "22:00",
+            "lastOrder": "21:00"
+          },
+          "source": "https://www.nagaokakojimaya.com/access.html"
+        },
+        {
+          "id": "nagaoka-festival-menu",
+          "effect": "menu_may_be_suspended",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": null,
+          "namedPeriod": [
+            "黃金週",
+            "長岡まつり"
+          ],
+          "status": "event_date_and_special_menu_required",
+          "source": "https://www.nagaokakojimaya.com/menu.html"
+        },
+        {
+          "id": "nagaoka-gozen-booking",
+          "effect": "advance_booking_required",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "menuNames": [
+            "天へぎ御膳"
+          ],
+          "leadTime": {
+            "days": 1,
+            "cutoffTime": null
+          },
+          "source": "https://nagaokakojimaya.owst.jp/foods"
+        }
+      ]
+    },
+    {
+      "id": "niigata-benkei-pierbandai",
+      "title": "弁慶ピア萬代本館｜佐渡直送迴轉壽司",
+      "japanese": "佐渡 廻転寿司 弁慶 ピア万代店",
+      "pref": "新潟縣",
+      "cuisine": [
+        "迴轉壽司",
+        "佐渡海鮮"
+      ],
+      "address": "新潟県新潟市中央区万代島2-4 ピアbandai内",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://sado-benkei.com/pier-bandai/"
+      ],
+      "remaining": [
+        "本館每盤價為官方參考價，季節魚種與供應不保證。",
+        "別館15:00–17:00不定期中休和週二休，不能套本館。",
+        "官方連出的Matterport導覽抓取404，暫不可作可用嵌入。"
+      ],
+      "description": "佐渡海鮮與市場採買可同區串連；本館迴轉壽司及2-9別館立食店是不同店面、休息日，資料嚴格分開。",
+      "routePairs": [
+        {
+          "anchor": "ピアBandai市場、萬代島區域",
+          "basis": "餐廳在市場內；往港口與市中心交通另查"
+        }
+      ],
+      "personaTags": [
+        "大眾壽司",
+        "地方海鮮",
+        "採買"
+      ],
+      "officialMapViewport": [
+        37.92318,
+        139.06092
+      ],
+      "menu": [
+        {
+          "name": "白盤",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "10:30–21:00 L.O.",
+          "priceJPY": 176,
+          "unit": "每盤，依盤色選品",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://sado-benkei.com/pier-bandai/",
+          "notes": "官網標『參考價』；不是每人餐費"
+        },
+        {
+          "name": "青盤",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "10:30–21:00 L.O.",
+          "priceJPY": 253,
+          "unit": "每盤",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://sado-benkei.com/pier-bandai/"
+        },
+        {
+          "name": "金盤",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "10:30–21:00 L.O.",
+          "priceJPY": 528,
+          "unit": "每盤",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://sado-benkei.com/pier-bandai/"
+        }
+      ],
+      "booking": {
+        "url": "https://sado-benkei.com/pier-bandai/",
+        "channel": "官方本館電話025-255-6000",
+        "releaseWindow": "未公開固定放位；電話洽店",
+        "cancellation": "官方店頁未列內用取消費",
+        "conditions": "外帶TakeMe是商品下單，不是內用座位；本研究未下單。",
+        "availability": {
+          "lookupCapability": "本館未找到官網即時內用空席頁；未查現場排隊",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "open": "10:30",
+        "close": "21:30",
+        "lastOrder": "21:00",
+        "lastEntry": null,
+        "break": "本館未列中休",
+        "closed": "週三",
+        "source": "https://sado-benkei.com/pier-bandai/"
+      },
+      "access": {
+        "stations": [],
+        "detail": "ピアBandai內；鐵路/巴士站與距離待交通官方確認"
+      },
+      "images": [
+        {
+          "page": "https://sado-benkei.com/pier-bandai/",
+          "url": null,
+          "subject": "官方本館壽司/店面照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "benkei-wednesday",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            3
+          ],
+          "source": "https://sado-benkei.com/pier-bandai/"
+        },
+        {
+          "id": "benkei-hours",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "10:30",
+            "end": "21:30",
+            "lastOrder": "21:00"
+          },
+          "source": "https://sado-benkei.com/pier-bandai/"
+        },
+        {
+          "id": "benkei-branch-scope",
+          "effect": "branch_scope",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "branch": "2-4本館のみ",
+          "exclusions": "不可套2-9別館的週二休、15–17點休息、別館套餐",
+          "source": "https://sado-benkei.com/pier-bandai/"
+        }
+      ]
+    },
+    {
+      "id": "saitama-kawagoe-ichinoya",
+      "title": "川越いちのや本店｜老街鰻魚",
+      "japanese": "川越 いちのや 本店",
+      "pref": "埼玉縣",
+      "cuisine": [
+        "鰻魚",
+        "日本料理"
+      ],
+      "address": "埼玉県川越市松江町1-18-10",
+      "coords": [
+        35.9192837938,
+        139.4854956865
+      ],
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://kawagoeichinoya.owst.jp/",
+        "https://www.hotpepper.jp/strJ003599291/yoyaku/hpds/?ROUTE_KBN=20"
+      ],
+      "remaining": [
+        "席費在首頁與費用備註敘述範圍不同，現場未訂位是否收取待確認。",
+        "未見公開取消比例，不可標免費取消。"
+      ],
+      "description": "與川越藏造老街、喜多院等文化行程搭配；週末假日預約限套餐，不能拿單點鰻重價格宣稱可訂座套餐。",
+      "routePairs": [
+        {
+          "anchor": "川越藏造老街、喜多院、本川越",
+          "basis": "川越同區規劃配對；景點間時間待算"
+        }
+      ],
+      "personaTags": [
+        "古蹟",
+        "傳統文化",
+        "地方料理"
+      ],
+      "coordinateSource": "餐廳官方OWST地圖q參數",
+      "menu": [
+        {
+          "name": "特製うな重（菊）",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "週二–五11:00–14:50/16:30–20:20；週末假日11:00–20:50 L.O.",
+          "priceJPY": 4300,
+          "unit": "每人一重，附肝吸/醃菜",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "另有席費",
+            "rate": 0.1,
+            "note": "官方列訂位餐費另10%，費用備註亦泛稱餐費一成；現場未預約是否收取待確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kawagoeichinoya.owst.jp/"
+        },
+        {
+          "name": "ひつまぶし",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "同店營業供餐時段，售完/臨時中休可能",
+          "priceJPY": 3980,
+          "unit": "每人一份",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "席費條件待確認",
+            "rate": 0.1
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kawagoeichinoya.owst.jp/"
+        },
+        {
+          "name": "かばやきコース8品",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "預約時段與最晚開席需詢店",
+          "priceJPY": 8000,
+          "unit": "每人；2人起",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "訂位另收",
+            "rate": 0.1,
+            "note": "預約食費另1成席料"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://kawagoeichinoya.owst.jp/",
+          "estimatedFoodTotalJPY": 8800
+        }
+      ],
+      "booking": {
+        "url": "https://www.hotpepper.jp/strJ003599291/yoyaku/hpds/?ROUTE_KBN=20",
+        "channel": "官方OWST連HotPepper；電話049-222-0354",
+        "releaseWindow": "依指定日期人數，固定放位未明示",
+        "cancellation": "官方公開首頁未列取消費率，必須查看預約方案或洽店",
+        "conditions": "週末/假日限套餐可預約；全預約另1成席費，不能以單點3980/4300當作週末訂位價。",
+        "availability": {
+          "lookupCapability": "可進入條件式訂位頁，未輸入特定旅行日期/人數查詢，未確認空席",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "weekdayTueFri": {
+          "lunch": "11:00–15:00",
+          "dinner": "16:30–20:30",
+          "lastOrder": "各閉店前10分鐘"
+        },
+        "weekendHoliday": {
+          "open": "11:00",
+          "close": "21:00",
+          "lastOrder": "20:50"
+        },
+        "lastEntry": null,
+        "break": "週二–五15:00–16:30，另可能臨時中休",
+        "closed": "週一；週一為假日時改週二",
+        "source": "https://kawagoeichinoya.owst.jp/"
+      },
+      "access": {
+        "stations": [
+          "本川越"
+        ],
+        "detail": "官方頁本川越站步行8分鐘",
+        "source": "https://kawagoeichinoya.owst.jp/"
+      },
+      "images": [
+        {
+          "page": "https://kawagoeichinoya.owst.jp/",
+          "url": null,
+          "subject": "官方鰻重及套餐照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "ichinoya-monday",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            1
+          ],
+          "exclusions": "若週一國定假日則週一營業、翌週二休",
+          "holidayOverride": {
+            "ifWeekday": 1,
+            "ifPublicHoliday": true,
+            "openOnHoliday": true,
+            "closeFollowingWeekday": 2
+          },
+          "source": "https://kawagoeichinoya.owst.jp/"
+        },
+        {
+          "id": "ichinoya-weekday-lunch",
+          "effect": "service_window",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "timeWindow": {
+            "start": "11:00",
+            "end": "15:00",
+            "lastOrder": "14:50"
+          },
+          "source": "https://kawagoeichinoya.owst.jp/"
+        },
+        {
+          "id": "ichinoya-weekday-dinner",
+          "effect": "service_window",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "timeWindow": {
+            "start": "16:30",
+            "end": "20:30",
+            "lastOrder": "20:20"
+          },
+          "source": "https://kawagoeichinoya.owst.jp/"
+        },
+        {
+          "id": "ichinoya-weekend",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            6,
+            0
+          ],
+          "orPublicHoliday": true,
+          "timeWindow": {
+            "start": "11:00",
+            "end": "21:00",
+            "lastOrder": "20:50"
+          },
+          "source": "https://kawagoeichinoya.owst.jp/"
+        },
+        {
+          "id": "ichinoya-weekend-booking",
+          "effect": "course_required_for_reservation",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            6,
+            0
+          ],
+          "orPublicHoliday": true,
+          "excludeMenuNames": [
+            "特製うな重（菊）",
+            "ひつまぶし"
+          ],
+          "source": "https://kawagoeichinoya.owst.jp/"
+        }
+      ]
+    },
+    {
+      "id": "saitama-kura-lumine-omiya",
+      "title": "藏壽司Lumine大宮｜車站內彈性晚餐",
+      "japanese": "くら寿司 プラス型店舗 ルミネ大宮",
+      "pref": "埼玉縣",
+      "cuisine": [
+        "迴轉壽司"
+      ],
+      "address": "埼玉県さいたま市大宮区錦町630 ルミネ大宮ルミネ1 B1F",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://shop.kurasushi.co.jp/detail/656",
+        "https://reservation.kurasushi.co.jp/shops?shopId=188261",
+        "https://canlyhp.s3-ap-northeast-1.amazonaws.com/images/202611206aff8aec62c66menu_city_145_E.pdf",
+        "https://canlyhp.s3-ap-northeast-1.amazonaws.com/images/202610306ae3e43599c3emenu_city_145_W.pdf"
+      ],
+      "remaining": [
+        "未抄錄他店145盤的品名；本店品名須從最新分店PDF視覺核對。",
+        "不能只用145乘固定盤數當作使用者餐費保證。",
+        "固定放位與取消費未公開確認。"
+      ],
+      "description": "大宮車站商場內選項，方便新幹線、川越往返與角色商店行程；每盤起價不可冒充每人完整餐價。",
+      "routePairs": [
+        {
+          "anchor": "大宮站、角色商店、往川越/新潟轉車",
+          "basis": "商場地址在站區；需另查店至月台實際時間"
+        }
+      ],
+      "personaTags": [
+        "平價壽司",
+        "親子",
+        "轉車",
+        "晚餐"
+      ],
+      "menu": [
+        {
+          "name": "145日圓起價盤",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "平日11:00、週末10:20起；最後入店22:30",
+          "priceJPY": 145,
+          "unit": "每盤起",
+          "taxStatus": "145價帶官方菜單說明為內用含稅；本分店最新PDF仍待視覺複核",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://canlyhp.s3-ap-northeast-1.amazonaws.com/images/202611206aff8aec62c66menu_city_145_E.pdf",
+          "notes": "分店不同商品價格有差，未把原宿或其他店的魚種/價錢套入本店"
+        }
+      ],
+      "booking": {
+        "url": "https://reservation.kurasushi.co.jp/shops?shopId=188261",
+        "channel": "分店官網連出的免註冊WEB席位預約",
+        "releaseWindow": "公開頁會顯示最早可約時間但有快取，本研究不儲存當作即時；固定放位未列",
+        "cancellation": "初始頁未列取消費，依選位條款或洽店",
+        "conditions": "內用席位預約與外帶是不同入口；未輸入/提交人數日期。",
+        "availability": {
+          "lookupCapability": "可進入條件式訂位頁，未輸入特定旅行日期/人數查詢，未確認空席",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "weekday": "11:00–23:00",
+        "weekend": "10:20–23:00",
+        "lastEntry": "22:30",
+        "lastOrder": null,
+        "break": "公開頁未列中休",
+        "closed": "未列固定公休；商場/臨時安排待查",
+        "source": "https://shop.kurasushi.co.jp/detail/656"
+      },
+      "access": {
+        "stations": [
+          "大宮"
+        ],
+        "detail": "Lumine1地下1樓；確切入口及與JR/東武/新都市交通線轉乘步行待查"
+      },
+      "images": [
+        {
+          "page": "https://shop.kurasushi.co.jp/detail/656",
+          "url": null,
+          "subject": "官方Lumine大宮店相片與分店菜單PDF",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "kura-weekday",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "timeWindow": {
+            "start": "11:00",
+            "end": "23:00",
+            "lastEntry": "22:30"
+          },
+          "source": "https://shop.kurasushi.co.jp/detail/656"
+        },
+        {
+          "id": "kura-weekend",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            6,
+            0
+          ],
+          "timeWindow": {
+            "start": "10:20",
+            "end": "23:00",
+            "lastEntry": "22:30"
+          },
+          "source": "https://shop.kurasushi.co.jp/detail/656"
+        },
+        {
+          "id": "kura-facility-change",
+          "effect": "requires_confirmation",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "trigger": "facility_special_hours_or_newyear",
+          "dateRange": null,
+          "source": "https://shop.kurasushi.co.jp/detail/656"
+        }
+      ]
+    },
+    {
+      "id": "hokkaido-ohiso-honten",
+      "title": "二條市場大磯本店｜海鮮早午餐",
+      "japanese": "大磯 本店",
+      "pref": "北海道",
+      "cuisine": [
+        "海鮮丼",
+        "燒魚定食"
+      ],
+      "address": "札幌市中央区南3条東2丁目（二条市場内）",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://ohiso.jp/shop/",
+        "https://ohiso.jp/menu/"
+      ],
+      "remaining": [
+        "丼類稅別需確認，價格未知稅務不可當完整可結帳預算。",
+        "官網總地圖是市場視窗中心，未當作本店入口坐標。"
+      ],
+      "description": "大磯本店、2號店、3號店時段不同；這筆僅本店。平日可排晚餐，週日/假日只供白天，適合二條市場與大通一帶行程。",
+      "routePairs": [
+        {
+          "anchor": "二條市場、大通、札幌角色商店市區路線",
+          "basis": "同市區規劃配對；不同店面不可混用時段"
+        }
+      ],
+      "personaTags": [
+        "北海道海鮮",
+        "早餐",
+        "地方料理",
+        "家庭"
+      ],
+      "menu": [
+        {
+          "name": "大磯丼",
+          "meal": [
+            "breakfast",
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "本店月–六07:30–15:00 L.O./17:00–20:30 L.O.；週日假日僅早午",
+          "priceJPY": 2500,
+          "unit": "每碗",
+          "taxStatus": "此丼行未單獨標含稅，待店確認；同頁部分單品有明標含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://ohiso.jp/menu/",
+          "budgetEligible": false
+        },
+        {
+          "name": "紅鮭焼",
+          "meal": [
+            "breakfast",
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "同本店適用餐期；週日假日不可當晚餐",
+          "priceJPY": 880,
+          "unit": "每份燒魚單品",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://ohiso.jp/menu/"
+        },
+        {
+          "name": "紅鮭焼＋定食加購",
+          "meal": [
+            "breakfast",
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "同本店適用餐期；週日假日不可當晚餐",
+          "priceJPY": 1260,
+          "unit": "每人一份；880單品＋380白飯/味噌湯/小鉢/醃菜",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://ohiso.jp/menu/",
+          "priceType": "官方兩項價計算合計，非原文套餐報價",
+          "calculation": "880 + 380 = 1260"
+        }
+      ],
+      "booking": {
+        "url": "https://ohiso.jp/shop/",
+        "channel": "官方明示本店目前不接受預約",
+        "releaseWindow": "不適用；現場依序入座",
+        "cancellation": "不適用於未受理的一般座位預約；包場另洽店",
+        "conditions": "本店電話011-219-5252；未查現場候位。",
+        "availability": {
+          "lookupCapability": "不可預約；無已驗證即時候位來源",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "monSat": {
+          "breakfastLunch": "07:30–15:30",
+          "lunchLastOrder": "15:00",
+          "dinner": "17:00–21:00",
+          "dinnerLastOrder": "20:30"
+        },
+        "sunHoliday": {
+          "open": "07:30",
+          "close": "15:30",
+          "lastOrder": "15:00",
+          "dinner": "無"
+        },
+        "lastEntry": null,
+        "break": "月–六15:30–17:00",
+        "closed": "週三，逢假日營業",
+        "source": "https://ohiso.jp/shop/"
+      },
+      "access": {
+        "stations": [
+          "大通",
+          "巴士中心前"
+        ],
+        "detail": "官網大通步行7分鐘，巴士中心前步行5分鐘",
+        "source": "https://ohiso.jp/shop/"
+      },
+      "images": [
+        {
+          "page": "https://ohiso.jp/menu/",
+          "url": null,
+          "subject": "官方大磯丼、燒魚照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        },
+        {
+          "page": "https://ohiso.jp/shop/",
+          "url": null,
+          "subject": "官方本店門面/店內相簿",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "ohiso-wednesday",
+          "effect": "closed",
+          "meal": [
+            "breakfast",
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            3
+          ],
+          "exclusions": "國定假日營業",
+          "source": "https://ohiso.jp/shop/"
+        },
+        {
+          "id": "ohiso-daytime",
+          "effect": "service_window",
+          "meal": [
+            "breakfast",
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "07:30",
+            "end": "15:30",
+            "lastOrder": "15:00"
+          },
+          "source": "https://ohiso.jp/shop/"
+        },
+        {
+          "id": "ohiso-dinner",
+          "effect": "service_window",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "excludePublicHolidays": true,
+          "timeWindow": {
+            "start": "17:00",
+            "end": "21:00",
+            "lastOrder": "20:30"
+          },
+          "source": "https://ohiso.jp/shop/"
+        },
+        {
+          "id": "ohiso-sunholiday",
+          "effect": "not_offered",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            0
+          ],
+          "orPublicHoliday": true,
+          "source": "https://ohiso.jp/shop/"
+        },
+        {
+          "id": "ohiso-no-booking",
+          "effect": "advance_booking_disabled",
+          "meal": [
+            "breakfast",
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": null,
+          "source": "https://ohiso.jp/shop/"
+        }
+      ]
+    },
+    {
+      "id": "hokkaido-jingisukanclub-nijo",
+      "title": "二條市場じんぎすかんクラブ｜北海道羊肉",
+      "japanese": "札幌二条市場 じんぎすかんクラブ",
+      "pref": "北海道",
+      "cuisine": [
+        "成吉思汗烤羊肉"
+      ],
+      "address": "北海道札幌市中央区南3条東1丁目 二条市場内 大磯3号店2階",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://jingisukanclub.com/",
+        "https://www.hotpepper.jp/strJ004591690/",
+        "https://ohiso.jp/shop/"
+      ],
+      "remaining": [
+        "OHISO集團頁寫午餐至14:30，專店官網寫14:00；採專店較早時間並明示差異。",
+        "取消、平台費、飲料/白飯加點與完整一餐總價待確認。"
+      ],
+      "description": "大磯團隊經營的羊肉店，可與二條市場海鮮餐錯開不同天，增加多日菜單變化；150克一人份羊肉不等於含白飯飲料的完整套餐。",
+      "routePairs": [
+        {
+          "anchor": "二條市場、創成川東區與札幌市中心",
+          "basis": "同區規劃配對"
+        }
+      ],
+      "personaTags": [
+        "北海道地方料理",
+        "晚餐",
+        "多人"
+      ],
+      "officialMapViewport": [
+        43.0590533,
+        141.3628891
+      ],
+      "menu": [
+        {
+          "name": "生マトンジンギスカン（附洋蔥、豆芽）",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "平日11:30–14:00/17:00–21:00 L.O.；週末12:00–21:00 L.O.",
+          "priceJPY": 1700,
+          "unit": "每人份150g；非全餐",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://jingisukanclub.com/"
+        },
+        {
+          "name": "生マトン肩ロース",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "同店供餐時段",
+          "priceJPY": 1200,
+          "unit": "每100g單品",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://jingisukanclub.com/"
+        },
+        {
+          "name": "自家製ミニマトンカレー",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timeWindow": "同店供餐時段",
+          "priceJPY": 600,
+          "unit": "每份迷你咖哩，非一般份量全餐",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://jingisukanclub.com/"
+        }
+      ],
+      "booking": {
+        "url": "https://www.hotpepper.jp/strJ004591690/",
+        "channel": "官方網站連出的HotPepper及電話011-222-5529",
+        "releaseWindow": "依日期人數查詢；固定放位日未公開",
+        "cancellation": "公開可讀頁未核得取消比例，須看方案條款或洽店",
+        "conditions": "2026-11-11公布新套餐，正式套餐內容/價格應按預約方案；不以1700肉盤價代替套餐價。",
+        "availability": {
+          "lookupCapability": "可進入條件式訂位頁，未輸入特定旅行日期/人數查詢，未確認空席",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "weekdayLunch": "11:30–14:00（官網L.O.14:00）",
+        "weekdayDinner": "17:00–22:00（L.O.21:00）",
+        "weekendHoliday": "12:00–22:00（L.O.21:00）",
+        "lastEntry": null,
+        "break": "平日14:00–17:00",
+        "closed": "週二、第2/4週一；11月行事曆另查",
+        "source": "https://jingisukanclub.com/"
+      },
+      "access": {
+        "stations": [],
+        "detail": "大磯3號店2樓，非大磯本店；樓層與無障礙電梯尚待確認"
+      },
+      "images": [
+        {
+          "page": "https://jingisukanclub.com/",
+          "url": "https://jingisukanclub.com/wp-content/themes/genghis-khan/assets/img/menu_img01_pc.webp",
+          "subject": "官方羊肉餐點照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "jingisukan-tue",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            2
+          ],
+          "source": "https://jingisukanclub.com/"
+        },
+        {
+          "id": "jingisukan-mon",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            1
+          ],
+          "weekOfMonth": [
+            2,
+            4
+          ],
+          "source": "https://jingisukanclub.com/"
+        },
+        {
+          "id": "jingisukan-weekday-lunch",
+          "effect": "service_window",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "timeWindow": {
+            "start": "11:30",
+            "end": "14:00",
+            "lastOrder": "14:00"
+          },
+          "note": "集團頁14:30與專店14:00不一，採較早限制；14點開席是否可行待確認",
+          "source": "https://jingisukanclub.com/"
+        },
+        {
+          "id": "jingisukan-weekday-dinner",
+          "effect": "service_window",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "timeWindow": {
+            "start": "17:00",
+            "end": "22:00",
+            "lastOrder": "21:00"
+          },
+          "source": "https://jingisukanclub.com/"
+        },
+        {
+          "id": "jingisukan-weekend",
+          "effect": "service_window",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            6,
+            0
+          ],
+          "orPublicHoliday": true,
+          "timeWindow": {
+            "start": "12:00",
+            "end": "22:00",
+            "lastOrder": "21:00"
+          },
+          "source": "https://jingisukanclub.com/"
+        },
+        {
+          "id": "jingisukan-holiday-closure",
+          "effect": "requires_confirmation",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "trigger": "public_holiday_on_regular_closed_day",
+          "note": "集團頁提假日營業，專店頁未列例外，須查最新月曆",
+          "source": "https://jingisukanclub.com/"
+        }
+      ]
+    },
+    {
+      "id": "hokkaido-otaru-masazushi-honten",
+      "title": "小樽政壽司本店｜運河日壽司餐",
+      "japanese": "おたる政寿司 本店",
+      "pref": "北海道",
+      "cuisine": [
+        "壽司",
+        "海鮮丼"
+      ],
+      "address": "北海道小樽市花園1丁目1番1号（寿司屋通り）",
+      "coords": null,
+      "checkedAt": "2026-11-20",
+      "michelin": {
+        "year": null,
+        "stars": null,
+        "status": "本研究未作當期米其林星級主張",
+        "source": null,
+        "checkedAt": "2026-11-20"
+      },
+      "sources": [
+        "https://masazushi.co.jp/shop-honten/",
+        "https://www.tablecheck.com/en/shops/masazushi-honten/reserve"
+      ],
+      "remaining": [
+        "服務費、取消費與平台費需選方案後確認。",
+        "官方海鮮ちらし標2700未稅/2920含稅，換算不一致，故未採該價。",
+        "地圖僅官方地圖視窗中心，未核精確入口。"
+      ],
+      "description": "小樽壽司屋通、運河與手作文化行程的餐飲點；預約平台把三代目吧檯套餐明列晚餐，不用日間丼價滿足晚上套餐預算。",
+      "routePairs": [
+        {
+          "anchor": "小樽運河、壽司屋通、玻璃工藝街區",
+          "basis": "小樽同區規劃配對；各店距離及體驗時間需另算"
+        }
+      ],
+      "personaTags": [
+        "壽司",
+        "傳統工藝",
+        "古街",
+        "晚餐"
+      ],
+      "officialMapViewport": [
+        43.194273,
+        141.000114
+      ],
+      "menu": [
+        {
+          "name": "三代目厳選コース（吧檯）",
+          "meal": [
+            "dinner"
+          ],
+          "timeWindow": "官方預約晚餐17:00/19:00；供餐約60–90分鐘",
+          "priceJPY": 13200,
+          "unit": "每人",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://www.tablecheck.com/en/shops/masazushi-honten/reserve",
+          "notes": "信用卡預約、限吧檯；非含無限飲酒"
+        },
+        {
+          "name": "三代目おまかせコース（吧檯）",
+          "meal": [
+            "dinner"
+          ],
+          "timeWindow": "官方預約17:00/19:00",
+          "priceJPY": 15400,
+          "unit": "每人",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://www.tablecheck.com/en/shops/masazushi-honten/reserve"
+        },
+        {
+          "name": "サーモン丼",
+          "meal": [
+            "lunch"
+          ],
+          "timeWindow": "午11:00–14:30 L.O.；其他餐期是否供應待店確認",
+          "priceJPY": 2420,
+          "unit": "每碗",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://masazushi.co.jp/shop-honten/",
+          "notes": "此處僅作午餐候選；官網未限制餐期，保守未用於晚餐預算"
+        },
+        {
+          "name": "政寿司 茜",
+          "meal": [
+            "lunch"
+          ],
+          "timeWindow": "午11:00–14:30 L.O.；其他餐期待確認",
+          "priceJPY": 4180,
+          "unit": "每人一份握壽司組合",
+          "taxStatus": "含稅",
+          "serviceFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "官方公開頁未明示；預約或結帳前確認"
+          },
+          "platformFee": {
+            "status": "未明示",
+            "amountJPY": null,
+            "note": "未完成任何訂位或付款；依所選平台最終條款"
+          },
+          "applicableDates": {
+            "checkedAt": "2026-11-20",
+            "validFrom": null,
+            "validTo": null,
+            "note": "查核日官網公開價；未保證未來日期，須在出發前重查"
+          },
+          "source": "https://masazushi.co.jp/shop-honten/"
+        }
+      ],
+      "booking": {
+        "url": "https://www.tablecheck.com/en/shops/masazushi-honten/reserve",
+        "channel": "官網連TableCheck；電話0134-64-1101",
+        "releaseWindow": "預約時段11:00、11:30（吧檯）、13:00、17:00、19:00；固定放位日未列",
+        "cancellation": "30分鐘無法聯絡可能取消；取消費公開初始頁未核得，須依所選方案最後條款確認",
+        "conditions": "當日未預約5人以上不受理；其他現場客依序且可能提早截止。指定座位不可用備註任意改；套餐需信用卡。",
+        "availability": {
+          "lookupCapability": "可進入條件式訂位頁，未輸入特定旅行日期/人數查詢，未確認空席",
+          "checkedAt": "2026-11-20",
+          "specificSeatsChecked": false,
+          "submitted": false
+        }
+      },
+      "hours": {
+        "lunch": "11:00–15:00",
+        "lunchLastOrder": "14:30",
+        "dinner": "17:00–21:00",
+        "dinnerLastOrder": "20:30",
+        "lastEntry": null,
+        "break": "15:00–17:00",
+        "closed": "週三、元旦，假日/活動可能變動",
+        "source": "https://masazushi.co.jp/shop-honten/"
+      },
+      "access": {
+        "stations": [
+          "小樽"
+        ],
+        "detail": "官網小樽站計程車3–4分鐘；中央巴士山手線本局前下車。未捏造步行分鐘。",
+        "source": "https://masazushi.co.jp/shop-honten/"
+      },
+      "images": [
+        {
+          "page": "https://masazushi.co.jp/shop-honten/",
+          "url": null,
+          "subject": "官方本店套餐與握壽司照片",
+          "licenseStatus": "未取得公開重製授權",
+          "displayPermission": "禁止將可讀取圖源直接視為已授權；目前僅連結官方相簿/頁面",
+          "downloaded": false
+        }
+      ],
+      "availabilityRules": [
+        {
+          "id": "masazushi-wednesday",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "weekday": [
+            3
+          ],
+          "exclusions": "節慶/活動可能變動，官網最新公告優先",
+          "source": "https://masazushi.co.jp/shop-honten/"
+        },
+        {
+          "id": "masazushi-jan1",
+          "effect": "closed",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "dateRange": {
+            "recurring": true,
+            "startMonthDay": "01-01",
+            "endMonthDay": "01-01"
+          },
+          "source": "https://masazushi.co.jp/shop-honten/"
+        },
+        {
+          "id": "masazushi-lunch",
+          "effect": "service_window",
+          "meal": [
+            "lunch"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "11:00",
+            "end": "15:00",
+            "lastOrder": "14:30"
+          },
+          "source": "https://masazushi.co.jp/shop-honten/"
+        },
+        {
+          "id": "masazushi-dinner",
+          "effect": "service_window",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "timeWindow": {
+            "start": "17:00",
+            "end": "21:00",
+            "lastOrder": "20:30"
+          },
+          "source": "https://masazushi.co.jp/shop-honten/"
+        },
+        {
+          "id": "masazushi-counter-courses",
+          "effect": "reservation_start_times",
+          "meal": [
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "startTimes": [
+            "17:00",
+            "19:00"
+          ],
+          "menuNames": [
+            "三代目厳選コース（吧檯）",
+            "三代目おまかせコース（吧檯）"
+          ],
+          "source": "https://www.tablecheck.com/en/shops/masazushi-honten/reserve"
+        },
+        {
+          "id": "masazushi-large-walkin",
+          "effect": "walkin_not_accepted",
+          "meal": [
+            "lunch",
+            "dinner"
+          ],
+          "timezone": "Asia/Tokyo",
+          "groupSize": {
+            "min": 5
+          },
+          "trigger": "same_day_without_reservation",
+          "source": "https://www.tablecheck.com/en/shops/masazushi-honten/reserve"
+        }
+      ]
+    }
+  ],
+  "mediaResearch": [
+    {
+      "id": "osaka-takoyaki-photo-TB-000136",
+      "subject": "大阪章魚燒通用料理照片，非たこ八店家餐點實拍",
+      "provider": "大阪觀光局官方PHOTO LIBRARY OSAKA",
+      "page": "https://photo.osaka-info.jp/product/%E3%81%9F%E3%81%93%E7%84%BC%E3%81%8D/",
+      "imageURL": "https://s3.ap-northeast-1.amazonaws.com/cdn-photo.osaka-info.jp/wp-content/uploads/7ed0012c-40fe-11e8-ba4b-06326e701dd4-1-1-1024x714.jpeg",
+      "licenseSource": "https://photo.osaka-info.jp/guide/",
+      "status": "可申請的官方授權渠道；尚未申請、未取得本案授權",
+      "allowedPurpose": "大阪觀光及地域宣傳，可用網站/旅行商品文宣；不能販售照片本身或做商品性相片集等",
+      "requiredSteps": [
+        "填寫使用申請並同意規約",
+        "如照片另有條件依聯絡窗口確認",
+        "繁中網站標示©Osaka Convention & Tourism Bureau",
+        "必要肖像/商標/場所許可由使用者確認"
+      ],
+      "hotlinkPermission": "未明示，不能因預覽URL可載入而熱鏈",
+      "downloaded": false,
+      "canRenderNow": false,
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "id": "tohoku-hegisoba-1703",
+      "subject": "新潟へぎそば通用料理圖，非須坂屋或長岡小嶋屋特定套餐實拍",
+      "provider": "東北觀光推進機構官方免費照片庫",
+      "page": "https://www.tohokukanko.jp/photos/detail_1703.html",
+      "imageURL": "https://www.tohokukanko.jp/lsc/upfile/photo/0000/1703/1703_1_m.jpg",
+      "licenseSource": "https://www.tohokukanko.jp/photos/detail_1703.html",
+      "status": "公開條件式使用渠道；條款需確認後使用，未下載",
+      "conditions": [
+        "用途須與觀光PR相符；該庫將本圖分類為新潟",
+        "不可以照片本身為商品",
+        "僅必要裁切、不得大幅變色或放大導致劣化"
+      ],
+      "ambiguity": "頁首稱同意條款後無須個別申請且免標示，條文第2項又限制未經明示同意複製；公開站直接重製前宜向機構確認本案/新潟用途，不能當CC0",
+      "hotlinkPermission": "未明示",
+      "downloaded": false,
+      "canRenderNow": false,
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "id": "sapporo-nijo-photo-2758",
+      "subject": "二條市場區域照片，非大磯本店餐點或室內",
+      "provider": "札幌觀光協會官方相片庫",
+      "page": "https://www.sapporo.travel/sightseeing.photolibrary/area/area03/2764/",
+      "imageURL": "https://sapporotravel.s3-ap-northeast-1.amazonaws.com/st/ph/img/c081-001.jpg",
+      "licenseSource": "https://www.sapporo.travel/info/about/copyright/",
+      "status": "找得到正式下載來源，但相片庫使用須知彈窗未能完整解析；不得宣稱已授權",
+      "conditions": [
+        "一般網站著作權頁要求重製前事先洽詢；相片庫可能有另訂條款，須取得完整規則"
+      ],
+      "hotlinkPermission": "未核得",
+      "downloaded": false,
+      "canRenderNow": false,
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "notSelected": [
+    {
+      "name": "嵐山よしむら",
+      "reason": "常態官網雖有2200等價，10/23–12/7改特別菜單；當期PDF文字未取出，故未用常態價替紅葉季。",
+      "sources": [
+        "https://www.yoshimura-gr.com/arashiyama/shop/",
+        "https://www.yoshimura-gr.com/arashiyama/menu/",
+        "https://drive.google.com/file/d/1RputMWzvU5H_uMNSnmiK_fZnq1pZIrf9/view?usp=sharing/"
+      ]
+    },
+    {
+      "name": "根室花まるJRタワーステラプレイス店",
+      "reason": "官方首頁查核時顯示安全維護；官方商場可核11–22/LO21:30，但未核當期各盤價，未冒用其他分店價格或歷史外帶價。",
+      "sources": [
+        "https://www.sushi-hanamaru.com/",
+        "https://www.stellarplace.net/shop_detail/125"
+      ]
+    },
+    {
+      "name": "わなか千日前本店",
+      "reason": "官方網站未提供本店當期一般菜單價；食べログ官方店頁價表更新2022，不能當2026已核實價。改以たこ八官方2026目錄菜單研究。",
+      "sources": [
+        "https://takoyaki-wanaka.com/",
+        "https://tabelog.com/osaka/A2702/A270202/27002320/dtlmenu/"
+      ]
+    }
+  ],
+  "unresolvedGlobal": [
+    "12家中大部分取消比例/服務費並非全面公開，unknown欄不可隱藏。",
+    "跨縣餐廳僅候選，正式花火活動日營業、節日特別菜單、末班車及全部九角色每日可用性仍需用實際旅行日期驗證。",
+    "本研究未取得12家餐廳照片的公開重製許可；有條件官方相片庫渠道已列mediaResearch，尚未申請。"
+  ]
+}

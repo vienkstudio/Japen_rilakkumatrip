@@ -1,0 +1,1914 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-21",
+  "scope": "17家餐廳官方媒體有界研究；僅metadata、HTML及圖片HEAD，不下載圖片，不改網站/Git，不申請/購買授權。",
+  "inlinePolicyMeaning": {
+    "allowed": "只有所指服務/條款範圍內可嵌入，非所有媒體權利",
+    "forbidden": "目前用途有明示禁止或需事先許可而尚未取得",
+    "unknown": "未查到明確公眾網站使用許可，不代表允許"
+  },
+  "verificationMethod": [
+    "讀取餐廳第一方HTML的img/alt及og:image；OMAKASE為餐廳官方訂位平台資料",
+    "HEAD只核HTTP狀態、Content-Type與長度，不讀取圖片body；未聲稱完成像素視覺檢查",
+    "主題按第一方alt、段落與分店路徑標記，空白alt/共享檔名疑慮保留待核",
+    "一般HTTP403不繞過；源站TLS與逾時失敗照實保留",
+    "來源文字、來源頁、連線和授權為不同欄位，不能由一項推導另一項"
+  ],
+  "restaurants": [
+    {
+      "restaurantId": "tokyo-ryugin-hibiya",
+      "officialPublisher": "日本料理 龍吟；OMAKASE官方訂位頁代為發布",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://www.nihonryori-ryugin.com/ja/",
+      "sourcePageConnectivity": {
+        "httpStatus": null,
+        "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>"
+      },
+      "assets": [
+        {
+          "id": "tokyo-ryugin-hibiya-photo-1",
+          "restaurantId": "tokyo-ryugin-hibiya",
+          "type": "image",
+          "imageURL": "https://omakase.in/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE5MywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--07c82d16449c9213ad6dcb8274d52a0243f6e7b7/ryugin_1.jpg",
+          "sourcePage": "https://omakase.in/r/xl754008",
+          "officialPublisher": "日本料理 龍吟；OMAKASE官方訂位頁代為發布",
+          "publishingRelationship": "restaurant_official_booking_platform",
+          "subject": "主題待核",
+          "title": "日本料理龍吟官方訂位頁第1張封面",
+          "classificationEvidence": "OMAKASE頁alt『日本料理龍吟の1枚目のカバー画像』；未從像素確認菜色/店內",
+          "visualInspection": false,
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": null,
+            "reachable": false,
+            "method": "native web open",
+            "imageBodyRead": false,
+            "error": "原餐廳網站Python TLS失敗，Windows HTTP讀HTML15秒逾時；官方訂位HTML可由瀏覽搜尋讀取，但一般HTTP頁403、圖源開啟cache miss，不繞過。",
+            "renderVerified": false
+          },
+          "licenseStatus": "OMAKASE服務使用不授予圖片權利；未取得本App使用許可",
+          "inlinePolicy": "unknown",
+          "termsUrl": "https://omakase.in/terms",
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "不可把可讀訂位頁視為圖片嵌入許可",
+          "downloaded": false
+        }
+      ],
+      "ogImage": null,
+      "rejectedAssets": [],
+      "officialSocialLinks": [],
+      "remaining": [
+        "龍吟自有網站圖源未能由普通HTTP解析；OMAKASE封面未通過圖片連線及主題核對，不能列成可用實照。"
+      ],
+      "additionalSourcePages": [
+        "https://omakase.in/r/xl754008"
+      ]
+    },
+    {
+      "restaurantId": "tokyo-tempura-kondo-ginza",
+      "officialPublisher": "てんぷら近藤（餐廳官方網站）",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://tempura-kondo.com/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "tokyo-tempura-kondo-ginza",
+          "imageURL": "https://tempura-kondo.com/wp-content/uploads/2020/03/tenpura1.jpg",
+          "sourcePage": "https://tempura-kondo.com/",
+          "subject": "菜色",
+          "title": "天婦羅",
+          "classificationEvidence": "由官網天婦羅理念段落與tenpura1檔名判定；未做像素視覺核對",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "tokyo-tempura-kondo-ginza-photo-1",
+          "type": "image",
+          "officialPublisher": "てんぷら近藤（餐廳官方網站）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "234698",
+            "finalURL": "https://tempura-kondo.com/wp-content/uploads/2020/03/tenpura1.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：てんぷら近藤（餐廳官方網站）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "tokyo-tempura-kondo-ginza",
+          "imageURL": "https://tempura-kondo.com/wp-content/uploads/2020/03/asparagus2.jpg",
+          "sourcePage": "https://tempura-kondo.com/",
+          "subject": "菜色",
+          "title": "蘆筍天婦羅",
+          "classificationEvidence": "官網蔬菜天婦羅內容、asparagus檔名",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "tokyo-tempura-kondo-ginza-photo-2",
+          "type": "image",
+          "officialPublisher": "てんぷら近藤（餐廳官方網站）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "279848",
+            "finalURL": "https://tempura-kondo.com/wp-content/uploads/2020/03/asparagus2.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：てんぷら近藤（餐廳官方網站）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": null,
+      "rejectedAssets": [
+        {
+          "url": "https://langnop003.sakura.ne.jp/kondo_japanese/wp-content/uploads/2020/03/logo-2.png",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "tokyo-sushi-ryujiro-aoyama",
+      "officialPublisher": "鮨 龍次郎；OMAKASE官方訂位頁代為發布",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://omakase.in/r/uk638032",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "tokyo-sushi-ryujiro-aoyama",
+          "imageURL": "https://omakase.in/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDkxLCJwdXIiOiJibG9iX2lkIn19--d0d8dcd5a849510dbf1c4972366f08e9c4714d2e/sushiryujiro.jpg",
+          "sourcePage": "https://omakase.in/r/uk638032",
+          "subject": "主題待核",
+          "title": "官方餐廳封面",
+          "classificationEvidence": "alt僅寫鮨龍次郎封面，不能只看檔名宣稱特定菜色/店內",
+          "htmlAlt": "鮨 龍次郎のカバー画像",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "tokyo-sushi-ryujiro-aoyama-photo-1",
+          "type": "image",
+          "officialPublisher": "鮨 龍次郎；OMAKASE官方訂位頁代為發布",
+          "publishingRelationship": "restaurant_official_booking_platform",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "error": "HTTP Error 403: Forbidden",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": false,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": "https://omakase.in/terms",
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：鮨 龍次郎；OMAKASE官方訂位頁代為發布（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://omakase.in/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDkxLCJwdXIiOiJibG9iX2lkIn19--d0d8dcd5a849510dbf1c4972366f08e9c4714d2e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemUiOiI1MjF4MzEwXHUwMDNlIn0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--bd3621b9c87d66d3cba20e5b6a72bdfef62461f3/sushiryujiro.jpg",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [
+        {
+          "url": "https://omakase.in/assets/common/logo_basic-57f48587bb9a2924864139ed23ab319fb435947c56b2c89e57ab6c1afb503c98.png",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [],
+      "remaining": [
+        "圖片HEAD403，不重試變更網址、代理、登入或繞過；僅保留官方頁連結。"
+      ]
+    },
+    {
+      "restaurantId": "tokyo-sushiro-asakusa-rokku",
+      "officialPublisher": "株式会社あきんどスシロー",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "tokyo-sushiro-asakusa-rokku",
+          "imageURL": "https://cmsimage.akindo-sushiro.co.jp/menu/261120_2098.png",
+          "sourcePage": "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873",
+          "subject": "菜色",
+          "title": "びん長大とろ",
+          "classificationEvidence": "分店菜單HTML alt與名稱一致；品牌商品圖，不代表淺草店現場實拍",
+          "htmlAlt": "びん長大とろ",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "tokyo-sushiro-asakusa-rokku-photo-1",
+          "type": "image",
+          "officialPublisher": "株式会社あきんどスシロー",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "application/octet-stream",
+            "contentLength": "93400",
+            "finalURL": "https://cmsimage.akindo-sushiro.co.jp/menu/261120_2098.png",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "主機回200但MIME是octet-stream；URL在官方菜單以img引用，瀏覽器顯示仍需實測"
+          },
+          "licenseStatus": "官網條款限制未經許可轉載；本案無個別許可",
+          "inlinePolicy": "forbidden",
+          "termsUrl": "https://www.akindo-sushiro.co.jp/about/",
+          "hotlinkPolicy": "forbidden_without_permission",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社あきんどスシロー（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "tokyo-sushiro-asakusa-rokku",
+          "imageURL": "https://cmsimage.akindo-sushiro.co.jp/menu/251001_418-2.png",
+          "sourcePage": "https://www.akindo-sushiro.co.jp/menu/menu_detail/?s_id=873",
+          "subject": "菜色",
+          "title": "えびアボカド",
+          "classificationEvidence": "分店菜單商品alt；若本次頁未列則略過",
+          "htmlAlt": "えびアボカド",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "tokyo-sushiro-asakusa-rokku-photo-2",
+          "type": "image",
+          "officialPublisher": "株式会社あきんどスシロー",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "application/octet-stream",
+            "contentLength": "100894",
+            "finalURL": "https://cmsimage.akindo-sushiro.co.jp/menu/251001_418-2.png",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "主機回200但MIME是octet-stream；URL在官方菜單以img引用，瀏覽器顯示仍需實測"
+          },
+          "licenseStatus": "官網條款限制未經許可轉載；本案無個別許可",
+          "inlinePolicy": "forbidden",
+          "termsUrl": "https://www.akindo-sushiro.co.jp/about/",
+          "hotlinkPolicy": "forbidden_without_permission",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社あきんどスシロー（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://www.akindo-sushiro.co.jp/shared/images/ogp.png?260319",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "forbidden",
+        "termsUrl": "https://www.akindo-sushiro.co.jp/about/",
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [
+        {
+          "url": "https://www.akindo-sushiro.co.jp/assets/images/pages/common/office_logo.svg?260318",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "tokyo-tenya-asakusa",
+      "officialPublisher": "天丼てんや／ロイヤルフードサービス",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://www.tenya.co.jp/menu/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "tokyo-tenya-asakusa",
+          "imageURL": "https://www.tenya.co.jp/menu/img/pic_season01_20261112.jpg",
+          "sourcePage": "https://www.tenya.co.jp/menu/",
+          "subject": "菜色",
+          "title": "2026冬季限定天丼商品宣傳圖",
+          "classificationEvidence": "官方菜單冬季蟹帆立/海鮮天丼段落；可能含多個菜品與文字，不是分店現場拍攝",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "tokyo-tenya-asakusa-photo-1",
+          "type": "image",
+          "officialPublisher": "天丼てんや／ロイヤルフードサービス",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "265834",
+            "finalURL": "https://www.tenya.co.jp/menu/img/pic_season01_20261112.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：天丼てんや／ロイヤルフードサービス（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "tokyo-tenya-asakusa",
+          "imageURL": "https://www.tenya.co.jp/menu/img/pic_teiban.jpg",
+          "sourcePage": "https://www.tenya.co.jp/menu/",
+          "subject": "菜單合成圖",
+          "title": "定番菜單封面",
+          "classificationEvidence": "官方alt店內定番菜單，需區別菜單封面與單品照片",
+          "htmlAlt": "店内定番メニュー",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "tokyo-tenya-asakusa-photo-2",
+          "type": "image",
+          "officialPublisher": "天丼てんや／ロイヤルフードサービス",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "253673",
+            "finalURL": "https://www.tenya.co.jp/menu/img/pic_teiban.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：天丼てんや／ロイヤルフードサービス（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": null,
+      "rejectedAssets": [],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "kyoto-kikunoi-honten",
+      "officialPublisher": "菊乃井（餐廳官方網站）",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://kikunoi.jp/restaurant/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "kyoto-kikunoi-honten",
+          "imageURL": "https://kikunoi.jp/upload_assets/gallery-honten01.jpg",
+          "sourcePage": "https://kikunoi.jp/restaurant/",
+          "subject": "主題待核",
+          "title": "本店官方相簿第1張",
+          "classificationEvidence": "本店gallery區、檔名honten；未視覺核對室內/外觀",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "kyoto-kikunoi-honten-photo-1",
+          "type": "image",
+          "officialPublisher": "菊乃井（餐廳官方網站）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "73780",
+            "finalURL": "https://kikunoi.jp/upload_assets/gallery-honten01.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：菊乃井（餐廳官方網站）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "kyoto-kikunoi-honten",
+          "imageURL": "https://kikunoi.jp/upload_assets/roan_lunch.jpg",
+          "sourcePage": "https://kikunoi.jp/restaurant/",
+          "subject": "菜色",
+          "title": "官網本店頁午餐段落配圖",
+          "classificationEvidence": "本店頁明列昼懐石旁圖，檔名卻roan；可能共用示意，不能稱本店當日實拍",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "kyoto-kikunoi-honten-photo-2",
+          "type": "image",
+          "officialPublisher": "菊乃井（餐廳官方網站）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "248771",
+            "finalURL": "https://kikunoi.jp/upload_assets/roan_lunch.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：菊乃井（餐廳官方網站）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://kikunoi.jp/assets/img/ogp.jpg",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [
+        {
+          "url": "https://kikunoi.jp/assets/img/common/logo.svg",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [],
+      "remaining": [
+        "roan_lunch檔名疑似共用露庵圖，來源確為本店頁；宜優先用本店gallery並在畫面確認內容後標題。"
+      ]
+    },
+    {
+      "restaurantId": "kyoto-yudofu-sagano",
+      "officialPublisher": "湯豆腐 嵯峨野",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://kyoto-sagano.jp/cuisine",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "kyoto-yudofu-sagano",
+          "imageURL": "https://kyoto-sagano.jp/wp/img/2023/05/yudofu_teishoku.jpg",
+          "sourcePage": "https://kyoto-sagano.jp/cuisine",
+          "subject": "菜色",
+          "title": "湯豆腐定食",
+          "classificationEvidence": "官方alt明示湯豆腐定食",
+          "htmlAlt": "湯豆腐定食",
+          "visualInspection": false,
+          "widthAttribute": "490",
+          "heightAttribute": "300",
+          "id": "kyoto-yudofu-sagano-photo-1",
+          "type": "image",
+          "officialPublisher": "湯豆腐 嵯峨野",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "187272",
+            "finalURL": "https://kyoto-sagano.jp/wp/img/2023/05/yudofu_teishoku.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：湯豆腐 嵯峨野（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "kyoto-yudofu-sagano",
+          "imageURL": "https://kyoto-sagano.jp/wp/img/2023/06/natsu_2023_saganogozen.jpg",
+          "sourcePage": "https://kyoto-sagano.jp/cuisine",
+          "subject": "菜色",
+          "title": "嵯峨野御膳示意",
+          "classificationEvidence": "官方alt御膳，檔名2023夏季；非當季/當日菜色保證",
+          "htmlAlt": "嵯峨野御膳",
+          "visualInspection": false,
+          "widthAttribute": "490",
+          "heightAttribute": "300",
+          "id": "kyoto-yudofu-sagano-photo-2",
+          "type": "image",
+          "officialPublisher": "湯豆腐 嵯峨野",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "131668",
+            "finalURL": "https://kyoto-sagano.jp/wp/img/2023/06/natsu_2023_saganogozen.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：湯豆腐 嵯峨野（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": null,
+      "rejectedAssets": [
+        {
+          "url": "https://kyoto-sagano.jp/wp/wp-content/themes/2020e/img/logo.png",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "osaka-ganko-dotonbori",
+      "officialPublisher": "株式会社GANKO",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://www.gankofood.co.jp/shop/detail/su-dotonbori",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "osaka-ganko-dotonbori",
+          "imageURL": "https://www.gankofood.co.jp/uploads/resized/900x530_su-dotonbori01.jpg",
+          "sourcePage": "https://www.gankofood.co.jp/shop/detail/su-dotonbori",
+          "subject": "店面或店內待核",
+          "title": "道頓堀分店官方相簿1",
+          "classificationEvidence": "分店頁相簿、檔名指定分店；alt空白，不能未看圖就指定室內/外觀",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "osaka-ganko-dotonbori-photo-1",
+          "type": "image",
+          "officialPublisher": "株式会社GANKO",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "315211",
+            "finalURL": "https://www.gankofood.co.jp/uploads/resized/900x530_su-dotonbori01.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社GANKO（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "osaka-ganko-dotonbori",
+          "imageURL": "https://www.gankofood.co.jp/uploads/resized/900x530_su-dotonbori03.jpg",
+          "sourcePage": "https://www.gankofood.co.jp/shop/detail/su-dotonbori",
+          "subject": "店面或店內待核",
+          "title": "道頓堀分店官方相簿3",
+          "classificationEvidence": "同分店相簿，alt空白，等待視覺核對",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "osaka-ganko-dotonbori-photo-2",
+          "type": "image",
+          "officialPublisher": "株式会社GANKO",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "311040",
+            "finalURL": "https://www.gankofood.co.jp/uploads/resized/900x530_su-dotonbori03.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社GANKO（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://www.gankofood.co.jp/assets/image/cmn/ogp.png",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "osaka-takohachi-dotonbori",
+      "officialPublisher": "株式会社たこ八",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://www.takohachi.jp/shop/doutonbori/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "osaka-takohachi-dotonbori",
+          "imageURL": "https://www.takohachi.jp/wp-content/uploads/2021/03/info_img_menu01-300x300.jpg",
+          "sourcePage": "https://www.takohachi.jp/shop/doutonbori/",
+          "subject": "菜色",
+          "title": "たこ焼",
+          "classificationEvidence": "官方道頓堀頁『たこ焼』段落圖",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "osaka-takohachi-dotonbori-photo-1",
+          "type": "image",
+          "officialPublisher": "株式会社たこ八",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "16010",
+            "finalURL": "https://www.takohachi.jp/wp-content/uploads/2021/03/info_img_menu01-300x300.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社たこ八（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "osaka-takohachi-dotonbori",
+          "imageURL": "https://www.takohachi.jp/wp-content/uploads/2021/03/floor_img_02-300x253.jpg",
+          "sourcePage": "https://www.takohachi.jp/shop/doutonbori/",
+          "subject": "店內",
+          "title": "2F道頓堀景觀用餐席",
+          "classificationEvidence": "官方樓層案內2F說明旁圖",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "osaka-takohachi-dotonbori-photo-2",
+          "type": "image",
+          "officialPublisher": "株式会社たこ八",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "22602",
+            "finalURL": "https://www.takohachi.jp/wp-content/uploads/2021/03/floor_img_02-300x253.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社たこ八（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "id": "osaka-takohachi-video-f4ebv213uM0",
+          "restaurantId": "osaka-takohachi-dotonbori",
+          "type": "youtube_embed",
+          "title": "【現役道頓堀のたこ焼き店スタッフ直伝】家庭用たこ焼き器で本場の味を再現する方法_タコパで活用したいたこ焼きの焼き方",
+          "subject": "餐點製作教學影片；非道頓堀本店到訪/店內影片",
+          "officialPublisher": "道頓堀たこ八【たこ焼き・お好み焼き】",
+          "sourcePage": "https://www.takohachi.jp/online/takopa/",
+          "publisherEvidence": "餐廳官方線上商品頁直接連此影片，oEmbed作者對應官方たこ八頻道",
+          "watchURL": "https://www.youtube.com/watch?v=f4ebv213uM0",
+          "embedURL": "https://www.youtube-nocookie.com/embed/f4ebv213uM0",
+          "oembedURL": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Df4ebv213uM0&format=json",
+          "oembedHTTPStatus": 200,
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "oembedHTTPStatus": 200,
+            "iframeReturned": true,
+            "fullPlaybackTested": false,
+            "downloaded": false
+          },
+          "inlinePolicy": "allowed",
+          "termsUrl": "https://support.google.com/youtube/answer/171780?hl=zh-Hant",
+          "licenseStatus": "僅限YouTube官方嵌入式播放器，在平台條款/開發人員政策內顯示；不是影片、畫面、縮圖的獨立重製授權",
+          "platformTermsUrl": "https://www.youtube.com/static?template=terms",
+          "embeddingConditions": [
+            "用官方iframe或oEmbed播放器，不自行下載/剪輯/換播放器",
+            "保留HTTP Referer；referrerpolicy建議strict-origin-when-cross-origin，no-referrer會導致153錯誤",
+            "不自動播放，不遮蔽播放器品牌/控制項",
+            "擁有者可關閉嵌入、地區/年齡限制或刪片，正式站仍需測試並提供原片外連",
+            "影片是家庭料理教學與品牌介紹，不能冒充本店現場拍攝"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/f4ebv213uM0/hqdefault.jpg",
+            "inlinePolicy": "unknown",
+            "termsUrl": "https://www.youtube.com/static?template=terms",
+            "note": "由oEmbed回傳，僅作中繼資料；本研究不主張可脫離官方播放器另行熱鏈或重製"
+          },
+          "downloaded": false
+        },
+        {
+          "id": "osaka-takohachi-video-zcQ-3jV2I18",
+          "restaurantId": "osaka-takohachi-dotonbori",
+          "type": "youtube_embed",
+          "title": "【現役道頓堀のスタッフ直伝】家庭用たこ焼き器でプロの明石焼きを再現する方法",
+          "subject": "餐點製作教學影片；非道頓堀本店到訪/店內影片",
+          "officialPublisher": "道頓堀たこ八【たこ焼き・お好み焼き】",
+          "sourcePage": "https://www.takohachi.jp/online/takopa/",
+          "publisherEvidence": "餐廳官方線上商品頁直接連此影片，oEmbed作者對應官方たこ八頻道",
+          "watchURL": "https://www.youtube.com/watch?v=zcQ-3jV2I18",
+          "embedURL": "https://www.youtube-nocookie.com/embed/zcQ-3jV2I18",
+          "oembedURL": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzcQ-3jV2I18&format=json",
+          "oembedHTTPStatus": 200,
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "oembedHTTPStatus": 200,
+            "iframeReturned": true,
+            "fullPlaybackTested": false,
+            "downloaded": false
+          },
+          "inlinePolicy": "allowed",
+          "termsUrl": "https://support.google.com/youtube/answer/171780?hl=zh-Hant",
+          "licenseStatus": "僅限YouTube官方嵌入式播放器，在平台條款/開發人員政策內顯示；不是影片、畫面、縮圖的獨立重製授權",
+          "platformTermsUrl": "https://www.youtube.com/static?template=terms",
+          "embeddingConditions": [
+            "用官方iframe或oEmbed播放器，不自行下載/剪輯/換播放器",
+            "保留HTTP Referer；referrerpolicy建議strict-origin-when-cross-origin，no-referrer會導致153錯誤",
+            "不自動播放，不遮蔽播放器品牌/控制項",
+            "擁有者可關閉嵌入、地區/年齡限制或刪片，正式站仍需測試並提供原片外連",
+            "影片是家庭料理教學與品牌介紹，不能冒充本店現場拍攝"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/zcQ-3jV2I18/hqdefault.jpg",
+            "inlinePolicy": "unknown",
+            "termsUrl": "https://www.youtube.com/static?template=terms",
+            "note": "由oEmbed回傳，僅作中繼資料；本研究不主張可脫離官方播放器另行熱鏈或重製"
+          },
+          "downloaded": false
+        },
+        {
+          "id": "osaka-takohachi-video-V_4PvhI5jFs",
+          "restaurantId": "osaka-takohachi-dotonbori",
+          "type": "youtube_embed",
+          "title": "【現役道頓堀のスタッフ直伝】家庭用ホットプレートでプロの焼きそばを再現する方法",
+          "subject": "餐點製作教學影片；非道頓堀本店到訪/店內影片",
+          "officialPublisher": "道頓堀たこ八【たこ焼き・お好み焼き】",
+          "sourcePage": "https://www.takohachi.jp/online/takopa/",
+          "publisherEvidence": "餐廳官方線上商品頁直接連此影片，oEmbed作者對應官方たこ八頻道",
+          "watchURL": "https://www.youtube.com/watch?v=V_4PvhI5jFs",
+          "embedURL": "https://www.youtube-nocookie.com/embed/V_4PvhI5jFs",
+          "oembedURL": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DV_4PvhI5jFs&format=json",
+          "oembedHTTPStatus": 200,
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "oembedHTTPStatus": 200,
+            "iframeReturned": true,
+            "fullPlaybackTested": false,
+            "downloaded": false
+          },
+          "inlinePolicy": "allowed",
+          "termsUrl": "https://support.google.com/youtube/answer/171780?hl=zh-Hant",
+          "licenseStatus": "僅限YouTube官方嵌入式播放器，在平台條款/開發人員政策內顯示；不是影片、畫面、縮圖的獨立重製授權",
+          "platformTermsUrl": "https://www.youtube.com/static?template=terms",
+          "embeddingConditions": [
+            "用官方iframe或oEmbed播放器，不自行下載/剪輯/換播放器",
+            "保留HTTP Referer；referrerpolicy建議strict-origin-when-cross-origin，no-referrer會導致153錯誤",
+            "不自動播放，不遮蔽播放器品牌/控制項",
+            "擁有者可關閉嵌入、地區/年齡限制或刪片，正式站仍需測試並提供原片外連",
+            "影片是家庭料理教學與品牌介紹，不能冒充本店現場拍攝"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/V_4PvhI5jFs/hqdefault.jpg",
+            "inlinePolicy": "unknown",
+            "termsUrl": "https://www.youtube.com/static?template=terms",
+            "note": "由oEmbed回傳，僅作中繼資料；本研究不主張可脫離官方播放器另行熱鏈或重製"
+          },
+          "downloaded": false
+        },
+        {
+          "id": "osaka-takohachi-video-wkXAiE5IwrM",
+          "restaurantId": "osaka-takohachi-dotonbori",
+          "type": "youtube_embed",
+          "title": "【炎たこⅡ】超人気店「たこ八」副社長が教える！プロのたこ焼き🐙",
+          "subject": "餐點製作教學影片；非道頓堀本店到訪/店內影片",
+          "officialPublisher": "イワタニまるっとch【公式】",
+          "sourcePage": "https://www.takohachi.jp/blog/1421/",
+          "publisherEvidence": "餐廳官方公告介紹岩谷官方頻道合作影片；影片發布者為岩谷，非餐廳頻道",
+          "watchURL": "https://www.youtube.com/watch?v=wkXAiE5IwrM",
+          "embedURL": "https://www.youtube-nocookie.com/embed/wkXAiE5IwrM",
+          "oembedURL": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DwkXAiE5IwrM&format=json",
+          "oembedHTTPStatus": 200,
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "oembedHTTPStatus": 200,
+            "iframeReturned": true,
+            "fullPlaybackTested": false,
+            "downloaded": false
+          },
+          "inlinePolicy": "allowed",
+          "termsUrl": "https://support.google.com/youtube/answer/171780?hl=zh-Hant",
+          "licenseStatus": "僅限YouTube官方嵌入式播放器，在平台條款/開發人員政策內顯示；不是影片、畫面、縮圖的獨立重製授權",
+          "platformTermsUrl": "https://www.youtube.com/static?template=terms",
+          "embeddingConditions": [
+            "用官方iframe或oEmbed播放器，不自行下載/剪輯/換播放器",
+            "保留HTTP Referer；referrerpolicy建議strict-origin-when-cross-origin，no-referrer會導致153錯誤",
+            "不自動播放，不遮蔽播放器品牌/控制項",
+            "擁有者可關閉嵌入、地區/年齡限制或刪片，正式站仍需測試並提供原片外連",
+            "影片是家庭料理教學與品牌介紹，不能冒充本店現場拍攝"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/wkXAiE5IwrM/hqdefault.jpg",
+            "inlinePolicy": "unknown",
+            "termsUrl": "https://www.youtube.com/static?template=terms",
+            "note": "由oEmbed回傳，僅作中繼資料；本研究不主張可脫離官方播放器另行熱鏈或重製"
+          },
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://www.takohachi.jp/wp-content/uploads/2021/03/screenshot.png",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [
+        {
+          "url": "https://www.takohachi.jp/assets/img/common/logo.png",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [
+        "https://youtube.com/channel/UCiZL8SHIC-SvsSdTV4X0-zw?si=uvFidpdLlVyrZMvE",
+        "https://www.instagram.com/takohachi5248/?hl=ja",
+        "https://www.facebook.com/100050342751214/"
+      ],
+      "remaining": []
+    },
+    {
+      "restaurantId": "niigata-suzakaya-ekimae",
+      "officialPublisher": "須坂屋そば 新潟駅前店（自有官方網站）",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://suzakayasobaekimae.com/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "niigata-suzakaya-ekimae",
+          "imageURL": "https://suzakayasobaekimae.com/img/menu_2.jpg",
+          "sourcePage": "https://suzakayasobaekimae.com/",
+          "subject": "菜色",
+          "title": "へぎそば及鄉土料理",
+          "classificationEvidence": "官網第二項菜單介紹旁圖，單張實際菜名待視覺核對",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "niigata-suzakaya-ekimae-photo-1",
+          "type": "image",
+          "officialPublisher": "須坂屋そば 新潟駅前店（自有官方網站）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "163456",
+            "finalURL": "https://suzakayasobaekimae.com/img/menu_2.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：須坂屋そば 新潟駅前店（自有官方網站）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "niigata-suzakaya-ekimae",
+          "imageURL": "https://suzakayasobaekimae.com/img/gallery_1.jpg",
+          "sourcePage": "https://suzakayasobaekimae.com/",
+          "subject": "店面或店內待核",
+          "title": "新潟站前店官方相簿",
+          "classificationEvidence": "分店官方gallery；alt未標室內/外觀",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "niigata-suzakaya-ekimae-photo-2",
+          "type": "image",
+          "officialPublisher": "須坂屋そば 新潟駅前店（自有官方網站）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "53673",
+            "finalURL": "https://suzakayasobaekimae.com/img/gallery_1.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：須坂屋そば 新潟駅前店（自有官方網站）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://suzakayasobaekimae.com/img/ogp.png",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "niigata-nagaokakojimaya-tonomachi",
+      "officialPublisher": "越後長岡小嶋屋（官方網站）",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://www.nagaokakojimaya.com/access.html",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "niigata-nagaokakojimaya-tonomachi",
+          "imageURL": "https://www.nagaokakojimaya.com/shop-img_honten01_1812.jpg",
+          "sourcePage": "https://www.nagaokakojimaya.com/access.html",
+          "subject": "店面",
+          "title": "殿町本店店照",
+          "classificationEvidence": "官方直營店列表殿町本店節點；源HTML為Shift-JIS，此次UTF8解析alt損壞，不沿用亂碼",
+          "htmlAlt": "�{�X",
+          "visualInspection": false,
+          "widthAttribute": "250",
+          "heightAttribute": "300",
+          "id": "niigata-nagaokakojimaya-tonomachi-photo-1",
+          "type": "image",
+          "officialPublisher": "越後長岡小嶋屋（官方網站）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "56462",
+            "finalURL": "https://www.nagaokakojimaya.com/shop-img_honten01_1812.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：越後長岡小嶋屋（官方網站）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": null,
+      "rejectedAssets": [],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "niigata-benkei-pierbandai",
+      "officialPublisher": "SADO BENKEI GROUP",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://sado-benkei.com/pier-bandai/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "niigata-benkei-pierbandai",
+          "imageURL": "https://sado-benkei.com/cms/wp-content/themes/benkei_bs_1912-1/assets/img/tp_pier-bandai_1.jpg",
+          "sourcePage": "https://sado-benkei.com/pier-bandai/",
+          "subject": "店面",
+          "title": "ピア萬代本館店照",
+          "classificationEvidence": "官方本館節點圖；不是2-9別館",
+          "htmlAlt": "佐渡 廻転寿司 弁慶 新潟ピア万代店",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "niigata-benkei-pierbandai-photo-1",
+          "type": "image",
+          "officialPublisher": "SADO BENKEI GROUP",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "139498",
+            "finalURL": "https://sado-benkei.com/cms/wp-content/themes/benkei_bs_1912-1/assets/img/tp_pier-bandai_1.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：SADO BENKEI GROUP（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "niigata-benkei-pierbandai",
+          "imageURL": "https://sado-benkei.com/cms/wp-content/themes/benkei_bs_1912-1/assets/img/floor2.png",
+          "sourcePage": "https://sado-benkei.com/pier-bandai/",
+          "subject": "店內",
+          "title": "本館店內資訊配圖",
+          "classificationEvidence": "官方本館『店內資訊』下的圖；檔名png不保證照片，需畫面確認是否平面圖",
+          "htmlAlt": "佐渡 廻転寿司 弁慶 新潟ピア万代店",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "niigata-benkei-pierbandai-photo-2",
+          "type": "image",
+          "officialPublisher": "SADO BENKEI GROUP",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "27081",
+            "finalURL": "https://sado-benkei.com/cms/wp-content/themes/benkei_bs_1912-1/assets/img/floor2.png",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：SADO BENKEI GROUP（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://sado-benkei.com/cms/wp-content/uploads/2019/12/tp_pier-bandai_1-1.jpg",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [],
+      "officialSocialLinks": [],
+      "remaining": [
+        "floor2.png可能是店內平面圖而非照片，須實際顯示核對；未將盤色圖誤當壽司圖。"
+      ]
+    },
+    {
+      "restaurantId": "saitama-kawagoe-ichinoya",
+      "officialPublisher": "川越いちのや本店（店家官方OWST頁）",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://kawagoeichinoya.owst.jp/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "saitama-kawagoe-ichinoya",
+          "imageURL": "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/bpee4xtz/35053370/7lt5_w900h600.jpg",
+          "sourcePage": "https://kawagoeichinoya.owst.jp/",
+          "subject": "菜色",
+          "title": "特製白燒（菊）",
+          "classificationEvidence": "官方OWST alt直接標菜名",
+          "htmlAlt": "特製 白焼（菊）",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "saitama-kawagoe-ichinoya-photo-1",
+          "type": "image",
+          "officialPublisher": "川越いちのや本店（店家官方OWST頁）",
+          "publishingRelationship": "restaurant_official_hosted_site",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/webp",
+            "contentLength": "0",
+            "finalURL": "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/bpee4xtz/35053370/7lt5_w900h600.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD回應Content-Length=0，不能只據此判定圖片空白或可正常顯示；需前端實測"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：川越いちのや本店（店家官方OWST頁）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "saitama-kawagoe-ichinoya",
+          "imageURL": "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/bpee4xtz/35053367/3zmj_w900h600.jpg",
+          "sourcePage": "https://kawagoeichinoya.owst.jp/",
+          "subject": "菜色",
+          "title": "ひつまぶし",
+          "classificationEvidence": "官方OWST alt直接標菜名",
+          "htmlAlt": "【楽しみ方いろいろ】 ひつまぶし",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "saitama-kawagoe-ichinoya-photo-2",
+          "type": "image",
+          "officialPublisher": "川越いちのや本店（店家官方OWST頁）",
+          "publishingRelationship": "restaurant_official_hosted_site",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/webp",
+            "contentLength": "0",
+            "finalURL": "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/bpee4xtz/35053367/3zmj_w900h600.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD回應Content-Length=0，不能只據此判定圖片空白或可正常顯示；需前端實測"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：川越いちのや本店（店家官方OWST頁）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/bpee4xtz/37418831/21wc.jpg",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "saitama-kura-lumine-omiya",
+      "officialPublisher": "くら寿司株式会社（官方分店頁／Canly託管）",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://shop.kurasushi.co.jp/detail/656",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "saitama-kura-lumine-omiya",
+          "imageURL": "https://canlyhp.s3-ap-northeast-1.amazonaws.com/images/2026022669a02660b0a18ルミネ大宮_外観.jpg",
+          "sourcePage": "https://shop.kurasushi.co.jp/detail/656",
+          "subject": "外觀",
+          "title": "Lumine大宮分店外觀",
+          "classificationEvidence": "官方分店頁圖片檔名明確標外觀，不是壽司料理圖",
+          "htmlAlt": "image",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "saitama-kura-lumine-omiya-photo-1",
+          "type": "image",
+          "officialPublisher": "くら寿司株式会社（官方分店頁／Canly託管）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "360106",
+            "finalURL": "https://canlyhp.s3-ap-northeast-1.amazonaws.com/images/2026022669a02660b0a18%E3%83%AB%E3%83%9F%E3%83%8D%E5%A4%A7%E5%AE%AE_%E5%A4%96%E8%A6%B3.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：くら寿司株式会社（官方分店頁／Canly託管）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://canlyhp.s3.ap-northeast-1.amazonaws.com/くら寿司株式会社/general/ogp.png",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [
+        {
+          "url": "https://www.kurasushi.co.jp/common/images/logo.svg",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [],
+      "remaining": []
+    },
+    {
+      "restaurantId": "hokkaido-ohiso-honten",
+      "officialPublisher": "株式会社OMフーズ／大磯",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://ohiso.jp/menu/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "hokkaido-ohiso-honten",
+          "imageURL": "https://ohiso.jp/_sys/wp-content/themes/ohiso/resources/images/menu/menu_main_l01.jpg",
+          "sourcePage": "https://ohiso.jp/menu/",
+          "subject": "菜色",
+          "title": "大磯丼",
+          "classificationEvidence": "官方商品菜單alt直接標大磯丼；集團菜單，不保證本店當日相同盛裝",
+          "htmlAlt": "大磯丼",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "hokkaido-ohiso-honten-photo-1",
+          "type": "image",
+          "officialPublisher": "株式会社OMフーズ／大磯",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "328055",
+            "finalURL": "https://ohiso.jp/_sys/wp-content/themes/ohiso/resources/images/menu/menu_main_l01.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社OMフーズ／大磯（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "hokkaido-ohiso-honten",
+          "imageURL": "https://ohiso.jp/_sys/wp-content/themes/ohiso/resources/images/menu/menu_main_m02.jpg",
+          "sourcePage": "https://ohiso.jp/menu/",
+          "subject": "菜色",
+          "title": "北海道產鮭魚卵丼",
+          "classificationEvidence": "官方商品菜單alt直接標北海道產イクラ丼",
+          "htmlAlt": "北海道産イクラ丼",
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "hokkaido-ohiso-honten-photo-2",
+          "type": "image",
+          "officialPublisher": "株式会社OMフーズ／大磯",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "453187",
+            "finalURL": "https://ohiso.jp/_sys/wp-content/themes/ohiso/resources/images/menu/menu_main_m02.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：株式会社OMフーズ／大磯（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://ohiso.jp/_sys/wp-content/themes/ohiso/resources/images/ogimg.png",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [],
+      "officialSocialLinks": [
+        "https://www.tiktok.com/@ohiso_sapporo",
+        "https://www.instagram.com/ohiso_nijyo/"
+      ],
+      "remaining": []
+    },
+    {
+      "restaurantId": "hokkaido-jingisukanclub-nijo",
+      "officialPublisher": "札幌二条市場じんぎすかんクラブ／OMフーズ",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://jingisukanclub.com/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "hokkaido-jingisukanclub-nijo",
+          "imageURL": "https://jingisukanclub.com/wp-content/themes/genghis-khan/assets/img/menu_img01_pc.webp",
+          "sourcePage": "https://jingisukanclub.com/",
+          "subject": "菜色",
+          "title": "生マトンジンギスカン",
+          "classificationEvidence": "官方菜單該品項旁圖",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "hokkaido-jingisukanclub-nijo-photo-1",
+          "type": "image",
+          "officialPublisher": "札幌二条市場じんぎすかんクラブ／OMフーズ",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/webp",
+            "contentLength": "122916",
+            "finalURL": "https://jingisukanclub.com/wp-content/themes/genghis-khan/assets/img/menu_img01_pc.webp",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：札幌二条市場じんぎすかんクラブ／OMフーズ（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "hokkaido-jingisukanclub-nijo",
+          "imageURL": "https://jingisukanclub.com/wp-content/themes/genghis-khan/assets/img/shop_img01_pc.webp",
+          "sourcePage": "https://jingisukanclub.com/",
+          "subject": "店面或店內待核",
+          "title": "二條市場店店面資訊配圖",
+          "classificationEvidence": "官方SHOP INFO相簿圖，未視覺核對",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "id": "hokkaido-jingisukanclub-nijo-photo-2",
+          "type": "image",
+          "officialPublisher": "札幌二条市場じんぎすかんクラブ／OMフーズ",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/webp",
+            "contentLength": "132188",
+            "finalURL": "https://jingisukanclub.com/wp-content/themes/genghis-khan/assets/img/shop_img01_pc.webp",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：札幌二条市場じんぎすかんクラブ／OMフーズ（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "http://jingisukanclub.com/wp-content/uploads/2026/03/og.png",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [
+        {
+          "url": "https://jingisukanclub.com/wp-content/themes/genghis-khan/assets/img/hp_logo.png",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [
+        "https://www.instagram.com/n2.jclub/?hl=ja"
+      ],
+      "remaining": []
+    },
+    {
+      "restaurantId": "hokkaido-otaru-masazushi-honten",
+      "officialPublisher": "おたる政寿司（官方本店頁）",
+      "checkedAt": "2026-11-21",
+      "sourcePage": "https://masazushi.co.jp/shop-honten/",
+      "sourcePageConnectivity": {
+        "httpStatus": 200,
+        "error": null
+      },
+      "assets": [
+        {
+          "restaurantId": "hokkaido-otaru-masazushi-honten",
+          "imageURL": "https://masazushi.co.jp/wp/wp-content/uploads/2023/03/honten-01-1-1024x698.jpg",
+          "sourcePage": "https://masazushi.co.jp/shop-honten/",
+          "subject": "店面或店內待核",
+          "title": "小樽本店官方相簿",
+          "classificationEvidence": "本店獨有honten相簿；alt空白，未視覺核對",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": "1024",
+          "heightAttribute": "698",
+          "id": "hokkaido-otaru-masazushi-honten-photo-1",
+          "type": "image",
+          "officialPublisher": "おたる政寿司（官方本店頁）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "112611",
+            "finalURL": "https://masazushi.co.jp/wp/wp-content/uploads/2023/03/honten-01-1-1024x698.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：おたる政寿司（官方本店頁）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        },
+        {
+          "restaurantId": "hokkaido-otaru-masazushi-honten",
+          "imageURL": "https://masazushi.co.jp/wp/wp-content/uploads/2023/03/ginza_course_01.jpg",
+          "sourcePage": "https://masazushi.co.jp/shop-honten/",
+          "subject": "菜色",
+          "title": "本店頁三代目套餐配圖",
+          "classificationEvidence": "本店套餐段落配圖但檔名ginza_course；標共享套餐示意，不能稱本店當日實拍",
+          "htmlAlt": null,
+          "visualInspection": false,
+          "widthAttribute": "470",
+          "heightAttribute": "302",
+          "id": "hokkaido-otaru-masazushi-honten-photo-2",
+          "type": "image",
+          "officialPublisher": "おたる政寿司（官方本店頁）",
+          "publishingRelationship": "restaurant_or_chain_first_party",
+          "connectivity": {
+            "checkedAt": "2026-11-21",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "102563",
+            "finalURL": "https://masazushi.co.jp/wp/wp-content/uploads/2023/03/ginza_course_01.jpg",
+            "method": "HEAD",
+            "imageBodyRead": false,
+            "reachable": true,
+            "renderVerified": false,
+            "note": "HEAD只核標頭，未下載或讀取圖檔內容"
+          },
+          "licenseStatus": "未核得公開網站可轉載/直連的明確許可；不能把官方發布或HEAD200當作授權",
+          "inlinePolicy": "unknown",
+          "termsUrl": null,
+          "hotlinkPolicy": "unknown",
+          "embeddingPolicy": "image_hotlink_not_authorized_by_this_research",
+          "sourceCreditSuggested": "來源：おたる政寿司（官方本店頁）（官方參考圖；非本App拍攝）",
+          "useCautions": [
+            "出處標註不等於使用許可",
+            "不宣稱此為到訪實拍或當日實際供餐",
+            "非純店家照片（品牌共用商品圖、舊季節圖）須保留原本範圍說明"
+          ],
+          "downloaded": false
+        }
+      ],
+      "ogImage": {
+        "url": "https://masazushi.co.jp/wp/wp-content/uploads/2023/03/honten-01-1.jpg",
+        "subject": "官方頁分享預覽圖；未視覺確認是否標誌、拼圖或照片",
+        "isRestaurantPhotoConfirmed": false,
+        "inlinePolicy": "unknown",
+        "termsUrl": null,
+        "note": "og:image僅代表頁面分享中繼資料，不代表第三方有公開重製許可，不用它填充店內照"
+      },
+      "rejectedAssets": [
+        {
+          "url": "https://masazushi.co.jp/wp/wp-content/uploads/2022/12/logo.png",
+          "subject": "品牌標誌或網站logo",
+          "reason": "不是餐點/店內/外觀實照，不能充當餐廳照片",
+          "inlinePolicy": "unknown",
+          "termsUrl": null
+        }
+      ],
+      "officialSocialLinks": [
+        "https://www.facebook.com/otarumasazushi/"
+      ],
+      "remaining": [
+        "ginza_course檔名疑似跨店套餐示意；不能標為本店當日菜單實拍。"
+      ]
+    }
+  ],
+  "rightsResearch": [
+    {
+      "id": "sushiro-website-terms",
+      "publisher": "株式会社あきんどスシロー",
+      "termsUrl": "https://www.akindo-sushiro.co.jp/about/",
+      "inlinePolicy": "forbidden",
+      "scope": "未取得事先許可下，把官方圖片複製/送信/轉載到其他網站",
+      "summary": "官方條款限定個人非商業用途且不得網路複製刊登；官網影像、照片另站轉載須事先同意。標註來源沒有取代許可。",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "id": "omakase-rights",
+      "publisher": "GMO OMAKASE",
+      "termsUrl": "https://omakase.in/terms",
+      "inlinePolicy": "unknown",
+      "scope": "餐廳在OMAKASE登錄的圖片",
+      "summary": "第16條說服務使用許可不等於智慧財產使用許可，餐廳登錄資料的服務宣傳使用範圍授予OMAKASE及特定業務合作方；不能推定本App是被授權合作方。",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "id": "kura-own-photo-guideline",
+      "publisher": "くら寿司株式会社",
+      "termsUrl": "https://www.kurasushi.co.jp/policy/movie_sns.html",
+      "inlinePolicy": "unknown",
+      "scope": "顧客到店自行拍攝及SNS發布規範",
+      "summary": "規範到店拍攝/SNS行為，不能延伸成允許抓取官網商品圖、分店外觀圖或logo。",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "id": "youtube-official-embed",
+      "publisher": "YouTube/Google",
+      "termsUrl": "https://support.google.com/youtube/answer/171780?hl=zh-Hant",
+      "inlinePolicy": "allowed",
+      "scope": "官方嵌入式播放器；不得延伸到獨立下載/擷取縮圖",
+      "summary": "官方說明提供網站嵌入方法、隱私加強網域及Referer要求；本研究4個官方公開影片oEmbed200均回傳iframe，未播放完整內容。",
+      "checkedAt": "2026-11-21"
+    }
+  ],
+  "officialLibraries": [
+    {
+      "id": "osaka-TB-000136",
+      "subject": "通用章魚燒料理圖，不是たこ八分店菜品或店內",
+      "publisher": "大阪觀光局",
+      "page": "https://photo.osaka-info.jp/product/%E3%81%9F%E3%81%93%E7%84%BC%E3%81%8D/",
+      "termsUrl": "https://photo.osaka-info.jp/guide/",
+      "imageURL": "https://s3.ap-northeast-1.amazonaws.com/cdn-photo.osaka-info.jp/wp-content/uploads/7ed0012c-40fe-11e8-ba4b-06326e701dd4-1-1-1024x714.jpeg",
+      "inlinePolicy": "forbidden",
+      "hotlinkPolicy": "forbidden",
+      "licenseStatus": "有明確觀光宣傳用途申請渠道，但尚未申請；條款禁止圖片直連",
+      "allowedPurposeAfterProcedure": "大阪觀光及地域宣傳的網站/廣告/旅遊文宣，不能販售圖像商品",
+      "requirements": [
+        "填申請表及遵守圖像附帶條件",
+        "標示©Osaka Convention & Tourism Bureau",
+        "不得直接連圖片URL；若核准用圖須依其指定下載程序，非本次任務"
+      ],
+      "applicationSubmitted": false,
+      "downloaded": false,
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "id": "niigata-tourism-photo-library",
+      "subject": "新潟觀光/美食圖庫；不把泛料理圖標為特定餐廳菜品",
+      "publisher": "公益社團法人新潟縣觀光協會",
+      "page": "https://niigata-kankou.or.jp/photo/",
+      "termsUrl": "https://niigata-kankou.or.jp/photo/guide.html",
+      "inlinePolicy": "unknown",
+      "hotlinkPolicy": "unknown",
+      "licenseStatus": "有明確新潟觀光PR用途條件式授權渠道，須申請；本案未申請",
+      "allowedPurposeAfterProcedure": "新潟觀光振興宣傳；同申請目的可跨網站/SNS/印刷，不同目的重申請",
+      "requirements": [
+        "依圖片挑選、申請、同意條款、郵件取得檔案的官方程序",
+        "網頁上刊登後通知日期與URL",
+        "圖片本身不能商品化、不得改色損形、特殊權利須另確認",
+        "新潟美食旅類素材使用期限2027-12-31"
+      ],
+      "applicationSubmitted": false,
+      "downloaded": false,
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "id": "tohoku-hegisoba-1703",
+      "subject": "新潟へぎそば通用料理照；非須坂屋/長岡小嶋屋實拍",
+      "publisher": "東北觀光推進機構",
+      "page": "https://www.tohokukanko.jp/photos/detail_1703.html",
+      "termsUrl": "https://www.tohokukanko.jp/photos/detail_1703.html",
+      "inlinePolicy": "unknown",
+      "hotlinkPolicy": "unknown",
+      "licenseStatus": "前次查核有用途限制與無須逐次申請說明，但同頁複製條款文字仍需釐清；本次未主張授權",
+      "imageURL": "https://www.tohokukanko.jp/lsc/upfile/photo/0000/1703/1703_1_m.jpg",
+      "applicationSubmitted": false,
+      "downloaded": false,
+      "checkedAt": "2026-11-21",
+      "note": "不可當作17家店內照，僅另列區域料理研究候選"
+    }
+  ],
+  "remaining": [
+    "全部17家均有來源媒體記錄，龍吟/龍次郎圖源未通過可用連線核對。",
+    "一般官方圖片多數inlinePolicy=unknown；來源信用不等於取得使用權，壽司郎目前必須排除公開站內圖載入。",
+    "10餘家圖源有明確餐點/店照官方文字脈絡，但尚未像素視覺校對；分店共用圖/季節舊圖須保留註解。",
+    "4個YouTube官方iframe有oEmbed證據，可先採官方播放器；正式網站須驗證Referer與實際播放限制。",
+    "沒有以觀光區域照代替任何餐廳店內照。"
+  ]
+}

@@ -1,6 +1,8 @@
 {
   "project_id": "appgprj_6afb200d06108191a4768e3e24f680d0",
-  "static": {
-    "directory": "dist"
-  }
+  "d1": "DB",
+  "capabilities": [
+    "mcp"
+  ],
+  "r2": null
 }
