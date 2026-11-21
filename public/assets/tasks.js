@@ -133,7 +133,7 @@ function foodMatches(p){
 function foodCaption(p){
  const r=p.restaurant;if(!r)return p.summary||p.note;
  const menus=r.menu.filter(m=>(api.state.q||menuMatches(m,true,r))&&m.priceJPY!=null&&!/限量/.test(m.priceBasis||''));
- const n=menus.length?Math.min(...menus.map(menuCost)):null;
+ const n=menus.length?Math.min(...menus.map(m=>menuCost(m))):null;
  const unit=menus.length&&menus.every(m=>/盤/.test(m.priceBasis||''))?'常態每盤（整餐待估）':menus.length&&menus.every(m=>/每碗/.test(m.priceBasis||''))?'一份主餐':'每人套餐（已列費用）';
  return r.cuisine.join('・')+' · '+(r.michelin.stars?'2026 米其林 '+r.michelin.stars+' 星 · ':'')+(!api.state.q&&food.meal?food.meal+' · ':'')+unit+' '+money(n)+' 起';
 }
