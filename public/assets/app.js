@@ -462,6 +462,7 @@ function setTripRange(start,end,party=state.party){
  state.tripStart=start;state.tripEnd=end;state.party=Math.max(1,Math.min(20,Number(party)||1));state.day="";experienceDay="";$("trip-start").value=start;$("trip-end").value=end;$("party").value=state.party;$("day").value="";renderTripScope();filterNow();return true;
 }
 for(const id of ["trip-start","trip-end"]){$(id).addEventListener("change",()=>{const start=$("trip-start").value,end=$("trip-end").value;if(start&&end){setTripRange(start,end);}else{state.tripStart=start;state.tripEnd=end;renderTripScope();filterNow();}});}
+$("trip-scope-details").open=false;$("sheet-backdrop").addEventListener("click",()=>closeDetail());
 new ResizeObserver(()=>document.documentElement.style.setProperty("--scope-height",Math.ceil($("trip-scope").getBoundingClientRect().height)+"px")).observe($("trip-scope"));
 $("day").value=state.day;$("party").value=state.party;$("trip-start").value=state.tripStart;$("trip-end").value=state.tripEnd;experienceDay=state.day;
 $("day").addEventListener("change",e=>{setActiveDay(e.target.value);});
