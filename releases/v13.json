@@ -1,0 +1,13 @@
+{
+  "project_id": "appgprj_6afb200d06108191a4768e3e24f680d0",
+  "release_version": 13,
+  "source_commit": "5b3a6fec51cef29cdab8291451e8af57a72f2d02",
+  "scope": "Interface-only release: layout.css v2, app.js v12, collapsed trip scope and backdrop dismissal. No data or API changes.",
+  "reason": "Sites deduplicates saved versions with identical source commits; this release record gives version13 distinct source provenance.",
+  "build": "npm run build succeeded including prebuild HTML synchronization",
+  "assets": {
+    "public/atlas.html": "48fbc30c3eb7080600dff6d6a403e5c9692976a9f0d5ff9ed3a5abff72034d51",
+    "public/assets/layout.css": "d08897d3440c7403120734bbd070067357575baa5a18f8609d26fba18881f70b",
+    "public/assets/app.js": "b76a8a9477f58b7f4a771f4319774fe2083680ed2f2b07cadf91660f37a4e57f"
+  }
+}
